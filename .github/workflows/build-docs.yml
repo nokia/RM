@@ -1,0 +1,28 @@
+name: "Pull Request Docs Check"
+on: 
+- pull_request
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
+    - name: Install prerequisites
+      run: | 
+        sudo apt-get --allow-releaseinfo-change update -y && sudo apt-get install -y tox
+    - name: Building RM in HTML
+      run: |
+        cd doc/ref_model
+        echo "---------------------------------------------------------------------------------------"
+        echo "---------------------------------- Building RM in HTML --------------------------------"
+        echo "---------------------------------------------------------------------------------------"
+        tox -e docs
+        echo "Building RM in html was successful! "
+    - name: Store html build result
+      uses: actions/upload-artifact@v3
+      with:
+          name: rm-html
+          path: |
+            doc/ref_model/build
+  
