@@ -1053,8 +1053,8 @@ In Australia, the telecommunication sector is regulated by the
 The ACCC is responsible for the economic regulation of the communications sector, including telecommunications and the
 National Broadband Network (NBN), broadcasting and content sectors.
 
-From the cloud services security perspective, the Australian Cyber Security Centre (ACSC) produced
-`Information Security Manual (ISM) <https://www.cyber.gov.au/acsc/view-all-content/ism/>`__,
+From the cloud services security perspective, the Australian Cyber Security Centre (ACSC) produced `Information Security
+Manual (ISM) <hhttps://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism>`__,
 is of particular importance. The purpose of the ISM is to outline a cyber security framework that organisations can
 apply, using their risk management framework, to protect their information and systems from cyber threats. The ISM is
 intended for Chief Information Security Officers, Chief Information Officers, cyber security professionals and
