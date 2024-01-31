@@ -166,7 +166,7 @@ Use cases
 ---------
 
 The intent of this section is to describe some important use cases that are pertinent to this Reference Model. We start
-with some typical Edge related use cases. The list of use cases will be extendd in the future releases.
+with some typical Edge related use cases. The list of use cases will be extended in the future releases.
 
 Telco Edge is commonly coupled with 5G use cases, seen as one of the ingredients of the Ultra-Reliable Low-latency
 Communication (URLLC) and Enhanced Mobile Broadband (eMBB) Network Slicing. The requirements for user plane Local
