@@ -14,6 +14,7 @@ html_theme = "piccolo_theme"
 intersphinx_mapping = {
     'cntt': ('https://cntt.readthedocs.io/en/latest/', None)
 }
+
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 4
 numfig = True
