@@ -6,7 +6,7 @@ This repo contains the source for the
 ## Issues
 
 Issues for this repo handled in the
-[anuket-project/anuket-specifications](https://github.com/anuket-project/anuket-specifications/issues) repositofy. 
+[anuket-project/anuket-specifications](https://github.com/anuket-project/anuket-specifications/issues) repository. 
 
 # Pull Requests
 
