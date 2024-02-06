@@ -1996,7 +1996,7 @@ Workload Efficiency Whitepaper (October 2016)
 
 Examples of opportunities for the energy demand and cost reductions for the telecommunications operators:
 - Smart sleep and shutdowns of elements of infrastructure
--- On site level: adaptive power consumption, power-amplifier symbol, mu;tiple input and output muting
+-- On site level: adaptive power consumption, power-amplifier symbol, multiple input and output muting
 -- Multi-site level: cross base-station optimisation, mobile cell shutdown, 3G/4G/5G optimisation
 - Smart monitoring based energy efficiency opportunities, enhanced by AI capabilities
 -- Cooling optimisation
