@@ -2009,4 +2009,4 @@ Examples of opportunities for the energy demand and cost reductions for the tele
 -- Improved insulation
 - Sustainable energy sourcing
 -- Sustainable energy generation
--- Procurment of green energy
+-- Procurement of green energy
