@@ -1995,18 +1995,22 @@ Workload Efficiency Whitepaper (October 2016)
 <https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf>`__ :cite:p:`questnfvwlenergyeff`.
 
 Examples of opportunities for the energy demand and cost reductions for the telecommunications operators:
+
 - Smart sleep and shutdowns of elements of infrastructure
--- On site level: adaptive power consumption, power-amplifier symbol, multiple input and output muting
--- Multi-site level: cross base-station optimisation, mobile cell shutdown, 3G/4G/5G optimisation
+  - On site level: adaptive power consumption, power-amplifier symbol, multiple input and output muting
+  - Multi-site level: cross base-station optimisation, mobile cell shutdown, 3G/4G/5G optimisation
+
 - Smart monitoring based energy efficiency opportunities, enhanced by AI capabilities
--- Cooling optimisation
--- Smart metering
--- Time of usage optimisation
--- Fuel usage optimisation
+  - Cooling optimisation
+  - Smart metering
+  - Time of usage optimisation
+  - Fuel usage optimisation
+
 - Technology advancements based optimisation
--- 2G/3G legacy shutdowns
--- New, more effective cooling systems
--- Improved insulation
+  - 2G/3G legacy shutdowns
+  - New, more effective cooling systems
+  - Improved insulation
+
 - Sustainable energy sourcing
--- Sustainable energy generation
--- Procurement of green energy
+  - Sustainable energy generation
+  - Procurement of green energy
