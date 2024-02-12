@@ -988,7 +988,7 @@ Load Balancers can be categorized or configured in following ways:
 -	based on hardware devices or written in software,
 -	operate on network Layer 4 or 7,
 -	balance incoming traffic/requests using target selection like static: random, round robin, based on performance of
-  target, based on client IP address, based on URL path or hash; and dynamic: least connections, least response time.
+target, based on client IP address, based on URL path or hash; and dynamic: least connections, least response time.
 
 To increase redundancy, multiple replicas of load balancer are placed into a load balancing cluster.
 
