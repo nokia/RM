@@ -972,6 +972,25 @@ SyncE was standardized by the ITU-T, in cooperation with IEEE, as three recommen
   SyncE architecture minimally requires replacement of the internal clock of the Ethernet card by a phase locked loop
   in order to feed the Ethernet PHY.
 
+Load Balancer
+~~~~~~~~~~~~~
+
+Load Balancing is the process of distributing a set of tasks over a set of resources (computing units), with the goal
+of improving overall system's scalability and availability. Load balancing can optimize the response time and avoid
+unevenly overloading some compute nodes while other compute nodes are left idle.
+
+Two main approaches to Load Balancing are: static algorithms which do not consider the state of different machines,
+and dynamic algorithms which are usually more general and more efficient but require exchanges of information between
+the different compute units, with possible tradeoff of integration complexity and reduced efficiency.
+
+Load Balancers can be categorized or configured in following ways:
+
+-	based on hardware devices or written in software,
+-	operate on network Layer 4 or 7,
+-	balance incoming traffic/requests using target selection like static: random, round robin, based on performance of target, based on client IP address, based on URL path or hash; and dynamic: least connections, least response time.
+
+To increase redundancy, multiple replicas of load balancer are placed into a load balancing cluster.
+
 Kubernetes Networking Semantics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
