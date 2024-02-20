@@ -2012,3 +2012,25 @@ Some relevant information regarding NFV energy efficiency can also be found in `
 on Energy Efficiency (March 2022) <https://www.o-ran.org/ecosystem-resources>`__ :cite:p:`oranenergyeff` and `QuEST Forum - NFV
 Workload Efficiency Whitepaper (October 2016)
 <https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf>`__ :cite:p:`questnfvwlenergyeff`.
+
+Examples of opportunities for the energy demand and cost reductions for the telecommunications operators are classified below.
+Only the first group, which is related to the optimisation on the workload to infrastructure interface level, is relevant for 
+this Reference Model.
+
+- Optimisation based on workload load demand, enhanced by AI-based smart monitoring
+  - Smart sleep and shutdowns of elements of infrastructure
+  - Adaptive power consumption
+  - Time of usage optimisation
+  - Multiple input and output muting
+  - Cross base-station optimisation
+
+- Technology advancements based optimisation
+  - 2G/3G legacy shutdowns
+  - 3G/4G/5G optimisation
+  - Cooling optimisation
+  - Improved insulation
+
+- Energy source
+  - Sustainable energy generation
+  - Procurement of green energy
+  - Fuel usage optimisation
