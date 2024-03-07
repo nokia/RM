@@ -3,7 +3,7 @@ Feature Set and Requirements from Infrastructure
 
 A profile :ref:`chapters/chapter02:profiles, profile extensions & flavours` specifies the configuration of a
 Cloud Infrastructure node (host or server). :ref:`chapters/chapter02:profile extensions (specialisations)`
-may specify additional configurations. Workloads utilise profiles to describe the configuration of nodes on which they
+may specify additional configurations. Workloads use profiles to describe the configuration of nodes on which they
 can be hosted to execute on. Workload flavours provide a mechanism to specify the VM or Pod sizing information to host
 the workload. Depending on the requirements of the workloads, a VM or a Pod is deployed according to the specified
 flavour information on a node configured according to the specified profile. Not only do the nodes (the hardware) have
