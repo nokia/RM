@@ -1982,17 +1982,41 @@ In virtualized environments AF_XDP could be used as interface between guest Kern
 Energy efficiency
 -----------------
 
-The energy efficiency should be an overall requirement for both the cloud infrastructure itself and the workloads
-hosted by this infrastructure. It is defined as "the relation between the useful output and energy consumption" by
-`ITU-T L.1330 <https://www.itu.int/rec/T-REC-L.1330>`__ :cite:p:`itutl1330` for telecommunication networks and
-`ETSI EN 303 471 <https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=50095>`__ :cite:p:`etsien303sp471` for NFV,
-the useful output being a metric which represents the capacity provided by the service whose energy efficiency is
-assessed.
+Energy efficiency should be an overall requirement for the cloud infrastructure itself, the workloads
+hosted by this infrastructure, and the interface layer between them. 
 
-As an example, the useful output of a traffic forwarding function can be the data volume forwarded (e.g., measured
+For telecommunication networks, energy efficiency is defined by `ITU-T L.1330 <https://www.itu.int/rec/T-REC-L.1330>`__ :cite:p:`itutl1330`
+as "the relation between the useful output and energy consumption", the useful output being a metric which represents the capacity provided by the service whose energy efficiency is
+assessed. As an example, the useful output of a traffic forwarding function can be the data volume forwarded (e.g., measured
 in Byte) and the assessment of its energy efficiency is then based on the ratio between this volume and the energy
 consumed for processing it (e.g., measured in Watt.hour) :
-Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy
+Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy.
+
+As elaborated in the Next Generation Alliance's whitepaper `NGA Green G <https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/#:~:text=Green%20G%3A%20The%20Path%20Toward%20Sustainable%206G%20shows%20how%20the,while%20accelerating%20progress%20toward%206G>`__ :cite:p:`ngagreeng`,
+with the global migration from 4G to 5G, one can observe the rise in data center power consumption with the parallel reduction in the energy consumption of core network 
+elements. This observation emphasizes the importance of the energy efficiency on the infrastructure and workload levels, and on the interface layer between them. 
+
+Examples of opportunities for the energy demand and cost reductions for the telecommunications operators are classified below.
+
+- Optimisation based on workload load demand, enhanced by AI-based smart monitoring
+  - Smart sleep and shutdowns of elements of infrastructure
+  - Adaptive power consumption
+  - Time of usage optimisation
+  - Multiple input and output muting
+  - Cross base-station optimisation
+
+- Technology advancements based optimisation
+  - 2G/3G legacy shutdowns
+  - 3G/4G/5G optimisation
+  - Cooling optimisation
+  - Improved insulation
+
+- Energy source
+  - Sustainable energy generation
+  - Procurement of green energy
+  - Fuel usage optimisation
+
+In this Reference Model, the focus is on the first group, which is related to the optimisation on the workload to infrastructure interface level.
 
 The method for assessing energy efficiency depends on the service targeted and the objectives. For NFV, ETSI proposes
 a method for production environment in `ETSI EN 303 471
@@ -2013,24 +2037,4 @@ on Energy Efficiency (March 2022) <https://www.o-ran.org/ecosystem-resources>`__
 Workload Efficiency Whitepaper (October 2016)
 <https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf>`__ :cite:p:`questnfvwlenergyeff`.
 
-Examples of opportunities for the energy demand and cost reductions for the telecommunications operators are classified below.
-Only the first group, which is related to the optimisation on the workload to infrastructure interface level, is relevant for 
-this Reference Model.
 
-- Optimisation based on workload load demand, enhanced by AI-based smart monitoring
-  - Smart sleep and shutdowns of elements of infrastructure
-  - Adaptive power consumption
-  - Time of usage optimisation
-  - Multiple input and output muting
-  - Cross base-station optimisation
-
-- Technology advancements based optimisation
-  - 2G/3G legacy shutdowns
-  - 3G/4G/5G optimisation
-  - Cooling optimisation
-  - Improved insulation
-
-- Energy source
-  - Sustainable energy generation
-  - Procurement of green energy
-  - Fuel usage optimisation
