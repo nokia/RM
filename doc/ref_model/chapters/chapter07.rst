@@ -506,7 +506,11 @@ operational and management perspective. This includes but is not limited to secu
 - Processes to address regulatory compliance failure.
 - Support for appropriate incident response and reporting.
 - Methods to support appropriate remote attestation certification of the validity of the security components,
-  architectures, and methodologies used.
+  architectures, and methodologies used. This can include the automated TLS certificate lifecycle management for workloads:
+
+  - Accept signing requests for certificates,
+  - Generate and manage private keys and Certificate Signing Requests (CSRs),
+  - Manage renewal before expiry.
 
 Remote Attestation/openCIT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
