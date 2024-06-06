@@ -149,12 +149,13 @@ The Reference Model specifications conform to the overall principles defined in
 Definitions/Terminology/Abbreviations
 -------------------------------------
 
-To help guide the reader, the Reference Model :doc:`common/glossary` provides an introduction to the main terms used
+To help guide the reader, the Anuket Glossary :cite:p:`anuket-glossary` provides an introduction to the main terms used
 within this document and throughout the project in general. These definitions are, with a few exceptions, based on the
-ETSI GR NFV 003 :cite:p:`etsigrnfv003` definitions. In a few cases, they have been modified to avoid deployment technology dependencies
-only when it seems necessary to avoid confusion.
+ETSI GR NFV 003 :cite:p:`etsigrnfv003` definitions. In a few cases, they have been modified to avoid deployment
+technology dependencies only when it seems necessary to avoid confusion.
 
-Please refer to :doc:`common/abbreviations` for a full list of abbreviations used in this document.
+Please refer to the Anuket Abbreviations :cite:p:`anuket-abbreviatons` for a full list of abbreviations used in this
+document.
 
 Conventions
 -----------
