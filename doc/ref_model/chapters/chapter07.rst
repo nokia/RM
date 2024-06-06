@@ -305,7 +305,7 @@ General security requirements for the cloud infrastructure
 +----------------------+----------------------+-------------------------+----------------------+-----------------------+
 | HW technology        | Which security       | Where it must be        | How to operationally | How to assure benign  |
 |                      | threat it mitigates  | enabled                 | activate             | workloads are run     |
-+======================+======================+=========================+======================++======================+
++======================+======================+=========================+======================+=======================+
 | Memory encryption on | Protects data going  | Server HW and BIOS.     | Configure BIOS. On   | Performed by          |
 | the level of the     | between the CPU and  |                         | virtualised software | application           |
 | whole physical       | the memory DIMMs.    |                         | infrastructure label | scheduling using      |
@@ -514,7 +514,11 @@ management perspective. This includes, but is not limited to, securing the follo
 - Processes to address regulatory compliance failures.
 - Support for appropriate incident response and reporting.
 - Methods to support appropriate remote attestation certification of the validity of the security components,
-  architectures, and methodologies used.
+  architectures, and methodologies used. This can include the automated TLS certificate lifecycle management for workloads:
+
+  - Accept signing requests for certificates,
+  - Generate and manage private keys and Certificate Signing Requests (CSRs),
+  - Manage renewal before expiry.
 
 Remote attestation/OpenCIT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
