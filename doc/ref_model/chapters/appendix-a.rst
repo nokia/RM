@@ -92,12 +92,12 @@ the:
 1. `CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version) <https://cloudsecurityalliance
    .org>`__.
 2. `OWASP Cheat Sheet Series (OCSS) <https://github.com/OWASP/CheatSheetSeries>`__ from the `Open Web Application
-   Security Project <https://www.owasp.org>`__.
+   Security Project <https://owasp.org/>`__.
 3. :ref:`chapters/chapter07:Workload Security - Vendor Responsibility` section of the Reference Model.
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
 `OWASP Top Ten Security Risks <https://owasp.org/www-project-top-ten/>`__ created by the
-`Open Web Application Security Project <https://www.owasp.org>`__.
+`Open Web Application Security Project < https://owasp.org/>`__.
 
 Miscellaneous
 -------------

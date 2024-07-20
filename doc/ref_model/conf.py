@@ -11,6 +11,27 @@ extensions = [
     'sphinxcontrib.bibtex'
 ]
 html_theme = "piccolo_theme"
+
+linkcheck_ignore = [
+    "https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md",
+    "https://github.com/opencontainers/runtime-spec/blob/master/config.md",
+    "https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en",
+    "https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en",
+    "https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en",
+    "https://ntia.gov/page/software-bill-materials",
+    "https://www.cisecurity.org/controls/cis-controls-list",
+    'https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#',
+    "https://infocentre2.gsma.com/",
+    "https://www.gsma.com/membership/member-gateway/",
+    "https://www.gsma.com/",
+    "https://www.gsma.com/security/resources/fs-31-gsma-baseline-security-controls/",
+    "https://us.aicpa.org/content/aicpa/interestareas/frc/assuranceadvisoryservices/sorhome.html",
+    "https://www.rfc-editor.org/info/rfc5907 ",
+    "https://static1.squarespace.com/static/5ad774cce74940d7115044b0/t/5db36ffa820b8d29022b6d08/1572040705841/ORAN-WG4.IOT.0-v01.00.pdf/2018/180226_NGMN_RANFSX_D1_V20_Final.pdf",
+    "https://ntia.gov/SBOM",
+    "https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf"
+]
+
 intersphinx_mapping = {
     'cntt': ('https://cntt.readthedocs.io/en/latest/', None)
 }
