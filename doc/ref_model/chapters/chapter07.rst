@@ -1103,9 +1103,9 @@ System hardening
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.002 | The systems part of the cloud infrastructure     | Hardening: CIS Password Policy Guide            |
 |                 | **must** support password hardening, as defined  |                                                 |
-|                 | in CIS Password Policy Guide `https://www.cisecu |                                                 |
-|                 | rity.org/insights/white-papers/cis-password-policy-guide`__.                                       |
-|                 | <https://www.cisecurity.org/insights/white-papers/cis-password-policy-guide>`__.                   |                                              
+|                 | in CIS Password Policy Guide <https://www.cisec  |                                                 |
+|                 | urity.org/insights/white-papers/cis-password-pol |                                                 |
+|                 | icy-guide>`__.                                   |                                                 |                                          
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.003 | The servers part of the cloud infrastructure     |                                                 |
 |                 | **must** support a root of trust and secure      |                                                 |
@@ -1145,7 +1145,10 @@ System hardening
 |                 | encrypted storage, for example, block, object    |                                                 |
 |                 | and file storage, with access to encryption keys |                                                 |
 |                 | restricted on a need-to-know basis. Controlled   |                                                 |
-|                 | access based on a need to know [`https://www.cisecurity.org/controls/cis-controls-list`](https://www.cisecurity.org/controls/cis-controls-list)__. |
+|                 | access based on a need to know [`https://www.cis |                                                 |
+|                 | ecurity.org/controls/cis-controls-list`](https:/ |                                                 |
+|                 | /www.cisecurity.org/controls/cis-controls-list   |                                                 |
+|                 | )__.                                             |                                                 |  
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
