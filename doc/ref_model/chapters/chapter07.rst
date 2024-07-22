@@ -170,7 +170,7 @@ important standards in current use.
   <https://www.etsi.org/technologies/nfv>`__ and its Security Working Group NFV-SEC
 
 - The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) -
-  `www.iso.org < https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
+  `www.iso.org <https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
 
   - ISO/IEC 27002:2013 and ISO/IEC 27001: these are the international standards for best-practice information security
     management systems (ISMSs).
