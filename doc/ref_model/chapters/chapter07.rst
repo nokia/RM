@@ -1141,14 +1141,13 @@ System hardening
 |                 | the source code and manifests.                   |                                                 |
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.010 | The cloud infrastructure **must** support        |                                                 |
-|-----------------|--------------------------------------------------|-------------------------------------------------|
 |                 | encrypted storage, for example, block, object    |                                                 |
 |                 | and file storage, with access to encryption keys |                                                 |
 |                 | restricted on a need-to-know basis. Controlled   |                                                 |
 |                 | access based on a need to know [`https://www.cis |                                                 |
-|                 | ecurity.org/controls/cis-controls-list`](https:/ |                                                 |
-|                 | /www.cisecurity.org/controls/cis-controls-list   |                                                 |
-|                 | )__.                                             |                                                 |  
+|                 | ecurity.org/controls/cis-controls-list`]         |                                                 |
+|                 | (https://www.cisecurity.org/controls/            |                                                 |
+|                 | cis-controls-list)__.                          |                                                 |          
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
