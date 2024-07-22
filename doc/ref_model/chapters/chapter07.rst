@@ -1733,7 +1733,7 @@ Compliance with standards
 |                 | Focus in Cloud Computing (latest version).   |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project `https://www. |
-|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org < https://owasp.org/>`__                |
+|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://owasp.org/>`__                   |
 |                 | (OCSS) `https://github.com/OWASP/CheatSheetS |                                                     |
 |                 | eries <https://github.com/OWASP/CheatSheetSe |                                                     |
 |                 | ries>`__.                                    |                                                     |
