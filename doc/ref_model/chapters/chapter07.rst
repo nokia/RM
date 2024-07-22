@@ -1147,7 +1147,7 @@ System hardening
 |                 | access based on a need to know [`https://www.cis |                                                 |
 |                 | ecurity.org/controls/cis-controls-list`]         |                                                 |
 |                 | (https://www.cisecurity.org/controls/            |                                                 |
-|                 | cis-controls-list)__.                          |                                                 |          
+|                 | cis-controls-list)__.                            |                                                 |          
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
