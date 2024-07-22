@@ -170,7 +170,7 @@ important standards in current use.
   <https://www.etsi.org/technologies/nfv>`__ and its Security Working Group NFV-SEC
 
 - The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) -
-  `www.iso.org < https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
+  `www.iso.org <https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
 
   - ISO/IEC 27002:2013 and ISO/IEC 27001: these are the international standards for best-practice information security
     management systems (ISMSs).
@@ -695,7 +695,7 @@ discovery, authentication and authorisation policies enforcement, network resili
 capabilities. The two documents,
 `NIST SP 800-204A <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__\ (Building Secure
 Microservices-based Applications Using Service-Mesh Architecture) and
-`NIST SP 800-204B < https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
+`NIST SP 800-204B <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
 Microservices-based Applications Using a Service Mesh), describe service mesh, and provide guidance for the deployment
 of service mesh components.
 
@@ -1736,7 +1736,7 @@ Compliance with standards
 |                 | Focus in Cloud Computing (latest version).   |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project `https://www. |
-|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org < https://owasp.org/>`__                |
+|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://owasp.org/>`__                   |
 |                 | (OCSS) `https://github.com/OWASP/CheatSheetS |                                                     |
 |                 | eries <https://github.com/OWASP/CheatSheetSe |                                                     |
 |                 | ries>`__.                                    |                                                     |
