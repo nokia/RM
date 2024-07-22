@@ -695,7 +695,7 @@ discovery, authentication and authorisation policies enforcement, network resili
 capabilities. The two documents,
 `NIST SP 800-204A <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__\ (Building Secure
 Microservices-based Applications Using Service-Mesh Architecture) and
-`NIST SP 800-204B < https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
+`NIST SP 800-204B <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
 Microservices-based Applications Using a Service Mesh), describe service mesh, and provide guidance for the deployment
 of service mesh components.
 
