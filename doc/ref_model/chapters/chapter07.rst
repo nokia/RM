@@ -35,8 +35,7 @@ secure and accessible over a secure network (transport layer security or TLS), u
 and RBAC policies to limit exposure of this vulnerability.
 
 Typical cloud-associated attacker tactics have been identified in the widely accepted
-`MITRE ATT&CK® Framework <https://www.mitre.org/sites/default/files/publications/mitre-getting-started-with-attack-octob
-er-2019.pdf>`__. This framework provides a systematic approach to capture adversarial tactics targeting cloud
+`MITRE ATT&CK® Framework <https://www.mitre.org/sites/default/files/2021-11/getting-started-with-attack-october-2019.pdf>`__. This framework provides a systematic approach to capture adversarial tactics targeting cloud
 environments. Examples of such adversarial tactics are listed in the following table.
 
 +------------------+---------------------------------------------------------------------------------------------------+
@@ -143,7 +142,7 @@ important standards in current use.
 
 - Cloud Security Alliance - `https://cloudsecurityalliance.org/ <https://cloudsecurityalliance.org/>`__
 
-- Open Web Application Security Project - `https://www.owasp.org <https://www.owasp.org>`__
+- Open Web Application Security Project - `https://owasp.org/ <https://owasp.org/>`__
 
 - The National Institute of Standards and Technology (NIST), with the following special publications:
 
@@ -154,13 +153,13 @@ important standards in current use.
     <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__
 
   - NIST SP 800-204B `Attribute-based Access Control for Microservices-based Applications Using a Service Mesh
-    <https://csrc.nist.gov/publications/detail/sp/800-204b/final>`__
+    <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__
 
   - NIST SP 800-207 `Zero Trust Architecture
     <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf>`__
 
   - NIST SP 800-218 `Secure Software Development Framework (SSDF)
-    <https://doi.org/10.6028/NIST.SP.800-218>`__
+    <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf>`__
 
 - FedRAMP Certification `https://www.fedramp.gov/ <https://www.fedramp.gov/>`__
 
@@ -171,7 +170,7 @@ important standards in current use.
   <https://www.etsi.org/technologies/nfv>`__ and its Security Working Group NFV-SEC
 
 - The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) -
-  `www.iso.org <https://www.iso.org>`__. The following ISO standards are of particular interest for NFVI:
+  `www.iso.org <https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
 
   - ISO/IEC 27002:2013 and ISO/IEC 27001: these are the international standards for best-practice information security
     management systems (ISMSs).
@@ -696,7 +695,7 @@ discovery, authentication and authorisation policies enforcement, network resili
 capabilities. The two documents,
 `NIST SP 800-204A <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__\ (Building Secure
 Microservices-based Applications Using Service-Mesh Architecture) and
-`NIST SP 800-204B <https://csrc.nist.gov/publications/detail/sp/800-204b/final>`__\ (Attribute-based Access Control for
+`NIST SP 800-204B <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
 Microservices-based Applications Using a Service Mesh), describe service mesh, and provide guidance for the deployment
 of service mesh components.
 
@@ -715,14 +714,14 @@ hundreds of customers were affected. The SolarWinds attack detailed in `Defendin
 <https://www.techtarget.com/searchsecurity/news/252494495/Defending-against-SolarWinds-attacks-What-can-be-done>`__
 is another example of how software suppliers are targeted and, by rebound, their customers affected.
 Open-source code weaknesses can also be exploited by attackers. The
-`Log4J <https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance>`__ vulnerability, impacting many
+`Log4J <https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance>`__ vulnerability, impacting many
 applications, is a recent example in this field. When addressing cyber security, the vulnerabilities of the
 software supply chain are often not taken into account. Some governments are already alerting and requesting
 actions to face these risks. The British government is hardening the law and standards of cyber security for
 the supply chain. The US government requested actions to enhance software supply chain security. The security
 of the software supply chain is a challenge also pointed out by the European Network and Information Security
 Agency, ENISA, in its report `NFV Security in 5G - Challenges and Best Practices
-<https://www.enisa.europa.eu/publications/nfv-security-in-5g-challenges-and-best-practices>`__.
+<https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance>`__.
 
 
 Software security
@@ -849,7 +848,7 @@ eXchange (SPDX), CycloneDX, and Software Identification Tags (SWID tags), are in
 fields and use common data syntax representations.
 
 - `SPDX <https://spdx.dev/>`__ is an open-source machine-readable format developed under the umbrella of the Linux
-  Foundation. `SPDX specification 2.2 <https://spdx.dev/specifications/>`__ has been published as the standard
+  Foundation. `SPDX specification 2.2 <https://spdx.dev/use/specifications/>`__ has been published as the standard
   ISO/IEC 5962:2021. It provides a language for communicating the data, licenses, copyrights, and security
   information associated with software components. With SPDX specification 2.2, multiple file formats are available:
   YAML, JSON, RDF/XML, tag\:value flat text, and xls spreadsheets.
@@ -1025,7 +1024,7 @@ European Union (EU)
 
 The overall telecommunications regulatory framework in the European Union (EU) is provided in
 `The European Electronic Communications Code
-<https://digital-strategy.ec.europa.eu/en/policies/electronic-communications-laws/>`__.
+<https://digital-strategy.ec.europa.eu/en/policies/eu-electronic-communications-code>`__.
 
 The European Union Agency for Cybersecurity `(ENISA) <https://www.enisa.europa.eu/>`__ contributes to EU cyber
 policy, enhances the trustworthiness of Information and Communications Technology (ICT) products, services,
@@ -1068,7 +1067,7 @@ Australia
 ~~~~~~~~~
 
 In Australia, the telecommunication sector is regulated by the
-`Australian Competition & Consumer Commission (ACCC) <https://www.accc.gov.au/regulated-infrastructure/communications/>`__.
+`Australian Competition & Consumer Commission (ACCC) <https://www.accc.gov.au/by-industry/telecommunications-and-internet>`__.
 The ACCC is responsible for the economic regulation of the communications sector. This includes telecommunications, the
 National Broadband Network (NBN), and the broadcasting and content sectors.
 
@@ -1082,7 +1081,7 @@ mandates, several security controls are, by law, mandatory for cloud-based servi
 operators, in situations involving strategically important data and/or services.
 
 Australia regulates data privacy and protection through a mix of federal, state, and territory laws. The federal
-`Privacy Act 1988 <https://www.oaic.gov.au/privacy/the-privacy-act/>`__ (currently under review by the Australian
+`Privacy Act 1988 <https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act>`__ (currently under review by the Australian
 Government) and the Australian Privacy Principles (APPs), contained in the Privacy Act, regulate the handling of
 personal information by relevant entities and under the Privacy Act. The Privacy Commissioner has the authority to conduct
 investigations, including its own motion investigations, to enforce the Privacy Act and to seek civil penalties for serious
@@ -1105,9 +1104,9 @@ System hardening
 | req.sec.gen.002 | The systems part of the cloud infrastructure     | Hardening: CIS Password Policy Guide            |
 |                 | **must** support password hardening, as defined  |                                                 |
 |                 | in CIS Password Policy Guide `https://www.cisecu |                                                 |
-|                 | rity.org/white-papers/cis-password-policy-guide  |                                                 |
-|                 | <https://www.cisecurity.org/white-papers/cis-pas |                                                 |
-|                 | sword-policy-guide>`__.                          |                                                 |
+|                 | rity.org/insights/white-papers/cis-password-poli |                                                 |
+|                 | cy-guide <https://www.cisecurity.org/insights/wh |                                                 |
+|                 | ite-papers/cis-password-policy-guide>`__.        |                                                 |
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.003 | The servers part of the cloud infrastructure     |                                                 |
 |                 | **must** support a root of trust and secure      |                                                 |
@@ -1146,11 +1145,10 @@ System hardening
 |                 | encrypted storage, for example, block, object    |                                                 |
 |                 | and file storage, with access to encryption keys |                                                 |
 |                 | restricted on a need-to-know basis. Controlled   |                                                 |
-|                 | access based on a need to know `https://www.ci   |                                                 |
-|                 | security.org/controls/controlled-access-based-on |                                                 |
-|                 | -the-need-to-know <https://www.cisecurity.org/co |                                                 |
-|                 | ntrols/controlled-access-based-on-the-need-to-kn |                                                 |
-|                 | ow>`__.                                          |                                                 |
+|                 | access based on a need to know `https://www.cis  |                                                 |
+|                 | ecurity.org/controls/cis-controls-list           |                                                 |
+|                 | <https://www.cisecurity.org/controls/            |                                                 |
+|                 | cis-controls-list>`__.                           |                                                 |          
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
@@ -1738,7 +1736,7 @@ Compliance with standards
 |                 | Focus in Cloud Computing (latest version).   |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project `https://www. |
-|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://www.owasp.org>`__                |
+|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://owasp.org/>`__                   |
 |                 | (OCSS) `https://github.com/OWASP/CheatSheetS |                                                     |
 |                 | eries <https://github.com/OWASP/CheatSheetSe |                                                     |
 |                 | ries>`__.                                    |                                                     |
@@ -1835,7 +1833,7 @@ the following lists gather together additional standards of interest for cloud i
 
 - `NIST SP 800-53A Assessing Security and Privacy Controls in Federal Information Systems and Organizations: Building
   Effective Assessment Plans
-  <https://www.serdp-estcp.org/content/download/47513/453118/file/NIST%20SP%20800-53A%20Rev%204%202013.pdf>`__
+  <https://serdp-estcp.mil/>`__
 
 - `NIST SP 800-63B Digital Identity Guidelines
   <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf>`__

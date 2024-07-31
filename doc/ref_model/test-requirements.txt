@@ -10,3 +10,4 @@ sphinxcontrib-applehelp===1.0.8
 sphinxcontrib-htmlhelp===2.0.5
 sphinxcontrib-qthelp===1.0.7
 sphinxcontrib-serializinghtml===1.1.10
+setuptools  # Ensure setuptools is included
