@@ -37,9 +37,9 @@ IP data services, billing, security, identity management, etc. ...) as well as t
 (e.g., Edge cloud, network slicing, etc.) in such a way as to create the necessary flexibility required by this new
 breed of enterprise customers."
 
-Cloud computing has evolved and matured since 2010, when
-`NIST <http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf>`__ published its definition of cloud computing,
-with its five essential characteristics, three service models, and four deployment models.
+Cloud computing has evolved and matured since 2010 when
+`NIST <https://csrc.nist.gov/pubs/sp/800/145/final>`__ published its definition of cloud computing,
+with its 5 essential characteristics, 3 service models and 4 deployment models.
 
 The generic model for an enterprise cloud has to be "hybrid", with the special cases of purely private or public clouds
 as subsets of the generic hybrid cloud deployment model. In a hybrid cloud deployment, two or more distinct cloud

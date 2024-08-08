@@ -102,11 +102,11 @@ Scope
 -----
 
 This **Reference Model** document focuses on identifying the abstractions, and associated concepts, that are needed to
-represent the cloud infrastructure. :numref:`Scope of Reference Model` Scope of Reference Model.
+represent the cloud infrastructure. See :numref:`scope-of-reference-model` for the Scope of Reference Model.
 
 .. figure:: ../figures/ch01_scope.png
    :alt: Scope of Reference Model
-   :name: Scope of Reference Model
+   :name: scope-of-reference-model
 
    Scope of Reference Model
 
@@ -149,12 +149,13 @@ The Reference Model specifications conform to the overall principles defined in
 Definitions/Terminology/Abbreviations
 -------------------------------------
 
-To help guide the reader, the :cite:p:`anuket-glossary` provides an introduction to the main terms used
+To help guide the reader, the Anuket Glossary :cite:p:`anuket-glossary` provides an introduction to the main terms used
 within this document and throughout the project in general. These definitions are, with a few exceptions, based on the
-ETSI GR NFV 003 :cite:p:`etsigrnfv003` definitions. In a few cases, they have been modified to avoid deployment technology dependencies
-only when it seems necessary to avoid confusion.
+ETSI GR NFV 003 :cite:p:`etsigrnfv003` definitions. In a few cases, they have been modified to avoid deployment
+technology dependencies only when it seems necessary to avoid confusion.
 
-Please refer to :cite:p:`anuket-abbreviations` for a full list of abbreviations used in this document.
+Please refer to the Anuket Abbreviations :cite:p:`anuket-abbreviatons` for a full list of abbreviations used in this
+document.
 
 Conventions
 -----------

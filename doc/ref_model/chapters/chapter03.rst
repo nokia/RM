@@ -955,11 +955,11 @@ Managed Objects :cite:p:`rfc5907`,
 Server Option for DHCPv6 :cite:p:`rfc5908`)
 as the default time synchronization for the cluster. That level of synchronization is not sufficient for some
 network functions. Just like real-time operating systems instead of base OS, so is precision timing for clock
-synchronization. Precision Time Protocol version 2 `PTP <https://standards.ieee.org/standard/1588-2019.html>`__ cite:p:`ieee1588dash2019`
+synchronization. Precision Time Protocol version 2 `PTP <https://standards.ieee.org/ieee/1588/6825/>`__ cite:p:`ieee1588dash2019`
 is commonly used for Time-Sensitive Networking. This allow synchronization in microsecond range rather than
 millisecond range that NTP provides.
 
-Some Network functions, like vDU, of vRAN, also require `SyncE <http://www.itu.int/rec/T-REC-G.8262>`__ :cite:p:`itutg8262`. Control,
+Some Network functions, like vDU, of vRAN, also require `SyncE <https://www.itu.int/rec/T-REC-G.8262>`__ :cite:p:`itutg8262`. Control,
 User and Synchronization (CUS) Plane specification defines different topology options that provides Lower Layer Split
 Control plane 1-4 (LLS-C1 - LLS-C4) with different synchronization requirements
 (`ITU-T G.8275.2 <https://www.itu.int/rec/T-REC-G.8275.2/en>`__ :cite:p:`itutg82752`).
@@ -1992,7 +1992,7 @@ in Byte) and the assessment of its energy efficiency is then based on the ratio 
 consumed for processing it (e.g., measured in Watt.hour) :
 Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy.
 
-As elaborated in the Next Generation Alliance's whitepaper `NGA Green G <https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/#:~:text=Green%20G%3A%20The%20Path%20Toward%20Sustainable%206G%20shows%20how%20the,while%20accelerating%20progress%20toward%206G>`__ :cite:p:`ngagreeng`,
+As elaborated in the Next Generation Alliance's whitepaper `NGA Green G <https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/>`__ :cite:p:`ngagreeng`,
 with the global migration from 4G to 5G, one can observe the rise in data center power consumption with the parallel reduction in the energy consumption of core network 
 elements. This observation emphasizes the importance of the energy efficiency on the infrastructure and workload levels, and on the interface layer between them. 
 
