@@ -75,7 +75,7 @@ Characteristics of a federated cloud
 ------------------------------------
 
 In this section, we will further explore the characteristics of the federated cloud architecture and the architecture
-building blocks that constitute the federated cloud. For example, :numref:`Example Hybrid Multi-Cloud Component Cloud`
+building blocks that constitute the federated cloud. For example, :numref:`Example hybrid multicloud component cloud`
 shows a Telco cloud that consists of four sub-clouds:
 
 - Private on premise
@@ -197,8 +197,8 @@ interfaces.
 
 As outlined in :numref:`Conceptual Architecture of a Telco Operator Platform` above, the exposure point for the
 management interactions is the Cloud Service Broker and the Cloud Resource Broker. The set of interactions that
-these interface points need to provide are defined by the :numref:`Multi-Cloud Interactions Model` below.
-:numref:`Multi-Cloud Interactions Model` provides a taxonomy for the interactions between the communications
+these interface points need to provide are defined by the :numref:`Multicloud interactions model` below.
+:numref:`Multicloud interactions model` provides a taxonomy for the interactions between the communications
 service provider and the cloud providers.
 
 .. figure:: ../figures/rm-chap-8-multicloud-interactions-03.png
@@ -421,39 +421,41 @@ These requirements are in addition to the requirements in other chapters of this
 
 **HEMP general requirements**
 
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| Ref         | Requirement                                     | Definition/Note                                      |
-+=============+=================================================+======================================================+
-| hem.gen.001 | The HEMP should only use published APIs in      | For example, to accomplish the example in            |
-|             | managing component clouds.                      | `hem.gen.003`, it uses the published APIs of the     |
-|             |                                                 | target cloud.                                        |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.002 | The HEMP should publish all of the APIs used by | For example, the available GUI portal only uses APIs |
-|             | any of its components.                          | that have been published by the HEMP.                |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.003 | The HEMP should provide common terms for        | For example, “create Account” should be used across  |
-|             | interaction with its constituent clouds.        | the different clouds.                                |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.004 | The HEMP should generalise and define a common  | Example resources include hosts (including           |
-|             | set of resources available to be managed in the | BareMetal), virtual machines (VMs), vCPU, memory,    |
-|             | constituent clouds.                             | storage, network, kubernetes clusters, kubernetes    |
-|             |                                                 | nodes, images (OS and others), and credentials. For  |
-|             |                                                 | the private cloud, additional example resources      |
-|             |                                                 | include racks, ToR/CE switches, and platform images. |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.005 | The HEMP should provide a common interface for  |                                                      |
-|             | managing component clouds.                      |                                                      |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.006 | The HEMP should expose resources from all the   | See the example resources in `hem.gen.004`           |
-|             | cloud operators and locations (regions, sites,  |                                                      |
-|             | and so on).	                                    |                                                      |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.007 | The HEMP should allow reservation of resources, |                                                      |
-|             | if the component cloud operator allows it.      |                                                      |
-+-------------+-------------------------------------------------+------------------------------------------------------+
-| hem.gen.008 | The HEMP should support multitenancy.           |                                                      |
-+-------------+-------------------------------------------------+------------------------------------------------------+
 
+.. list-table:: General requirements of the Hybrid, Edge, and Multicloud operator Platform (HEMP)
+   :widths: 10 20 20
+   :header-rows: 1
+
+   * - Ref
+     - Requirement
+     - Definition/Note 
+   * - hem.gen.001
+     - The HEMP should only use published APIs in managing component clouds.
+     - For example, to accomplish the example in `hem.gen.003`, it uses the published APIs of the target cloud.
+   * - hem.gen.002
+     - The HEMP should publish all of the APIs used by any of its components.
+     - For example, the available GUI portal only uses APIs that have been published by the HEMP.
+   * - hem.gen.003
+     - The HEMP should provide common terms for interaction with its constituent clouds.
+     - For example, “create Account” should be used across the different clouds.
+   * - hem.gen.004
+     - The HEMP should generalise and define a common set of resources available to be managed in the constituent
+       clouds.
+     - Example resources include hosts (including BareMetal), virtual machines (VMs), vCPU, memory, storage, network,
+       kubernetes clusters, kubernetes nodes, images (OS and others), and credentials. For the private cloud, additional
+       example resources include racks, ToR/CE switches, and platform images.
+   * - hem.gen.005
+     - The HEMP should provide a common interface for managing component clouds.
+     - 
+   * - hem.gen.006
+     - The HEMP should expose resources from all the cloud operators and locations (regions, sites, and so on).
+     - See the example resources in `hem.gen.004`
+   * - hem.gen.007
+     - The HEMP should allow reservation of resources, if the component cloud operator allows it.
+     - 
+   * - hem.gen.008
+     - The HEMP should support multitenancy.
+     - 
 
 **Table 8-2:** General requirements of the Hybrid, Edge, and Multicloud operator Platform (HEMP)
 
@@ -638,48 +640,47 @@ Telco Edge Cloud (TEC) deployment locations can be in any of the following envir
 - Friendly environments, such as offices, apartments, or other similar indoor locations.
 - Challenging environments, such as busy streets, near to network radio transmitters, or other noisy outdoor locations.
 - Harsh environments: places where there is a likelihood of chemical, heat, or electromagnetic exposure, such as
-factories, power stations, processing plants, and so on.
+  factories, power stations, processing plants, and so on.
 
 Some of the more salient characteristics can be seen in Table 8-2.
 
-+-----------------+-----------------+-----------------+----------------+------------+----------------+-----------------+
-|                 | Facility        | Environmental   | Capabilities   | Physical   | Implications   | Deployment      |
-|                 | type            | characteristics |                | security   |                | locations       |
-+=================+=================+=================+================+============+================+=================+
-| Environmentally | Indoors:        | Protected, and  | - Easy access  | Controlled | Commoditised   | Indoor venues:  |
-| friendly        | typically       | therefore safe  | to a           | access     | infrastructure | homes, shops,   |
-|                 | commercial      | for common      | continuous     |            | with minimal   | offices,        |
-|                 | or              | infrastructure. | electricity    |            | need or no     | stationary and  |
-|                 | residential     |                 | supply.        |            | need for       | secure          |
-|                 | buildings.      |                 | - High/medium  |            | hardening or   | cabinets, data  |
-|                 |                 |                 | bandwidth.     |            | ruggedisation. | centres,        |
-|                 |                 |                 | - Fixed and/or |            | Operational    | central         |
-|                 |                 |                 | wireless       |            | benefits for   | offices,        |
-|                 |                 |                 | network access.|            | installation   | colocation      |
-|                 |                 |                 |                |            | and            | facilities,     |
-|                 |                 |                 |                |            | maintenance.   | vendor          |
-|                 |                 |                 |                |            |                | premises,       |
-|                 |                 |                 |                |            |                | customer        |
-|                 |                 |                 |                |            |                | premises.       |
-+-----------------+-----------------+-----------------+----------------+------------+----------------+-----------------+
-| Environmentally | Outdoors        | - Lack of       | - Possibility  | Little or  | - Ruggedisation| Example         |
-| challenging     | and/or exposed  | protection.     | of devices     | no access  | is likely to   | locations: curb |
-|                 | to              | - Exposure to   | having to rely | control.   | be expensive.  | side, near      |
-|                 | environmentally | abnormally high | on battery     |            | - The system   | cellular        |
-|                 | harsh           | levels of       | power only.    |            | is likely to   | radios.         |
-|                 | conditions.     | noise,          | - Low/medium   |            | be complex to  |                 |
-|                 |                 | vibration,      | bandwidth.     |            | operate.       |                 |
-|                 |                 | heat, chemical, | - Fixed and/or |            |                |                 |
-|                 |                 | and             | mobile network |            |                |                 |
-|                 |                 | electromagnetic | access.        |            |                |                 |
-|                 |                 | pollution.      |                |            |                |                 |
-|                 |                 |                 |                |            |                |                 | 
-|                 |                 |                 |                |            |                |                 |
-|                 |                 |                 |                |            |                |                 |
-|                 |                 |                 |                |            |                |                 |
-|                 |                 |                 |                |            |                |                 |
-|                 |                 |                 |                |            |                |                 |
-+-----------------+-----------------+-----------------+----------------+------------+----------------+-----------------+
+.. list-table:: TEC deployment location characteristics and capabilities
+   :widths: 10 10 10 10 10 10 10
+   :header-rows: 1
+
+   * - 
+     - Facility type
+     - Environmental characteristics
+     - Capabilities
+     - Physical security
+     - Implications
+     - Deployment locations
+   * - Environmentally friendly
+     - Indoors: typically commercial or residential buildings.
+     - Protected, and therefore safe for common infrastructure.
+     - 
+       * Easy access to a continuous electricity supply.
+       * High/medium bandwidth.
+       * Fixed and/or wireless network access.
+     - Controlled access
+     - Commoditised infrastructure with minimal need or no need for hardening or ruggedisation. Operational benefits for
+       installation and maintenance.
+     - Indoor venues: homes, shops, offices, stationary and secure cabinets, data centres, central offices, colocation
+       facilities, vendor premises, customer premises.
+   * - Environmentally challenging
+     - Outdoors and/or exposed to environmentally harsh conditions.
+     - 
+       * Lack of protection.
+       * Exposure to abnormally high levels of noise, vibration, heat, chemical, and electromagnetic pollution. 
+     - 
+       * Possibility of devices having to rely on battery power only.
+       * Low/medium bandwidth.
+       * Fixed and/or mobile network access.
+     - Little or no access control.
+     - 
+       * Ruggedisation is likely to be expensive.
+       * The system is likely to be complex to operate.
+     - Example locations: curb side, near cellular radios.
 
 **Table 8-6:** TEC deployment location characteristics and capabilities**
 
@@ -709,9 +710,9 @@ The :ref:`chapters/chapter04:profiles and workload flavours` section specifies t
 profiles:
 
 - The **Basic** cloud infrastructure profile. This is intended for use by both IT and Network Function workloads that
-have low to medium network throughput requirements.
+  have low to medium network throughput requirements.
 - The **High Performance** cloud infrastructure profile. This is intended for use by applications that have high network
-throughput requirements (up to 50 Gbps).
+  throughput requirements (up to 50 Gbps).
 
 The High-Performance profile can specify extensions for hardware offloading. For details, see
 :ref:`chapters/chapter03:hardware acceleration abstraction`. The Reference Model High-Performance profile
@@ -754,9 +755,9 @@ need to be relaxed.
 
 * This is immaterial if the number of CPU sockets (infra.hw.cpu.cfg.001) is 1.
 
- Note ::
-None of the listed parameters forms part of a typical OpenStack flavour, except that the vCPU and memory requirements
-of a flavour cannot exceed the available hardware capacity.
+.. note::
+  None of the listed parameters forms part of a typical OpenStack flavour, except that the vCPU and memory requirements
+  of a flavour cannot exceed the available hardware capacity.
 
 Telco Edge Cloud: platform services deployment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -764,9 +765,9 @@ Telco Edge Cloud: platform services deployment
 This section characterises the hardware capabilities for different edge deployments and the platform services that run
 on the infrastructure.
 
- Note ::
-The platform services are containerised to save resources, and benefit from intrinsic availability and autoscaling
-capabilities.
+.. note::
+  The platform services are containerised to save resources, and benefit from intrinsic availability and autoscaling
+  capabilities.
 
 +-----------+--------------------------------------------------------+-------------------------+-----------------------+
 |           | Platform services                                      | Storage                 | Network services      |
@@ -800,125 +801,81 @@ Depending on the facility capabilities, deployments at the edge may be similar t
 Comparison of deployment topologies and edge terms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+------+
-| This   | Comp-  | Stor-  | Netwo- | RTT    | Secur- | Scala- | Elast- | Resi- | Pref- | Upgr- | Open- | OPNFV | Edge |
-| Speci- | ute    | age    | rking  |        | ity    | bility | icity  | lie-  | erred | ades  | Stack | Edge  | Glo- |
-| ficat- |        |        |        |        |        |        |        | ncy   | Work- |       |       |       | ssa- |
-| ion    |        |        |        |        |        |        |        |       | load  |       |       |       | ry   |
-|        |        |        |        |        |        |        |        |       | Arch- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | itec- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | ture  |       |       |       |      |
-+========+========+========+========+========+========+========+========+=======+=======+=======+=======+=======+======+
-| Regio- | 1000'- | 10's   | >100   | ~100   | Highly | Horiz- | Rapid  | Infr- | Micr- | Firm- | Cent- |       |      |
-| nal    | s,     | EB,    | Gbps,  | ms     | Secure | ontal  | spin   | astr- | oser- | ware: | ral   |       |      |
-| Data   | Stand- | Stand- | Stand- |        |        | and    | up and | uctu- | vices | When  | Data  |       |      |
-| Centre | ardis- | ardis- | ardis- |        |        | unlim- | down   | re    | bas-  | requ- | Cent- |       |      |
-| (DC),  | ed,    | ed,    | ed     |        |        | ited   |        | arch- | ed,   | ired, | re    |       |      |
-| Fixed  | >1 CPU | HDD    |        |        |        | scali- |        | itec- | Stat- | Plat- |       |       |      |
-|        | >20 c- | and    |        |        |        | ng     |        | ted   | ele-  | form  |       |       |      |
-|        | ores / | NVMe,  |        |        |        |        |        | for   | ss,   | SW:   |       |       |      |
-|        | CPU    | Perma- |        |        |        |        |        | resi- | Hos-  | CD    |       |       |      |
-|        |        | nence  |        |        |        |        |        | lien- | ted   |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy,   | on    |       |       |       |      |
-|        |        |        |        |        |        |        |        | Redu- | Cont- |       |       |       |      |
-|        |        |        |        |        |        |        |        | ndan- | aine- |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy    | rs    |       |       |       |      |
-|        |        |        |        |        |        |        |        | for   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | FT    |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | and   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | HA    |       |       |       |       |      |
-+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+------+
-| Metro  | 10's   | 100's  | > 100  | ~10 ms | Highly | Horiz- | Rapid  | Infr- | Micr- | Firm- | Edge  | Large | Agg- |
-| Data   | to     | PB,    | Gbps,  |        | Secure | ontal  | spin   | astr- | oser- | ware: | Site  | Edge  | reg- |
-| Centr- | 100's, | Stand- | Stand- |        |        | but    | up and | uctu- | vices | When  |       |       | ati- |
-| es,    | Stand- | ardis- | ardis- |        |        | limit- | down   | re    | bas-  | requ- |       |       | on   |
-| Fixed  | ardis- | ed,    | ed     |        |        | ed     |        | arch- | ed,   | ired, |       |       | Edge |
-|        | ed,    | NVMe   |        |        |        | scal-  |        | itec- | Stat- | Plat- |       |       |      |
-|        | >1 CPU | on     |        |        |        | ing    |        | ted   | ele-  | form  |       |       |      |
-|        | >20 c- | PCIe,  |        |        |        |        |        | for   | ss,   | SW:   |       |       |      |
-|        | ores   | Perma- |        |        |        |        |        | some  | Host- | CD    |       |       |      |
-|        | / CPU  | nence  |        |        |        |        |        | level | ed on |       |       |       |      |
-|        |        |        |        |        |        |        |        | of    | Cont- |       |       |       |      |
-|        |        |        |        |        |        |        |        | resi- | aine- |       |       |       |      |
-|        |        |        |        |        |        |        |        | lien- | rs    |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy,   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | Redu- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | ndan  |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy    |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | for   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | limi- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | ted   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | FT    |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | and   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | HA    |       |       |       |       |      |
-+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+------+
-| Edge,  | 10's,  | 100    | 50 Gb- | ~5 ms  | Low    | Horiz- | Rapid  | Appl- | Micr- | Firm- | Far   | Medi- | Acc- |
-| Fixed  | Some   | TB,    | ps,    |        | Level  | ontal  | spin   | icat- | oser- | ware: | Edge  | um    | ess  |
-| /      | Varia- | Stand- | Stand- |        | of     | but    | up     | ions  | vices | When  | Site  | Edge  | Edge |
-| Mobile | bili-  | ardis- | ardi-  |        | Trust  | highly | (when  | desi- | bas-  | requ- |       |       | /    |
-|        | ty,    | ed,    | sed    |        |        | const- | possi- | gned  | ed,   | ired, |       |       | Agg- |
-|        | >=1    | NVMe   |        |        |        | rained | ble)   | for   | Stat- | Plat- |       |       | rega-|
-|        | CPU,   | on     |        |        |        | scal-  | and    | resi- | ele-  | form  |       |       | tion |
-|        | >10    | PCIe,  |        |        |        | ing,   | down   | lien- | ss,   | SW:   |       |       | Edge |
-|        | cores  | Perma- |        |        |        | if any |        | cy    | Host- | CD    |       |       |      |
-|        | / CPU  | nence  |        |        |        |        |        | agai- | ed on |       |       |       |      |
-|        |        | /      |        |        |        |        |        | nst   | Cont- |       |       |       |      |
-|        |        | Ephem- |        |        |        |        |        | infra | aine- |       |       |       |      |
-|        |        | eral   |        |        |        |        |        | fail- | rs    |       |       |       |      |
-|        |        |        |        |        |        |        |        | ures, |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | No or |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | high- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | ly    |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | limi- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | ted   |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | redu- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | ndan- |       |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy    |       |       |       |       |      |
-+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+------+
-| Mini-  | 1's,   | 10's   | 10     | <2 ms, | Untru- | Limit- | Const- | Appl- | Micr- | Plat- | Fog   | Small | Acc- |
-| /      | High   | GB,    | Gbps,  | Locat- | sted   | ed     | rained | icat- | oerv- | form  | Comp- | Edge  | ess  |
-| Micro- | Varia- | NVMe,  | Conne- | ed in  |        | Verti- |        | ions  | ices  |       | uting |       | Edge |
-| Edge,  | bili-  | Ephem- | ctivi- | netwo- |        | cal    |        | desi- | based |       | (Mos- |       |      |
-| Mobile | ty,    | eral,  | ty not | rk     |        | Scali- |        | gned  | or    |       | tly   |       |      |
-| /      | Harsh  | Cachi- | Guara- | proxi- |        | ng     |        | for   | mono- |       | depr- |       |      |
-| Fixed  | Envir- | ng     | nteed  | mity   |        | (resi- |        | resi- | lit-  |       | ecat- |       |      |
-|        | onmen- |        |        | of     |        | zing)  |        | lien- | hic,  |       | ed    |       |      |
-|        | ts,    |        |        | EUD /  |        |        |        | cy    | Stat- |       | term- |       |      |
-|        | 1 CPU, |        |        | IoT    |        |        |        | agai- | eless |       | inol- |       |      |
-|        | >2     |        |        |        |        |        |        | nst   | or    |       | ogy), |       |      |
-|        | cores  |        |        |        |        |        |        | infra | Stat- |       | Extr- |       |      |
-|        | / CPU  |        |        |        |        |        |        | fail- | eful, |       | eme   |       |      |
-|        |        |        |        |        |        |        |        | ures, | Host- |       | Edge, |       |      |
-|        |        |        |        |        |        |        |        | No or | ed on |       | Far   |       |      |
-|        |        |        |        |        |        |        |        | high- | Cont- |       | Edge  |       |      |
-|        |        |        |        |        |        |        |        | ly    | aine- |       |       |       |      |
-|        |        |        |        |        |        |        |        | limi- | rs or |       |       |       |      |
-|        |        |        |        |        |        |        |        | ted   | VMs,  |       |       |       |      |
-|        |        |        |        |        |        |        |        | redu- | Subj- |       |       |       |      |
-|        |        |        |        |        |        |        |        | ndan- | ect   |       |       |       |      |
-|        |        |        |        |        |        |        |        | cy    | to    |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | QoS,  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | adap- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | tive  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | to    |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | reso- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | urce  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | avai- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | labi- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | lity, |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | viz.  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | redu- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | ce    |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | reso- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | urce  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | cons- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | umpt- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | ion   |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | as    |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | they  |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | satu- |       |       |       |      |
-|        |        |        |        |        |        |        |        |       | rate  |       |       |       |      |
-+--------+--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+------+
+.. list-table:: Profile extensions
+   :widths: 10 10 10 10 10 10 10 10 10 10 10 10 10 10
+   :header-rows: 1
+
+   * - This Specification
+     - Compute
+     - Storage
+     - Networking
+     - RTT
+     - Security
+     - Scalability
+     - Elasticity
+     - Resiliency
+     - Preferred Workload Architecture
+     - Upgrades
+     - OpenStack
+     - OPNFV Edge
+     - Edge Glossary
+   * - Regional Data Centre (DC), Fixed
+     - 1000's, Standardised, >1 CPU >20 cores / CPU
+     - 10's EB, Standardised, HDD and NVMe, Permanence
+     - >100 Gbps, Standardised
+     - ~100 ms
+     - Highly Secure
+     - Horizontal and unlimited scaling
+     - Rapid spin up and down
+     - Infrastructure architected for resiliency, Redundancy for FT and HA
+     - Microservices based, Stateless, Hosted on Containers
+     - Firmware: When required, Platform SW: CD
+     - Central Data Center
+     - 
+     - 
+   * - Metro Data Centres, Fixed
+     - 10's to 100's, Standardised, >1 CPU >20 cores / CPU
+     - 100's PB, Standardised, NVMe on PCIe, Permanence
+     - > 100 Gbps, Standardised
+     - ~10 ms
+     - Highly Secure
+     - Horizontal but limited scaling
+     - Rapid spin up and down
+     - Infrastructure architected for some level of resiliency, Redundancy for limited FT and HA
+     - Microservices based, Stateless, Hosted on Containers
+     - Firmware: When required, Platform SW: CD
+     - Edge Site
+     - Large Edge
+     - Aggregation Edge
+   * - Edge, Fixed / Mobile
+     - 10's, Some Variability, >=1 CPU, >10 cores / CPU
+     - 100 TB, Standardised, NVMe on PCIe, Permanence / Ephemeral
+     - 50 Gbps, Standardised
+     - ~5 ms
+     - Low Level of Trust
+     - Horizontal but highly constrained scaling, if any
+     - Rapid spin up (when possible) and down
+     - Applications designed for resiliency against infra failures No or highly limited redundancy
+     - Microservices based, Stateless, Hosted on Containers
+     - Firmware: When required, Platform SW: CD
+     - Far Edge Site
+     - Medium Edge
+     - Access Edge / Aggregation Edge
+   * - Mini / Micro Edge, Mobil / Fixed
+     - 1's, High Variability, Harsh Environments, 1 CPU >2 cores / CPU
+     - 10's GB, NVMe, Ephemeral, Caching
+     - 10 Gbps, Connectivity not Guaranteed
+     - <2 ms Located in network proximity of EUD / IoT
+     - Untrusted
+     - Limited  Vertical Scaling (resizing)
+     - Constrained
+     - Applications designed for resiliency against infra failures No or highly limited redundancy
+     - Microervices based or monolithic, Stateless or Stateful, Hosted on Containers or VMs, Subject to QoS, adaptive to
+       resource availability, viz. reduce resource consumption as they saturate
+     - Platform
+     - Fog Computing (Mostly deprecated terminology), Extreme Edge, Far Edge
+     - Small Edge
+     - Access Edge
 
 **Table 8-6:** Comparison of Deployment Topologies
 
