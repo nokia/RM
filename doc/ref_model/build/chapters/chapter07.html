@@ -1,0 +1,2456 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Security &#8212; Anuket Reference Model (RM)  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css?v=db1dbc67" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=85408339" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/petite-vue.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../index.html" title="Go to homepage"><img src="../_static/anuket-logo.png"/></a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="security">
+<h1>Security<a class="headerlink" href="#security" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Security vulnerabilities and attack vectors are everywhere. The telecom industry and its cloud infrastructures are
+especially vulnerable to potential attacks due to the ubiquitous nature of the infrastructures and services, combined
+with the vital role telecommunications play in the modern world. The attack vectors are many and varied, ranging
+from the potential for exposure of sensitive data, both personal and corporate, to weaponized disruption to the
+global telecommunications networks. These threats can take the form of physical attacks on the locations where the
+infrastructure hardware is housed, to network attacks, such as denial of service and targeted corruption of the
+network service applications themselves. Whatever the source, a Cloud Infrastructure needs to be able to withstand
+attacks in whatever form they take.</p>
+<p>This chapter examines multiple aspects of security, as it relates to cloud infrastructure and security aspects for
+workloads. After discussing security attack vectors, this chapter delves into the security requirements. Regarding
+security requirements and best practices, specifications and documents are published by standards organisations. A
+selection of standards of interest for cloud infrastructure security is listed in a dedicated section. This chapter
+culminates with a consolidated set of requirements recommendations. It is suggested that operators carefully evaluate
+the recommendations for possible implementation.</p>
+</section>
+<section id="potential-attack-vectors">
+<h2>Potential attack vectors<a class="headerlink" href="#potential-attack-vectors" title="Link to this heading">¶</a></h2>
+<p>Previously, attacks designed to place and migrate workloads outside the legal boundaries were not possible using the
+traditional infrastructure, due to the closed nature of these systems. However, using cloud infrastructure, violation
+of regulatory policies and laws becomes possible by actors diverting or moving an application from an authenticated and
+legal location to a potentially illegal location. The consequences of violating regulatory policies may take the
+form of a complete banning of service and/or an exaction of a financial penalty by a governmental agency or through SLA
+enforcement. Such vectors of attack may be the original intention of the attacker in an effort to harm the service
+provider. One possible attack scenario is when an attacker exploits the insecure NF API to dump personal data records
+from the database, in an attempt to violate user privacy. Cloud infrastructure operators should ensure that the APIs are
+secure and accessible over a secure network (transport layer security or TLS), under strict set of security best practices
+and RBAC policies to limit exposure of this vulnerability.</p>
+<p>Typical cloud-associated attacker tactics have been identified in the widely accepted
+<a class="reference external" href="https://www.mitre.org/sites/default/files/2021-11/getting-started-with-attack-october-2019.pdf">MITRE ATT&amp;CK® Framework</a>. This framework provides a systematic approach to capture adversarial tactics targeting cloud
+environments. Examples of such adversarial tactics are listed in the following table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attacker tactics</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Initial access</p></td>
+<td><p>Compromising user administration accounts that are not protected by multifactor authentication.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Evasion</p></td>
+<td><p>Modifying cloud compute instances in the production environment by modifying virtual instances
+for the staging of attacks.</p></td>
+</tr>
+<tr class="row-even"><td><p>Discovery</p></td>
+<td><p>Discovering which cloud services are operating and then disabling them at a later stage.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data
+exfiltration</p></td>
+<td><p>Moving data from the compromised tenant’s production databases to the hacker’s cloud service
+account, or transferring data out of the communication service provider (CSP) to the attacker’s
+private network.</p></td>
+</tr>
+<tr class="row-even"><td><p>Service impact</p></td>
+<td><p>Creating denial-of-service availability issues by modifying the Web Application Firewall (WAF)
+rules and compromising APIs and web-based GUIs.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-1:</strong> Examples of cloud attacker tactics</p>
+</section>
+<section id="security-scope">
+<h2>Security scope<a class="headerlink" href="#security-scope" title="Link to this heading">¶</a></h2>
+<section id="in-scope-and-out-of-scope-definition">
+<h3>In-scope and out-of-scope definition<a class="headerlink" href="#in-scope-and-out-of-scope-definition" title="Link to this heading">¶</a></h3>
+<p>The scope of the requirements of the security controls maps to the scope of the Reference Model architecture.</p>
+<p>Cloud infrastructure requirements must cover the virtual infrastructure layer and the hardware infrastructure layer,
+including virtual resources, hardware resources, the virtual infrastructure manager, and the hardware infrastructure
+manager, as described in Chapter 3.</p>
+</section>
+<section id="high-level-security-requirements">
+<h3>High-level security requirements<a class="headerlink" href="#high-level-security-requirements" title="Link to this heading">¶</a></h3>
+<p>The following diagram shows the different security domains that impact the Reference Model:</p>
+<figure class="align-default" id="id9">
+<img alt="&quot;Reference Model Security Domains&quot;" src="../_images/ch7_security_posture.png" />
+<figcaption>
+<p><span class="caption-text">Reference Model Security Domains</span><a class="headerlink" href="#id9" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>..note:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Platform&quot;</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">the</span> <span class="n">cloud</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="k">with</span> <span class="nb">all</span> <span class="n">its</span> <span class="n">hardware</span> <span class="ow">and</span> <span class="n">software</span> <span class="n">components</span><span class="o">.</span>
+</pre></div>
+</div>
+<section id="platform-security-requirements">
+<h4>Platform security requirements<a class="headerlink" href="#platform-security-requirements" title="Link to this heading">¶</a></h4>
+<p>At a high level, the following areas/requirements cover platform security for a particular deployment:</p>
+<ul class="simple">
+<li><p>Platform certification.</p></li>
+<li><p>Secure access controls for administrators.</p></li>
+<li><p>A secure API interface for tenants.</p></li>
+<li><p>Encryption for all external and control communications.</p></li>
+<li><p>Strong separation between tenants, ensuring network, data, memory, and runtime process (CPU running core)
+isolation between tenants.</p></li>
+<li><p>Authenticated/secure APIs provided to overlay network administrators.</p></li>
+<li><p>Platform change control on hardware.</p></li>
+<li><p>Templated approved changes for automation where available.</p></li>
+<li><p>Typically well-defined security framework documentation, including approved deployment use cases.</p></li>
+<li><p>Infrastructure software update processes.</p></li>
+</ul>
+</section>
+<section id="workload-security-requirements">
+<h4>Workload security requirements<a class="headerlink" href="#workload-security-requirements" title="Link to this heading">¶</a></h4>
+<p>At a high level, the following areas/requirements cover workload security for a particular deployment:</p>
+<ul class="simple">
+<li><p>Certification up to platform level.</p></li>
+<li><p>Requirement of each workload network to undertake it own security self-assessment and accreditation, and not inherit a
+security accreditation from the platform.</p></li>
+<li><p>Potentially automated service activation.</p></li>
+<li><p>The workload owner owns the workload security certification process.</p></li>
+<li><p>The workload owner owns the workload design change process.</p></li>
+<li><p>The workload owner owns the workload software update process.</p></li>
+</ul>
+</section>
+</section>
+<section id="common-security-standards">
+<h3>Common security standards<a class="headerlink" href="#common-security-standards" title="Link to this heading">¶</a></h3>
+<p>The Cloud Infrastructure Reference Model and the supporting architectures are not only required to optimally support
+networking functions. They must also be designed, from inception, with common security principles and standards. These
+best practices must be applied at all layers of the infrastructure stack and across all points of interconnection
+(internal or with outside networks), APIs, and contact points with the NFV network functions overlaying or interacting
+with that infrastructure.</p>
+<p>A good place to start to understand the security requirements is to use the following widely accepted definitions and
+core principles developed by the Open Web Application Security Project (OWASP):</p>
+<ul class="simple">
+<li><p>Confidentiality: only allow access to data which the user is permitted to view.</p></li>
+<li><p>Integrity: ensure the data has not been tampered with or altered by unauthorised users.</p></li>
+<li><p>Availability: ensure the systems and data are available to authorised users when they need it.</p></li>
+</ul>
+<p>These three principles are complemented for cloud infrastructure security by authenticity. Authenticity refers to the
+ability to confirm that the users are valid and have the correct rights to access the systems or data.</p>
+<p>Standards organisations with recommendations and best practices, and certifications that need to be taken into
+consideration, include the following examples. This is not an exhaustive list, it contains only some of the more
+important standards in current use.</p>
+<ul class="simple">
+<li><p>Center for Internet Security - <a class="reference external" href="https://www.cisecurity.org/">https://www.cisecurity.org/</a></p></li>
+<li><p>Cloud Security Alliance - <a class="reference external" href="https://cloudsecurityalliance.org/">https://cloudsecurityalliance.org/</a></p></li>
+<li><p>Open Web Application Security Project - <a class="reference external" href="https://owasp.org/">https://owasp.org/</a></p></li>
+<li><p>The National Institute of Standards and Technology (NIST), with the following special publications:</p>
+<ul>
+<li><p>NIST SP 800-123 <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-123.pdf">Guide to General Server Security</a></p></li>
+<li><p>NIST SP 800-204A <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf">Building Secure Microservices-based Applications Using Service-Mesh Architecture</a></p></li>
+<li><p>NIST SP 800-204B <a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/204/b/final">Attribute-based Access Control for Microservices-based Applications Using a Service Mesh</a></p></li>
+<li><p>NIST SP 800-207 <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf">Zero Trust Architecture</a></p></li>
+<li><p>NIST SP 800-218 <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf">Secure Software Development Framework (SSDF)</a></p></li>
+</ul>
+</li>
+<li><p>FedRAMP Certification <a class="reference external" href="https://www.fedramp.gov/">https://www.fedramp.gov/</a></p></li>
+<li><p>ETSI Cyber Security Technical Committee (TC CYBER) - <a class="reference external" href="https://www.etsi.org/committee/cyber">https://www.etsi.org/committee/cyber</a></p></li>
+<li><p><a class="reference external" href="https://www.etsi.org/technologies/nfv">ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV)</a> and its Security Working Group NFV-SEC</p></li>
+<li><p>The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) -
+<a class="reference external" href="https://www.iso.org/home.html">www.iso.org</a>. The following ISO standards are of particular interest for NFVI:</p>
+<ul>
+<li><p>ISO/IEC 27002:2013 and ISO/IEC 27001: these are the international standards for best-practice information security
+management systems (ISMSs).</p></li>
+<li><p>ISO/IEC 27032: this is the international standard focusing explicitly on cybersecurity.</p></li>
+<li><p>ISO/IEC 27035: this is the international standard for incident management.</p></li>
+<li><p>ISO/IEC 27031: this is the international standard for ICT readiness for business continuity.</p></li>
+</ul>
+</li>
+</ul>
+<p>In the mobile network field, the GSM Association (<a class="reference external" href="https://www.gsma.com/">GSMA</a>) and its Fraud and Security working group
+of experts have developed a set of documents specifying how to secure the global mobile ecosystem.</p>
+<ul class="simple">
+<li><p>The document “Baseline Security controls”, <a class="reference external" href="https://www.gsma.com/security/resources/fs-31-gsma-baseline-security-controls/">FS.31 v2.0</a> <span id="id1">[<a class="reference internal" href="chapter01.html#id30" title="Baseline Security Controls. GSMA FS.31 version 2.0. URL: https://www.gsma.com/security/resources/fs-31-gsma-baseline-security-controls/.">31</a>]</span>, published in February 2020, is a practical guide intended for operators and
+stakeholders to check mobile network’s internal security. It lists a set of security controls from business controls
+(including security roles, organizational policies, business continuity management, and so on) to technological controls
+(for user equipment, networks, operations, and so on), covering all areas of mobile network, including Cloud Infrastructure.
+A checklist of questions allows the operator to improve the security of a deployed network.</p></li>
+<li><p>The document “Network Equipment Security Assurance Scheme – Development and Lifecycle Security Requirements” <span id="id2">[<a class="reference internal" href="chapter01.html#id51" title="Network Equipment Security Assurance Scheme – Development and Lifecycle Security Requirements. GSMA FS.16 v2.2. URL: https://www.gsma.com/security/resources/fs-16-network-equipment-security-assurance-scheme-development-and-lifecycle-security-requirements/.">32</a>]</span>,
+is part of a set of documents that aim to build a security assurance scheme for network equipment. Focusing on critical controls,
+it defines a set of requirements to be met by the vendors’ development and product lifecycle processes.</p></li>
+</ul>
+<p>The GSMA security activities are currently focused on 5G services and the new challenges posed by the virtualisation of network
+functions and by open-source software. The following two documents are in the scope of cloud infrastructure security:</p>
+<ul class="simple">
+<li><p>The white paper <a class="reference external" href="https://www.gsma.com/futurenetworks/resources/open-networking-the-security-of-open-source-software-deployment/">“Open Networking &amp; the Security of Open Source Software deployment”</a> <span id="id3">[<a class="reference internal" href="chapter01.html#id31" title="Open Networking &amp; the Security of Open Source Software Deployment. URL: https://www.gsma.com/futurenetworks/resources/open-networking-the-security-of-open-source-software-deployment/.">33</a>]</span>,
+deals with open-source software security. It highlights the importance of layered security defences and lists
+recommendations and security concepts that are able to secure deployments.</p></li>
+<li><p>The “5G Security Guide” <span id="id4">[<a class="reference internal" href="chapter01.html#id42" title="5G Security Guide. GSMA FS.40-v02.00, October 2021. URL: https://infocentre2.gsma.com/.">34</a>]</span> (non-binding Permanent Reference Document), covers 5G security in a holistic way,
+from user equipment to networks. This document describes the new security features in 5G. It includes a dedicated section on
+the impact of the cloud on 5G security, with recommendations on virtualisation, cloud-native applications, and containerisation
+security.</p></li>
+</ul>
+</section>
+</section>
+<section id="cloud-infrastructure-security">
+<h2>Cloud infrastructure security<a class="headerlink" href="#cloud-infrastructure-security" title="Link to this heading">¶</a></h2>
+<section id="general-platform-security">
+<h3>General platform security<a class="headerlink" href="#general-platform-security" title="Link to this heading">¶</a></h3>
+<p>The security certification of the platform typically needs to be the same as, or higher than, the workload requirements.</p>
+<p>The platform supports the workload, and in effect controls access to the workload to and from the external endpoints,
+such as carriage networks used by workloads, by data centre operations staff supporting the workload, or by tenants
+accessing workloads. From an access security perspective, the following diagram shows where the different access controls
+operate within the platform to provide access controls throughout the platform.</p>
+<figure class="align-default" id="id10">
+<img alt="&quot;Reference Model access controls&quot;" src="../_images/ch7-data-access-model.png" />
+<figcaption>
+<p><span class="caption-text">Reference Model access controls</span><a class="headerlink" href="#id10" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="high-level-functions-of-access-controls">
+<h4>High-level functions of access controls<a class="headerlink" href="#high-level-functions-of-access-controls" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>MGMT ACCESS CONTROLS</strong> - These provide platform access to workloads for service management. Typically, all management
+and control-plane traffic is encrypted.</p></li>
+<li><p><strong>DATA ACCESS CONTROLS</strong> - These control the east-west traffic between workloads and control of north-south traffic
+between the network function (NF) and other platform services, such as front-end carriage networks and platform services.
+Inherently strong separation between tenants is mandatory.</p></li>
+<li><p><strong>SERVICES ACCESS CONTROLS</strong> - These protect the platform services from any platform access.</p></li>
+<li><p><strong>BACK-END ACCESS CONTROLS</strong> - These provide data centre operations access to the platform, and subsequently, the
+workloads. Typically, stronger authent,ication, such as Two-Factor Authentication (2FA), is required, as well as the use
+of technologies, such as Role-Based Access Control (RBAC) and encryption. Application Programming Interface (API)
+gateways may be required for automated/script-driven processes.</p></li>
+<li><p><strong>FRONT-END ACCESS CONTROLS</strong> - These protect the platform from malicious carriage network access and provide
+connectivity for specific workloads to specific carriage networks. Carriage networks are those networks that are
+provided as public networks and are operated by carriers, in this case with interfaces that are usually subnetworks or
+virtual networks.</p></li>
+<li><p><strong>TENANT ACCESS CONTROLS</strong> - These provide appropriate tenant access controls to specific platform services and tenant
+workloads. These controls include Role-Based Access Control (RBAC), authentication controls as appropriate for the
+access arrangement, and Application Programming Interface (API) gateways for automated/script-driven processes.</p></li>
+</ul>
+</section>
+<section id="general-security-requirements-for-the-cloud-infrastructure">
+<h4>General security requirements for the cloud infrastructure<a class="headerlink" href="#general-security-requirements-for-the-cloud-infrastructure" title="Link to this heading">¶</a></h4>
+<p><strong>System hardening</strong></p>
+<ul class="simple">
+<li><p>Adhering to the principle of least privilege, there is no login to the root on any platform systems when root
+privileges are not required.</p></li>
+</ul>
+<p>..note:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Platform</span> <span class="n">systems</span> <span class="n">are</span> <span class="n">those</span> <span class="n">systems</span> <span class="n">that</span> <span class="n">are</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">platform</span><span class="o">.</span> <span class="n">They</span> <span class="n">include</span> <span class="n">systems</span> <span class="n">that</span> <span class="n">directly</span>
+<span class="ow">or</span> <span class="n">indirectly</span> <span class="n">affect</span> <span class="n">the</span> <span class="n">viability</span> <span class="n">of</span> <span class="n">the</span> <span class="n">platform</span><span class="o">.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ensure that all the platform’s components, including hypervisors, VMs, and so on, are kept up to date with the
+latest patch.</p></li>
+<li><p>To tightly control access to resources and protect them from malicious access and introspection, Linux
+Security Modules, such as SELinux, should be used to enforce access rules.</p></li>
+</ul>
+<p><strong>Vulnerability management</strong></p>
+<ul class="simple">
+<li><p>Security defects must be reported.</p></li>
+<li><p>The Cloud Infrastructure components must be continuously analysed from deployment to runtime. The cloud infrastructure
+must offer tools to check the code libraries and all other code against the
+<a class="reference external" href="https://cve.mitre.org/">Common Vulnerabilities and Exposures (CVE) databases</a> to identify the presence of any
+known vulnerabilities. The CVE is a list of publicly disclosed vulnerabilities and exposures that is maintained by
+<a class="reference external" href="https://www.mitre.org/">MITRE</a>. Each vulnerability is characterised by an identifier, a description, a date, and
+comments.</p></li>
+<li><p>When a vulnerability is discovered on a component (from operating systems to virtualisation layer components), the
+remediation action depends on its severity. The <a class="reference external" href="https://www.first.org/cvss/">Common Vulnerability Scoring System (CVSS)</a> allows you to calculate a vulnerability score. It is an open framework widely used in
+vulnerability management tools. The CVSS is owned and managed by the Forum of Incident Response and Security Teams
+(FIRST). The CVSS consists of three metric groups: base, temporal, and environmental. The base metrics produce a score
+ranging from 0 to 10. This score can then be refined using temporal and environmental metrics. The numerical score can
+be translated into a qualitative representation of the severity: low, medium, high, or critical. The severity score
+(or the associated qualitative representation) allows organisations to prioritise the remediation activities, with high
+scores mandating a fast response time. The vulnerable components must then be patched or replaced, or their access must
+be restricted.</p></li>
+<li><p>Security patches must be obtained from an authorised source, to ensure their integrity. Patches must be tested and
+validated in a preproduction environment before being deployed into production.</p></li>
+</ul>
+<p><strong>Platform access</strong></p>
+<ul class="simple">
+<li><p>Restrict traffic only to traffic that is necessary, and deny all other traffic, including traffic to and from the
+backend.</p></li>
+<li><p>Provide protections between the internet and the workloads, including web and volumetrics attack preventions.</p></li>
+<li><p>All host-to-host communications within the cloud provider network are to be cryptographically protected in transit.</p></li>
+<li><p>Use cryptographically protected protocols for administrative access to the platform.</p></li>
+<li><p>Data centre operations staff and systems must use management protocols that limit security risk, such as SNMPv3,
+SSH v2, ICMP, NTP, syslog, and TLS v1.2 or higher.</p></li>
+<li><p>Processes for managing platform access control filters must be documented, followed, and monitored.</p></li>
+<li><p>Role-Based Access Control (RBAC) must apply to all access to platform systems.</p></li>
+<li><p>All access to APIs, including backend APIs, must use the TLS protocol.</p></li>
+</ul>
+<p><strong>Security hardware assist for data in use</strong></p>
+<ul class="simple">
+<li><p>Server hardware architectures offer various technologies to assist with protecting data in use. The following table
+categorizes such technologies.</p></li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>HW technology</p></th>
+<th class="head"><p>Which security
+threat it mitigates</p></th>
+<th class="head"><p>Where it must be
+enabled</p></th>
+<th class="head"><p>How to operationally
+activate</p></th>
+<th class="head"><p>How to assure benign
+workloads are run</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Memory encryption on
+the level of the
+whole physical
+server.</p></td>
+<td><p>Protects data going
+between the CPU and
+the memory DIMMs.</p></td>
+<td><p>Server HW and BIOS.</p></td>
+<td><p>Configure BIOS. On
+virtualised software
+infrastructure label
+nodes to influence
+scheduling.</p></td>
+<td><p>Performed by
+application
+scheduling using
+node labels.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memory encryption on
+the level of the
+VMs.</p></td>
+<td><p>HW-protected data
+between the VMs.</p></td>
+<td><p>Server HW, BIOS, and
+hypervisor and guests
+(paravirtualised
+generally only in the
+guest BIOS).
+Attestation if
+assurance of workload
+is required.</p></td>
+<td><p>Configure BIOS and
+hypervisor. On
+virtualised software
+infrastructure label
+nodes to influence
+scheduling.</p></td>
+<td><p>Remote attestation
+of the freshly spun
+up VM, to provide
+measurements of the
+VM and of the
+platform patch level.</p></td>
+</tr>
+<tr class="row-even"><td><p>Secure enclaves
+within application.</p></td>
+<td><p>HW-protected
+specific application
+code and data in
+memory, from
+processes running at
+higher privilege
+levels, such as OS
+or hypervisor.</p></td>
+<td><p>Server HW and BIOS,
+hypervisor if used,
+device plugin if
+Kubernetes is used, and
+in application.
+Attestation if
+assurance of workload
+required.</p></td>
+<td><p>Configure the BIOS
+and the hypervisor,
+if used. If
+Kubernetes is used,
+then the pod
+descriptor requests
+for such resources.</p></td>
+<td><p>Remote attestation of
+freshly spun up
+enclave, to provide
+measurements of the
+enclave and of the
+platform patch level.</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Using computing accelerators, such as FPGA or GPU, that are connected via an I/O link, such as PCI Express, breaks
+the confidentiality property, unless HW-assisted encryption of the I/O transfers, runtime encryption of the
+accelerated workload, and attestation of the accelerated workload can be guaranteed.</p></li>
+</ul>
+<p><strong>Workload security</strong></p>
+<ul class="simple">
+<li><p>Restrict traffic to and from the workload only to traffic that is necessary, and deny all other traffic.</p></li>
+<li><p>Support zoning within a tenant workload using application-level filtering.</p></li>
+<li><p>Do not expose tenant-internal IP address details to another tenant.</p></li>
+<li><p>All production workloads must be separated from all non-production workloads, including separation between
+non-hosted non-production external networks.</p></li>
+</ul>
+<p><strong>Confidentiality and integrity</strong></p>
+<ul class="simple">
+<li><p>All data persisted to primary, replica, or backup storage is to be encrypted.</p></li>
+</ul>
+<p><strong>Monitoring and security audit</strong></p>
+<ul class="simple">
+<li><p>All platform security logs are to be time-synchronised.</p></li>
+<li><p>Logs are to be regularly scanned for events of interest.</p></li>
+<li><p>The cloud services must be regularly tested for vulnerability and penetration.</p></li>
+</ul>
+<p><strong>Platform provisioning and LCM</strong></p>
+<ul class="simple">
+<li><p>A platform change management process that is documented, properly communicated to staff and tenants, and rigorously
+followed.</p></li>
+<li><p>A process to check change management adherence that is implemented and rigorously followed.</p></li>
+<li><p>An approved system or process for last-resort access must exist for the platform.</p></li>
+<li><p>Where there are multiple hosting facilities used in the provisioning of a service, network communications between the
+facilities for the purpose of backup, management, and workload communications are cryptographically protected in
+transit between data centre facilities.</p></li>
+<li><p>Continuous cloud security compliance is mandatory.</p></li>
+<li><p>An incident response plan must exist for the platform.</p></li>
+</ul>
+</section>
+</section>
+<section id="platform-backend-access-security">
+<h3>Platform backend access security<a class="headerlink" href="#platform-backend-access-security" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Validate and verify the integrity of the resources management requests coming from a higher orchestration layer to
+the cloud infrastructure manager.</p></li>
+</ul>
+</section>
+<section id="platform-frontend-access-security">
+<h3>Platform frontend access security<a class="headerlink" href="#platform-frontend-access-security" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Frontend network security at the application level is the responsibility of the workload. However, the platform
+must ensure the isolation and integrity of tenant connectivity to frontend networks.</p></li>
+<li><p>The frontend network may provide Distributed Denial Of Service (DDoS) support.</p></li>
+</ul>
+</section>
+<section id="infrastructure-as-a-code-security">
+<h3>Infrastructure as a Code security<a class="headerlink" href="#infrastructure-as-a-code-security" title="Link to this heading">¶</a></h3>
+<p>Infrastructure as a Code (IaaC), alternatively known as Infrastructure as Code (IaC), refers to the software used
+for the declarative management of the cloud infrastructure resources. To dynamically address user requirements,
+release features incrementally, and deliver more speedily, DevSecOps teams use best practices, including continuous
+integration and delivery, and integrate information security controls and scanning tools into these processes, with
+with the aim of providing timely and meaningful feedback. This includes identifying vulnerabilities and security
+policy violations. With these automated security testing and analysis capabilities, it is of critical value in
+detecting vulnerabilities early and maintaining a consistent security policy.</p>
+<p>Because of the high complexity of modern Telco cloud infrastructures, even minor IaaC code changes could
+disproportionately and sometimes disastrously affect downstream security and privacy. Therefore, the integration of
+security testing into the IaaC software development pipeline requires security activities to be automated using
+security tools, and integrated with the native DevOps and DevSecOps tools and procedures.</p>
+<p>The DevSecOps Automation best practices advocate, among other things, the implementation of a framework for security
+automation and programmatic execution, as well as the monitoring of security controls to identify, protect, detect,
+respond, and recover from cyber threats. The framework used for IaaC security is based on the joint publication of
+the Cloud Security Alliance (CSA) and SAFECode,
+“<a class="reference external" href="https://safecode.org/resource-secure-development-practices/the-six-pillars-of-devsecops-automation">The Six Pillars of DevSecOps: Automation (2020)</a>”
+<span id="id5">[<a class="reference internal" href="chapter01.html#id32" title="The Six Pillars of DevSecOps: Automation. 2020. URL: https://safecode.org/resource-secure-development-practices/the-six-pillars-of-devsecops-automation/.">35</a>]</span>. This document uses the base definitions and constructs from
+<a class="reference external" href="https://www.iso.org/standard/73906.html">ISO 27000</a> <span id="id6">[<a class="reference internal" href="chapter01.html#id33" title="Information technology — Security techniques — Information security management systems — Overview and vocabulary. ISO/IEC 27000:2018, 2018. URL: https://www.iso.org/standard/73906.html.">36</a>]</span>, and the CSA’s
+<a class="reference external" href="https://cloudsecurityalliance.org/artifacts/information-security-management-through-reflexive-security/">Information Security Management through Reflexive Security</a> <span id="id7">[<a class="reference internal" href="chapter01.html#id34" title="Information Security Management through Reflexive Security. 2019. URL: https://cloudsecurityalliance.org/artifacts/information-security-management-through-reflexive-security/.">37</a>]</span>.</p>
+<p>The framework identifies the following five distinct stages:</p>
+<ol class="arabic simple">
+<li><p>Secure design and architecture.</p></li>
+<li><p>Secure coding (developer IDE and code repository).</p></li>
+<li><p>Continuous build, integration, and testing.</p></li>
+<li><p>Continuous delivery and deployment.</p></li>
+<li><p>Continuous monitoring and runtime defence.</p></li>
+</ol>
+<p>Triggers and checkpoints define transitions within stages. When designing DevSecOps security processes, it should be
+borne in mind that when a trigger condition is met, one or more security activities is activated. The outcomes of these
+security activities need to determine whether or not the requirements of the process checkpoint are satisfied. If the
+outcome of the security activities meets the requirements, the next set of security activities is performed as the
+process transition to the next checkpoint, or, alternatively, to the next stage, if the checkpoint is the last one in
+the current stage. If, however, the outcome of the security activities does not meet the requirements, then the
+process should not be allowed to advance to the next checkpoint. In
+“<a class="reference internal" href="#consolidated-security-requirements"><span class="std std-ref">Consolidated security requirements</span></a>”, the IaaC security activities are presented as security
+requirements mapped to particular stages and trigger points.</p>
+</section>
+<section id="security-of-production-and-non-production-environments">
+<h3>Security of production and non-production environments<a class="headerlink" href="#security-of-production-and-non-production-environments" title="Link to this heading">¶</a></h3>
+<p>Telecommunications operators often focus their security efforts on the production environments actively used by their
+customers or their employees, or both. This is critical because a breach of these systems can seriously damage the
+company and its customers. In addition, production systems often contain the most valuable data, making them attractive
+targets for intruders. However, an insecure non-production (development and testing) environment can also create real
+problems because they may leave a company open to corporate espionage, sabotage by competitors, and theft of sensitive
+data.</p>
+<p>Security is about mitigating risk. If operators do not have the same level of security in their non-production
+environments compared to production, then an additional level of risk may be introduced. This is especially true if
+such non-production environments accept outside connections (for example, for suppliers or partners, which is quite
+normal in complex Telco ecosystems). There is a need to monitor the security of these non-production environments. The
+gold standard, therefore, is to implement the same security policies in production and non-production infrastructure.
+This would reduce risk and typically simplify operations by using the same control tools and processes. However, for
+practical reasons, some of the security monitoring rules may differ. As an example, if a company maintains a separate,
+isolated environment for infrastructure software development experimentation, the configuration monitoring rules may
+be relaxed, in comparison with the production environment, where such experimentation is not allowed. Therefore, in
+this document, when dealing with such dilemmas, the focus has been placed on those non-production security requirements
+that must be on the same level as in the production environment (typically of <strong>must</strong> type), leaving relaxed
+requirements (typically of <strong>should</strong> or <strong>may</strong>) in cases where there is no such necessity.</p>
+<p>In the context of contemporary telecommunications technology, the cloud infrastructure typically is considered
+Infrastructure as a Code (IaaC). This fact implies that many aspects of code-related security automatically apply to
+IaaC. Security aspects of IaaC in the Telco context are discussed in
+“<a class="reference internal" href="#infrastructure-as-a-code-security"><span class="std std-ref">Infrastructure as a Code security</span></a>”, which introduces the relevant framework for security
+automation and programmatic execution, as well as monitoring of security controls. Organisations need to identify which
+of the stages, or activities within these stages, should be performed within the non-production versus production
+environments. This mapping will then dictate which security activities defined for particular stages and triggers
+(such as vulnerability tests, patch testing, and penetration tests) are mandatory, and which can be regarded as
+discretionary.</p>
+</section>
+</section>
+<section id="workload-security-and-vendor-responsibility">
+<h2>Workload security and vendor responsibility<a class="headerlink" href="#workload-security-and-vendor-responsibility" title="Link to this heading">¶</a></h2>
+<section id="software-hardening">
+<h3>Software hardening<a class="headerlink" href="#software-hardening" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>There must be no hard-coded credentials or clear text passwords in the code and images. The software must support
+configurable or industry-standard password complexity rules.</p></li>
+<li><p>The software should be independent of the infrastructure platform (no OS point release dependencies to patch).</p></li>
+<li><p>The software must be code-signed. All individual subcomponents are assessed and verified for End-user License
+Agreement (EULA) violations.</p></li>
+<li><p>The software should have a process for discovery, classification, communication, and timely resolution of security
+vulnerabilities (that is, bumg bounty, penetration testing/scan findings, and so on).</p></li>
+<li><p>The software should support recognised encryption standards. Encryption should be decoupled from the software.</p></li>
+<li><p>The software should have support for configurable banners to display authorised use criteria/policies.</p></li>
+</ul>
+</section>
+<section id="port-protection">
+<h3>Port protection<a class="headerlink" href="#port-protection" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Unused software and unused network ports should be disabled by default.</p></li>
+</ul>
+</section>
+<section id="software-code-quality-and-security">
+<h3>Software code quality and security<a class="headerlink" href="#software-code-quality-and-security" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Vendors should use industry-recognized software testing suites.</p>
+<ul>
+<li><p>Static and dynamic scanning.</p></li>
+<li><p>Automated static code review with remediation of medium/high/critical security issues. The tool used for static
+code analysis, and analysis of the code being released, must be shared.</p></li>
+<li><p>Dynamic security tests with remediation of medium/high/critical security issues. The tool used for dynamic
+security analysis of code being released must be shared.</p></li>
+<li><p>Penetration tests (pen tests) with remediation of medium/high/critical security issues.</p></li>
+<li><p>The methodology for ensuring that security is included in the Agile/DevOps delivery lifecycle for ongoing
+feature enhancement/maintenance.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="alerting-and-monitoring">
+<h3>Alerting and monitoring<a class="headerlink" href="#alerting-and-monitoring" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Security event logging: all security events must be logged, including informational events.</p></li>
+<li><p>Privilege escalation must be detected.</p></li>
+</ul>
+</section>
+<section id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Logging output should support customizable log retention and log rotation.</p></li>
+</ul>
+</section>
+</section>
+<section id="workload-security-cloud-infrastructure-operator-responsibility">
+<h2>Workload security: cloud infrastructure operator responsibility<a class="headerlink" href="#workload-security-cloud-infrastructure-operator-responsibility" title="Link to this heading">¶</a></h2>
+<p>The operator’s responsibility is not only to make sure that security is included in all the vendor-supplied
+infrastructure and NFV components, but also to maintain the security functions from an operational and
+management perspective. This includes, but is not limited to, securing the following elements:</p>
+<ul class="simple">
+<li><p>Maintaining standard security operational management methods and processes.</p></li>
+<li><p>Monitoring and reporting functions.</p></li>
+<li><p>Processes to address regulatory compliance failures.</p></li>
+<li><p>Support for appropriate incident response and reporting.</p></li>
+<li><p>Methods to support appropriate remote attestation certification of the validity of the security components,
+architectures, and methodologies used. This can include the automated TLS certificate lifecycle management for workloads:</p>
+<ul>
+<li><p>Accept signing requests for certificates,</p></li>
+<li><p>Generate and manage private keys and Certificate Signing Requests (CSRs),</p></li>
+<li><p>Manage renewal before expiry.</p></li>
+</ul>
+</li>
+</ul>
+<section id="remote-attestation-opencit">
+<h3>Remote attestation/OpenCIT<a class="headerlink" href="#remote-attestation-opencit" title="Link to this heading">¶</a></h3>
+<p>Cloud infrastructure operators must ensure that remote attestation methods are used to remotely verify the trust status
+of a given cloud infrastructure platform. The concept is based on boot integrity measurements leveraging the Trusted
+Platform Module (TPM) built into the underlying hardware. Remote attestation can be provided as a service. It may be
+used by the platform owner or by a customer to verify that the platform has booted in a trusted manner. Practical
+implementations of the remote attestation service include the Open Cloud Integrity Tool (OpenCIT). OpenCIT provides
+‘Trust’ visibility of the cloud infrastructure. It enables compliance in cloud datacenters by establishing the root
+of trust, and builds a chain of trust across hardware, operating system, hypervisor, virtual machines, and containers.
+It includes asset tagging for location and boundary control. The platform trust and asset tag attestation information
+is used by orchestrators and/or policy compliance management to ensure workloads are launched on trusted and location-
+or boundary-compliant platforms. They provide the necessary visibility and auditability of infrastructure in both
+public and private cloud environments.</p>
+</section>
+<section id="workload-image">
+<h3>Workload image<a class="headerlink" href="#workload-image" title="Link to this heading">¶</a></h3>
+<p>Only workload images from trusted sources may be used. Secrets must be stored outside the images.</p>
+<p>It is easy to tamper with workload images. It requires only a few seconds to insert some malware into a workload image
+file while it is being uploaded to an image database or transferred from an image database to a compute node. To guard
+against this danger, workload images must be cryptographically signed and verified during launch time. This can be
+achieved by setting up a signing authority and modifying the hypervisor configuration to verify an image’s signature
+before it is launched.</p>
+<p>To implement image security, the workload operator must test the image and the supplementary components, to verify that
+everything conforms to the security policies and best practices. The use of image scanners, such as OpenSCAP or Trivy,
+to determine security vulnerabilities is recommended.</p>
+<p>CIS hardened images should be used whenever possible. CIS provides, for example, virtual machine hardened images based
+on CIS benchmarks for various operating systems. Another best practice is to use minimalist base images whenever
+possible.</p>
+<p>Images are stored in registries. The images registry must contain vetted images only. The registry must remain a source
+of trust for images over time. Images must therefore be continuously scanned to identify vulnerabilities and out-of-date
+versions, as described previously. Access to the registry is an important security risk. It must be granted by a
+dedicated authorisation process and through secure networks that enforce authentication, integrity, and confidentiality.</p>
+</section>
+<section id="networking-security-zoning">
+<h3>Networking security zoning<a class="headerlink" href="#networking-security-zoning" title="Link to this heading">¶</a></h3>
+<p>Network segmentation is important for ensuring that applications can only communicate with those applications with
+which they are supposed to communicate. To prevent a workload from impacting other workloads or hosts, it is good
+practice to separate workload traffic and management traffic. This prevents attacks by VMs or containers breaking
+into the management infrastructure. It is also best to separate the VLAN traffic into appropriate groups and disable
+all other VLANs that are not in use. Likewise, workloads of similar functionalities can be grouped into specific zones
+and their traffic isolated. Each zone can be protected using access control policies and a dedicated firewall based on
+the required security level.</p>
+<p>It is recommended to set network security policies following the principle of least privileged, only allowing
+approved protocol flows. For example, set ‘default deny’ for inbound flows and add the approved policies required for
+the functioning of the application running on the NFV infrastructure.</p>
+</section>
+<section id="volume-encryption">
+<h3>Volume encryption<a class="headerlink" href="#volume-encryption" title="Link to this heading">¶</a></h3>
+<p>Virtual volume disks associated with workloads may contain sensitive data. Therefore, they need to be protected.
+It is best practice is to secure the workload volumes by encrypting them and storing the cryptographic keys in safe
+locations. Encryption functions rely on a cloud infrastructure internal key management service. Be aware that the
+decision to encrypt the volumes might cause reduced performance. Therefore, the decision to encrypt needs to be
+dependent on the requirements of the given infrastructure. The Trusted Platform Module (TPM) module can also be used
+to store these keys securely. The hypervisor should also be configured to securely erase the virtual volume disks,
+in the event of application crashes, or in case it is intentionally destroyed to protect it from unauthorized access.</p>
+<p>For sensitive data encryption, when data sovereignty is required, an external Hardware Security Module (HSM) should
+be integrated, in order to protect the cryptographic keys. A HSM is a physical device which manages and stores
+secrets. Usage of an HSM strengthens the security of the secrets. For 5G services, GSMA FASG recommends the
+implementation of an HSM to secure the storage of the Universal Integrated Circuit Card (UICC) credentials.</p>
+</section>
+<section id="root-of-trust-for-measurements">
+<h3>Root of trust for measurements<a class="headerlink" href="#root-of-trust-for-measurements" title="Link to this heading">¶</a></h3>
+<p>The following sections define the mechanisms to ensure the integrity of the infrastructure pre-boot and post-boot
+(running). The following definitions detail a set of terms used in those sections.</p>
+<ul class="simple">
+<li><p>The hardware root of trust helps with the pre-boot and post-boot security issues.</p></li>
+<li><p>The Unified Extensible Firmware Interface (UEFI) adheres to standards defined by an industry consortium. Vendors
+(hardware and software) and solution providers collaborate to define common interfaces, protocols, and structures
+for computing platforms.</p></li>
+<li><p>The Platform Configuration Register (PCR) is a memory location in the TPM that is used to store TPM Measurements
+(hash values generated by the SHA-1 standard hashing algorithm). The PCRs are cleared only on TPM reset. UEFI
+defines 24 PCRs, of which the first 16, PCR 0 - PCR 15, are used to store measures created during the UEFI boot
+process.</p></li>
+<li><p>The Root of Trust for Measurement (RTM) is a computing engine that is capable of making integrity measurements.</p></li>
+<li><p>The Core Root of Trust for Measurements (CRTM) is a set of instructions executed when performing an RTM.</p></li>
+<li><p>Platform Attestation provides proof of validity of the platform’s integrity measurements. For details, see
+“<a class="reference internal" href="#remote-attestation-opencit"><span class="std std-ref">Remote attestation/OpenCIT</span></a>”.</p></li>
+</ul>
+<p>Values stored in a PCR cannot be reset (or forged), as they can only be extended. Whenever a measurement is sent to a
+TPM, the hash of the concatenation of the current value of the PCR and the new measurement is stored in the PCR. The PCR
+values are used to encrypt data. If the proper environment is not loaded, which will result in different PCR values, the
+TPM will be unable to decrypt the data.</p>
+<section id="static-root-of-trust-for-measurement">
+<h4>Static Root of Trust for Measurement<a class="headerlink" href="#static-root-of-trust-for-measurement" title="Link to this heading">¶</a></h4>
+<p>The Static Root of Trust for Measurement (SRTM) begins with measuring and verifying the integrity of the BIOS firmware.
+It then measures additional firmware modules, verifies their integrity, and adds each component’s measure to an SRTM
+value. The final value represents the expected state of the boot path loads. The SRTM stores the results as one or more
+values stored in PCR storage. In the SRTM, the CRTM resets PCRs 0 to 15 only at boot.</p>
+<p>Using a Trusted Platform Module (TPM) as a hardware root of trust, measurements of platform components, such as
+firmware, bootloader, and OS kernel, can be securely stored and verified. Cloud infrastructure operators should ensure
+that the TPM support is enabled in the platform firmware, so that the platform measurements are correctly recorded
+during boot time.</p>
+<p>A simple process works in the following way:</p>
+<ol class="arabic simple">
+<li><p>The BIOS CRTM (Bios Boot Block) is executed by the CPU and is used to measure the BIOS firmware.</p></li>
+<li><p>The SHA1 hash of the result of the measurement is sent to the TPM.</p></li>
+<li><p>The TPM stores this new result hash by extending the currently stored value.</p></li>
+<li><p>The hash comparisons can validate settings, as well as the integrity of the modules.</p></li>
+</ol>
+<p>Cloud infrastructure operators should ensure that OS kernel measurements can be recorded by using a TPM-aware
+bootloader (for example, tboot, (see <a class="reference external" href="https://sourceforge.net/projects/tboot/">https://sourceforge.net/projects/tboot/</a>)
+or shim, (see <a class="reference external" href="https://github.com/rhboot/shim">https://github.com/rhboot/shim</a>)), which can extend the root
+of trust up to the kernel level.</p>
+<p>The validation of the platform measurements can be performed by the TPM’s launch control policy (LCP) or through
+the remote attestation server.</p>
+</section>
+<section id="dynamic-root-of-trust-for-measurement">
+<h4>Dynamic Root of Trust for Measurement<a class="headerlink" href="#dynamic-root-of-trust-for-measurement" title="Link to this heading">¶</a></h4>
+<p>In the Dynamic Root of Trust for Measurement (DRTM), the RTM for the running environment is stored in the PCRs
+starting with PCR 17.</p>
+<p>If a remote attestation server is used to monitor platform integrity, the operators should ensure that the
+attestation is performed periodically or in a timely manner. Additionally, platform monitoring can be extended to
+monitor the integrity of the static file system at run-time by using a TPM-aware kernel module, such as Linux
+Integrity Measurement Architecture (IMA). For details, see
+<a class="reference external" href="https://sourceforge.net/p/linux-ima/wiki/Home">https://sourceforge.net/p/linux-ima/wiki/Home</a>. Alternatively,
+you can use the trust policies functionality of OpenCIT.
+See <a class="reference external" href="https://github.com/opencit/opencit/wiki/Open-CIT-3.2-Product-Guide">https://github.com/opencit/opencit/wiki/Open-CIT-3.2-Product-Guide</a> for details.</p>
+<p>The static file system includes a set of important files and folders which do not change between reboots during the
+platform’s lifecycle. This allows the attestation server to detect any tampering with the static file system during
+the platform’s runtime.</p>
+</section>
+</section>
+<section id="zero-trust-architecture">
+<h3>Zero Trust Architecture<a class="headerlink" href="#zero-trust-architecture" title="Link to this heading">¶</a></h3>
+<p>The sections “<a class="reference internal" href="#remote-attestation-opencit"><span class="std std-ref">Remote attestation/OpenCIT</span></a>” and
+“<a class="reference internal" href="#root-of-trust-for-measurements"><span class="std std-ref">Root of trust for measurements</span></a>” provide
+methods to ensure the integrity of the infrastructure. The Zero Trust concept goes a step further, by enabling
+the operator to build secure by design cloud infrastructure, from hardware to applications. The adoption of
+Zero Trust principles mitigates the threats and attacks within an enterprise, a network, or an infrastructure,
+thereby ensuring a fine grained segmentation between each component of the system.</p>
+<p>Zero Trust Architecture (ZTA), as described in <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf">NIST SP 800-207 publication</a> <span id="id8">[<a class="reference internal" href="chapter01.html#id35" title="Zero Trust Architecture (ZTA). NIST SP 800-207. URL: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf.">38</a>]</span>, assumes there is no implicit trust granted to assets or
+user accounts, whatever their location or ownership. The Zero Trust approach focuses on protecting all types of resources:
+data, services, devices, infrastructure components, and virtual and cloud components. Trust is never granted implicitly,
+and must be evaluated continuously.</p>
+<p>The ZTA principles applied to the cloud infrastructure components are as follows:</p>
+<ul class="simple">
+<li><p>The adoption of least privilege configurations.</p></li>
+<li><p>The requirement of authentication and authorization for each entity, service, or session.</p></li>
+<li><p>Fine-grained segmentation.</p></li>
+<li><p>Separation of the control plane and the data plane.</p></li>
+<li><p>Secure internal and external communications.</p></li>
+<li><p>The continuous monitoring, testing, and analysing of security.</p></li>
+</ul>
+<p>Zero Trust principles should also be applied to cloud-native applications. With the increasing use of these applications,
+which are designed with microservices and deployed using containers as packaging and Kubernetes as an orchestrator, the
+security of east-west communications between components must be carefully addressed. The use of secured communication
+protocols brings a first level of security. However, considering each component as non-trustworthy will minimize the risk
+for applications to be compromised. A good practice is to implement the proxy-based service mesh. This will provide a
+framework to build a secured environment for microservices-based applications, offering services such as service
+discovery, authentication and authorisation policies enforcement, network resilience, and security monitoring
+capabilities. The two documents,
+<a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf">NIST SP 800-204A</a>(Building Secure
+Microservices-based Applications Using Service-Mesh Architecture) and
+<a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/204/b/final">NIST SP 800-204B</a>(Attribute-based Access Control for
+Microservices-based Applications Using a Service Mesh), describe service mesh, and provide guidance for the deployment
+of service mesh components.</p>
+</section>
+</section>
+<section id="software-supply-chain-security">
+<h2>Software supply chain security<a class="headerlink" href="#software-supply-chain-security" title="Link to this heading">¶</a></h2>
+<p>Software supply chain attacks are increasing worldwide and can cause serious damage. Many enterprises and
+organisations are experiencing these threats. Aqua Security’s experts estimated that <a class="reference external" href="https://www.aquasec.com/news/aqua-securitys-argon-experts-find-software-supply-chain-attacks-more-than-tripled-in-2021/">software supply chain attacks
+have more than tripled in 2021</a>.
+Reuters reported in August 2021 that the <a class="reference external" href="https://www.reuters.com/technology/kaseya-ransomware-attack-sets-off-race-hack-service-providers-researchers-2021-08-03/">ransomware affecting Kaseya Virtual System Administration product</a>
+caused downtime for over 1500 companies. In the case of the <a class="reference external" href="https://www.reuters.com/technology/codecov-hackers-breached-hundreds-restricted-customer-sites-sources-2021-04-19/">backdoor inserted in codecov software</a>,
+hundreds of customers were affected. The SolarWinds attack detailed in <a class="reference external" href="https://www.techtarget.com/searchsecurity/news/252494495/Defending-against-SolarWinds-attacks-What-can-be-done">Defending against SolarWinds attacks</a>
+is another example of how software suppliers are targeted and, by rebound, their customers affected.
+Open-source code weaknesses can also be exploited by attackers. The
+<a class="reference external" href="https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance">Log4J</a> vulnerability, impacting many
+applications, is a recent example in this field. When addressing cyber security, the vulnerabilities of the
+software supply chain are often not taken into account. Some governments are already alerting and requesting
+actions to face these risks. The British government is hardening the law and standards of cyber security for
+the supply chain. The US government requested actions to enhance software supply chain security. The security
+of the software supply chain is a challenge also pointed out by the European Network and Information Security
+Agency, ENISA, in its report <a class="reference external" href="https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance">NFV Security in 5G - Challenges and Best Practices</a>.</p>
+<section id="software-security">
+<h3>Software security<a class="headerlink" href="#software-security" title="Link to this heading">¶</a></h3>
+<p>Software supply chain security is crucial and is made complex by the greater attack surface provided by the
+many different supply chains in virtualised, containerised, and edge environments.
+All software components must be trusted, from commercial software and open-source
+code to proprietary software, as well as the integration of these components.
+The SAFECode white paper <a class="reference external" href="https://safecode.org/wp-content/uploads/2017/05/SAFECode_TPC_Whitepaper.pdf">“Managing Security Risks Inherent in the Use of Third-party Components”</a> provides
+a detailed risk management approach.</p>
+<p>To secure the software code, the following methods must be applied:</p>
+<ul class="simple">
+<li><p>Use best practices coding, such as design pattern, recommended in the <a class="reference external" href="https://12factor.net/">Twelve-Factor App</a>
+or <a class="reference external" href="https://owasp.org/">OWASP “Secure Coding Practices - Quick Reference Guide”</a>.</p></li>
+<li><p>Perform threat modelling, as described in the <a class="reference external" href="https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf">“Tactical Threat Modeling”</a> document, published by SAFECode.</p></li>
+<li><p>Use trusted, authenticated, and identified software images that are provided by authenticated software
+distribution portals.</p></li>
+<li><p>Require suppliers to provide a Software Bill of Materials to identify all the components parts of their product’s
+software releases with their dependencies, and eventually identify the open-source modules.</p></li>
+<li><p>Test the software in a pre-production environment to validate integration.</p></li>
+<li><p>Detect vulnerabilities using security tools scanning and Common Vulnerabilities and Exposures (CVE), and apply
+remediation actions according to their severity ratings.</p></li>
+<li><p>Report and remove vulnerabilities by upgrading components using authenticated software update distribution portals.</p></li>
+<li><p>Actively monitor the open-source software repositories to determine if new versions have been released that address
+identified vulnerabilities discovered in the community.</p></li>
+<li><p>Secure the integration process by securing the software production pipeline.</p></li>
+<li><p>Adopt a DevSecOps approach and rely on testing automation throughout the software build, integration, delivery,
+deployment, and runtime operation to perform automatic security checks, as described in ”Infrastructure
+as a Code Security”.</p></li>
+</ul>
+</section>
+<section id="open-source-software-security">
+<h3>Open-source software security<a class="headerlink" href="#open-source-software-security" title="Link to this heading">¶</a></h3>
+<p>Open-source code is present in cloud infrastructure software from BIOS and host operating systems to virtualisation
+layer components. The most obvious is represented by Linux, KVM, QEMU, OpenStack, and Kubernetes. Workloads
+components can also be composed of open-source code. The proportion of open-source code to an application source code
+can vary. It can be partial or total, visible or invisible. Open-source code can be upstream code coming directly
+from open-source public repositories, or code within a commercial application or network function.</p>
+<p>The strength of open-source code is the availability of code source developed by a community which maintains and
+improves it. Integration of open-source code with application source code helps to develop and produce applications
+faster. This could, however, introduce security risks if a risk management DevSecOps approach is not implemented.
+The GSMA white paper  <a class="reference external" href="https://www.gsma.com/futurenetworks/resources/open-networking-the-security-of-open-source-software-deployment/">“Open Networking &amp; the Security of Open Source Software Deployment - Future Networks”</a>
+highlights these risks and addresses the challenges coming with open-source code usage. Among the security risks are
+poor code quality containing security flaws, an obsolete code with known vulnerabilities, and the lack of knowledge
+of the branch activity of the open-source communities. An active branch comes with bugs fixes. This is not the case
+with an inactive branch. The GSMA white paper develops means to mitigate these security issues.</p>
+<p>Poor code quality is a risk factor. One advantage of open-source code is its transparency. Code can be inspected using
+tools with various capabilities, such as open-source software discovery, and static and dynamic code analysis.</p>
+<p>Each actor in the whole chain of software production must use a dedicated internal isolated repository separated from
+the production environment to store vetted open-source content. This content can include images, as well as the
+installer and utilities. These software packages must be signed and the signature must be verified prior to the
+installation of the packages or images. Access to the repository must be granted by a dedicated authorization. The
+code must be inspected and vulnerabilities identified as described previously. After the software has been validated,
+it can be moved to the appropriate production repository.</p>
+</section>
+<section id="software-bill-of-materials">
+<h3>Software Bill of Materials<a class="headerlink" href="#software-bill-of-materials" title="Link to this heading">¶</a></h3>
+<p>To ensure software security, it is crucial to identify the software components and their origins. The
+Software Bill of Materials (SBOM), described by the US National Telecommunications and Information Administration
+<a class="reference external" href="https://ntia.gov/page/software-bill-materials">US NTIA</a>, is a recommended tool for identifying software
+components. The SBOM is an inventory of software components and the relationships between them. The NTIA describes
+how to establish an SBOM and provides SBOM standard data formats. In the event of vulnerability being detected in a
+component, the SBOM inventory is an effective means of identifying the impacted component and of enabling
+remediation.</p>
+<p>A transparent software supply chain offers benefits for the remediation of vulnerabilities. It also offers benefits
+for licensing management and provides assurance of the source and integrity of the components. To achieve and
+benefit from this transparency, a shared model must be supported by industry. This is the goal of the work
+performed by the US Department of Commerce and the National Telecommunications and Information Administration (NTIA)
+and published, in the report <a class="reference external" href="https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf">“The Minimum Elements for a Software Bill of Materials (SBOM)”</a>, in July 2021. This document gives
+guidance and specifies the minimum elements for the SBOM as a starting point.</p>
+<p>A piece of software can be modelled as a hierarchical tree with components and subcomponents. Each
+component should have its SBOM, including, as a baseline, the information detailed in the following table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Data field</strong></p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Supplier name</strong></p></td>
+<td><p>The name of an entity that creates, defines, and
+identifies the components.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Component name</strong></p></td>
+<td><p>The designation assigned to a unit of software
+defined by the original supplier.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Component version</strong></p></td>
+<td><p>The identifier used by the supplier to specify a
+change in the software from a previously
+identified version.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Other unique identifiers</strong></p></td>
+<td><p>Other identifiers that are used to identify a
+component, or to serve as a look-up key for
+relevant databases.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Dependency relationship</strong></p></td>
+<td><p>Characterization of the relationship that an
+upstream component X is included in software Y.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Author of SBOM data</strong></p></td>
+<td><p>The name of the entity that creates the SBOM data
+for this component.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Timestamp</strong></p></td>
+<td><p>The record of the date and time of the SBOM data
+assembly.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-2</strong>: SBOM components of the data fields. (Source:
+<a class="reference external" href="https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf">NTIA</a>)</p>
+<p>For more details about each data field, see the NTIA SBOM document. Examples of commonly used identifiers are
+provided.</p>
+<p>To use SBOMs efficiently and encourage their widespread adoption, information must be generated and shared in a
+standard format. This format must be machine-readable, to allow automation. Proprietary formats should not be used.
+Multiple data formats exist covering baseline SBOM information. The three key formats, Software Package Data
+eXchange (SPDX), CycloneDX, and Software Identification Tags (SWID tags), are interoperable for the core data
+fields and use common data syntax representations.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://spdx.dev/">SPDX</a> is an open-source machine-readable format developed under the umbrella of the Linux
+Foundation. <a class="reference external" href="https://spdx.dev/use/specifications/">SPDX specification 2.2</a> has been published as the standard
+ISO/IEC 5962:2021. It provides a language for communicating the data, licenses, copyrights, and security
+information associated with software components. With SPDX specification 2.2, multiple file formats are available:
+YAML, JSON, RDF/XML, tag:value flat text, and xls spreadsheets.</p></li>
+<li><p><a class="reference external" href="https://cyclonedx.org/">CycloneDX</a> was designed in 2017 for use with the Open Web Application Security Project
+(OWASP) Dependency-Track tool, an open-source component analysis platform that identifies risk in the software
+supply chain. CycloneDX supports a wide range of software components, including applications, containers,
+libraries, files, firmware, frameworks, and operating systems. The CycloneDX project provides standards in XML,
+JSON, and Protocol Buffers, as well as a large collection of official and community supported tools that create or
+interoperate with the standard.</p></li>
+<li><p><a class="reference external" href="https://nvd.nist.gov/products/swid">SWID Tags</a> is an international XML-based standard used by commercial
+software publishers. It has been published as the standard ISO/IEC 19770-2. The specification defines four types
+of SWID tags: primary, patch, corpus, and supplemental, to describe a software component.</p></li>
+</ul>
+<p>The SBOM should be integrated into the operations of the secure development lifecycle, especially for vulnerabilities
+management. It should also evolve in time. When a software component is updated, a new SBOM must be created. The
+elements described in this section are part of an ongoing effort. Improvements, such as SBOM integrity and
+authenticity, will be added in the future.</p>
+</section>
+<section id="vulnerability-identification">
+<h3>Vulnerability identification<a class="headerlink" href="#vulnerability-identification" title="Link to this heading">¶</a></h3>
+<p>Vulnerability management must be continuous: from development to runtime, not only on the development process, but
+during the entire life of the application, workload, or service. When a public vulnerability on a component is
+released, an update of the component must be triggered. When an SBOM recording the code composition is provided,
+the affected components are easier to identify. It is essential to remediate the affected components as soon as
+possible, because the vulnerability can be exploited by attackers who can exploit code weaknesses.</p>
+<p>The CVE and the CVSS must be used to identify vulnerabilities and their severity rating. The CVE identifies,
+defines, and catalogues publicly disclosed cybersecurity vulnerabilities. The CVSS is an open framework to
+calculate the severity rating of the vulnerabilities.</p>
+<p>Image scanning tools, including open-source tools such as Clair or Trivy, are useful for auditing images for
+security vulnerabilities. The results of a vulnerabilities scan audit must be analysed carefully when it is applied
+to a vendor offering packaged solutions. As patches are not detected by scanning tools, some components can be
+detected as obsolete.</p>
+</section>
+</section>
+<section id="testing-and-certification">
+<span id="testing-certification"></span><h2>Testing and certification<a class="headerlink" href="#testing-and-certification" title="Link to this heading">¶</a></h2>
+<section id="testing-demarcation-points">
+<h3>Testing demarcation points<a class="headerlink" href="#testing-demarcation-points" title="Link to this heading">¶</a></h3>
+<p>It is not enough simply to secure all the potential points of entry and hope for the best. Any cloud infrastructure
+architecture must be able, as much as possible, to be tested and confirmed to be protected from attack. The ability
+to continuously test the infrastructure for vulnerabilities is critical for maintaining the highest possible level
+of security. Testing needs to be done both from the inside and the outside of the systems and networks. Below is a
+sample of some of the available testing methodologies and frameworks.</p>
+<ul class="simple">
+<li><p>OWASP testing guide</p></li>
+<li><p>Penetration Testing Execution Standard, PTES</p></li>
+<li><p>Technical Guide to Information Security Testing and Assessment, <a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf">NIST 800-115</a></p></li>
+<li><p>Vulnerability Assessment Framework for Cloud Computing (VULCAN), IEEE 2013</p></li>
+<li><p>Penetration Testing Framework, VulnerabilityAssessment.co.uk</p></li>
+<li><p>Information Systems Security Assessment Framework (ISSAF)</p></li>
+<li><p>Open Source Security Testing Methodology Manual (OSSTMM)</p></li>
+<li><p>FedRAMP Penetration Test Guidance (US Only)</p></li>
+<li><p>CREST Penetration Testing Guide</p></li>
+</ul>
+<p>Ensuring that the security standards and best practices are incorporated into the cloud infrastructure and
+architectures must be a shared responsibility. The telecommunications operators interested in building and
+maintaining the infrastructures in support of their services, the application vendors developing the network
+services to be used by the operators, and the cloud infrastructure vendors creating the infrastructures for
+their telecommunications customers must all be responsible for performing this task. Each party needs to
+incorporate security and testing components, and maintain operational processes and procedures to address
+any security threats or incidents in an appropriate manner. Each of the stakeholders needs to contribute
+to the creation of effective security for the cloud infrastructure.</p>
+</section>
+<section id="certification-requirements">
+<h3>Certification requirements<a class="headerlink" href="#certification-requirements" title="Link to this heading">¶</a></h3>
+<p>Security certification should encompass the following elements:</p>
+<ul class="simple">
+<li><p>Security test cases executed and test case results.</p></li>
+<li><p>Industry standard compliance achieved (NIST, ISO, PCI, FedRAMP Moderate, and so on).</p></li>
+<li><p>Output and analysis from automated static code reviews, dynamic tests, and penetration tests with
+remediation of medium, high, and critical security issues. Tools used for the security testing of software
+that is being released must be shared.</p></li>
+<li><p>Details of unremediated low-severity security issues must be shared.</p></li>
+<li><p>Threat models performed during the design phase. This includes remediation summaries to mitigate threats
+identified.</p></li>
+<li><p>Details of unremediated low-severity security issues.</p></li>
+<li><p>Any additional security and privacy requirements implemented in the software deliverable beyond the
+default rules used by security analysis tools.</p></li>
+<li><p>Execution of resiliency tests, such as hardware failures or power failure tests.</p></li>
+</ul>
+</section>
+</section>
+<section id="cloud-infrastructure-regulatory-compliance">
+<h2>Cloud infrastructure regulatory compliance<a class="headerlink" href="#cloud-infrastructure-regulatory-compliance" title="Link to this heading">¶</a></h2>
+<p>Evolving cloud adoption in the telecom industry, now encroaching on its inner sanctum of network services,
+brings many benefits for the network operators and their partners, and ultimately to the consumers of
+the telecommunication services. However, it also brings major compliance challenges. The telecommunication
+industry players can mitigate these challenges by arming themselves with information about which laws they
+need to comply with, why they need to comply with them, and how they can do this.</p>
+<p>The costs of non-compliance can be heavy. Organisations may not only have to contend with hefty fines and
+possible lawsuits, but they may also end up damaging their reputation and, consequently, losing customers,
+which would, in turn, adversely affect revenues and profitability.</p>
+<p>Compliance means that an operator’s systems, processes, and workflows align with the requirements mandated by the
+regulatory regimes imposed by the relevant  governmental and industry regulatory bodies. The need for compliance
+extends to the cloud. Therefore, operators must ensure that any data that is stored in their cloud infrastructure,
+as well as data that is transferred to and from it, complies with all the relevant data protection laws, including
+data residency and privacy laws.</p>
+<p>To comply with the laws that apply to an operator’s business, the correct security controls need to be applied. The
+applicable laws have specific rules and constraints about how companies can collect, store, and process data in
+the cloud. To satisfy these constraints and ensure compliance, the telecom operators should work with their cloud
+providers and other partners to implement tight controls. To speed up this process, the operators may start from
+augmenting their existing  cybersecurity and information security frameworks to guide their security programs to
+implement controls to secure their cloud infrastructure and to achieve regulatory compliance. This process can also
+be assisted by support from the cloud providers and from third parties, who can offer their well-proven compliance
+offerings, resources, audit reports, dashboards, and ecertain security controls as a service.</p>
+<p>After implementing these controls, companies need to train their employees and partners to use the controls properly,
+to protect data and maintain the required compliance posture. This is a critical requirement to maintain compliance
+by enforcing relevant security guidelines in all aspects of everyday operations, as well as for ensuring a process
+of regular assessment of the compliance posture.</p>
+<p>Due to the localised nature of the regulatory regimes, this document may not provide any specific compliance
+requirements.  However, some examples provided below may help in an operator’ compliance considerations.</p>
+<p>Commonly used (in many jurisdictions) compliance audit reports are based on the SOC 2 report from the System and
+Organization Controls (SOC) suite of services, standardised by the American Institute of Certified Public
+Accountants (AICPA) and meant for service organizations, such as cloud providers. See
+<a class="reference external" href="https://us.aicpa.org/content/aicpa/interestareas/frc/assuranceadvisoryservices/sorhome.html">AICPA SOC</a> for
+details. A SOC 2 report shows whether the cloud provider has implemented the security controls required to comply
+with the AICPA’s five “trust services criteria”: security, availability, confidentiality, processing integrity,
+and privacy. Operators should request a SOC 2 report from their cloud  providers (public or internal to their
+organisations). SOC 2 comprises two types: type 1 and type 2. A type 1 report shows the status and suitability
+of the provider’s controls at a particular moment. A type 2 report shows the operational effectiveness of
+these controls over a certain period. In cases where a cloud provider is not willing to share an SOC 2 report
+because it may contain sensitive information, operators can ask for an SOC 3 report. This is intended as a
+general-use report, but can still help to assess the provider’s compliance posture.</p>
+<p>Some cloud providers also provide attestations (or, in the case of the private cloud, telecoms should seek
+such attestations) to show which of their cloud services have achieved compliance with different frameworks,
+such as SOC, but also commonly used frameworks, such as OWASP, ISAE, NIST, ETSI, and the ISO 27000 series,
+as well as more geographically localised standard frameworks such as NIST (as used in the U.S.A.), ENISA,
+GDPR, and ISM.</p>
+<p>The use of the ISO 2700s, OWASP, ISAE, NIST, and ETSI security frameworks for the cloud infrastructure is
+referenced in the Common Security Standards and Compliance with Standards sections.</p>
+<p>Examples of regulatory frameworks are presented below. It is intended to expand this list of examples in
+future releases to cover more jurisdictions and to accommodate changes in the rapidly evolving security and
+regulatory landscape.</p>
+<section id="united-states-of-america-u-s-a">
+<h3>United States of America (U.S.A.)<a class="headerlink" href="#united-states-of-america-u-s-a" title="Link to this heading">¶</a></h3>
+<p>In the United States, the Federal Communications Commission <a class="reference external" href="https://www.fcc.gov/">(FCC)</a> regulates
+interstate and international communications by radio, television, wire, satellite, and cable in all 50 states,
+the District of Columbia, and all U.S. overseas territories. The FCC is an independent U.S. government agency
+overseen by Congress. The Commission is the federal agency responsible for implementing and enforcing
+America’s communications laws and regulations.</p>
+<p>National Institute of Standards and Technology
+<a class="reference external" href="https://www.nist.gov/cyberframework/">(NIST) Cybersecurity Framework</a>,
+compliance is mandatory for the supply chain for all U.S. federal government agencies. Because this framework
+references globally accepted standards, guidelines, and practice, telecom organisations in the U.S.A. and
+worldwide can use it to efficiently operate in a global environment and manage new and evolving cybersecurity
+risks in the cloud adoption area.</p>
+</section>
+<section id="european-union-eu">
+<h3>European Union (EU)<a class="headerlink" href="#european-union-eu" title="Link to this heading">¶</a></h3>
+<p>The overall telecommunications regulatory framework in the European Union (EU) is provided in
+<a class="reference external" href="https://digital-strategy.ec.europa.eu/en/policies/eu-electronic-communications-code">The European Electronic Communications Code</a>.</p>
+<p>The European Union Agency for Cybersecurity <a class="reference external" href="https://www.enisa.europa.eu/">(ENISA)</a> contributes to EU cyber
+policy, enhances the trustworthiness of Information and Communications Technology (ICT) products, services,
+and processes with cybersecurity certification schemes, cooperates with Member States and EU bodies, and helps
+Europe prepare for the cyber challenges of tomorrow. In particular, ENISA performs risk assessments of cloud
+computing and works on the European Cybersecurity Certification Scheme
+<a class="reference external" href="https://www.enisa.europa.eu/publications/eucs-cloud-service-scheme/">(EUCS)</a> for Cloud Services, which
+looks into the certification of the cybersecurity of cloud services.</p>
+<p>The General Data Protection Regulation <a class="reference external" href="https://gdpr-info.eu/">(GDPR)</a> is a set of EU regulations that govern
+how data should be protected for EU citizens. It affects organisations that have EU-based customers, even if
+these organisations are not themselves based in the EU.</p>
+</section>
+<section id="united-kingdom-uk">
+<h3>United Kingdom (UK)<a class="headerlink" href="#united-kingdom-uk" title="Link to this heading">¶</a></h3>
+<p>The Office of Communications <a class="reference external" href="https://www.ofcom.org.uk/">(Ofcom)</a> is the regulator and competition authority
+for the UK communications industries. It regulates the television and radio sectors, fixed-line telecoms,
+mobiles, postal services, and the airwaves over which wireless devices operate.</p>
+<p>The Security of Networks and Information Systems
+<a class="reference external" href="https://www.gov.uk/government/collections/nis-directive-and-nis-regulations-2018/">NIS Regulations in UK</a>,
+provides legal measures to boost the level of security (both cyber and physical resilience) of network and
+information systems for the provision of essential services and digital services.</p>
+<p>The UK’s National Cyber Security Centre <a class="reference external" href="https://www.ncsc.gov.uk/">(NCSC)</a> acts as a bridge between industry
+and government. It provides a unified source of advice, guidance, and support on cyber security, including the
+management of cyber security incidents. From this perspective, it is critical for cloud-related security in the
+UK telecommunications industry. The NCSC is not a regulator. Within the general UK cyber security regulatory
+environment, including both NIS and GDPR, the NCSC’s aim is to operate as a trusted, expert, and impartial
+advisor to all interested parties. The NCSC supports Security of Networks &amp; Information Systems (NIS)
+Regulations.</p>
+<p>Data protection in UK is controlled by
+<a class="reference external" href="https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted/">Data Protection Act 2018</a>, which is UK’s
+implementation of the EU’s General Data Protection Regulation (GDPR).</p>
+</section>
+<section id="australia">
+<h3>Australia<a class="headerlink" href="#australia" title="Link to this heading">¶</a></h3>
+<p>In Australia, the telecommunication sector is regulated by the
+<a class="reference external" href="https://www.accc.gov.au/by-industry/telecommunications-and-internet">Australian Competition &amp; Consumer Commission (ACCC)</a>.
+The ACCC is responsible for the economic regulation of the communications sector. This includes telecommunications, the
+National Broadband Network (NBN), and the broadcasting and content sectors.</p>
+<p>From the point of view of cloud services security, the
+<a class="reference external" href="hhttps://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism">Information Security Manual (ISM)</a>,
+produced by the Australian Cyber Security Centre (ACSC), is of particular importance. The purpose of the ISM is to outline
+a cyber security framework that organisations can apply, using their risk management framework, to protect their information
+and systems from cyber threats. The ISM is intended for Chief Information Security Officers, Chief Information Officers,
+cyber security professionals, and information technology managers. While in general the ISM provides guidelines rather than
+mandates, several security controls are, by law, mandatory for cloud-based services used by the Australian telecommunications
+operators, in situations involving strategically important data and/or services.</p>
+<p>Australia regulates data privacy and protection through a mix of federal, state, and territory laws. The federal
+<a class="reference external" href="https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act">Privacy Act 1988</a> (currently under review by the Australian
+Government) and the Australian Privacy Principles (APPs), contained in the Privacy Act, regulate the handling of
+personal information by relevant entities and under the Privacy Act. The Privacy Commissioner has the authority to conduct
+investigations, including its own motion investigations, to enforce the Privacy Act and to seek civil penalties for serious
+and egregious breaches, or for repeated breaches of the APPs where an entity has failed to implement remedial efforts.</p>
+</section>
+</section>
+<section id="consolidated-security-requirements">
+<h2>Consolidated security requirements<a class="headerlink" href="#consolidated-security-requirements" title="Link to this heading">¶</a></h2>
+<section id="system-hardening">
+<h3>System hardening<a class="headerlink" href="#system-hardening" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.gen.001</p></td>
+<td><p>The platform <strong>must</strong> maintain the specified
+configuration.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.002</p></td>
+<td><p>The systems part of the cloud infrastructure
+<strong>must</strong> support password hardening, as defined
+in CIS Password Policy Guide <a class="reference external" href="https://www.cisecurity.org/insights/white-papers/cis-password-policy-guide">https://www.cisecu
+rity.org/insights/white-papers/cis-password-poli
+cy-guide</a>.</p></td>
+<td><p>Hardening: CIS Password Policy Guide</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.003</p></td>
+<td><p>The servers part of the cloud infrastructure
+<strong>must</strong> support a root of trust and secure
+boot.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.004</p></td>
+<td><p>The operating systems of all the parts of the
+cloud infrastructure dealing with servers
+<strong>must</strong> be hardened by removing or disabling
+unnecessary services, applications, and network
+protocols, configuring operating system user
+authentication, configuring resource controls,
+installing and configuring additional security
+controls where needed, and testing the security
+of the operating system.</p></td>
+<td><p>NIST SP 800-123</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.005</p></td>
+<td><p>The platform <strong>must</strong> support operating system-
+level access control.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.006</p></td>
+<td><p>The platform <strong>must</strong> support secure logging.
+Logging with the root account must be prohibited
+when the root privileges are not required.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.007</p></td>
+<td><p>All parts of the cloud infrastructure dealing
+with servers <strong>must</strong> be time-synchronized with
+the authenticated time service.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.008</p></td>
+<td><p>All parts of the cloud infrastructure dealing
+with servers <strong>must</strong> be regularly updated to
+address security vulnerabilities.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.009</p></td>
+<td><p>The platform <strong>must</strong> support software integrity
+protection and verification, and <strong>must</strong> scan
+the source code and manifests.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.010</p></td>
+<td><p>The cloud infrastructure <strong>must</strong> support
+encrypted storage, for example, block, object
+and file storage, with access to encryption keys
+restricted on a need-to-know basis. Controlled
+access based on a need to know <a class="reference external" href="https://www.cisecurity.org/controls/cis-controls-list">https://www.cis
+ecurity.org/controls/cis-controls-list</a>.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.011</p></td>
+<td><p>The cloud infrastructure <strong>should</strong> support
+read- and write-only storage partitions (write-
+only permission to one or more authorized
+actors).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.012</p></td>
+<td><p>The operator <strong>must</strong> ensure that only
+authorized actors have physical access to the
+underlying infrastructure.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.013</p></td>
+<td><p>The platform <strong>must</strong> ensure that only
+authorized actors have logical access to the
+underlying infrastructure.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.gen.014</p></td>
+<td><p>All parts of the cloud infrastructure dealing
+with servers <strong>should</strong> support measured boot
+and an attestation server that monitors the
+measurements of the servers.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.gen.015</p></td>
+<td><p>Any change to the platform <strong>must</strong> be logged as
+a security event. The logged event must include
+the identity of the entity making the change,
+the change itself, and the date and time of the
+change.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-3:</strong> System hardening requirements</p>
+</section>
+<section id="platform-and-access">
+<h3>Platform and access<a class="headerlink" href="#platform-and-access" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.sys.001</p></td>
+<td><p>The platform <strong>must</strong> support authenticated and
+secure access to APIs, GUIs, and command line
+interfaces (CLIs).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.002</p></td>
+<td><p>The platform <strong>must</strong> support traffic filtering
+for workloads (for example, firewalls).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.003</p></td>
+<td><p>The platform <strong>must</strong> support secure and
+encrypted communications, and the
+confidentiality and integrity of network
+traffic.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.004</p></td>
+<td><p>The cloud infrastructure <strong>must</strong> support
+authentication, integrity, and confidentiality
+on all network channels.</p></td>
+<td><p>A secure channel enables the transferring of
+data that is resistant to overhearing and
+tampering.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.005</p></td>
+<td><p>The cloud infrastructure <strong>must</strong> segregate the
+underlay and overlay networks.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.006</p></td>
+<td><p>The cloud infrastructure must be able to utilize
+the cloud infrastructure manager identity
+lifecycle management capabilities.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.007</p></td>
+<td><p>The platform <strong>must</strong> implement controls
+enforcing the separation of duties and
+privileges, least privilege use and least common
+mechanism (role-based access control).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.008</p></td>
+<td><p>The platform <strong>must</strong> be able to assign the
+entities that comprise the tenant networks to
+different trust domains.</p></td>
+<td><p>Communication between different trust domains
+is not allowed, by default.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.009</p></td>
+<td><p>The platform <strong>must</strong> support the creation of
+trust relationships between trust domains.</p></td>
+<td><p>These may be uni-directional relationships
+where the trusting domain trusts another domain
+(the “trusted domain”) to authenticate users
+for them, or to allow access to its resources
+from the trusted domain. In a bidirectional
+relationship, both domains are “trusting” and
+“trusted”.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.010</p></td>
+<td><p>For two or more domains without existing trust
+relationships, the platform <strong>must not</strong> allow
+the effect of an attack on one domain to impact
+the other domains, either directly or
+indirectly.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.011</p></td>
+<td><p>The platform <strong>must not</strong> reuse the same
+authentication credentials (for example, a key-
+pair) on different platform components (for
+example, on different hosts, or different
+services).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.012</p></td>
+<td><p>The platform <strong>must</strong> protect all secrets by
+using strong encryption techniques and storing
+the protected secrets externally from the
+component.</p></td>
+<td><p>For example, in OpenStack Barbican.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.013</p></td>
+<td><p>The platform <strong>must</strong> provide secrets
+dynamically as and when needed.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.014</p></td>
+<td><p>The platform <strong>should</strong> use Linux Security
+Modules, such as SELinux, to control access to
+resources.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.015</p></td>
+<td><p>The platform <strong>must not</strong> contain back-door
+entries (such as unpublished access points,
+APIs, and so on).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.016</p></td>
+<td><p>Login access to the platform’s components
+<strong>must</strong> be through encrypted protocols, such as
+SSH v2 or TLS v1.2, or higher.</p></td>
+<td><p>Hardened jump servers isolated from
+external networks are recommended.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.017</p></td>
+<td><p>The platform <strong>must</strong> provide the capability of
+using digital certificates that comply with
+X.509 standards issued by a trusted
+certification authority.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.018</p></td>
+<td><p>The platform <strong>must</strong> provide the ability to
+allow certificate renewal and revocation.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.sys.019</p></td>
+<td><p>The platform <strong>must</strong> provide the ability to
+test the validity of a digital certificate
+(CA signature, validity period, non-revocation,
+identity).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.sys.020</p></td>
+<td><p>The cloud infrastructure architecture <strong>should</strong>
+rely on Zero Trust principles to build a secure
+by design environment.</p></td>
+<td><p>Zero Trust Architecture (ZTA) described in NIST
+SP 800-207</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-4:</strong> Platform and access requirements</p>
+</section>
+<section id="confidentiality-and-integrity">
+<h3>Confidentiality and integrity<a class="headerlink" href="#confidentiality-and-integrity" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.ci.001</p></td>
+<td><p>The platform <strong>must</strong> support the confidentiality and integrity of data
+at rest and in transit.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.ci.002</p></td>
+<td><p>The platform <strong>should</strong> support self-encrypting storage devices.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.ci.003</p></td>
+<td><p>The platform <strong>must</strong> support the confidentiality and integrity of data-
+related metadata.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.ci.004</p></td>
+<td><p>The platform <strong>must</strong> support the confidentiality of processes and
+restrict information sharing to the process owner only (for example, the
+tenant).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.ci.005</p></td>
+<td><p>The platform <strong>must</strong> support the confidentiality and integrity of
+process-related metadata and restrict information sharing to the process
+owner only (for example, the tenant).</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.ci.006</p></td>
+<td><p>The platform <strong>must</strong> support the confidentiality and integrity of
+workload resource utilization (RAM, CPU, storage, network I/O, cache,
+hardware offload), and restrict information sharing to the workload owner
+only (for example, the, tenant).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.ci.007</p></td>
+<td><p>The platform <strong>must not</strong> allow memory inspection by any other actor than
+the authorized actors for the entity to which memory is assigned (such as
+the tenants owning the workload), for lawful inspection, and by secure
+monitoring services.</p></td>
+<td><p>Admin access must be
+carefully regulated.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.ci.008</p></td>
+<td><p>The cloud infrastructure <strong>must</strong> support the segregation of the tenant
+networks.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.ci.009</p></td>
+<td><p>For sensitive data encryption, the key management service <strong>should</strong>
+leverage a hardware security module to manage and protect cryptographic
+keys.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-5:</strong> Confidentiality and integrity requirements</p>
+</section>
+<section id="workload-security">
+<h3>Workload security<a class="headerlink" href="#workload-security" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.wl.001</p></td>
+<td><p>The platform <strong>must</strong> support a workload placement policy.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.wl.002</p></td>
+<td><p>The cloud infrastructure <strong>must</strong> provide methods to ensure the
+platform’s trust status and integrity (for example, remote attestation,
+trusted platform module).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.wl.003</p></td>
+<td><p>The platform <strong>must</strong> support the secure provisioning of workloads.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.wl.004</p></td>
+<td><p>The platform <strong>must</strong> support location assertion (for mandated in-country
+or location requirements).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.wl.005</p></td>
+<td><p>The platform <strong>must</strong> support the separation of production and
+non-production workloads.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.wl.006</p></td>
+<td><p>The platform <strong>must</strong> support the separation of workloads based on their
+categorisation (for example, payment card information, healthcare, and so
+on).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.wl.007</p></td>
+<td><p>The operator <strong>should</strong> implement processes and tools to verify NF
+authenticity and integrity.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-6:</strong> Workload security requirements</p>
+</section>
+<section id="image-security">
+<h3>Image security<a class="headerlink" href="#image-security" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.img.001</p></td>
+<td><p>Images must be scanned, in order to be kept free from known vulnerabilities.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.img.002</p></td>
+<td><p>Images must be scanned, in order to be kept free from known vulnerabilities.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.img.003</p></td>
+<td><p>Images must not be configured to run with privileges higher than those of the
+actor who is authorized to run them.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.img.004</p></td>
+<td><p>Images <strong>must</strong> only be accessible to authorized actors.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.img.005</p></td>
+<td><p>Image registries <strong>must</strong> only be accessible to authorized actors.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.img.006</p></td>
+<td><p>Image registries <strong>must</strong> only be accessible over secure networks that enforce
+authentication, integrity, and confidentiality.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.img.007</p></td>
+<td><p>Image registries <strong>must</strong> be clear of vulnerable and out of date versions.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.img.008</p></td>
+<td><p>Images <strong>must not</strong> include any secrets. Secrets include passwords, cloud
+provider credentials, SSH keys, TLS certificate keys, and so on.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.img.009</p></td>
+<td><p>CIS hardened images <strong>should</strong> be used whenever possible.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.img.010</p></td>
+<td><p>Minimalist base images <strong>should</strong> be used whenever possible.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-7:</strong> Image security requirements</p>
+</section>
+<section id="security-lcm">
+<h3>Security LCM<a class="headerlink" href="#security-lcm" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.lcm.001</p></td>
+<td><p>The platform <strong>must</strong> support secure provisioning, availability, and
+deprovisioning (secure clean-up) of workload resources where secure
+clean-up includes tear-down, and defence against virus attacks or other
+attacks.</p></td>
+<td><p>Secure clean-up:
+tear-down, defending
+against virus attacks
+or other attacks, or
+observing of
+cryptographic or user
+service data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.002</p></td>
+<td><p>Cloud operations staff and systems <strong>must</strong> use management protocols
+limiting security risk, such as SNMPv3, SSH v2, ICMP, NTP, syslog, and
+TLS v1.2 or higher.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.lcm.003</p></td>
+<td><p>The cloud operator <strong>must</strong> implement and strictly follow change
+management processes for the cloud infrastructure, cloud infrastructure
+manager, and other components of the cloud, and platform change control
+on hardware.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.004</p></td>
+<td><p>The cloud operator <strong>should</strong> support automated templated approved
+changes.</p></td>
+<td><p>Templated approved
+changes for automation
+where available.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.lcm.005</p></td>
+<td><p>The platform <strong>must</strong> provide logs. These logs must be regularly
+monitored for anomalous behaviour.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.006</p></td>
+<td><p>The platform <strong>must</strong> verify the integrity of all resource management
+requests.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.lcm.007</p></td>
+<td><p>The platform <strong>must</strong> be able to update newly instantiated, suspended,
+hibernated, migrated, and restarted images with the current time
+information.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.008</p></td>
+<td><p>The platform <strong>must</strong> be able to update newly instantiated, suspended,
+hibernated, migrated, and restarted images with the relevant DNS
+information.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.lcm.009</p></td>
+<td><p>The platform <strong>must</strong> be able to update the tags of newly instantiated,
+suspended, hibernated, migrated, and restarted images with the relevant
+geolocation (geographical) information.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.010</p></td>
+<td><p>The platform <strong>must</strong> log all changes to geolocation along with the
+mechanisms and sources of the location information (that is, GPS, IP
+block, and timing).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.lcm.011</p></td>
+<td><p>The platform <strong>must</strong> implement security lifecycle management processes,
+including the proactive update and patching of all deployed cloud
+infrastructure software.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.lcm.012</p></td>
+<td><p>The platform <strong>must</strong> log any access privilege escalation.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-8:</strong> Security LCM requirements</p>
+</section>
+<section id="monitoring-and-security-audit">
+<h3>Monitoring and security audit<a class="headerlink" href="#monitoring-and-security-audit" title="Link to this heading">¶</a></h3>
+<p>The platform is assumed to provide configurable alerting and notification capabilities. The operator is assumed to have
+systems, policies, and procedures in place to act on alerts and notifications in a timely fashion. In the following,
+the monitoring and logging capabilities can trigger alerts and notifications for appropriate action. In general, it is
+recommended to have the same security monitoring and auditing capabilities in both production and non-production
+environments. However, we distinguish between the requirements for the production platform (Prod-Platform) and the
+non-production platform (NonProd-Platform), as some of the requirements may, in practice, need to differ. See
+<a class="reference internal" href="#security-of-production-and-non-production-environments"><span class="std std-ref">Security of production and non-production environments</span></a> for a general discussion of this
+topic. In the table below, when a requirement mentions only Prod-Platform, it is assumed that this requirement is
+optional for the NonProd-Platform. If a requirement does not mention either platform, it is assumed that it is valid
+for both the Prod-Platform and the NonProd-Platform.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.mon.001</p></td>
+<td><p>The Prod-Platform and NonProd-Platform <strong>must</strong> provide logs. The logs <strong>must</strong>
+contain the following fields: event type, date/time, protocol, the service or
+program used for access, success/failure, the login ID or process ID, the IP
+address, and the ports (source and destination) involved.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.002</p></td>
+<td><p>The logs <strong>must</strong> be regularly monitored for events of interest.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.003</p></td>
+<td><p>The logs <strong>must</strong> be time-synchronised for the Prod-Platform, as well as for
+the NonProd-Platform.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.004</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> log all changes to the time
+server source, time, and date and time zones.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.005</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> secure and protect all the
+logs containing sensitive information, both in transit and at rest.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.006</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> monitor and audit the
+various behaviours of connection and login attempts to detect access attacks
+and potential access attempts, and take corrective action accordingly.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.007</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> Monitor and Audit operations
+by authorized account access after login, to detect malicious operational
+activity and take corrective action.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.008</p></td>
+<td><p>The Prod-Platform <strong>must</strong> monitor and audit security parameter configurations
+for compliance with defined security policies.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.009</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> monitor and audit
+externally exposed interfaces for illegal access (attacks) and take corrective
+security hardening measures.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.010</p></td>
+<td><p>The Prod-Platform <strong>must</strong> monitor and audit the service for various attacks
+(malformed messages, signalling flooding and replaying, and so on), and take
+corrective action.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.011</p></td>
+<td><p>The Prod-Platform <strong>must</strong> monitor and audit running processes to detect
+unexpected or unauthorized processes, and take corrective action.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.012</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> monitor and audit logs from
+the infrastructure elements and workloads to detect anomalies in the system
+components and take corrective action.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.013</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> monitor and audit traffic
+patterns and volumes to prevent malware download attempts.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.014</p></td>
+<td><p>The monitoring system <strong>must not</strong> affect the security (integrity and
+confidentiality) of the infrastructure, workloads, or the user data (through
+back-door entries).</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.015</p></td>
+<td><p>The monitoring systems <strong>should not</strong> impact IaaS, PaaS, and SaaS SLAs,
+including availability SLAs.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.016</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> ensure that the monitoring
+systems are never starved of resources and <strong>must</strong> activate alarms when
+resource utilisation exceeds a configurable threshold.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.017</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform monitoring components <strong>should</strong>
+follow security best practices for auditing, including secure logging and
+tracing.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.018</p></td>
+<td><p>The Prod-Platform and the NonProd-Platform <strong>must</strong> audit systems for any
+missing security patches and take appropriate action.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.019</p></td>
+<td><p>The Prod-Platform, starting from initialization, <strong>must</strong> collect and analyse
+logs to identify security events and store these events in an external system.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.020</p></td>
+<td><p>The components of the Prod-Platform and the NonProd-Platform <strong>must not</strong>
+include any authentication credentials, such as passwords, in any logs, even if
+they are encrypted.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.mon.021</p></td>
+<td><p>The logging system of the Prod-Platform and the NonProd-Platform <strong>must</strong>
+support the storage of the security audit logs for a configurable period.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.mon.022</p></td>
+<td><p>The Prod-Platform <strong>must</strong> store the security events locally, if the external
+logging system is unavailable. It must periodically attempt to send them to
+the external logging system until it is successful.</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-9:</strong> Monitoring and security audit requirements</p>
+</section>
+<section id="open-source-software">
+<h3>Open-source software<a class="headerlink" href="#open-source-software" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.oss.001</p></td>
+<td><p>Open-source code <strong>must</strong> be inspected by tools with various capabilities
+for static and dynamic code analysis.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.oss.002</p></td>
+<td><p>The Common Vulnerabilities and Exposures (CVE) <strong>must</strong> be used to
+identify vulnerabilities and assess their severity rating for the
+open-source code part of the cloud infrastructure and workloads software.</p></td>
+<td><p><a class="reference external" href="https://cve.mitre.org/">https://cve.mitre.org
+/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.oss.003</p></td>
+<td><p>Critical- and high-severity-rated vulnerabilities <strong>must</strong> be fixed in a
+timely manner. See the Common Vulnerability Scoring System (CVSS) to find
+out a vulnerability score and its associated rate (low, medium, high, or
+critical).</p></td>
+<td><p><a class="reference external" href="https://www.first.org/cvss/">https://www.first.org
+/cvss/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.oss.004</p></td>
+<td><p>A dedicated internal isolated repository separated from the production
+environment <strong>must</strong> be used to store vetted open-source content.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.oss.005</p></td>
+<td><p>A Software Bill of Materials (SBOM) <strong>should</strong> be provided or built, and
+maintained to identify the software components and their origins.</p></td>
+<td><p>Inventory of software
+components, <a class="reference external" href="https://ntia.gov/SBOM">https://
+ntia.gov/SBOM</a></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-10:</strong> Open-source software requirements</p>
+</section>
+<section id="iaac-secure-design-and-architecture-stage-requirements">
+<h3>IaaC - Secure design and architecture stage requirements<a class="headerlink" href="#iaac-secure-design-and-architecture-stage-requirements" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.arch.001</p></td>
+<td><p>Threat modelling methodologies and tools
+<strong>should</strong> be used during the
+Secure Design and Architecture stage,
+triggered by the Software Feature Design
+trigger.</p></td>
+<td><p>These are methodologies for identifying and
+understanding threats impacting a resource or a set
+of resources. It may be done manually or by using
+tools such as the open-source OWASP Threat Dragon.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.arch.002</p></td>
+<td><p>A Security Control Baseline Assessment
+<strong>should</strong> be performed during the Secure
+Design and Architecture stage, triggered by
+the Software Feature Design trigger.</p></td>
+<td><p>Security Control Baseline Assessments are typically
+done manually by internal or independent assessors.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-11:</strong> IaaC - Secure design and architecture stage requirements</p>
+</section>
+<section id="iaac-secure-code-stage-requirements">
+<h3>IaaC - Secure code stage requirements<a class="headerlink" href="#iaac-secure-code-stage-requirements" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.code.001</p></td>
+<td><p>Static Application Security Testing (SAST)
+<strong>must</strong> be applied during the secure
+coding stage, triggered by the Pull, Clone
+or Comment trigger.</p></td>
+<td><p>SAST is a type of security testing that analyses
+application source code for software
+vulnerabilities and gaps against best practices.
+An example of this is the open-source OWASP range
+of tools.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.code.002</p></td>
+<td><p>Software Composition Analysis (SCA)
+<strong>should</strong> be applied during the secure
+coding stage, triggered by the Pull, Clone,
+or Comment trigger.</p></td>
+<td><p>SCA is a type of security testing that analyses
+application source code or compiled code for
+software components with known vulnerabilities.
+An example of this is the open-source OWASP range
+of tools.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.code.003</p></td>
+<td><p>A source code review <strong>should</strong> be
+performed continuously during Secure Coding
+stage.</p></td>
+<td><p>This is typically done manually.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.code.004</p></td>
+<td><p>Integrated SAST via IDE plugins <strong>should</strong>
+be used during the secure coding stage,
+triggered by the Developer Code trigger.</p></td>
+<td><p>On the local machine: through the IDE or integrated
+test suites and triggered on completion of the
+coding development.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.code.005</p></td>
+<td><p>Static Application Security Testing of
+the source code repo <strong>should</strong> be
+performed during the secure coding stage,
+triggered by the Developer Code trigger.</p></td>
+<td><p>Continuous delivery predeployment: scanning prior
+to deployment.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-12:</strong> IaaC - Secure code stage requirements</p>
+</section>
+<section id="iaac-continuous-build-integration-and-testing-stage-requirements">
+<h3>IaaC - Continuous build, integration, and testing stage requirements<a class="headerlink" href="#iaac-continuous-build-integration-and-testing-stage-requirements" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.bld.001</p></td>
+<td><p>Static Application Security Testing (SAST)
+<strong>should</strong> be applied during the continuous
+build, integration, and testing stage,
+triggered by the Build and Integrate
+trigger.</p></td>
+<td><p>Example: the open-source OWASP range of tools.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.bld.002</p></td>
+<td><p>Software Composition Analysis (SCA)
+<strong>should</strong> be applied during the continuous
+build, integration, and testing stage,
+triggered by the Build and Integrate
+trigger.</p></td>
+<td><p>Example: the open-source OWASP range of tools.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.bld.003</p></td>
+<td><p>An image scan <strong>must</strong> be applied during the
+continuous build, integration, and testing
+stage, triggered by the Package trigger.</p></td>
+<td><p>Example: pushing a container image to a container
+registry may trigger a vulnerability scan before
+the image becomes available in the registry.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.bld.004</p></td>
+<td><p>Dynamic Application Security Testing (DAST)
+<strong>should</strong> be applied during the continuous
+build, integration, and testing stage,
+triggered by the Stage and Test trigger.</p></td>
+<td><p>DAST is a type of security testing that analyses a
+running application by exercising the application
+functionality and detecting vulnerabilities based
+on the behaviour and response of the application.
+Example: OWASP Zed Attack Proxy (ZAP).</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.bld.005</p></td>
+<td><p>Fuzzing <strong>should</strong> be applied during the
+continuous build, integration, and testing
+stage, triggered by the Stage and Test
+trigger.</p></td>
+<td><p>Fuzzing, or fuzz testing, is an automated software
+testing technique that involves providing invalid,
+unexpected, or random data as input to a computer
+program. Example: GitLab Open Sources Protocol
+Fuzzer Community Edition.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.bld.006</p></td>
+<td><p>Interactive Application Security Testing
+(IAST) <strong>should</strong> be applied during the
+continuous build, integration, and testing
+stage, triggered by the Stage and Test
+trigger.</p></td>
+<td><p>A software component deployed with an application
+that assesses the behaviour of the application and
+detects the presence of vulnerabilities on
+applications that are being exercised in realistic
+testing scenarios. Example: Contrast Community
+Edition.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-13:</strong> IaaC - Continuous build, integration, and testing stage requirements</p>
+</section>
+<section id="iaac-continuous-delivery-and-deployment-stage-requirements">
+<h3>IaaC - Continuous delivery and deployment stage requirements<a class="headerlink" href="#iaac-continuous-delivery-and-deployment-stage-requirements" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.del.001</p></td>
+<td><p>An image scan <strong>must</strong> be applied during the
+continuous delivery and deployment stage,
+triggered by the Publish to Artifact and
+Image Repository trigger.</p></td>
+<td><p>Example: GitLab uses the open-source Clair engine
+for container image scanning.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.del.002</p></td>
+<td><p>Code signing <strong>must</strong> be applied during the
+continuous delivery and deployment stage,
+triggered by the Publish to Artifact and
+Image Repository trigger.</p></td>
+<td><p>Code signing provides authentication to assure that
+downloaded files are from the publisher named on
+the certificate.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.del.003</p></td>
+<td><p>An artifact and image repository scan
+<strong>should</strong> be continuously applied during
+the continuous delivery and deployment
+stage.</p></td>
+<td><p>Example: GitLab uses the open-source Clair engine
+for container scanning.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.del.004</p></td>
+<td><p>A component vulnerability scan <strong>must</strong> be
+applied during the continuous delivery and
+deployment stage, triggered by the
+Instantiate Infrastructure trigger.</p></td>
+<td><p>The vulnerability scanning system is deployed on
+the cloud platform to detect the security
+vulnerabilities of specified components through
+scanning and to provide timely security protection.
+Example: OWASP Zed Attack Proxy (ZAP).</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-14:</strong> IaaC - Continuous delivery and deployment stage requirements</p>
+</section>
+<section id="iaac-runtime-defence-and-monitoring-requirements">
+<h3>IaaC - Runtime defence and monitoring requirements<a class="headerlink" href="#iaac-runtime-defence-and-monitoring-requirements" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.run.001</p></td>
+<td><p>Component vulnerability monitoring <strong>must</strong>
+be continuously applied during the runtime
+defence and monitoring stage, and
+remediation actions <strong>must</strong> be applied for
+high-severity-rated vulnerabilities.</p></td>
+<td><p>Security technology that monitors components such
+as virtual servers and assesses data, applications,
+and infrastructure for security risks.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.run.002</p></td>
+<td><p>Runtime Application Self-Protection (RASP)
+<strong>should</strong> be continuously applied during
+the runtime defence and monitoring stage.</p></td>
+<td><p>Security technology deployed within the target
+application in production for detecting, alerting,
+and blocking attacks.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.run.003</p></td>
+<td><p>Application testing and fuzzing <strong>should</strong>
+be continuously applied during the runtime
+defence and monitoring stage.</p></td>
+<td><p>Fuzzing, or fuzz, testing is an automated software
+testing technique that involves providing invalid,
+unexpected, or random data as input to a computer
+program. Example: GitLab Open Sources Protocol
+Fuzzer Community Edition.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.run.004</p></td>
+<td><p>Penetration testing <strong>should</strong> be
+continuously applied during the runtime
+defence and monitoring stage.</p></td>
+<td><p>This is typically done manually.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-15:</strong> IaaC - Runtime defence and monitoring requirements</p>
+</section>
+<section id="compliance-with-standards">
+<h3>Compliance with standards<a class="headerlink" href="#compliance-with-standards" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ref</p></th>
+<th class="head"><p>Requirement</p></th>
+<th class="head"><p>Definition/Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>req.sec.std.001</p></td>
+<td><p>The cloud operator <strong>should</strong> comply with the
+Center for Internet Security CIS Controls.</p></td>
+<td><p>Center for Internet Security - <a class="reference external" href="https://www.cisecurity.org/">https://www.cisecur
+ity.org/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.002</p></td>
+<td><p>The cloud operator, platform, and workloads
+<strong>should</strong> follow the guidance in the CSA
+Security Guidance for Critical Areas of
+Focus in Cloud Computing (latest version).</p></td>
+<td><p>Cloud Security Alliance - <a class="reference external" href="https://cloudsecurityalliance.org/">https://cloudsecurityall
+iance.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.std.003</p></td>
+<td><p>The platform and workloads <strong>should</strong> follow
+the guidance in the OWASP Cheat Sheet Series
+(OCSS) <a class="reference external" href="https://github.com/OWASP/CheatSheetSeries">https://github.com/OWASP/CheatSheetS
+eries</a>.</p></td>
+<td><p>Open Web Application Security Project <a class="reference external" href="https://owasp.org/">https://www.
+owasp.org</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.004</p></td>
+<td><p>The cloud operator, platform, and workloads
+<strong>should</strong> ensure that their code is not
+vulnerable to the OWASP Top Ten Security
+Risks <a class="reference external" href="https://owasp.org/www-project-top-ten/">https://owasp.org/www-project-top-ten
+/</a>.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.std.005</p></td>
+<td><p>The cloud operator, platform, and workloads
+<strong>should</strong> strive to improve their maturity
+on the OWASP Software Maturity Model (SAMM)
+<a class="reference external" href="https://owaspsamm.org/blog/2019/12/20/version2-community-release/">https://owaspsamm.org/blog/2019/12/20/versi
+on2-community-release/</a>.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.006</p></td>
+<td><p>The cloud operator, platform, and workloads
+<strong>should</strong> utilize the OWASP Web Security
+Testing Guide <a class="reference external" href="https://github.com/OWASP/wstg/tree/master/document">https://github.com/OWASP/wstg
+/tree/master/document</a>.</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.std.007</p></td>
+<td><p>The cloud operator and platform <strong>should</strong>
+satisfy the requirements for Information
+Management Systems, specified in ISO/IEC
+27001 <a class="reference external" href="https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en">https://www.iso.org/obp/ui/#iso:std:i
+so-iec:27001:ed-2:v1:en</a> .</p></td>
+<td><p>ISO/IEC 27002:2013 - ISO/IEC 27001 is the
+international standard for best-practice
+information security management systems (ISMSs).</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.008</p></td>
+<td><p>The cloud operator and platform <strong>should</strong>
+implement the code of practice for Security
+Controls specified ISO/IEC 27002:2013 (or
+latest) <a class="reference external" href="https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en">https://www.iso.org/obp/ui/#iso:std
+:iso-iec:27002:ed-2:v1:en</a> .</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.std.009</p></td>
+<td><p>The cloud operator and platform <strong>should</strong>
+implement the ISO/IEC 27032:2012 (or latest)
+Guidelines for Cybersecurity techniques <a class="reference external" href="https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en">htt
+ps://www.iso.org/obp/ui/#iso:std:iso-iec:270
+32:ed-1:v1:en</a> .</p></td>
+<td><p>ISO/IEC 27032 - ISO/IEC 27032is the international
+Standard focusing explicitly on cybersecurity.</p></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.010</p></td>
+<td><p>The cloud operator <strong>should</strong> conform to the
+ISO/IEC 27035 standard for incidence
+management.</p></td>
+<td><p>ISO/IEC 27035 - ISO/IEC 27035 is the international
+standard for incident management.</p></td>
+</tr>
+<tr class="row-even"><td><p>req.sec.std.011</p></td>
+<td><p>The cloud operator <strong>should</strong> conform to the
+ISO/IEC 27031 standard for business
+continuity ISO/IEC 27031. ISO/IEC 27031 is
+the international standard for ICT readiness
+for business continuity.</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>req.sec.std.012</p></td>
+<td><p>The public cloud operator <strong>must</strong>, and the
+private cloud operator <strong>may</strong>, be certified
+to be compliant with the International
+Standard on Awareness Engagements (ISAE)
+3402 (in the US: SSAE 16).</p></td>
+<td><p>International Standard on Awareness Engagements
+(ISAE) 3402. US Equivalent: SSAE16.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7-16:</strong> Compliance with standards requirements</p>
+</section>
+</section>
+<section id="additional-security-references">
+<h2>Additional security references<a class="headerlink" href="#additional-security-references" title="Link to this heading">¶</a></h2>
+<p>In addition to the security standards used throughout this specification,
+the following lists gather together additional standards of interest for cloud infrastructure security.</p>
+<p><strong>ETSI Documents</strong></p>
+<ul class="simple">
+<li><p>Network Functions Virtualisation (NFV); NFV Security; Problem Statement, ETSI GS NFV-SEC 001 V1.1.1 (2014-10)</p></li>
+<li><p>Network Functions Virtualisation (NFV); NFV Security; Security and Trust Guidance, ETSI GS NFV-SEC 003 V1.1.1
+(2014-12)</p></li>
+<li><p>Network Functions Virtualisation (NFV) Release 3; Security; Security Management and Monitoring specification,
+ETSI GS NFV-SEC 013 V3.1.1 (2017-02)</p></li>
+<li><p>Network Functions Virtualisation (NFV) Release 3; NFV Security; Security Specification for MANO Components and
+Reference points, ETSI GS NFV-SEC 014 V3.1.1 (2018-04)</p></li>
+<li><p>Network Functions Virtualisation (NFV) Release 2; Security; VNF Package Security Specification,
+ETSI GS NFV-SEC 021 V2.6.1 (2019-06)</p></li>
+</ul>
+<p><strong>NIST Documents</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf">NIST SP 800-53 Security and Privacy Controls for Federal Information Systems and Organizations</a></p></li>
+<li><p><a class="reference external" href="https://serdp-estcp.mil/">NIST SP 800-53A Assessing Security and Privacy Controls in Federal Information Systems and Organizations: Building
+Effective Assessment Plans</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf">NIST SP 800-63B Digital Identity Guidelines</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf">NIST SP 800-115 Technical Guide to Information Security Testing and Assessment</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-125.pdf">NIST SP 800-125 Guide to Security for Full Virtualization Technologies</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-125Ar1.pdf">NIST SP 800-125a Security Recommendations for Server-based Hypervisor Platforms</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-125B.pdf">NIST SP 800-125b Secure Virtual Network Configuration for Virtual Machine (VM) Protection</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf">NIST SP 800-137 Information Security Continuous Monitoring for Federal Information
+Systems and Organizations</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST SP 800-145 The NIST Definition of Cloud Computing</a></p></li>
+<li><p><a class="reference external" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf">NIST SP 800-190 Application Container Security Guide</a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">Security</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#potential-attack-vectors">Potential attack vectors</a></li>
+<li><a class="reference internal" href="#security-scope">Security scope</a><ul>
+<li><a class="reference internal" href="#in-scope-and-out-of-scope-definition">In-scope and out-of-scope definition</a></li>
+<li><a class="reference internal" href="#high-level-security-requirements">High-level security requirements</a><ul>
+<li><a class="reference internal" href="#platform-security-requirements">Platform security requirements</a></li>
+<li><a class="reference internal" href="#workload-security-requirements">Workload security requirements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#common-security-standards">Common security standards</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cloud-infrastructure-security">Cloud infrastructure security</a><ul>
+<li><a class="reference internal" href="#general-platform-security">General platform security</a><ul>
+<li><a class="reference internal" href="#high-level-functions-of-access-controls">High-level functions of access controls</a></li>
+<li><a class="reference internal" href="#general-security-requirements-for-the-cloud-infrastructure">General security requirements for the cloud infrastructure</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#platform-backend-access-security">Platform backend access security</a></li>
+<li><a class="reference internal" href="#platform-frontend-access-security">Platform frontend access security</a></li>
+<li><a class="reference internal" href="#infrastructure-as-a-code-security">Infrastructure as a Code security</a></li>
+<li><a class="reference internal" href="#security-of-production-and-non-production-environments">Security of production and non-production environments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#workload-security-and-vendor-responsibility">Workload security and vendor responsibility</a><ul>
+<li><a class="reference internal" href="#software-hardening">Software hardening</a></li>
+<li><a class="reference internal" href="#port-protection">Port protection</a></li>
+<li><a class="reference internal" href="#software-code-quality-and-security">Software code quality and security</a></li>
+<li><a class="reference internal" href="#alerting-and-monitoring">Alerting and monitoring</a></li>
+<li><a class="reference internal" href="#logging">Logging</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#workload-security-cloud-infrastructure-operator-responsibility">Workload security: cloud infrastructure operator responsibility</a><ul>
+<li><a class="reference internal" href="#remote-attestation-opencit">Remote attestation/OpenCIT</a></li>
+<li><a class="reference internal" href="#workload-image">Workload image</a></li>
+<li><a class="reference internal" href="#networking-security-zoning">Networking security zoning</a></li>
+<li><a class="reference internal" href="#volume-encryption">Volume encryption</a></li>
+<li><a class="reference internal" href="#root-of-trust-for-measurements">Root of trust for measurements</a><ul>
+<li><a class="reference internal" href="#static-root-of-trust-for-measurement">Static Root of Trust for Measurement</a></li>
+<li><a class="reference internal" href="#dynamic-root-of-trust-for-measurement">Dynamic Root of Trust for Measurement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zero-trust-architecture">Zero Trust Architecture</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-supply-chain-security">Software supply chain security</a><ul>
+<li><a class="reference internal" href="#software-security">Software security</a></li>
+<li><a class="reference internal" href="#open-source-software-security">Open-source software security</a></li>
+<li><a class="reference internal" href="#software-bill-of-materials">Software Bill of Materials</a></li>
+<li><a class="reference internal" href="#vulnerability-identification">Vulnerability identification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testing-and-certification">Testing and certification</a><ul>
+<li><a class="reference internal" href="#testing-demarcation-points">Testing demarcation points</a></li>
+<li><a class="reference internal" href="#certification-requirements">Certification requirements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cloud-infrastructure-regulatory-compliance">Cloud infrastructure regulatory compliance</a><ul>
+<li><a class="reference internal" href="#united-states-of-america-u-s-a">United States of America (U.S.A.)</a></li>
+<li><a class="reference internal" href="#european-union-eu">European Union (EU)</a></li>
+<li><a class="reference internal" href="#united-kingdom-uk">United Kingdom (UK)</a></li>
+<li><a class="reference internal" href="#australia">Australia</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#consolidated-security-requirements">Consolidated security requirements</a><ul>
+<li><a class="reference internal" href="#system-hardening">System hardening</a></li>
+<li><a class="reference internal" href="#platform-and-access">Platform and access</a></li>
+<li><a class="reference internal" href="#confidentiality-and-integrity">Confidentiality and integrity</a></li>
+<li><a class="reference internal" href="#workload-security">Workload security</a></li>
+<li><a class="reference internal" href="#image-security">Image security</a></li>
+<li><a class="reference internal" href="#security-lcm">Security LCM</a></li>
+<li><a class="reference internal" href="#monitoring-and-security-audit">Monitoring and security audit</a></li>
+<li><a class="reference internal" href="#open-source-software">Open-source software</a></li>
+<li><a class="reference internal" href="#iaac-secure-design-and-architecture-stage-requirements">IaaC - Secure design and architecture stage requirements</a></li>
+<li><a class="reference internal" href="#iaac-secure-code-stage-requirements">IaaC - Secure code stage requirements</a></li>
+<li><a class="reference internal" href="#iaac-continuous-build-integration-and-testing-stage-requirements">IaaC - Continuous build, integration, and testing stage requirements</a></li>
+<li><a class="reference internal" href="#iaac-continuous-delivery-and-deployment-stage-requirements">IaaC - Continuous delivery and deployment stage requirements</a></li>
+<li><a class="reference internal" href="#iaac-runtime-defence-and-monitoring-requirements">IaaC - Runtime defence and monitoring requirements</a></li>
+<li><a class="reference internal" href="#compliance-with-standards">Compliance with standards</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-security-references">Additional security references</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2022, Anuket. Licensed under CC BY 4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>

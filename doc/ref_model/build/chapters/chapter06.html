@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>External Interfaces &#8212; Anuket Reference Model (RM)  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css?v=db1dbc67" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=85408339" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/petite-vue.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../index.html" title="Go to homepage"><img src="../_static/anuket-logo.png"/></a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="external-interfaces">
+<h1>External Interfaces<a class="headerlink" href="#external-interfaces" title="Link to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>In the earlier sections in this document, the various resources and capabilities of the Cloud Infrastructure were
+catalogued and the workloads profiled with respect to those capabilities. The intent behind this section and an
+“API Layer” is to similarly provide a single place to catalogue, and thereby codify, a common set of open APIs to
+access (that is, request, consume, control, and so on) the aforementioned resources, be they directly exposed to
+the workloads, or purely internal to the Cloud Infrastructure.</p>
+<p>This section and document also aim to ensure that the APIs adopted for the Cloud Infrastructure implementations
+are open and not proprietary, in support of compatibility, component substitution, and the ability to realize the
+maximum value from existing and future test heads and harnesses.</p>
+<p>This section aims to catalogue the APIs.  It does not aim to reprint the APIs, as this would make the maintenance of
+this section impractical and its length disproportionate within the Reference Model document. Instead, the APIs
+selected for the Cloud Infrastructure implementations and specified in this section will be incorporated by reference
+and URLs for the latest authoritative versions of the APIs, provided in the References section of this document.</p>
+<p>Although this document does not attempt to reprint the APIs themselves, where appropriate and where the mapping of
+the resources and capabilities within the Cloud Infrastructure to objects in the APIs would be otherwise ambiguous,
+this section will provide explicit identification and mapping.</p>
+<p>In addition to the raw or base-level Cloud Infrastructure functionality to API and object mapping, this section aims
+to specify an explicit, normalized set of APIs and mappings to control the logical interconnections and relationships
+between these objects, notably, but not limited to, support of Service Function Chaining (SFC) and other networking
+and network management functionalities.</p>
+<p>This section specifies the abstract interfaces (API, CLI, and so on) supported by the Cloud Infrastructure Reference
+Model. The purpose of this section is to define and catalogue a common set of open (not proprietary) APIs, of the
+following types:</p>
+<ul class="simple">
+<li><p>Cloud Infrastructure APIs: These APIs are provided to the workloads (that is, exposed), by the infrastructure, in
+order for workloads to access (that is, request, consume, control, and so on) Cloud Infrastructure resources.</p></li>
+<li><p>Intra-Cloud Infrastructure APIs: These APIs are provided and consumed directly by the infrastructure. These APIs are
+purely internal to the Cloud Infrastructure and are not exposed to the workloads.</p></li>
+<li><p>Enabler Services APIs: These APIs are provided by non-Cloud Infrastructure services and provide capabilities that are
+required for a majority of workloads, such as DHCP, DNS, NTP, DBaaS, and so on.</p></li>
+</ul>
+</section>
+<section id="cloud-infrastructure-apis">
+<h2>Cloud Infrastructure APIs<a class="headerlink" href="#cloud-infrastructure-apis" title="Link to this heading">¶</a></h2>
+<p>The Cloud Infrastructure APIs consist of sets of APIs that are externally and internally visible. The externally
+visible APIs are made available for the orchestration and management of the execution environments that host the
+workloads, while the internally visible APIs support actions on the hypervisor and the physical resources. The
+ETSI NFV Reference MANO Architecture (<code class="xref std std-numref docutils literal notranslate"><span class="pre">ETSI</span> <span class="pre">NFV</span> <span class="pre">architecture</span> <span class="pre">mapping</span></code>) shows a number of Interface points
+where specific APIs, or sets of APIs, are supported. For the scope of the reference model, the relevant interface
+points are shown in <strong>Table 6-1</strong>.</p>
+<figure class="align-default" id="etsi-nfv-architecture-mapping">
+<img alt="ETSI NFV architecture mapping" src="../_images/ch09-etsi-nfv-architecture-mapping.png" />
+<figcaption>
+<p><span class="caption-text">ETSI NFV architecture mapping</span><a class="headerlink" href="#etsi-nfv-architecture-mapping" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Interface
+point</p></th>
+<th class="head"><p>Cloud
+Infrastructure
+exposure</p></th>
+<th class="head"><p>Interface between</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vi-Ha</p></td>
+<td><p>Internal NFVI</p></td>
+<td><p>Software layer and hardware resources</p></td>
+<td><p>1. Discover/collect the resources and their
+configuration information.
+2. Create an execution environment (for
+example, VM) for the workloads (VNF).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vn-Nf</p></td>
+<td><p>External</p></td>
+<td><p>NFVI and VM (VNF)</p></td>
+<td><p>Here, VNF represents the execution environment.
+The interface is used to specify the
+interactions between the VNF and the abstract
+NFVI accelerators. The interfaces can be used
+to discover, configure, and manage these
+accelerators, and for the VNF to register/
+deregister for receiving accelerator events and
+data.</p></td>
+</tr>
+<tr class="row-even"><td><p>NF-Vi</p></td>
+<td><p>External</p></td>
+<td><p>NFVI and VIM</p></td>
+<td><p>1. Discover/collect physical/virtual resources
+and their configuration information.
+2. Manage (create, resize, suspend, unsuspend,
+reboot, and so on) physical/virtualised
+resources.
+3. Configuration changes of physical/virtual
+resources.
+4. Physical/Virtual resource configuration.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Or-Vi</p></td>
+<td><p>External</p></td>
+<td><p>VNF orchestrator and VIM</p></td>
+<td><p>See below</p></td>
+</tr>
+<tr class="row-even"><td><p>Vi-Vnfm</p></td>
+<td><p>External</p></td>
+<td><p>VNF manager and VIM</p></td>
+<td><p>See below</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 6-1:</strong> NFVI and VIM interfaces with other system components in the ETSI NFV architecture</p>
+<p>The Or-Vi and Vi-Vnfm both specify interfaces provided by the VIM and are therefore related. The Or-Vi reference
+point is used for exchanges between the NFV orchestrator and the VIM, and supports the interfaces listed below.
+Virtualised resources refer to virtualised compute, storage, and network resources:</p>
+<ul class="simple">
+<li><p>Software image management</p></li>
+<li><p>Virtualised resources information management</p></li>
+<li><p>Virtualised resources capacity management (only VNF orchestrator and VIM (Or-Vi))</p></li>
+<li><p>Virtualised resources management</p></li>
+<li><p>Virtualised resources change management</p></li>
+<li><p>Virtualised resources reservation management</p></li>
+<li><p>Virtualised resources quota management</p></li>
+<li><p>Virtualised resources performance management</p></li>
+<li><p>Virtualised resources fault management</p></li>
+<li><p>Policy management</p></li>
+<li><p>Network forwarding path (NFP) management (only VNF orchestrator and VIM (Or-Vi))</p></li>
+</ul>
+<section id="tenant-level-apis">
+<h3>Tenant-level APIs<a class="headerlink" href="#tenant-level-apis" title="Link to this heading">¶</a></h3>
+<p>In the abstraction model of the Cloud Infrastructure (see <strong>Chapter 3</strong>), a conceptual model of a tenant represents
+the slice of a cloud zone dedicated to a workload. This slice, the tenant, is composed of virtual resources being
+utilized by workloads within that tenant. The tenant has an assigned quota of virtual resources. A set of users can
+perform operations according to their assigned roles, and the tenant exists within a cloud zone. The APIs specify
+the allowed operations on the tenant, including its component virtual resources. The different APIs can only be
+executed by users with the appropriate roles. For example, a tenant may only be allowed to be created and deleted by
+the cloud zone administrators, while the virtual compute resources could be allowed to be created and deleted by the
+tenant administrators.</p>
+<p>The creation of a workload in a tenant also requires APIs for the management (creation, deletion, and operation) of
+the tenant, software flavours (see Chapter 5), operating system and workload images (“Images”), identity and
+authorization (“Identity”), virtual resources, security, and the workload application (“stack”).</p>
+<p>A virtual compute resource is created according to the flavour template, specifying the compute, memory, and local
+storage capacity. It is launched using an image with access and security credentials. Once launched, it is referred to
+as a virtual compute instance or simply “Instance”. Instances can be launched by specifying the compute, memory, and
+local storage capacity parameters, instead of an existing flavour. Reference to flavours covers the situation where the
+capacity parameters are specified. IP addresses and storage volumes can be attached to a running Instance.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource</p></th>
+<th class="head"><p>Create</p></th>
+<th class="head"><p>List</p></th>
+<th class="head"><p>Attach</p></th>
+<th class="head"><p>Detach</p></th>
+<th class="head"><p>Delete</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Flavour</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Image</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by the appropriate administrators.</p></td>
+</tr>
+<tr class="row-even"><td><p>Key pairs</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Privileges</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>Created and managed by the Cloud Service Provider (CSP)
+administrators.</p></td>
+</tr>
+<tr class="row-even"><td><p>Role</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by authorized administrators where roles are
+assigned privileges and mapped to the users in scope.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Security
+groups</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted only by the VDC administrators.</p></td>
+</tr>
+<tr class="row-even"><td><p>Stack</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by VDC users with the appropriate role.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Virtual
+storage</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by VDC users with the appropriate role.</p></td>
+</tr>
+<tr class="row-even"><td><p>User</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted only by the VDC administrators.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tenant</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted only by the Cloud Zone administrators.</p></td>
+</tr>
+<tr class="row-even"><td><p>Virtual
+compute</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by VDC users with the appropriate role.
+Additional operations include suspend and unsuspend.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Virtual
+network</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Created and deleted by VDC users with the appropriate role.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 6-2:</strong> API types for a minimal set of resources</p>
+<p><strong>Table 6-2</strong> specifies a minimal set of operations for a minimal set of resources that are needed to orchestrate
+the workloads. The APIs for the listed operations are specified in the Reference Architectures. Each listed
+operation can have a number of associated APIs with a different set of parameters. For example, create a virtual
+resource using an image or a device.</p>
+</section>
+<section id="hardware-acceleration-interfaces">
+<h3>Hardware acceleration interfaces<a class="headerlink" href="#hardware-acceleration-interfaces" title="Link to this heading">¶</a></h3>
+<p><strong>Acceleration Interface Specifications</strong>
+ETSI GS NFV-IFA 002 <span id="id1">[<a class="reference internal" href="chapter01.html#id17" title="Acceleration Technologies; VNF Interfaces Specification. ETSI GS NFV-IFA 002 v2.1.1. URL: https://www.etsi.org/deliver/etsi_gs/NFV-IFA/001_099/002/02.01.01_60/gs_NFV-IFA002v020101p.pdf.">28</a>]</span> defines a technology- and implementation-independent virtual accelerator,
+and the accelerator interface requirements and specifications that would allow a workload to leverage a virtual
+accelerator. The virtual accelerator is modelled on extensible para-virtualised devices (EDP).
+ETSI GS NFV-IFA 002 <span id="id2">[<a class="reference internal" href="chapter01.html#id17" title="Acceleration Technologies; VNF Interfaces Specification. ETSI GS NFV-IFA 002 v2.1.1. URL: https://www.etsi.org/deliver/etsi_gs/NFV-IFA/001_099/002/02.01.01_60/gs_NFV-IFA002v020101p.pdf.">28</a>]</span> specifies the architectural model in Chapter 4 and the abstract interfaces
+for management, configuration, monitoring, and data exchange in Chapter 7.</p>
+<p>ETSI NFV-IFA 019 3.1.1 <span id="id3">[<a class="reference internal" href="chapter01.html#id18" title="Network Functions Virtualisation (NFV); Acceleration Technologies; Acceleration Resource Management Interface Specification. ETSI NFV-IFA 019 V3.1.1. URL: https://www.etsi.org/deliver/etsi_gs/nfv-ifa/001_099/019/03.01.01_60/gs_nfv-ifa019v030101p.pdf.">29</a>]</span> has defined a set of technology-independent interfaces for acceleration
+resource lifecycle management. These operations allow allocation, release, and querying of acceleration resources, get
+and reset statistics, subscribe/unsubscribe (terminate) to fault notifications, notify (only used by NFVI), and get
+alarm information.</p>
+<p>These acceleration interfaces are summarized here in Table 6.3 for your convenience only.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Request</p></th>
+<th class="head"><p>Response</p></th>
+<th class="head"><p>From,
+To</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="3"><p>InitAccRequest</p></td>
+<td rowspan="3"><p>InitAccResponse</p></td>
+<td rowspan="3"><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accFilter</p></td>
+<td><p>The accelerator subsystems to
+initialize and retrieve their
+capabilities.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Filter</p></td>
+<td><p>accAttributeS
+elector</p></td>
+<td><p>The attribute names of the
+accelerator capabilities.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>accCapabiliti
+es</p></td>
+<td><p>The acceleration subsystem
+capabilities.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>RegisterForAccEventRe</p>
+<p>quest</p>
+</td>
+<td rowspan="2"><p>RegisterForAccEventRes</p>
+<p>ponse</p>
+</td>
+<td rowspan="2"><p>VNF →</p>
+<p>NFVI</p>
+</td>
+<td><p>Input</p></td>
+<td><p>accEvent</p></td>
+<td><p>The event in which the VNF is
+interested.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>vnfEventHandl
+erId</p></td>
+<td><p>The handler for the NFVI to use
+when notifying the VNF of the
+event.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>AccEventNotificationR
+equest</p></td>
+<td rowspan="2"><p>AccEventNotificationRe
+sponse</p></td>
+<td rowspan="2"><p>NFVI
+→ VNF</p></td>
+<td><p>Input</p></td>
+<td><p>vnfEventHandl
+erId</p></td>
+<td><p>The handler used by the VNF
+registering for this event.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accEventMetaD
+ata</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>DeRegisterForAccEvent
+Request</p></td>
+<td><p>DeRegisterForAccEventR
+esponse</p></td>
+<td><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accEvent</p></td>
+<td><p>The event from which the VNF is
+deregistering.</p></td>
+</tr>
+<tr class="row-even"><td><p>ReleaseAccRequest</p></td>
+<td><p>ReleaseAccResponse</p></td>
+<td><p>VNF →
+NFVI</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>ModifyAccConfiguratio
+nRequest</p></td>
+<td rowspan="2"><p>ModifyAccConfiguration
+Response</p></td>
+<td rowspan="2"><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accConfigurat
+ionData</p></td>
+<td><p>The configuration data for the
+accelerator.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accSubSysConf
+igurationData</p></td>
+<td><p>The configuration data for the
+accelerator subsystem.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>GetAccConfigsRequest</p></td>
+<td rowspan="3"><p>GetAccConfigsResponse</p></td>
+<td rowspan="3"><p>VNF →</p>
+<p>NFVI</p>
+</td>
+<td><p>Input</p></td>
+<td><p>accFilter</p></td>
+<td><p>The filter for the subsystems from
+which the configuration data is
+requested.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accConfigSele
+ctor</p></td>
+<td><p>The attributes of the
+configuration types.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>accConfigs</p></td>
+<td><p>The configuration information
+(only for the specified
+attributes) for the specified
+subsystems.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>ResetAccConfigsReque
+st</p></td>
+<td rowspan="2"><p>ResetAccConfigsRespon
+se</p></td>
+<td rowspan="2"><p>VNF →</p>
+<p>NFVI</p>
+</td>
+<td><p>Input</p></td>
+<td><p>accFilter</p></td>
+<td><p>The filter for the subsystems for
+which the configuration is to be
+reset.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accConfigSele
+ctor</p></td>
+<td><p>The attributes of the
+configuration types whose values
+will be reset.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>AccDataRequest</p></td>
+<td rowspan="3"><p>AccDataResponse</p></td>
+<td rowspan="3"><p>VNF →</p>
+<p>NFVI</p>
+</td>
+<td><p>Input</p></td>
+<td><p>accData</p></td>
+<td><p>The data (metadata) sent to
+the accelerator.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accChannel</p></td>
+<td><p>The channel to which the data is
+to be sent.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>accData</p></td>
+<td><p>The data from the accelerator.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>AccSendDataRequest</p></td>
+<td rowspan="2"><p>AccSendDataResponse</p></td>
+<td rowspan="2"><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accData</p></td>
+<td><p>The data (metadata) sent to the
+accelerator.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accChannel</p></td>
+<td><p>The channel to which the data is
+to be sent.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>AccReceiveDataRequest</p></td>
+<td rowspan="3"><p>AccReceiveDataResponse</p></td>
+<td rowspan="3"><p>VNF →</p>
+<p>NFVI</p>
+</td>
+<td><p>Input</p></td>
+<td><p>maxNumberOfDa
+taItems</p></td>
+<td><p>The maximum number of data items
+to be received.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accChannel</p></td>
+<td><p>Channel data is requested from the
+accelerator.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>accData</p></td>
+<td><p>Data is received from the
+accelerator.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>RegisterForAccDataAva
+ilableEventRequest</p></td>
+<td rowspan="2"><p>RegisterForAccDataAvai
+lableEventResponse</p></td>
+<td rowspan="2"><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>regHandlerId</p></td>
+<td><p>Registration identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accChannel</p></td>
+<td><p>Channel where the event is
+requested.</p></td>
+</tr>
+<tr class="row-even"><td><p>AccDataAvailableEvent
+NotificationRequest</p></td>
+<td><p>AccDataAvailableEventN
+otificationResponse</p></td>
+<td><p>NFVI
+→ VNF</p></td>
+<td><p>Input</p></td>
+<td><p>regHandlerId</p></td>
+<td><p>Reference used by the VNF when
+registering for the event.</p></td>
+</tr>
+<tr class="row-odd"><td><p>DeRegisterForAccDataA
+vailableEventRequest</p></td>
+<td><p>DeRegisterForAccDataAv
+ailableEventResponse</p></td>
+<td><p>VNF →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accChannel</p></td>
+<td><p>Channel related to the event.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>AllocateAccResourceRe
+quest</p></td>
+<td rowspan="3"><p>AllocateAccResourceRes
+ponse</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>attachTarget
+Info</p></td>
+<td><p>The resource to which the
+accelerator is to be attached
+(for example, VM).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accResourceI
+nfo</p></td>
+<td><p>Accelerator information.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>accResourceId</p></td>
+<td><p>ID, if successful.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReleaseAccResourceReq
+uest</p></td>
+<td><p>ReleaseAccResourceResp
+onse</p></td>
+<td><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accResourceId</p></td>
+<td><p>ID of the resource to be released.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>QueryAccResourceReque
+st</p></td>
+<td rowspan="3"><p>QueryAccResourceRespon
+se</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>hostId</p></td>
+<td><p>ID of the specified host.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Filter</p></td>
+<td><p>Specifies the accelerators to
+which the query applies.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>accQueryResu
+lt</p></td>
+<td><p>Details of the accelerators
+matching the input filter located
+in the selected host.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>GetAccStatisticsReque
+st</p></td>
+<td rowspan="3"><p>GetAccStatisticsRespon
+se</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accFilter</p></td>
+<td><p>Accelerator subsystems from which
+data is requested.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accStatSelect
+or</p></td>
+<td><p>Attributes of AccStatistics whose
+data is returned.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Output</p></td>
+<td><p>accStatistics</p></td>
+<td><p>Statistics data of the
+accelerators matching the input
+filter located in the selected
+host.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>ResetAccStatisticsReq
+uest</p></td>
+<td rowspan="2"><p>ResetAccStatisticsResp
+onse</p></td>
+<td rowspan="2"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accFilter</p></td>
+<td><p>Accelerator subsystems for which
+the data is to be reset.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accStatSelect
+or</p></td>
+<td><p>Attributes of AccStatistics whose
+data will be reset.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>SubscribeRequest</p></td>
+<td rowspan="3"><p>SubscribeResponse</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>hostId</p></td>
+<td><p>ID of the specified host.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Filter</p></td>
+<td><p>Specifies the accelerators and
+the related alarms. The filter can
+include accelerator information,
+severity of the alarm, and so on.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>Subscriptio
+nId</p></td>
+<td><p>Identifier of the successfully
+created subscription.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>UnsubscribeRequest</p></td>
+<td rowspan="2"><p>UnsubscribeResponse</p></td>
+<td rowspan="2"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>hostId</p></td>
+<td><p>ID of the specified host.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>Subscription
+Id</p></td>
+<td><p>Identifier of the subscription to
+be unsubscribed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Notify</p></td>
+<td></td>
+<td><p>NFVI
+→ VIM</p></td>
+<td></td>
+<td></td>
+<td><p>NFVI notifies an alarm to VIM.</p></td>
+</tr>
+<tr class="row-even"><td rowspan="3"><p>GetAlarmInfoRequest</p></td>
+<td rowspan="3"><p>GetAlarmInfoResponse</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>hostId</p></td>
+<td><p>ID of the specified host.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>Filter</p></td>
+<td><p>Specifies the accelerators and
+the related alarms. The filter can
+include accelerator information,
+severity of the alarm, and so on.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>Alarm</p></td>
+<td><p>Information about the alarms, if
+the filter matches an alarm.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="2"><p>AccResourcesDiscovery
+Request</p></td>
+<td rowspan="2"><p>AccResourcesDiscoveryR
+esponse</p></td>
+<td rowspan="2"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>hostId</p></td>
+<td><p>ID of the specified host.</p></td>
+</tr>
+<tr class="row-even"><td><p>Output</p></td>
+<td><p>discoveredAcc
+ResourceInfo</p></td>
+<td><p>Information on the acceleration
+resources discovered within the
+NFVI.</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>OnloadAccImageRequest</p></td>
+<td rowspan="3"><p>OnloadAccImageResponse</p></td>
+<td rowspan="3"><p>VIM →
+NFVI</p></td>
+<td><p>Input</p></td>
+<td><p>accResourceId</p></td>
+<td><p>Identifier of the chosen
+accelerator in the NFVI.</p></td>
+</tr>
+<tr class="row-even"><td><p>Input</p></td>
+<td><p>accImageInfo</p></td>
+<td><p>Information about the acceleration
+image.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input</p></td>
+<td><p>accImage</p></td>
+<td><p>The binary file of the
+acceleration image.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 6-3:</strong> Hardware acceleration interfaces in the ETSI NFV architecture</p>
+</section>
+</section>
+<section id="intra-cloud-infrastructure-interfaces">
+<h2>Intra-Cloud Infrastructure interfaces<a class="headerlink" href="#intra-cloud-infrastructure-interfaces" title="Link to this heading">¶</a></h2>
+<section id="hypervisor-hardware-interface">
+<h3>Hypervisor hardware interface<a class="headerlink" href="#hypervisor-hardware-interface" title="Link to this heading">¶</a></h3>
+<p>Table 6-1 lists a number of NFVI and VIM interfaces, including the internal VI-Ha interface. The VI-Ha interface allows
+the hypervisor to control the physical infrastructure. The hypervisor acts under VIM control. The VIM issues all
+requests and responses using the NF-VI interface. Requests and responses include commands, configuration requests,
+policies, updates, alerts, and response to infrastructure results. The hypervisor also provides information about the
+health of the physical infrastructure resources to the VM. All these activities, on behalf of the VIM, are performed by
+the hypervisor using the VI-Ha interface. While no abstract APIs have yet been defined for this internal VI-Ha
+interface, ETSI GS NFV-INF 004 <span id="id4">[<a class="reference internal" href="chapter01.html#id19" title="Network Functions Virtualisation (NFV); Infrastructure; Hypervisor Domain. ETSI GS NFV-INF 004 V1.1.1. URL: https://www.etsi.org/deliver/etsi_gs/NFV-INF/001_099/004/01.01.01_60/gs_NFV-INF004v010101p.pdf.">30</a>]</span> defines a set of requirements and details of the information
+that is required by the VIM from the physical infrastructure resources. Hypervisors utilize various programs to get this
+data, including BIOS, IPMI, PCI, I/O Adapters/Drivers, and so on.</p>
+</section>
+</section>
+<section id="enabler-services-interfaces">
+<h2>Enabler services interfaces<a class="headerlink" href="#enabler-services-interfaces" title="Link to this heading">¶</a></h2>
+<p>In order to function properly, an operational cloud needs a set of standard services. These services comprise NTP for
+time synchronization, DHCP for IP address allocation, DNS for obtaining IP addresses for domain names, and LBaaS
+(version 2) to distribute incoming requests amongst a pool of designated resources.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">External Interfaces</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#cloud-infrastructure-apis">Cloud Infrastructure APIs</a><ul>
+<li><a class="reference internal" href="#tenant-level-apis">Tenant-level APIs</a></li>
+<li><a class="reference internal" href="#hardware-acceleration-interfaces">Hardware acceleration interfaces</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#intra-cloud-infrastructure-interfaces">Intra-Cloud Infrastructure interfaces</a><ul>
+<li><a class="reference internal" href="#hypervisor-hardware-interface">Hypervisor hardware interface</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enabler-services-interfaces">Enabler services interfaces</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+            </div>
+
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2022, Anuket. Licensed under CC BY 4.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
+</html>
