@@ -202,10 +202,10 @@ run within a virtual machine (VM) or as a set of containers.</p></li>
 <h3>Virtual Resources<a class="headerlink" href="#virtual-resources" title="Link to this heading">¶</a></h3>
 <p>The virtual infrastructure resources provided by the Cloud Infrastructure can be grouped into four categories as shown
 in the diagram below:</p>
-<figure class="align-default" id="id34">
+<figure class="align-default" id="id50">
 <img alt="Virtual Infrastructure Resources provide virtual compute, storage and networks in a tenant context" src="../_images/ch03-model-virtual-resources.png" />
 <figcaption>
-<p><span class="caption-text">Virtual Infrastructure Resources provide virtual compute, storage and networks in a tenant context</span><a class="headerlink" href="#id34" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Virtual Infrastructure Resources provide virtual compute, storage and networks in a tenant context</span><a class="headerlink" href="#id50" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -386,10 +386,10 @@ workload, and thus increase the workloads’ fault-tolerance.</p>
 <li><p>manage access privileges and</p></li>
 <li><p>provision, manage, monitor and delete virtual resources.</p></li>
 </ul>
-<figure class="align-default" id="id35">
+<figure class="align-default" id="id51">
 <img alt="Virtual Infrastructure Manager" src="../_images/ch03-model-virtual-manager.png" />
 <figcaption>
-<p><span class="caption-text">Virtual Infrastructure Manager</span><a class="headerlink" href="#id35" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Virtual Infrastructure Manager</span><a class="headerlink" href="#id51" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The virtual infrastructure manager needs to support the following functional aspects:</p>
@@ -419,10 +419,10 @@ resources</p></li>
 <p>Compute, Storage and Network resources serve as the foundation of the cloud infrastructure. They are exposed to and used
 by a set of networked Host Operating Systems in a cluster that normally handles the Virtual Infrastructure Layer
 offering Virtual Machines or Containers where the application workloads (VNFs/CNFs) runs.</p>
-<figure class="align-default" id="id36">
+<figure class="align-default" id="id52">
 <img alt="Cloud Infrastructure Hardware Resources" src="../_images/ch03-model-hardware-resources.png" />
 <figcaption>
-<p><span class="caption-text">Cloud Infrastructure Hardware Resources</span><a class="headerlink" href="#id36" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Cloud Infrastructure Hardware Resources</span><a class="headerlink" href="#id52" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>In managed Hardware Infrastructure systems, these consumable Compute, Storage and Network resources can be provisioned
@@ -502,10 +502,10 @@ Network resources to handle the resource assignment and arbitration.</p>
 <p>The resource allocation could be a simple book-keeping of which Virtualization Infrastructure Layer instance that have
 been allocated a physical hardware resource or a more advanced resource Composition function that assemble the consumed
 Compute, Storage and Network resources on demand from the pools of physical hardware resources.</p>
-<figure class="align-default" id="id37">
+<figure class="align-default" id="id53">
 <img alt="Hardware Infrastructure Manager" src="../_images/ch03-model-hardware-manager.png" />
 <figcaption>
-<p><span class="caption-text">Hardware Infrastructure Manager</span><a class="headerlink" href="#id37" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Hardware Infrastructure Manager</span><a class="headerlink" href="#id53" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The hardware infrastructure manager allows to:</p>
@@ -539,13 +539,13 @@ access management, policy management (e.g. to enforce security policies), etc.</
 <p>This section proposes a Redfish based hardware infrastructure manager for the Anuket project. Open Distributed Infrastructure Management (ODIM) is an open source software platform that delivers means of distributed physical infrastructure lifecycle management based on the industry standard DMTF Redfish API and Model specification.</p>
 <p>Chapter 9 (<a class="reference internal" href="chapter09.html#configuration-and-lifecycle-management"><span class="std std-ref">Configuration and Lifecycle Management</span></a>) of this reference model specifies Redfish standard for managing Infrastructure Hardware. The GSMA’s “Cloud Infrastructure Reference Model (NG.126)” also specifies Redfish as the standard interface that should be
 made available by the infrastructure and Cloud Infrastructure Management components, in the “Infrastructure Hardware” layer.</p>
-<p>Redfish is an internationally recognized standard <a href="#id42"><span class="problematic" id="id43">`ISO/IEC 30115:2018`__</span></a> <span id="id1">[<a class="reference internal" href="chapter01.html#id60" title="Information technology — Redfish scalable platforms management API specification. URL: https://www.iso.org/standard/83853.html.">12</a>]</span>. The Redfish interface specifies a HTTP RESTful interface that a client can use to manage conformant platforms. The Redfish standard consists of a Redfish interface specification <a class="reference external" href="://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf">Redfish Specification</a> and model specification <a href="#id42"><span class="problematic" id="id44">`Redfish Data Model Specification`__</span></a> <span id="id2">[<a class="reference internal" href="chapter01.html#id61" title="Redfish Data Model Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">13</a>]</span>.  The interface specification defines the RESTful behavior of the resources. The data model specification defines the structure of the HTTP resources. The model is expressed as schema using OpenAPI and json-schema formats. The schema allows implementing redfish clients using the OpenAPI and json-schema toolchains.</p>
+<p>Redfish is an internationally recognized standard <a href="#id58"><span class="problematic" id="id59">`ISO/IEC 30115:2018`__</span></a> <span id="id1">[<a class="reference internal" href="chapter01.html#id60" title="Information technology — Redfish scalable platforms management API specification. URL: https://www.iso.org/standard/83853.html.">12</a>]</span>. The Redfish interface specifies a HTTP RESTful interface that a client can use to manage conformant platforms. The Redfish standard consists of a Redfish interface specification <a class="reference external" href="://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf">Redfish Specification</a> and model specification <a href="#id58"><span class="problematic" id="id60">`Redfish Data Model Specification`__</span></a> <span id="id2">[<a class="reference internal" href="chapter01.html#id61" title="Redfish Data Model Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">13</a>]</span>.  The interface specification defines the RESTful behavior of the resources. The data model specification defines the structure of the HTTP resources. The model is expressed as schema using OpenAPI and json-schema formats. The schema allows implementing redfish clients using the OpenAPI and json-schema toolchains.</p>
 <p>There are several opensource implementations of Redfish Clients and Redfish Services.
 A refish resource aggregator could implement a scalable infrastructure manager which aggregates and exposes a standards-based Redfish interface and services northbound to an Orchestrator.</p>
 <p>DMTF specifies the Redfish interface and model, seeking to expand the manageability domains. The prescription of what subset of the
 Redfish model needs to be implemented for a specific manageability domain is left to other standards bodies.  Redfish had defined a
 JSON syntax for the prescription call a Redfish Profile and implemented an application which reads the Redfish Profile and tests for
-conformance of an implementation <a href="#id42"><span class="problematic" id="id45">`Interop Validato`__</span></a> <span id="id3">[<a class="reference internal" href="chapter01.html#id62" title="Redfish-Interop-Validator. URL: https://github.com/DMTF/Redfish-Interop-Validator.">14</a>]</span>.  The Redfish Profile mechanism is being utilized by the Open Compute Project
+conformance of an implementation <a href="#id58"><span class="problematic" id="id61">`Interop Validato`__</span></a> <span id="id3">[<a class="reference internal" href="chapter01.html#id62" title="Redfish-Interop-Validator. URL: https://github.com/DMTF/Redfish-Interop-Validator.">14</a>]</span>.  The Redfish Profile mechanism is being utilized by the Open Compute Project
 and Open Process Automation Forum.</p>
 <p>Redfish fulfills the following requirements stated in the above HW Infrastructure Manager section:</p>
 <ul class="simple">
@@ -553,10 +553,10 @@ and Open Process Automation Forum.</p>
 <li><p><strong>Discovery</strong>: The Redfish schema provides a physical hardware resource model including relevant information</p></li>
 <li><p><strong>Topology</strong>: The Redfish schema contains a cable model</p></li>
 <li><p><strong>Equipment</strong>: The Redfish schema contains a physical model and a functional model. The physical model expresses the chassis and containers and interconnects between them and environmental control functions.  The functional model expresses the logical aspects and includes configuration and  firmware status.   Both the physical and functional model have their own health/fault status information</p></li>
-<li><p><strong>Resource Allocation and Composition</strong>: The Redfish schema has a composition model through which a client can compose a logical resource by allocating physical resources. <a href="#id42"><span class="problematic" id="id46">`Redfish Composition Whitepaper`__</span></a> <span id="id4">[]</span>.</p></li>
+<li><p><strong>Resource Allocation and Composition</strong>: The Redfish schema has a composition model through which a client can compose a logical resource by allocating physical resources. <a href="#id58"><span class="problematic" id="id62">`Redfish Composition Whitepaper`__</span></a> <span id="id4">[]</span>.</p></li>
 <li><p><strong>Underlay Network Resources Manager</strong>: The Redfish schema has models for fabrics, switches and SmartNICs.</p></li>
-<li><p><strong>Monitoring</strong>: The Redfish schema contains event model for the client to receive hardware events and telemetry model for collecting information across the entire model (physical and functional) <a href="#id42"><span class="problematic" id="id47">`Redfish Telemetry Whitepaper`__</span></a> <span id="id5">[]</span></p></li>
-<li><p><strong>Additional Management Functions</strong>: The Redfish schema has models for access management and identity management <a href="#id42"><span class="problematic" id="id48">`Redfish Data Model Specification`__</span></a> <span id="id6">[<a class="reference internal" href="chapter01.html#id61" title="Redfish Data Model Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">13</a>]</span>.</p></li>
+<li><p><strong>Monitoring</strong>: The Redfish schema contains event model for the client to receive hardware events and telemetry model for collecting information across the entire model (physical and functional) <a href="#id58"><span class="problematic" id="id63">`Redfish Telemetry Whitepaper`__</span></a> <span id="id5">[]</span></p></li>
+<li><p><strong>Additional Management Functions</strong>: The Redfish schema has models for access management and identity management <a href="#id58"><span class="problematic" id="id64">`Redfish Data Model Specification`__</span></a> <span id="id6">[<a class="reference internal" href="chapter01.html#id61" title="Redfish Data Model Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">13</a>]</span>.</p></li>
 </ul>
 </section>
 <section id="how-redfish-fits-into-the-etsi-nfv-networking-reference-model">
@@ -1100,13 +1100,13 @@ Managed Objects <span id="id12">[<a class="reference internal" href="chapter01.h
 Server Option for DHCPv6 <span id="id13">[<a class="reference internal" href="chapter01.html#id10" title="Benoit Lourdelet and Richard Gayraud. Network Time Protocol (NTP) Server Option for DHCPv6. RFC 5908, June 2010. URL: https://www.rfc-editor.org/info/rfc5908.">19</a>]</span>)
 as the default time synchronization for the cluster. That level of synchronization is not sufficient for some
 network functions. Just like real-time operating systems instead of base OS, so is precision timing for clock
-synchronization. Precision Time Protocol version 2 <a href="#id42"><span class="problematic" id="id49">`PTP`__</span></a> <span id="id14">[]</span> __ <span id="id15">[<a class="reference internal" href="chapter01.html#id37" title="Precision Clock Synchronization Protocol for Networked Measurement and Control Systems. IEEE 1588-2019. URL: https://standards.ieee.org/standard/1588-2019.html.">20</a>]</span>
+synchronization. Precision Time Protocol version 2 <a href="#id58"><span class="problematic" id="id65">`PTP`__</span></a> <span id="id14">[]</span> __ <span id="id15">[<a class="reference internal" href="chapter01.html#id37" title="Precision Clock Synchronization Protocol for Networked Measurement and Control Systems. IEEE 1588-2019. URL: https://standards.ieee.org/standard/1588-2019.html.">20</a>]</span>
 is commonly used for Time-Sensitive Networking. This allow synchronization in microsecond range rather than
 millisecond range that NTP provides.</p>
-<p>Some Network functions, like vDU, of vRAN, also require <a href="#id42"><span class="problematic" id="id50">`SyncE`__</span></a> <span id="id16">[]</span> __ <span id="id17">[<a class="reference internal" href="chapter01.html#id38" title="Timing characteristics of a synchronous equipment slave clock. ITU-T G.8262. URL: https://www.itu.int/rec/T-REC-G.8262.">21</a>]</span>. Control,
+<p>Some Network functions, like vDU, of vRAN, also require <a href="#id58"><span class="problematic" id="id66">`SyncE`__</span></a> <span id="id16">[]</span> __ <span id="id17">[<a class="reference internal" href="chapter01.html#id38" title="Timing characteristics of a synchronous equipment slave clock. ITU-T G.8262. URL: https://www.itu.int/rec/T-REC-G.8262.">21</a>]</span>. Control,
 User and Synchronization (CUS) Plane specification defines different topology options that provides Lower Layer Split
 Control plane 1-4 (LLS-C1 - LLS-C4) with different synchronization requirements
-(<a href="#id42"><span class="problematic" id="id51">`ITU-T G.8275.2`__</span></a> <a href="#id18"><span class="problematic" id="id19">:cite:p:`ITU-T G.8275.2`__</span></a> <span id="id20">[<a class="reference internal" href="chapter01.html#id39" title="Precision time protocol telecom profile for time/phase synchronization with partial timing support from the network. ITU-T G.8275.2. URL: https://www.itu.int/rec/T-REC-G.8275.2.">22</a>]</span>).</p>
+(<a href="#id58"><span class="problematic" id="id67">`ITU-T G.8275.2`__</span></a> <a href="#id18"><span class="problematic" id="id19">:cite:p:`ITU-T G.8275.2`__</span></a> <span id="id20">[<a class="reference internal" href="chapter01.html#id39" title="Precision time protocol telecom profile for time/phase synchronization with partial timing support from the network. ITU-T G.8275.2. URL: https://www.itu.int/rec/T-REC-G.8275.2.">22</a>]</span>).</p>
 <p>SyncE was standardized by the ITU-T, in cooperation with IEEE, as three recommendations:</p>
 <ul class="simple">
 <li><p>ITU-T Rec. G.8261 that defines aspects about the architecture and the wander performance of SyncE networks</p></li>
@@ -1152,9 +1152,10 @@ tables inside the pod network namespace.</p>
 <h4>Multiple Networks and Advanced Configurations<a class="headerlink" href="#multiple-networks-and-advanced-configurations" title="Link to this heading">¶</a></h4>
 <p>Currently Kubernetes does not in itself support multi networks, pod multi network attachments or network orchestration.
 This is supported by using a <cite>Container Network Interface</cite> <a href="#id21"><span class="problematic" id="id22">:cite:p:`container-network-interface`__</span></a> multiplexer
-such as <a class="reference external" href="https://github.com/k8snetworkplumbingwg/multus-cni">Multus</a>.
-The <a class="reference external" href="https://github.com/k8snetworkplumbingwg/community">Network Plumbing Working Group</a> has produced
-the <a class="reference external" href="https://docs.google.com/document/d/1Ny03h6IDVy_e_vmElOqR7UdTPAG_RNydhVE1Kx54kFQ/edit">Kubernetes Network Custom Resource Definition De-facto Standard</a>.
+such as <a href="#id58"><span class="problematic" id="id68">`Multus`__</span></a> <span id="id23">[]</span>.
+The <a href="#id58"><span class="problematic" id="id69">`Network Plumbing Working Group`__</span></a> <span id="id24">[]</span> has produced
+the <a href="#id58"><span class="problematic" id="id70">`Kubernetes Network Custom Resource Definition De-facto Standard`__</span></a>
+<span id="id25">[]</span>.
 This document describes how secondary networks can be defined and attached to
 pods.</p>
 </section>
@@ -1291,10 +1292,10 @@ bootstrap process, it cannot be dependent on a separate storage system for maint
 <h3>Storage for Tenant Consumption<a class="headerlink" href="#storage-for-tenant-consumption" title="Link to this heading">¶</a></h3>
 <p>Storage is made available for tenant consumption through a number of models. A simplified view of this is provided in the
 following illustrative model.</p>
-<figure class="align-default" id="id38">
+<figure class="align-default" id="id54">
 <img alt="Storage Model - Cost vs Performance with Consumption Model Overlay" src="../_images/rm-ch3.6-storage-model-02.png" />
 <figcaption>
-<p><span class="caption-text">Storage Model - Cost vs Performance with Consumption Model Overlay</span><a class="headerlink" href="#id38" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Storage Model - Cost vs Performance with Consumption Model Overlay</span><a class="headerlink" href="#id54" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>Where:</p>
@@ -2011,7 +2012,7 @@ Also, this realization example would enable implementation of a programmable fab
 </figcaption>
 </figure>
 <p>The terms Container Infrastructure Service Instance and Container Infrastructure Service Manager should be understood as
-defined in ETSI GR NFV-IFA 029 V3.3.1 <span id="id23">[<a class="reference internal" href="chapter01.html#id14" title="Network Functions Virtualisation (NFV) Release 3; Architecture; Report on the Enhancements of the NFV architecture towards &quot;Cloud-native&quot; and &quot;PaaS&quot;. ETSI GR NFV-IFA 029 v3.3.1. URL: https://www.etsi.org/deliver/etsi_gr/NFV-IFA/001_099/029/03.03.01_60/gr_NFV-IFA029v030301p.pdf.">15</a>]</span>. More detailed deployment examples can be found in
+defined in ETSI GR NFV-IFA 029 V3.3.1 <span id="id26">[<a class="reference internal" href="chapter01.html#id14" title="Network Functions Virtualisation (NFV) Release 3; Architecture; Report on the Enhancements of the NFV architecture towards &quot;Cloud-native&quot; and &quot;PaaS&quot;. ETSI GR NFV-IFA 029 v3.3.1. URL: https://www.etsi.org/deliver/etsi_gr/NFV-IFA/001_099/029/03.03.01_60/gr_NFV-IFA029v030301p.pdf.">15</a>]</span>. More detailed deployment examples can be found in
 <a class="reference internal" href="#network">network</a> of this Reference Model chapter.</p>
 </section>
 <section id="hardware-acceleration-abstraction">
@@ -2104,10 +2105,10 @@ programmable to activate;
 </tbody>
 </table>
 <p><strong>Table 3-10:</strong> Hardware acceleration categories, implementation, activation/LCM/support and usage</p>
-<figure class="align-default" id="id39">
+<figure class="align-default" id="id55">
 <img alt="Examples of server- and SmartSwitch-based nodes (for illustration only)" src="../_images/ch03-examples-of-server-and-smartswitch-based-nodes.png" />
 <figcaption>
-<p><span class="caption-text">Examples of server- and SmartSwitch-based nodes (for illustration only)</span><a class="headerlink" href="#id39" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Examples of server- and SmartSwitch-based nodes (for illustration only)</span><a class="headerlink" href="#id55" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 </section>
@@ -2158,14 +2159,14 @@ be decoupled from it by using open multi-vendor API for Hardware Acceleration de
 <p>O-RAN Alliance’s Cloudification and Orchestration Workgroup (WG6) defines the Acceleration Abstraction Layer (AAL), an
 application-level interface, as the recommended way of decoupling software vendors’ network functions from the different
 hardware accelerator implementations.</p>
-<figure class="align-default" id="id40">
+<figure class="align-default" id="id56">
 <img alt="AAL Interface in RM Realization Diagram" src="../_images/ch03-hardware-acceleration-in-rm-realization-diagram_AAL.png" />
 <figcaption>
-<p><span class="caption-text">AAL Interface in RM Realization Diagram</span><a class="headerlink" href="#id40" title="Link to this image">¶</a></p>
+<p><span class="caption-text">AAL Interface in RM Realization Diagram</span><a class="headerlink" href="#id56" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>The document “O-RAN Acceleration Abstraction Layer General Aspects and Principles 1.0” <span id="id24">[<a class="reference internal" href="chapter01.html#id41" title="O-RAN Acceleration Abstraction Layer General Aspects and Principles. O-RAN.WG6.AAL-GAnP-v01.00, November 2020. URL: https://www.o-ran.org.">23</a>]</span>,
-and the latest O-RAN WG6 Cloudification and Orchestration Workgroup specifications <span id="id25">[<a class="reference internal" href="chapter01.html#id44" title="WG6: Cloudification and Orchestration Workgroup specfications. URL: https://www.o-ran.org.">24</a>]</span>:</p>
+<p>The document “O-RAN Acceleration Abstraction Layer General Aspects and Principles 1.0” <span id="id27">[<a class="reference internal" href="chapter01.html#id41" title="O-RAN Acceleration Abstraction Layer General Aspects and Principles. O-RAN.WG6.AAL-GAnP-v01.00, November 2020. URL: https://www.o-ran.org.">23</a>]</span>,
+and the latest O-RAN WG6 Cloudification and Orchestration Workgroup specifications <span id="id28">[<a class="reference internal" href="chapter01.html#id44" title="WG6: Cloudification and Orchestration Workgroup specfications. URL: https://www.o-ran.org.">24</a>]</span>:</p>
 <ul class="simple">
 <li><p>Describe the functions conveyed over the AAL interface, including configuration and management functions.</p></li>
 <li><p>Identify the requirements as well as general procedures and operations.</p></li>
@@ -2242,10 +2243,10 @@ infrastructure virtual switching or part of an application functions data plane.
 Data Processing Unit (DPU), have a programmable pipeline and some strong CPU cores that simultaneously can implement
 underlay networking separation and trusted forwarding functions, infrastructure virtual switching data and control plane
 as well as part of an application functions control plane.</p>
-<figure class="align-default" id="id41">
+<figure class="align-default" id="id57">
 <img alt="Example SmartNIC Deployment Model That Accelerates Two Workloads and Has OOB Management" src="../_images/ch03-example-smartnic-deployment-model.png" />
 <figcaption>
-<p><span class="caption-text">Example SmartNIC Deployment Model That Accelerates Two Workloads and Has OOB Management</span><a class="headerlink" href="#id41" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Example SmartNIC Deployment Model That Accelerates Two Workloads and Has OOB Management</span><a class="headerlink" href="#id57" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <section id="simple-smartnic">
@@ -2277,7 +2278,7 @@ for their respective control functions. These APIs must have an ability to handl
 forwarding and control planes life cycle management will not be atomic. The offload functions that should be offered as
 services must have published and preferably standardized open APIs, but the application specific forwarding functions do
 not have to be open APIs since they will only communicate with the application tenant provided control functions.
-<a class="reference external" href="https://p4.org/">P4</a> and <a class="reference external" href="https://openconfig.net/">OpenConfig</a> are examples of suitable languages and models,
+<a href="#id58"><span class="problematic" id="id71">`P4`__</span></a> <span id="id29">[]</span> and <a href="#id58"><span class="problematic" id="id72">`OpenConfig`__</span></a> <span id="id30">[]</span> are examples of suitable languages and models,
 with different levels of flexibility, usable for these forwarding and control functions.</p>
 <p>The separated management channel could either come in through the BMC, a direct management port on the DPU or through a
 management VPN on the switch ports. This enable the Hardware Infrastructure Management to automate its networking
@@ -2296,16 +2297,16 @@ into respective application tenant environment.</p>
 <p>Smart Switches can be broadly categorized into Configurable Switches and Programmable Switches.</p>
 <p>Configurable Smart Switches run generic “smart” configurable network operating system offering full range of network
 functionality and are flexible enough to support most network solutions. The most common such network operating system
-is Linux-based <a class="reference external" href="https://github.com/sonic-net/SONiC">SONiC</a> allowing hardware and software disaggregation by running
+is Linux-based <a href="#id58"><span class="problematic" id="id73">`SONiC`__</span></a> <span id="id31">[]</span> allowing hardware and software disaggregation by running
 on switches from multiple switch vendors with different types of vendor fixed-function ASICs. Still, SONiC today cannot
 implement new type of data plane functionality or patch/modify/correct an ASIC, which is the type of support offered by
 programmable smart switches.</p>
 <p>Programmable Smart Switches make it possible to quickly support new or correct/modify existing protocols and network
 functions, allow end customers to implement network functions, and to only implement and load functionality that is
 needed. Such switches contain one or more programmable switch ASICs of the same or different types. The two most used
-programming languages are <a class="reference external" href="https://p4.org/">P4</a> and <a class="reference external" href="https://nplang.org/">NPL</a>, and both can be used with
+programming languages are <a href="#id58"><span class="problematic" id="id74">`P4`__</span></a> <span id="id32">[]</span> and <a href="#id58"><span class="problematic" id="id75">`NPL`__</span></a> <span id="id33">[]</span>, and both can be used with
 vendor-specific toolchains to program their switch ASICs and/or FPGAs. Open Networking Foundation
-<a class="reference external" href="https://opennetworking.org/stratum/">Stratum</a> is an example of network operating system that offers generic life
+<a href="#id58"><span class="problematic" id="id76">`Stratum`__</span></a> <span id="id34">[]</span> is an example of network operating system that offers generic life
 cycle management control services for the P4 components and a management API. The control API for the individual network
 functions are not part of the Stratum APIs.</p>
 <p>Based on Smart Switches, products exist for fully integrated edge and fabric solutions from vendors like Arista, Cisco
@@ -2380,11 +2381,11 @@ Balancer being hardware-accelerated).</p>
 </section>
 <section id="address-family-for-xdp-af-xdp">
 <h2>Address Family For XDP (AF_XDP)<a class="headerlink" href="#address-family-for-xdp-af-xdp" title="Link to this heading">¶</a></h2>
-<p><a class="reference external" href="https://www.kernel.org/doc/html/latest/networking/af_xdp.html">Address Family For XDP (AF_XDP)</a> is optimized for
-high performance packet processing and introduced in Linux kernel v4.18. This new socket type leverages the <a class="reference external" href="https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/">eXpress
-Data Path (XDP)</a> in-kernel fast-path to transfer
-traffic frames from the NIC driver directly to userspace without the need for full network stack. XDP is an <a class="reference external" href="https://ebpf.io/">Extended
-Berkley Packet Filter</a> (eBPF) software program.</p>
+<p><a href="#id58"><span class="problematic" id="id77">`Address Family For XDP (AF_XDP)`__</span></a> <span id="id35">[]</span> is optimized for
+high performance packet processing and introduced in Linux kernel v4.18. This new socket type leverages the <a href="#id58"><span class="problematic" id="id78">`eXpress
+Data Path (XDP)`__</span></a> <span id="id36">[]</span> in-kernel fast-path to transfer
+traffic frames from the NIC driver directly to userspace without the need for full network stack. XDP is an <a href="#id58"><span class="problematic" id="id79">`Extended
+Berkley Packet Filter`__</span></a> <span id="id37">[]</span> (eBPF) software program.</p>
 <p>By using the XDP_REDIRECT action from that XDP program, ingress frames can be redirected to other XDP-enabled network
 devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP drivers.</p>
 <figure class="align-default" id="af-xdp-architecture">
@@ -2393,23 +2394,24 @@ devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP 
 <p><span class="caption-text">AF_XDP Architecture</span><a class="headerlink" href="#af-xdp-architecture" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
-<p>Linux-native applications can open an AF_XDP socket to receive raw packets directly from the NIC, by using <a class="reference external" href="https://www.kernel.org/doc/html/latest/bpf/libbpf/index.html">libbpf</a> library functions to register a packet buffer area
+<p>Linux-native applications can open an AF_XDP socket to receive raw packets directly from the NIC, by using <a href="#id58"><span class="problematic" id="id80">`libbpf`__</span></a> <a href="#id38"><span class="problematic" id="id39">:cite:p:`libbpf
+` library functions to register a packet buffer area
 where packets will be located, and to create and bind the socket to a networking interface. DPDK-based applications
-can use <a class="reference external" href="https://doc.dpdk.org/guides/nics/af_xdp.html">AF_XDP Poll Mode Driver</a> . VPP-based applications can use
-<a class="reference external" href="https://s3-docs.fd.io/vpp/23.02/developer/devicedrivers/af_xdp.html">AF_XDP Device Driver</a>.</p>
+can use `AF_XDP Poll Mode Driver`__</span></a> <span id="id40">[]</span>. VPP-based applications can use
+<a href="#id58"><span class="problematic" id="id81">`AF_XDP Device Driver`__</span></a> <span id="id41">[]</span>.</p>
 <p>In virtualized environments AF_XDP could be used as interface between guest Kernel and user space application, but still need SR-IOV or virtio to get traffic to the VM.</p>
 </section>
 <section id="energy-efficiency">
 <h2>Energy efficiency<a class="headerlink" href="#energy-efficiency" title="Link to this heading">¶</a></h2>
 <p>Energy efficiency should be an overall requirement for the cloud infrastructure itself, the workloads
 hosted by this infrastructure, and the interface layer between them.</p>
-<p>For telecommunication networks, energy efficiency is defined by <a class="reference external" href="https://www.itu.int/rec/T-REC-L.1330">ITU-T L.1330</a> <span id="id26">[<a class="reference internal" href="chapter01.html#id45" title="Energy efficiency measurement and metrics for telecommunication networks. ITU-T L.1330. URL: https://www.itu.int/rec/T-REC-L.1330.">25</a>]</span>
+<p>For telecommunication networks, energy efficiency is defined by <a href="#id58"><span class="problematic" id="id82">`ITU-T L.1330`__</span></a> <span id="id42">[<a class="reference internal" href="chapter01.html#id45" title="Energy efficiency measurement and metrics for telecommunication networks. ITU-T L.1330. URL: https://www.itu.int/rec/T-REC-L.1330.">25</a>]</span>
 as “the relation between the useful output and energy consumption”, the useful output being a metric which represents the capacity provided by the service whose energy efficiency is
 assessed. As an example, the useful output of a traffic forwarding function can be the data volume forwarded (e.g., measured
 in Byte) and the assessment of its energy efficiency is then based on the ratio between this volume and the energy
 consumed for processing it (e.g., measured in Watt.hour) :
 Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy.</p>
-<p>As elaborated in the Next Generation Alliance’s whitepaper <a class="reference external" href="https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/">NGA Green G</a> <span id="id27">[<a class="reference internal" href="chapter01.html#id52" title="Next G Alliance Green G: The path towards sustainable 6G. URL: https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/.">26</a>]</span>,
+<p>As elaborated in the Next Generation Alliance’s whitepaper <a href="#id58"><span class="problematic" id="id83">`NGA Green G`__</span></a> <span id="id43">[<a class="reference internal" href="chapter01.html#id52" title="Next G Alliance Green G: The path towards sustainable 6G. URL: https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/.">26</a>]</span>,
 with the global migration from 4G to 5G, one can observe the rise in data center power consumption with the parallel reduction in the energy consumption of core network
 elements. This observation emphasizes the importance of the energy efficiency on the infrastructure and workload levels, and on the interface layer between them.</p>
 <p>Examples of opportunities for the energy demand and cost reductions for the telecommunications operators are classified below.</p>
@@ -2432,18 +2434,18 @@ elements. This observation emphasizes the importance of the energy efficiency on
 </ul>
 <p>In this Reference Model, the focus is on the first group, which is related to the optimisation on the workload to infrastructure interface level.</p>
 <p>The method for assessing energy efficiency depends on the service targeted and the objectives. For NFV, ETSI proposes
-a method for production environment in <a class="reference external" href="https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=50095">ETSI EN 303 471</a> <span id="id28">[<a class="reference internal" href="chapter01.html#id46" title="Energy Efficiency measurement methodology and KPI/metrics for NFV. ETSI EN 303 471. URL: https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=50095.">27</a>]</span> and another one for laboratory one
-in <a class="reference external" href="https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=47210">ETSI ES 203 539</a> <span id="id29">[<a class="reference internal" href="chapter01.html#id47" title="Measurement method for energy efficiency of Network Functions Virtualisation (NFV) in laboratory environment. ETSI ES 203 539. URL: https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=47210.">28</a>]</span> (which is
-a common work with ITU-T which published as <a class="reference external" href="https://www.itu.int/rec/T-REC-L.1361">ITU-T L.1361</a> <span id="id30">[<a class="reference internal" href="chapter01.html#id48" title="Measurement method for energy efficiency of network functions virtualization. ITU-T L.1361. URL: https://www.itu.int/rec/T-REC-L.1361.">29</a>]</span>).</p>
+a method for production environment in <a href="#id58"><span class="problematic" id="id84">`ETSI EN 303 471`__</span></a> <span id="id44">[<a class="reference internal" href="chapter01.html#id46" title="Energy Efficiency measurement methodology and KPI/metrics for NFV. ETSI EN 303 471. URL: https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=50095.">27</a>]</span> and another one for laboratory one
+in <a href="#id58"><span class="problematic" id="id85">`ETSI ES 203 539`__</span></a> <span id="id45">[<a class="reference internal" href="chapter01.html#id47" title="Measurement method for energy efficiency of Network Functions Virtualisation (NFV) in laboratory environment. ETSI ES 203 539. URL: https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=47210.">28</a>]</span> (which is
+a common work with ITU-T which published as <a href="#id58"><span class="problematic" id="id86">`ITU-T L.1361`__</span></a> <span id="id46">[<a class="reference internal" href="chapter01.html#id48" title="Measurement method for energy efficiency of network functions virtualization. ITU-T L.1361. URL: https://www.itu.int/rec/T-REC-L.1361.">29</a>]</span>).</p>
 <p>Whatever the method and the service, it requires the cloud infrastructure to provide some <strong>energy consumption metrics</strong>
 for different parts of the infrastructure hardware (server, CPU etc.) as included in
 <a class="reference internal" href="chapter04.html#internal-performance-measurement-capabilities"><span class="std std-ref">Internal Performance Measurement Capabilities</span></a>.
 These metrics can be an amount of consumed energy (measured in Joule or Watt.hour) or a real-time power utilisation
-(measured in Watt or Joule/second) as proposed by <a class="reference external" href="https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf">DMTF Redfish DSP0268 2022.2</a> <span id="id31">[<a class="reference internal" href="chapter01.html#id21" title="DMTF RedFish Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">30</a>]</span> which specifies metrics
+(measured in Watt or Joule/second) as proposed by <a href="#id58"><span class="problematic" id="id87">`DMTF Redfish DSP0268 2022.2`__</span></a> <span id="id47">[<a class="reference internal" href="chapter01.html#id21" title="DMTF RedFish Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">30</a>]</span> which specifies metrics
 EnergykWh and PowerWatts for this purpose.</p>
-<p>Some relevant information regarding NFV energy efficiency can also be found in <a class="reference external" href="https://www.o-ran.org/ecosystem-resources">Open RAN Technical Priority - Focus
-on Energy Efficiency (March 2022)</a> <span id="id32">[<a class="reference internal" href="chapter01.html#id49" title="Open RAN Technical Priority - Focus on Energy Efficiency. March 2022. URL: https://www.o-ran.org/ecosystem-resources.">31</a>]</span> and <a class="reference external" href="https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf">QuEST Forum - NFV
-Workload Efficiency Whitepaper (October 2016)</a> <span id="id33">[<a class="reference internal" href="chapter01.html#id50" title="QuEST Forum - NFV Workload Efficiency Whitepaper. October 2016. URL: https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf.">32</a>]</span>.</p>
+<p>Some relevant information regarding NFV energy efficiency can also be found in <a href="#id58"><span class="problematic" id="id88">`Open RAN Technical Priority - Focus
+on Energy Efficiency (March 2022)`__</span></a> <span id="id48">[<a class="reference internal" href="chapter01.html#id49" title="Open RAN Technical Priority - Focus on Energy Efficiency. March 2022. URL: https://www.o-ran.org/ecosystem-resources.">31</a>]</span> and <a href="#id58"><span class="problematic" id="id89">`QuEST Forum - NFV
+Workload Efficiency Whitepaper (October 2016)`__</span></a> <span id="id49">[<a class="reference internal" href="chapter01.html#id50" title="QuEST Forum - NFV Workload Efficiency Whitepaper. October 2016. URL: https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf.">32</a>]</span>.</p>
 </section>
 </section>
 

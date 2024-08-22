@@ -1016,10 +1016,10 @@ Multiple Networks and Advanced Configurations
 
 Currently Kubernetes does not in itself support multi networks, pod multi network attachments or network orchestration.
 This is supported by using a `Container Network Interface` :cite:p:`container-network-interface`__ multiplexer
-such as `Multus <https://github.com/k8snetworkplumbingwg/multus-cni>`__.
-The `Network Plumbing Working Group <https://github.com/k8snetworkplumbingwg/community>`__ has produced
-the `Kubernetes Network Custom Resource Definition De-facto Standard
-<https://docs.google.com/document/d/1Ny03h6IDVy_e_vmElOqR7UdTPAG_RNydhVE1Kx54kFQ/edit>`__.
+such as `Multus`__ :cite:p:`multus`.
+The `Network Plumbing Working Group`__ :cite:p:`network-plumbing-working-group` has produced
+the `Kubernetes Network Custom Resource Definition De-facto Standard`__ 
+:cite:p:`kubernetes-network-custom-resource-definition-de-facto-standard`.
 This document describes how secondary networks can be defined and attached to
 pods.
 
@@ -1867,7 +1867,7 @@ for their respective control functions. These APIs must have an ability to handl
 forwarding and control planes life cycle management will not be atomic. The offload functions that should be offered as
 services must have published and preferably standardized open APIs, but the application specific forwarding functions do
 not have to be open APIs since they will only communicate with the application tenant provided control functions.
-`P4 <https://p4.org/>`__ and `OpenConfig <https://openconfig.net/>`__ are examples of suitable languages and models,
+`P4`__ :cite:p:`p4-open-source-programming-language` and `OpenConfig`__ :cite:p:`openConfig` are examples of suitable languages and models,
 with different levels of flexibility, usable for these forwarding and control functions.
 
 The separated management channel could either come in through the BMC, a direct management port on the DPU or through a
@@ -1889,7 +1889,7 @@ Smart Switches can be broadly categorized into Configurable Switches and Program
 
 Configurable Smart Switches run generic “smart” configurable network operating system offering full range of network
 functionality and are flexible enough to support most network solutions. The most common such network operating system
-is Linux-based `SONiC <https://github.com/sonic-net/SONiC>`__ allowing hardware and software disaggregation by running
+is Linux-based `SONiC`__ :cite:p:`sonic` allowing hardware and software disaggregation by running
 on switches from multiple switch vendors with different types of vendor fixed-function ASICs. Still, SONiC today cannot
 implement new type of data plane functionality or patch/modify/correct an ASIC, which is the type of support offered by
 programmable smart switches.
@@ -1897,9 +1897,9 @@ programmable smart switches.
 Programmable Smart Switches make it possible to quickly support new or correct/modify existing protocols and network
 functions, allow end customers to implement network functions, and to only implement and load functionality that is
 needed. Such switches contain one or more programmable switch ASICs of the same or different types. The two most used
-programming languages are `P4 <https://p4.org/>`__ and `NPL <https://nplang.org/>`__, and both can be used with
+programming languages are `P4`__ :cite:p:`p4-open-source-programming-language` and `NPL`__ :cite:p:`npl`, and both can be used with
 vendor-specific toolchains to program their switch ASICs and/or FPGAs. Open Networking Foundation
-`Stratum <https://opennetworking.org/stratum/>`__ is an example of network operating system that offers generic life
+`Stratum`__ :cite:p:`stratum` is an example of network operating system that offers generic life
 cycle management control services for the P4 components and a management API. The control API for the individual network
 functions are not part of the Stratum APIs.
 
@@ -1955,11 +1955,11 @@ Platform Services:
 Address Family For XDP (AF_XDP)
 -------------------------------
 
-`Address Family For XDP (AF_XDP) <https://www.kernel.org/doc/html/latest/networking/af_xdp.html>`__ is optimized for
+`Address Family For XDP (AF_XDP)`__ :cite:p:`address-family-for-xdp` is optimized for
 high performance packet processing and introduced in Linux kernel v4.18. This new socket type leverages the `eXpress
-Data Path (XDP) <https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/>`__ in-kernel fast-path to transfer
+Data Path (XDP)`__ :cite:p:`eXpress-dataa-path-xdp` in-kernel fast-path to transfer
 traffic frames from the NIC driver directly to userspace without the need for full network stack. XDP is an `Extended
-Berkley Packet Filter <https://ebpf.io/>`__ (eBPF) software program.
+Berkley Packet Filter`__ :cite:p:`extended-berkley-packet-filter` (eBPF) software program.
 
 By using the XDP_REDIRECT action from that XDP program, ingress frames can be redirected to other XDP-enabled network
 devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP drivers.
@@ -1970,11 +1970,11 @@ devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP 
 
    AF_XDP Architecture
 
-Linux-native applications can open an AF_XDP socket to receive raw packets directly from the NIC, by using `libbpf
-<https://www.kernel.org/doc/html/latest/bpf/libbpf/index.html>`__ library functions to register a packet buffer area
+Linux-native applications can open an AF_XDP socket to receive raw packets directly from the NIC, by using `libbpf`__ :cite:p:`libbpf
+` library functions to register a packet buffer area
 where packets will be located, and to create and bind the socket to a networking interface. DPDK-based applications
-can use `AF_XDP Poll Mode Driver <https://doc.dpdk.org/guides/nics/af_xdp.html>`__ . VPP-based applications can use
-`AF_XDP Device Driver <https://s3-docs.fd.io/vpp/23.02/developer/devicedrivers/af_xdp.html>`__.
+can use `AF_XDP Poll Mode Driver`__ :cite:p:`AF_XDP-poll-mode-driver`. VPP-based applications can use
+`AF_XDP Device Driver`__ :cite:p:`AF_XDP-device-driver`.
 
 In virtualized environments AF_XDP could be used as interface between guest Kernel and user space application, but still need SR-IOV or virtio to get traffic to the VM.
 
@@ -1985,14 +1985,14 @@ Energy efficiency
 Energy efficiency should be an overall requirement for the cloud infrastructure itself, the workloads
 hosted by this infrastructure, and the interface layer between them. 
 
-For telecommunication networks, energy efficiency is defined by `ITU-T L.1330 <https://www.itu.int/rec/T-REC-L.1330>`__ :cite:p:`itutl1330`
+For telecommunication networks, energy efficiency is defined by `ITU-T L.1330`__ :cite:p:`itutl1330`
 as "the relation between the useful output and energy consumption", the useful output being a metric which represents the capacity provided by the service whose energy efficiency is
 assessed. As an example, the useful output of a traffic forwarding function can be the data volume forwarded (e.g., measured
 in Byte) and the assessment of its energy efficiency is then based on the ratio between this volume and the energy
 consumed for processing it (e.g., measured in Watt.hour) :
 Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy.
 
-As elaborated in the Next Generation Alliance's whitepaper `NGA Green G <https://nextgalliance.org/white_papers/green-g-the-path-towards-sustainable-6g/>`__ :cite:p:`ngagreeng`,
+As elaborated in the Next Generation Alliance's whitepaper `NGA Green G`__ :cite:p:`ngagreeng`,
 with the global migration from 4G to 5G, one can observe the rise in data center power consumption with the parallel reduction in the energy consumption of core network 
 elements. This observation emphasizes the importance of the energy efficiency on the infrastructure and workload levels, and on the interface layer between them. 
 
@@ -2019,22 +2019,19 @@ Examples of opportunities for the energy demand and cost reductions for the tele
 In this Reference Model, the focus is on the first group, which is related to the optimisation on the workload to infrastructure interface level.
 
 The method for assessing energy efficiency depends on the service targeted and the objectives. For NFV, ETSI proposes
-a method for production environment in `ETSI EN 303 471
-<https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=50095>`__ :cite:p:`etsien303sp471` and another one for laboratory one
-in `ETSI ES 203 539 <https://portal.etsi.org/webapp/workprogram/Report_WorkItem.asp?WKI_ID=47210>`__ :cite:p:`etsies203sp539` (which is
-a common work with ITU-T which published as `ITU-T L.1361 <https://www.itu.int/rec/T-REC-L.1361>`__ :cite:p:`itutl1361`).
+a method for production environment in `ETSI EN 303 471`__ :cite:p:`etsien303sp471` and another one for laboratory one
+in `ETSI ES 203 539`__ :cite:p:`etsies203sp539` (which is
+a common work with ITU-T which published as `ITU-T L.1361`__ :cite:p:`itutl1361`).
 
 Whatever the method and the service, it requires the cloud infrastructure to provide some **energy consumption metrics**
 for different parts of the infrastructure hardware (server, CPU etc.) as included in
 :ref:`chapters/chapter04:internal performance measurement capabilities`.
 These metrics can be an amount of consumed energy (measured in Joule or Watt.hour) or a real-time power utilisation
-(measured in Watt or Joule/second) as proposed by `DMTF Redfish DSP0268 2022.2
-<https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf>`__ :cite:p:`dmtfredfish` which specifies metrics
+(measured in Watt or Joule/second) as proposed by `DMTF Redfish DSP0268 2022.2`__ :cite:p:`dmtfredfish` which specifies metrics
 EnergykWh and PowerWatts for this purpose.
 
 Some relevant information regarding NFV energy efficiency can also be found in `Open RAN Technical Priority - Focus
-on Energy Efficiency (March 2022) <https://www.o-ran.org/ecosystem-resources>`__ :cite:p:`oranenergyeff` and `QuEST Forum - NFV
-Workload Efficiency Whitepaper (October 2016)
-<https://tl9000.org/resources/documents/NFV%20Workload%20Efficiency%20Whitepaper.pdf>`__ :cite:p:`questnfvwlenergyeff`.
+on Energy Efficiency (March 2022)`__ :cite:p:`oranenergyeff` and `QuEST Forum - NFV
+Workload Efficiency Whitepaper (October 2016)`__ :cite:p:`questnfvwlenergyeff`.
 
 
