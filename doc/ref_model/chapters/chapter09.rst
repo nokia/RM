@@ -697,15 +697,15 @@ operations force a particular CI/CD design or even worse ask to deploy a full
 dedicated CI/CD toolchain for a particular network service.
 
 At first glance, the deployment and test job must not basically ask for a
-specific CI/CD tools such as `Jenkins <https://www.jenkins.io/>`__ or
-`Gitlab CI/CD <https://docs.gitlab.com/ee/ci/>`__. But they are many other
+specific CI/CD tools such as `Jenkins`__ :cite:p:`jenkins` or
+`Gitlab CI/CD`__ :cite:p:`ci/cd-gitlab`. But they are many other
 ways where deployment and test jobs can constraint the end users from the
 build servers to the artefact management. Any manual operation is discouraged
 whatever it's about the deployment or the test resources.
 
 The following requirements also aims at deploying smoothly and easily all CI/CD
 toolchains via simple playbooks as targeted by the Reference Conformance
-suites currently leveraging `XtestingCI <https://galaxy.ansible.com/collivier/xtesting>`__.
+suites currently leveraging `XtestingCI`__ :cite:p:`xtestingCI`.
 
 +-----------------+---------------------------------------------------+------------------------------------------------+
 | Ref #           | Description                                       | Comments/Notes                                 |
