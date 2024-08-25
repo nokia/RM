@@ -160,7 +160,7 @@ IP data services, billing, security, identity management, etc. …) as well as t
 (e.g., Edge cloud, network slicing, etc.) in such a way as to create the necessary flexibility required by this new
 breed of enterprise customers.”</p>
 <p>Cloud computing has evolved and matured since 2010 when
-<a class="reference external" href="https://csrc.nist.gov/pubs/sp/800/145/final">NIST</a> published its definition of cloud computing,
+<a href="#id9"><span class="problematic" id="id10">`NIST`__</span></a> <span id="id1">[]</span> published its definition of cloud computing,
 with its 5 essential characteristics, 3 service models and 4 deployment models.</p>
 <p>The generic model for an enterprise cloud has to be “hybrid” with the special cases of purely private or public clouds
 as subsets of the generic hybrid cloud deployment model. In a hybrid cloud deployment, at least two or more distinct
@@ -176,7 +176,7 @@ responding to other component clouds (external requests)</p>
 <ul>
 <li><p>the component clouds are autonomous in terms of, for example, execution autonomy; please note that in a centralised
 control plane scenario (please see the section “Centralised Control Plane” in the
-“<a class="reference external" href="https://www.openstack.org/use-cases/edge-computing/edge-computing-next-steps-in-architecture-design-and-testing/">Edge Computing: Next Steps in Architecture, Design and Testing</a>” whitepaper <span id="id1">[<a class="reference internal" href="chapter01.html#id36" title="Edge Computing: Next Steps in Architecture, Design and Testing. URL: https://www.openstack.org/use-cases/edge-computing/edge-computing-next-steps-in-architecture-design-and-testing/.">39</a>]</span>) the edge clouds do not have
+“<a href="#id9"><span class="problematic" id="id11">`Edge Computing: Next Steps in Architecture, Design and Testing`__</span></a>” whitepaper <span id="id2">[<a class="reference internal" href="chapter01.html#id36" title="Edge Computing: Next Steps in Architecture, Design and Testing. URL: https://www.openstack.org/use-cases/edge-computing/edge-computing-next-steps-in-architecture-design-and-testing/.">47</a>]</span>) the edge clouds do not have
 total autonomy and are subject to constraints (e.g., workload LCM)</p></li>
 <li><p>execution autonomy is the ability of a component cloud to decide the order in which internal and external requests
 are performed</p></li>
@@ -337,10 +337,10 @@ interactions; as well as the data plane, customer and user, transactions and con
 Management Interactions is the “Cloud Service Broker” and the “Cloud Resource Broker”. The set of interactions that
 these interface points need to provide are defined by the <code class="xref std std-numref docutils literal notranslate"><span class="pre">Multi-Cloud</span> <span class="pre">Interactions</span> <span class="pre">Model</span></code> below. This provides
 a taxonomy for the interactions between the Communications Service Provider and the Cloud Providers.</p>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id3">
 <img alt="Multi-Cloud Interactions Model" src="../_images/rm-chap-8-multicloud-interactions-03.png" />
 <figcaption>
-<p><span class="caption-text">Multi-Cloud Interactions Model</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+<p><span class="caption-text">Multi-Cloud Interactions Model</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
 </figcaption>
 </figure>
 <p>The model defines the following core roles:</p>
@@ -450,7 +450,7 @@ presented for management of the multi-cloud environment</p></li>
 </figure>
 </section>
 <section id="requirements-reference-architecture-industry-standards-intersect">
-<span id="id3"></span><h3>Requirements, Reference Architecture &amp; Industry Standards Intersect<a class="headerlink" href="#requirements-reference-architecture-industry-standards-intersect" title="Link to this heading">¶</a></h3>
+<span id="id4"></span><h3>Requirements, Reference Architecture &amp; Industry Standards Intersect<a class="headerlink" href="#requirements-reference-architecture-industry-standards-intersect" title="Link to this heading">¶</a></h3>
 <p>The Communications Service Provider (CSP) is both a provider and consumer of Cloud based services.
 When the CSP is acting as:</p>
 <ul class="simple">
@@ -531,7 +531,7 @@ capabilities to consistently:</p>
 </ul>
 <p>through a common set of governance and operational practices.</p>
 <p>GSMA’s Operator Platform Group (OPG) specify a federated model and specify requirements for the Edge Platforms
-(Operator Platform Telco Edge Requirements v2.0 <span id="id4">[<a class="reference internal" href="chapter01.html#id40" title="Operator Platform Telco Edge Requirements. GSMA OPG.02. URL: https://www.gsma.com/futurenetworks/operator-platform-hp/.">27</a>]</span>)
+(Operator Platform Telco Edge Requirements v2.0 <span id="id5">[<a class="reference internal" href="chapter01.html#id40" title="Operator Platform Telco Edge Requirements. GSMA OPG.02. URL: https://www.gsma.com/futurenetworks/operator-platform-hp/.">36</a>]</span>)
 applicable to other cloud deployments. Anuket RM is implementation agnostic, viz., whether the implementation uses
 agents, federations or some other mechanisms.</p>
 <p>The following tables list some of the requirements for the Hybrid, Edge, and Multi cloud operator Platform (HEMP). These
@@ -736,7 +736,7 @@ for RAN and core functions to secure the networks.</p>
 <p>In a hybrid multi-cloud environment, there are additional security principles to be considered.
 These principles, see the table below, are
 drawn from the collaboration with the GSMA Fraud and Security Group (FASG) and the “5G security Guide”,
-FS.40 v2.0 document <span id="id5">[<a class="reference internal" href="chapter01.html#id42" title="5G Security Guide. GSMA FS.40-v02.00, October 2021. URL: https://infocentre2.gsma.com/.">34</a>]</span>.</p>
+FS.40 v2.0 document <span id="id6">[<a class="reference internal" href="chapter01.html#id42" title="5G Security Guide. GSMA FS.40-v02.00, October 2021. URL: https://infocentre2.gsma.com/.">42</a>]</span>.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Multi-cloud Security Principle</p></th>
@@ -779,7 +779,7 @@ established overall security operations model</p></td>
 <p>For telco operators to run their network functions in a multi-cloud environment, and specifically, in public clouds, the
 industry will need a set of new standards and new security tools to manage and regulate the interactions between
 multi-cloud participating parties. To give an example of a step in this direction, refer to the ETSI specification
-<a class="reference external" href="https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.01.01_60/ts_103457v010101p.pdf">TS 103 457</a> “Interface
+<a href="#id9"><span class="problematic" id="id12">`TS 103 457`__</span></a> <span id="id7">[]</span> “Interface
 to offload sensitive functions to a trusted domain”, which provides extra security requirements for public clouds so as
 to enable telco operators the option of running network functions in public clouds.</p>
 <p>There is also another security aspect to consider, which is related to the autonomous nature of the participants in the
@@ -798,7 +798,7 @@ Transferring cryptography functionality:</p>
 <li><p>Secure storage</p></li>
 <li><p>Search capabilities</p></li>
 </ul>
-<p>As described in Sec. 1 (Scope) of the TS 103 457 document <span id="id6">[<a class="reference internal" href="chapter01.html#id43" title="CYBER; Trusted Cross-Domain Interface: Interface to offload sensitive functions to a trusted domain. ETSI TS 103 457, October 2018. URL: https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.01.01_60/ts_103457v010101p.pdf.">40</a>]</span>, it specifies “… a high-level service-oriented interface, as
+<p>As described in Sec. 1 (Scope) of the TS 103 457 document <span id="id8">[<a class="reference internal" href="chapter01.html#id43" title="CYBER; Trusted Cross-Domain Interface: Interface to offload sensitive functions to a trusted domain. ETSI TS 103 457, October 2018. URL: https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.01.01_60/ts_103457v010101p.pdf.">48</a>]</span>, it specifies “… a high-level service-oriented interface, as
 an application layer with a set of mandatory functions, to access secured services provided by, and executed in a More
 Trusted Domain. The transport layer is out of scope and left to the architecture implementation”. The standard provides
 extra security features for sensitive functions down to individual Virtual Machines or Containers. As such, it is

@@ -352,7 +352,7 @@ infrastructure and Cloud Infrastructure Management components to allow for succe
 </tr>
 <tr class="row-even"><td><p>Infrastructure Hardware</p></td>
 <td><p>Redfish API</p></td>
-<td><p>DMTF RedFish specification <span id="id2">[<a class="reference internal" href="chapter01.html#id21" title="DMTF RedFish Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">21</a>]</span></p></td>
+<td><p>DMTF RedFish specification <span id="id2">[<a class="reference internal" href="chapter01.html#id21" title="DMTF RedFish Specification. URL: https://www.dmtf.org/sites/default/files/standards/documents/DSP0268_2022.2.pdf.">30</a>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -892,14 +892,14 @@ proprietary software. They all prevent that specific deployment or testing
 operations force a particular CI/CD design or even worse ask to deploy a full
 dedicated CI/CD toolchain for a particular network service.</p>
 <p>At first glance, the deployment and test job must not basically ask for a
-specific CI/CD tools such as <a class="reference external" href="https://www.jenkins.io/">Jenkins</a> or
-<a class="reference external" href="https://docs.gitlab.com/ee/ci/">Gitlab CI/CD</a>. But they are many other
+specific CI/CD tools such as <a href="#id7"><span class="problematic" id="id8">`Jenkins`__</span></a> <span id="id4">[]</span> or
+<a href="#id7"><span class="problematic" id="id9">`Gitlab CI/CD`__</span></a> <span id="id5">[]</span>. But they are many other
 ways where deployment and test jobs can constraint the end users from the
 build servers to the artefact management. Any manual operation is discouraged
 whatever it’s about the deployment or the test resources.</p>
 <p>The following requirements also aims at deploying smoothly and easily all CI/CD
 toolchains via simple playbooks as targeted by the Reference Conformance
-suites currently leveraging <a class="reference external" href="https://galaxy.ansible.com/collivier/xtesting">XtestingCI</a>.</p>
+suites currently leveraging <a href="#id7"><span class="problematic" id="id10">`XtestingCI`__</span></a> <span id="id6">[]</span>.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Ref #</p></th>

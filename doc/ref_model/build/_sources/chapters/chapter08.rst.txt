@@ -37,7 +37,7 @@ IP data services, billing, security, identity management, etc. ...) as well as t
 breed of enterprise customers."
 
 Cloud computing has evolved and matured since 2010 when
-`NIST <https://csrc.nist.gov/pubs/sp/800/145/final>`__ published its definition of cloud computing,
+`NIST`__ :cite:p:`nist-cloud-computing` published its definition of cloud computing,
 with its 5 essential characteristics, 3 service models and 4 deployment models.
 
 The generic model for an enterprise cloud has to be "hybrid" with the special cases of purely private or public clouds
@@ -56,8 +56,7 @@ A generic Telco cloud is a hybrid multi-cloud. A better designation would be a f
 
   - the component clouds are autonomous in terms of, for example, execution autonomy; please note that in a centralised
     control plane scenario (please see the section "Centralised Control Plane" in the
-    "`Edge Computing: Next Steps in Architecture, Design and Testing <https://www.openstack.org/use-cases/edge-computing
-    /edge-computing-next-steps-in-architecture-design-and-testing/>`__" whitepaper :cite:p:`openinfraedgearch`) the edge clouds do not have
+    "`Edge Computing: Next Steps in Architecture, Design and Testing`__" whitepaper :cite:p:`openinfraedgearch`) the edge clouds do not have
     total autonomy and are subject to constraints (e.g., workload LCM)
   - execution autonomy is the ability of a component cloud to decide the order in which internal and external requests
     are performed
@@ -570,7 +569,7 @@ FS.40 v2.0 document :cite:p:`gsmafs40`.
 For telco operators to run their network functions in a multi-cloud environment, and specifically, in public clouds, the
 industry will need a set of new standards and new security tools to manage and regulate the interactions between
 multi-cloud participating parties. To give an example of a step in this direction, refer to the ETSI specification
-`TS 103 457 <https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.01.01_60/ts_103457v010101p.pdf>`__ “Interface
+`TS 103 457`__ :cite:p:`TS-103-457cyber` “Interface
 to offload sensitive functions to a trusted domain”, which provides extra security requirements for public clouds so as
 to enable telco operators the option of running network functions in public clouds.
 
