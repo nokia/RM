@@ -1973,7 +1973,7 @@ devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP 
 Linux-native applications can open an AF_XDP socket to receive raw packets directly from the NIC, by using libbpf :cite:p:`libbpf`
 library functions to register a packet buffer area
 where packets will be located, and to create and bind the socket to a networking interface. DPDK-based applications
-can use `AF_XDP Poll Mode Driver`__ :cite:p:`AF_XDP-poll-mode-driver`. VPP-based applications can use
+can use AF_XDP Poll Mode Driver :cite:p:`AF_XDP-poll-mode-driver`. VPP-based applications can use
 `AF_XDP Device Driver`__ :cite:p:`AF_XDP-device-driver`.
 
 In virtualized environments AF_XDP could be used as interface between guest Kernel and user space application, but still need SR-IOV or virtio to get traffic to the VM.
