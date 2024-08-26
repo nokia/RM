@@ -386,7 +386,7 @@ Redfish fulfills the following requirements stated in the above HW Infrastructur
 
 -	**Equipment**: The Redfish schema contains a physical model and a functional model. The physical model expresses the chassis and containers and interconnects between them and environmental control functions.  The functional model expresses the logical aspects and includes configuration and  firmware status.   Both the physical and functional model have their own health/fault status information
 
--	**Resource Allocation and Composition**: The Redfish schema has a composition model through which a client can compose a logical resource by allocating physical resources. `Redfish Composition Whitepaper`__ :cite:p:`redfish-composition-whitepaper`.
+-	**Resource Allocation and Composition**: The Redfish schema has a composition model through which a client can compose a logical resource by allocating physical resources. Redfish Composition Whitepaper :cite:p:`redfish-composition-whitepaper`.
 
 -	**Underlay Network Resources Manager**: The Redfish schema has models for fabrics, switches and SmartNICs.
 
