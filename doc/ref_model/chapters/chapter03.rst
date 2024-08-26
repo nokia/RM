@@ -373,7 +373,7 @@ A refish resource aggregator could implement a scalable infrastructure manager w
 DMTF specifies the Redfish interface and model, seeking to expand the manageability domains. The prescription of what subset of the 
 Redfish model needs to be implemented for a specific manageability domain is left to other standards bodies.  Redfish had defined a 
 JSON syntax for the prescription call a Redfish Profile and implemented an application which reads the Redfish Profile and tests for 
-conformance of an implementation `Interop Validato`__ :cite:p:`redfish-interop-validator`.  The Redfish Profile mechanism is being utilized by the Open Compute Project 
+conformance of an implementation Interop Validator :cite:p:`redfish-interop-validator`.  The Redfish Profile mechanism is being utilized by the Open Compute Project 
 and Open Process Automation Forum.
 
 Redfish fulfills the following requirements stated in the above HW Infrastructure Manager section:
