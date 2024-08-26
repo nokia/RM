@@ -2030,7 +2030,7 @@ These metrics can be an amount of consumed energy (measured in Joule or Watt.hou
 (measured in Watt or Joule/second) as proposed by DMTF Redfish DSP0268 2022.2 :cite:p:`dmtfredfish` which specifies metrics
 EnergykWh and PowerWatts for this purpose.
 
-Some relevant information regarding NFV energy efficiency can also be found in `Open RAN Technical Priority - Focus
+Some relevant information regarding NFV energy efficiency can also be found in Open RAN Technical Priority - Focus
 on Energy Efficiency (March 2022) :cite:p:`oranenergyeff` and QuEST Forum - NFV
 Workload Efficiency Whitepaper (October 2016) :cite:p:`questnfvwlenergyeff`.
 
