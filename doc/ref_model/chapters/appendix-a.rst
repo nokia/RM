@@ -89,14 +89,14 @@ software and the resultant VNF image:
 Additionally, in the design and implementation of their software, the VNF Developer **should** follow the guidance in
 the:
 
-1. `CSA Security Guidance for Critical Areas of Focus in Cloud Computing`__ (latest version) :cite:p:`owasp-Cheat-sheet-series`.
-2. `OWASP Cheat Sheet Series`__ (OCSS) :cite:p:`owasp-Cheat-sheet-series` from the `Open Web Application
-   Security Project`__:cite:p:`owasp-Web-application-security-project`.
+1. CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version) :cite:p:`owasp-Cheat-sheet-series`.
+2. OWASP Cheat Sheet Series (OCSS) :cite:p:`owasp-Cheat-sheet-series` from the Open Web Application
+   Security Project :cite:p:`owasp-Web-application-security-project`.
 3. :ref:`chapters/chapter07:Workload Security` section of the Reference Model.
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
-`OWASP Top Ten Security Risks`__:cite:p:`owasp-top-ten` created by the
-`Open Web Application Security Project`__ :cite:p:`owasp`.
+OWASP Top Ten Security Risks :cite:p:`owasp-top-ten` created by the
+Open Web Application Security Project :cite:p:`owasp`.
 
 Miscellaneous
 -------------
