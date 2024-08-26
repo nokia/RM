@@ -697,7 +697,7 @@ operations force a particular CI/CD design or even worse ask to deploy a full
 dedicated CI/CD toolchain for a particular network service.
 
 At first glance, the deployment and test job must not basically ask for a
-specific CI/CD tools such as `Jenkins`__ :cite:p:`jenkins` or
+specific CI/CD tools such as Jenkins :cite:p:`jenkins` or
 `Gitlab CI/CD`__ :cite:p:`ci/cd-gitlab`. But they are many other
 ways where deployment and test jobs can constraint the end users from the
 build servers to the artefact management. Any manual operation is discouraged
