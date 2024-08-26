@@ -1016,7 +1016,7 @@ Multiple Networks and Advanced Configurations
 
 Currently Kubernetes does not in itself support multi networks, pod multi network attachments or network orchestration.
 This is supported by using a Container Network Interface :cite:p:`container-network-interface` multiplexer
-such as `Multus`__ :cite:p:`multus`.
+such as Multus :cite:p:`multus`.
 The `Network Plumbing Working Group`__ :cite:p:`network-plumbing-working-group` has produced
 the `Kubernetes Network Custom Resource Definition De-facto Standard`__ 
 :cite:p:`kubernetes-network-custom-resource-definition-de-facto-standard`.
