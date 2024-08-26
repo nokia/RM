@@ -1867,7 +1867,7 @@ for their respective control functions. These APIs must have an ability to handl
 forwarding and control planes life cycle management will not be atomic. The offload functions that should be offered as
 services must have published and preferably standardized open APIs, but the application specific forwarding functions do
 not have to be open APIs since they will only communicate with the application tenant provided control functions.
-`P4`__ :cite:p:`p4-open-source-programming-language` and `OpenConfig`__ :cite:p:`openConfig` are examples of suitable languages and models,
+P4 :cite:p:`p4-open-source-programming-language` and OpenConfig :cite:p:`openConfig` are examples of suitable languages and models,
 with different levels of flexibility, usable for these forwarding and control functions.
 
 The separated management channel could either come in through the BMC, a direct management port on the DPU or through a
