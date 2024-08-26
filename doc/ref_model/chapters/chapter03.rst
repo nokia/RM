@@ -2021,7 +2021,7 @@ In this Reference Model, the focus is on the first group, which is related to th
 The method for assessing energy efficiency depends on the service targeted and the objectives. For NFV, ETSI proposes
 a method for production environment in ETSI EN 303 471 :cite:p:`etsien303sp471` and another one for laboratory one
 in ETSI ES 203 539 :cite:p:`etsies203sp539` (which is
-a common work with ITU-T which published as `ITU-T L.1361`__ :cite:p:`itutl1361`).
+a common work with ITU-T which published as ITU-T L.1361 :cite:p:`itutl1361`).
 
 Whatever the method and the service, it requires the cloud infrastructure to provide some **energy consumption metrics**
 for different parts of the infrastructure hardware (server, CPU etc.) as included in
