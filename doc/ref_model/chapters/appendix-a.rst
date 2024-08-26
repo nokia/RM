@@ -91,7 +91,7 @@ the:
 
 1. CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version) :cite:p:`owasp-Cheat-sheet-series`.
 2. OWASP Cheat Sheet Series (OCSS) :cite:p:`owasp-Cheat-sheet-series` from the Open Web Application
-   Security Project`__:cite:p:`owasp-Web-application-security-project`.
+   Security Project :cite:p:`owasp-Web-application-security-project`.
 3. :ref:`chapters/chapter07:Workload Security` section of the Reference Model.
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
