@@ -55,7 +55,7 @@ A generic Telco cloud is a hybrid multi-cloud. A better designation would be a f
 
   - the component clouds are autonomous in terms of, for example, execution autonomy; please note that in a centralised
     control plane scenario (please see the section "Centralised Control Plane" in the
-    "`Edge Computing: Next Steps in Architecture, Design and Testing`__" whitepaper :cite:p:`openinfraedgearch`) the edge clouds do not have
+    "Edge Computing: Next Steps in Architecture, Design and Testing" whitepaper :cite:p:`openinfraedgearch`) the edge clouds do not have
     total autonomy and are subject to constraints (e.g., workload LCM)
   - execution autonomy is the ability of a component cloud to decide the order in which internal and external requests
     are performed
