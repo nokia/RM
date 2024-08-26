@@ -160,7 +160,7 @@ important standards in current use.
 
 - ETSI Cyber Security Technical Committee (TC CYBER) - :cite:p:`ETSI-cyber-security-technical-committee`
 
-- `ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV)`__ :cite:p:`eTSI-industry-specification-group-network-functions-virtualisation` and its Security Working Group NFV-SEC
+- ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV) :cite:p:`eTSI-industry-specification-group-network-functions-virtualisation` and its Security Working Group NFV-SEC
 
 - The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) - :cite:p:`the-international-organization-for-standardization`. The following ISO standards are of particular interest for NFVI:
 
