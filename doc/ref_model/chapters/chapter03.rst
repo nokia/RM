@@ -1018,7 +1018,7 @@ Currently Kubernetes does not in itself support multi networks, pod multi networ
 This is supported by using a Container Network Interface :cite:p:`container-network-interface` multiplexer
 such as Multus :cite:p:`multus`.
 The Network Plumbing Working Group :cite:p:`network-plumbing-working-group` has produced
-the `Kubernetes Network Custom Resource Definition De-facto Standard`__ 
+the Kubernetes Network Custom Resource Definition De-facto Standard 
 :cite:p:`kubernetes-network-custom-resource-definition-de-facto-standard`.
 This document describes how secondary networks can be defined and attached to
 pods.
