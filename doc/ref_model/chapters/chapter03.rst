@@ -2019,7 +2019,7 @@ Examples of opportunities for the energy demand and cost reductions for the tele
 In this Reference Model, the focus is on the first group, which is related to the optimisation on the workload to infrastructure interface level.
 
 The method for assessing energy efficiency depends on the service targeted and the objectives. For NFV, ETSI proposes
-a method for production environment in `ETSI EN 303 471`__ :cite:p:`etsien303sp471` and another one for laboratory one
+a method for production environment in ETSI EN 303 471 :cite:p:`etsien303sp471` and another one for laboratory one
 in ETSI ES 203 539 :cite:p:`etsies203sp539` (which is
 a common work with ITU-T which published as `ITU-T L.1361`__ :cite:p:`itutl1361`).
 
