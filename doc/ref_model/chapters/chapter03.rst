@@ -2027,7 +2027,7 @@ Whatever the method and the service, it requires the cloud infrastructure to pro
 for different parts of the infrastructure hardware (server, CPU etc.) as included in
 :ref:`chapters/chapter04:internal performance measurement capabilities`.
 These metrics can be an amount of consumed energy (measured in Joule or Watt.hour) or a real-time power utilisation
-(measured in Watt or Joule/second) as proposed by `DMTF Redfish DSP0268 2022.2`__ :cite:p:`dmtfredfish` which specifies metrics
+(measured in Watt or Joule/second) as proposed by DMTF Redfish DSP0268 2022.2 :cite:p:`dmtfredfish` which specifies metrics
 EnergykWh and PowerWatts for this purpose.
 
 Some relevant information regarding NFV energy efficiency can also be found in `Open RAN Technical Priority - Focus
