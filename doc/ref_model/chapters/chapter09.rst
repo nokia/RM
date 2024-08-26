@@ -623,8 +623,7 @@ refers to Continuous Deployment.
 |               |                                                   | specific criteria, and delivery of the product   |
 |               |                                                   | onto a runtime environment. Example of an        |
 |               |                                                   | open-source cloud native CI/CD framework is the  |
-|               |                                                   | Tekton project (`https://tekton.dev/ <https://te |
-|               |                                                   | kton.dev/>`__)                                   |
+|               |                                                   | Tekton project cite:p:`tektondev`                |
 +---------------+---------------------------------------------------+--------------------------------------------------+
 | auto.cicd.002 | The CI/CD pipelines must use event-driven task    |                                                  |
 |               | automation                                        |                                                  |
