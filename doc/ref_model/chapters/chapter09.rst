@@ -705,7 +705,7 @@ whatever it's about the deployment or the test resources.
 
 The following requirements also aims at deploying smoothly and easily all CI/CD
 toolchains via simple playbooks as targeted by the Reference Conformance
-suites currently leveraging `XtestingCI`__ :cite:p:`xtestingCI`.
+suites currently leveraging XtestingCI :cite:p:`xtestingCI`.
 
 +-----------------+---------------------------------------------------+------------------------------------------------+
 | Ref #           | Description                                       | Comments/Notes                                 |
