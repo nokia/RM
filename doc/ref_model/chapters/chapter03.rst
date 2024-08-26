@@ -1992,7 +1992,7 @@ in Byte) and the assessment of its energy efficiency is then based on the ratio 
 consumed for processing it (e.g., measured in Watt.hour) :
 Energy Efficicency (B/Wh) = Traffic Volume / Consumed Energy.
 
-As elaborated in the Next Generation Alliance's whitepaper `NGA Green G`__ :cite:p:`ngagreeng`,
+As elaborated in the Next Generation Alliance's whitepaper NGA Green G :cite:p:`ngagreeng`,
 with the global migration from 4G to 5G, one can observe the rise in data center power consumption with the parallel reduction in the energy consumption of core network 
 elements. This observation emphasizes the importance of the energy efficiency on the infrastructure and workload levels, and on the interface layer between them. 
 
