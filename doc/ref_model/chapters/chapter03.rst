@@ -962,7 +962,7 @@ millisecond range that NTP provides.
 Some Network functions, like vDU, of vRAN, also require SyncE :cite:p:`syncE` :cite:p:`itutg8262`. Control,
 User and Synchronization (CUS) Plane specification defines different topology options that provides Lower Layer Split
 Control plane 1-4 (LLS-C1 - LLS-C4) with different synchronization requirements
-(`ITU-T G.8275.2`__ :cite:p:`ITU-T G.8275.2`__ :cite:p:`itutg82752`).
+(ITU-T G.8275.2 :cite:p:`itutg82752`).
 
 SyncE was standardized by the ITU-T, in cooperation with IEEE, as three recommendations:
 
