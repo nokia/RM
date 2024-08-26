@@ -959,7 +959,7 @@ synchronization. Precision Time Protocol version 2 `PTP`__ :cite:p:`precision-ti
 is commonly used for Time-Sensitive Networking. This allow synchronization in microsecond range rather than
 millisecond range that NTP provides.
 
-Some Network functions, like vDU, of vRAN, also require `SyncE`__ :cite:p:`syncE` __ :cite:p:`itutg8262`. Control,
+Some Network functions, like vDU, of vRAN, also require SyncE :cite:p:`syncE` :cite:p:`itutg8262`. Control,
 User and Synchronization (CUS) Plane specification defines different topology options that provides Lower Layer Split
 Control plane 1-4 (LLS-C1 - LLS-C4) with different synchronization requirements
 (`ITU-T G.8275.2`__ :cite:p:`ITU-T G.8275.2`__ :cite:p:`itutg82752`).
