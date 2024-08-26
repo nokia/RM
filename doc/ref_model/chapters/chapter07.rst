@@ -148,7 +148,7 @@ important standards in current use.
 
   - NIST SP 800-123 Guide to General Server Security :cite:p:`guide-to-general-server-security`
 
-  - NIST SP 800-204A `Building Secure Microservices-based Applications Using Service-Mesh Architecture`__ :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
+  - NIST SP 800-204A Building Secure Microservices-based Applications Using Service-Mesh Architecture :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
 
   - NIST SP 800-204B `Attribute-based Access Control for Microservices-based Applications Using a Service Mesh`__ :cite:p:`attribute-based-access-control-for-microservices-based-applications-using-a-service-mesh`
 
