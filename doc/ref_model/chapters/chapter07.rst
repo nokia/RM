@@ -146,7 +146,7 @@ important standards in current use.
 
 - The National Institute of Standards and Technology (NIST), with the following special publications:
 
-  - NIST SP 800-123 `Guide to General Server Security`__ :cite:p:`guide-to-general-server-security`
+  - NIST SP 800-123 Guide to General Server Security :cite:p:`guide-to-general-server-security`
 
   - NIST SP 800-204A `Building Secure Microservices-based Applications Using Service-Mesh Architecture`__ :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
 
