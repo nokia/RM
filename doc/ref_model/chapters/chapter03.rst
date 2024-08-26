@@ -390,7 +390,7 @@ Redfish fulfills the following requirements stated in the above HW Infrastructur
 
 -	**Underlay Network Resources Manager**: The Redfish schema has models for fabrics, switches and SmartNICs.
 
--	**Monitoring**: The Redfish schema contains event model for the client to receive hardware events and telemetry model for collecting information across the entire model (physical and functional) `Redfish Telemetry Whitepaper`__ :cite:p:`redfish-telemetry-whitepaper`
+-	**Monitoring**: The Redfish schema contains event model for the client to receive hardware events and telemetry model for collecting information across the entire model (physical and functional) Redfish Telemetry Whitepaper :cite:p:`redfish-telemetry-whitepaper`
 
 -	**Additional Management Functions**: The Redfish schema has models for access management and identity management `Redfish Data Model Specification`__ :cite:p:`redfish-data-model-specification`.
 
