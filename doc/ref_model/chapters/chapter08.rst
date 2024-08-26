@@ -568,7 +568,7 @@ FS.40 v2.0 document :cite:p:`gsmafs40`.
 For telco operators to run their network functions in a multi-cloud environment, and specifically, in public clouds, the
 industry will need a set of new standards and new security tools to manage and regulate the interactions between
 multi-cloud participating parties. To give an example of a step in this direction, refer to the ETSI specification
-`TS 103 457`__ :cite:p:`TS-103-457cyber` “Interface
+TS 103 457 :cite:p:`TS-103-457cyber` “Interface
 to offload sensitive functions to a trusted domain”, which provides extra security requirements for public clouds so as
 to enable telco operators the option of running network functions in public clouds.
 
