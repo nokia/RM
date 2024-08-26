@@ -955,7 +955,7 @@ Managed Objects :cite:p:`rfc5907`,
 Server Option for DHCPv6 :cite:p:`rfc5908`)
 as the default time synchronization for the cluster. That level of synchronization is not sufficient for some
 network functions. Just like real-time operating systems instead of base OS, so is precision timing for clock
-synchronization. Precision Time Protocol version 2 `PTP`__ :cite:p:`precision-time-protocol-version-2` __ :cite:p:`ieee1588dash2019`
+synchronization. Precision Time Protocol version 2 PTP :cite:p:`precision-time-protocol-version-2` __ :cite:p:`ieee1588dash2019`
 is commonly used for Time-Sensitive Networking. This allow synchronization in microsecond range rather than
 millisecond range that NTP provides.
 
