@@ -1899,7 +1899,7 @@ functions, allow end customers to implement network functions, and to only imple
 needed. Such switches contain one or more programmable switch ASICs of the same or different types. The two most used
 programming languages are P4 :cite:p:`p4-open-source-programming-language` and NPL :cite:p:`npl`, and both can be used with
 vendor-specific toolchains to program their switch ASICs and/or FPGAs. Open Networking Foundation
-`Stratum`__ :cite:p:`stratum` is an example of network operating system that offers generic life
+Stratum :cite:p:`stratum` is an example of network operating system that offers generic life
 cycle management control services for the P4 components and a management API. The control API for the individual network
 functions are not part of the Stratum APIs.
 
