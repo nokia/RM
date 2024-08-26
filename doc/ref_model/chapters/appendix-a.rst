@@ -96,7 +96,7 @@ the:
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
 OWASP Top Ten Security Risks :cite:p:`owasp-top-ten` created by the
-`Open Web Application Security Project`__ :cite:p:`owasp`.
+Open Web Application Security Project :cite:p:`owasp`.
 
 Miscellaneous
 -------------
