@@ -35,7 +35,7 @@ secure and accessible over a secure network (transport layer security or TLS), u
 and RBAC policies to limit exposure of this vulnerability.
 
 Typical cloud-associated attacker tactics have been identified in the widely accepted
-`MITRE ATT&CK® Framework`__ :cite:p:`ATT&CK®`. This framework provides a systematic approach to capture adversarial tactics targeting cloud
+MITRE ATT&CK® Framework :cite:p:`ATT&CK®`. This framework provides a systematic approach to capture adversarial tactics targeting cloud
 environments. Examples of such adversarial tactics are listed in the following table.
 
 +------------------+---------------------------------------------------------------------------------------------------+
