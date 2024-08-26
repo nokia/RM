@@ -154,7 +154,7 @@ important standards in current use.
 
   - NIST SP 800-207 Zero Trust Architecture :cite:p:`zero-trust-architecture`
 
-  - NIST SP 800-218 `Secure Software Development Framework (SSDF)`__ :cite:p:`secure-software-development-framework`
+  - NIST SP 800-218 Secure Software Development Framework (SSDF) :cite:p:`secure-software-development-framework`
 
 - FedRAMP Certification :cite:p:`fedRAMP-certification`
 
