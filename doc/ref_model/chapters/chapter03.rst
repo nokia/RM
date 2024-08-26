@@ -1985,7 +1985,7 @@ Energy efficiency
 Energy efficiency should be an overall requirement for the cloud infrastructure itself, the workloads
 hosted by this infrastructure, and the interface layer between them. 
 
-For telecommunication networks, energy efficiency is defined by `ITU-T L.1330`__ :cite:p:`itutl1330`
+For telecommunication networks, energy efficiency is defined by ITU-T L.1330 :cite:p:`itutl1330`
 as "the relation between the useful output and energy consumption", the useful output being a metric which represents the capacity provided by the service whose energy efficiency is
 assessed. As an example, the useful output of a traffic forwarding function can be the data volume forwarded (e.g., measured
 in Byte) and the assessment of its energy efficiency is then based on the ratio between this volume and the energy
