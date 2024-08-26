@@ -1959,7 +1959,7 @@ Address Family For XDP (AF_XDP) :cite:p:`address-family-for-xdp` is optimized fo
 high performance packet processing and introduced in Linux kernel v4.18. This new socket type leverages the eXpress
 Data Path (XDP) :cite:p:`eXpress-dataa-path-xdp` in-kernel fast-path to transfer
 traffic frames from the NIC driver directly to userspace without the need for full network stack. XDP is an Extended
-Berkley Packet Filter`__ :cite:p:`extended-berkley-packet-filter` (eBPF) software program.
+Berkley Packet Filter :cite:p:`extended-berkley-packet-filter` (eBPF) software program.
 
 By using the XDP_REDIRECT action from that XDP program, ingress frames can be redirected to other XDP-enabled network
 devices. The fastest working mode of operation is Zero-Copy mode in enabled XDP drivers.
