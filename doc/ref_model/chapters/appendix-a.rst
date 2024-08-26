@@ -95,7 +95,7 @@ the:
 3. :ref:`chapters/chapter07:Workload Security` section of the Reference Model.
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
-`OWASP Top Ten Security Risks`__:cite:p:`owasp-top-ten` created by the
+OWASP Top Ten Security Risks :cite:p:`owasp-top-ten` created by the
 `Open Web Application Security Project`__ :cite:p:`owasp`.
 
 Miscellaneous
