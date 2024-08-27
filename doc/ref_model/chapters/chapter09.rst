@@ -623,8 +623,8 @@ refers to Continuous Deployment.
 |               |                                                   | specific criteria, and delivery of the product   |
 |               |                                                   | onto a runtime environment. Example of an        |
 |               |                                                   | open-source cloud native CI/CD framework is the  |
-|               |                                                   | Tekton project (`https://tekton.dev/ <https://te |
-|               |                                                   | kton.dev/>`__)                                   |
+|               |                                                   | Tekton project :cite:p:`tekton-project`          |
+|               |                                                   |                                                  |
 +---------------+---------------------------------------------------+--------------------------------------------------+
 | auto.cicd.002 | The CI/CD pipelines must use event-driven task    |                                                  |
 |               | automation                                        |                                                  |
@@ -637,8 +637,8 @@ refers to Continuous Deployment.
 |               |                                                   | repositories and may, thus, specify which        |
 |               |                                                   | repository is to be used for these release. An   |
 |               |                                                   | example, of an open source repository is the     |
-|               |                                                   | CNCF Harbor (`https://goharbor.io/ <https://goha |
-|               |                                                   | rbor.io/>`__)                                    |
+|               |                                                   | CNCF Harbor :cite:p:`cncf-harbor`                |
+|               |                                                   |                                                  |
 +---------------+---------------------------------------------------+--------------------------------------------------+
 | auto.cicd.005 | The CI pipeline must scan source code and         |                                                  |
 |               | manifests to validate for compliance with design  |                                                  |
@@ -697,15 +697,15 @@ operations force a particular CI/CD design or even worse ask to deploy a full
 dedicated CI/CD toolchain for a particular network service.
 
 At first glance, the deployment and test job must not basically ask for a
-specific CI/CD tools such as `Jenkins`__ :cite:p:`jenkins` or
-`Gitlab CI/CD`__ :cite:p:`ci/cd-gitlab`. But they are many other
+specific CI/CD tools such as Jenkins :cite:p:`jenkins` or
+Gitlab CI/CD :cite:p:`ci/cd-gitlab`. But they are many other
 ways where deployment and test jobs can constraint the end users from the
 build servers to the artefact management. Any manual operation is discouraged
 whatever it's about the deployment or the test resources.
 
 The following requirements also aims at deploying smoothly and easily all CI/CD
 toolchains via simple playbooks as targeted by the Reference Conformance
-suites currently leveraging `XtestingCI`__ :cite:p:`xtestingCI`.
+suites currently leveraging XtestingCI :cite:p:`xtestingCI`.
 
 +-----------------+---------------------------------------------------+------------------------------------------------+
 | Ref #           | Description                                       | Comments/Notes                                 |
