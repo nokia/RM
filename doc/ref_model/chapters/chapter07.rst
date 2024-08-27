@@ -1711,7 +1711,7 @@ Compliance with standards
 | req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project               |
 |                 | the guidance in the OWASP Cheat Sheet Series | :cite:p:`open-web-application`                      |                             
 |                 | (OCSS)                                       |                                                     | 
-|                 | :cite:p:`owasp-cheat-sheet-series`           |                                                     |
+|                 | :cite:p:`owasp-Cheat-sheet-series`           |                                                     |
 |                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.004 | The cloud operator, platform, and workloads  |                                                     |
