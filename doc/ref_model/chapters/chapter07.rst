@@ -1119,9 +1119,7 @@ System hardening
 |                 | and file storage, with access to encryption keys |                                                 |
 |                 | restricted on a need-to-know basis. Controlled   |                                                 |
 |                 | access based on a need to know                   |                                                 |
-|                 | :cite:p:`the-18-CIS-critical-security-controls`  |                                                 |                                 |
-|                 |                                                  |                                                 | 
-|                 |                                                                                                    |          
+|                 | :cite:p:`the-18-CIS-critical-security-controls`  |                                                 |
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
