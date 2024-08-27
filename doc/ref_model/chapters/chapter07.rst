@@ -146,21 +146,21 @@ important standards in current use.
 
 - The National Institute of Standards and Technology (NIST), with the following special publications:
 
-  - NIST SP 800-123 `Guide to General Server Security`__ :cite:p:`guide-to-general-server-security`
+  - NIST SP 800-123 Guide to General Server Security :cite:p:`guide-to-general-server-security`
 
-  - NIST SP 800-204A `Building Secure Microservices-based Applications Using Service-Mesh Architecture`__ :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
+  - NIST SP 800-204A Building Secure Microservices-based Applications Using Service-Mesh Architecture :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
 
-  - NIST SP 800-204B `Attribute-based Access Control for Microservices-based Applications Using a Service Mesh`__ :cite:p:`attribute-based-access-control-for-microservices-based-applications-using-a-service-mesh`
+  - NIST SP 800-204B Attribute-based Access Control for Microservices-based Applications Using a Service Mesh :cite:p:`attribute-based-access-control-for-microservices-based-applications-using-a-service-mesh`
 
-  - NIST SP 800-207 `Zero Trust Architecture`__ :cite:p:`zero-trust-architecture`
+  - NIST SP 800-207 Zero Trust Architecture :cite:p:`zero-trust-architecture`
 
-  - NIST SP 800-218 `Secure Software Development Framework (SSDF)`__ :cite:p:`secure-software-development-framework`
+  - NIST SP 800-218 Secure Software Development Framework (SSDF) :cite:p:`secure-software-development-framework`
 
 - FedRAMP Certification :cite:p:`fedRAMP-certification`
 
 - ETSI Cyber Security Technical Committee (TC CYBER) - :cite:p:`ETSI-cyber-security-technical-committee`
 
-- `ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV)`__ :cite:p:`eTSI-industry-specification-group-network-functions-virtualisation` and its Security Working Group NFV-SEC
+- ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV) :cite:p:`eTSI-industry-specification-group-network-functions-virtualisation` and its Security Working Group NFV-SEC
 
 - The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) - :cite:p:`the-international-organization-for-standardization`. The following ISO standards are of particular interest for NFVI:
 

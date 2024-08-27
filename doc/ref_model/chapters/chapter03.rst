@@ -365,7 +365,7 @@ This section proposes a Redfish based hardware infrastructure manager for the An
 Chapter 9 (:ref:`chapters/chapter09:Configuration and Lifecycle Management`) of this reference model specifies Redfish standard for managing Infrastructure Hardware. The GSMA's "Cloud Infrastructure Reference Model (NG.126)" also specifies Redfish as the standard interface that should be 
 made available by the infrastructure and Cloud Infrastructure Management components, in the "Infrastructure Hardware" layer.
  
-Redfish is an internationally recognized standard `ISO/IEC 30115:2018`__ :cite:p:`iso-standard-83853`. The Redfish interface specifies a HTTP RESTful interface that a client can use to manage conformant platforms. The Redfish standard consists of a Redfish interface specification `Redfish Specification <://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf>`__ and model specification Redfish Data Model Specification :cite:p:`redfish-data-model-specification`.  The interface specification defines the RESTful behavior of the resources. The data model specification defines the structure of the HTTP resources. The model is expressed as schema using OpenAPI and json-schema formats. The schema allows implementing redfish clients using the OpenAPI and json-schema toolchains.
+Redfish is an internationally recognized standard ISO/IEC 30115:2018 :cite:p:`iso-standard-83853`. The Redfish interface specifies a HTTP RESTful interface that a client can use to manage conformant platforms. The Redfish standard consists of a Redfish interface specification `Redfish Specification <://www.dmtf.org/sites/default/files/standards/documents/DSP0266_1.8.0.pdf>`__ and model specification Redfish Data Model Specification :cite:p:`redfish-data-model-specification`.  The interface specification defines the RESTful behavior of the resources. The data model specification defines the structure of the HTTP resources. The model is expressed as schema using OpenAPI and json-schema formats. The schema allows implementing redfish clients using the OpenAPI and json-schema toolchains.
 
 There are several opensource implementations of Redfish Clients and Redfish Services. 
 A refish resource aggregator could implement a scalable infrastructure manager which aggregates and exposes a standards-based Redfish interface and services northbound to an Orchestrator. 
@@ -2027,11 +2027,11 @@ Whatever the method and the service, it requires the cloud infrastructure to pro
 for different parts of the infrastructure hardware (server, CPU etc.) as included in
 :ref:`chapters/chapter04:internal performance measurement capabilities`.
 These metrics can be an amount of consumed energy (measured in Joule or Watt.hour) or a real-time power utilisation
-(measured in Watt or Joule/second) as proposed by `DMTF Redfish DSP0268 2022.2`__ :cite:p:`dmtfredfish` which specifies metrics
+(measured in Watt or Joule/second) as proposed by DMTF Redfish DSP0268 2022.2 :cite:p:`dmtfredfish` which specifies metrics
 EnergykWh and PowerWatts for this purpose.
 
-Some relevant information regarding NFV energy efficiency can also be found in `Open RAN Technical Priority - Focus
-on Energy Efficiency (March 2022)`__ :cite:p:`oranenergyeff` and `QuEST Forum - NFV
-Workload Efficiency Whitepaper (October 2016)`__ :cite:p:`questnfvwlenergyeff`.
+Some relevant information regarding NFV energy efficiency can also be found in Open RAN Technical Priority - Focus
+on Energy Efficiency (March 2022) :cite:p:`oranenergyeff` and QuEST Forum - NFV
+Workload Efficiency Whitepaper (October 2016) :cite:p:`questnfvwlenergyeff`.
 
 
