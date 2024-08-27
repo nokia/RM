@@ -811,7 +811,7 @@ component should have its SBOM, including, as a baseline, the information detail
 +------------------------------+---------------------------------------------------+
 
 **Table 7-2**: SBOM components of the data fields. (Source:
-NTIA :citr:p:`ntia`)
+NTIA :cite:p:`ntia`)
 
 For more details about each data field, see the NTIA SBOM document. Examples of commonly used identifiers are
 provided.
