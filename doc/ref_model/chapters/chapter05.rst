@@ -451,15 +451,15 @@ Virtual compute
 **Table 5-8** depicts the features and configurations related to virtual compute for the two Cloud Infrastructure
 profiles.
 
-================= ================================= =============== ===== ================
-Reference         Feature                           Type            Basic High performance
-================= ================================= =============== ===== ================
-infra.com.cfg.001 CPU allocation ratio              <value>         N:1   1:1
-infra.com.cfg.002 NUMA alignment                    Yes/No          N     Y
-infra.com.cfg.003 CPU pinning                       Yes/No          N     Y
-infra.com.cfg.004 Huge pages                        Yes/No          N     Y
-infra.com.cfg.005 Simultaneous multithreading (SMT) Yes/No/Optional Y     Optional
-================= ================================= =============== ===== ================
+================= ================================= =============== ===================== ================
+Reference         Feature                           Type            Basic                 High performance
+================= ================================= =============== ===================== ================
+infra.com.cfg.001 CPU allocation ratio              <value>         N:1                   1:1
+infra.com.cfg.002 NUMA alignment                    Yes/No          N                     Y
+infra.com.cfg.003 CPU pinning                       Yes/No          N                     Y
+infra.com.cfg.004 Huge pages                        Yes/No          N                     Y
+infra.com.cfg.005 Simultaneous multithreading (SMT) Yes/No/Optional Y if SMT is supported Optional
+================= ================================= =============== ===================== ================
 
 **Table 5-8:** Virtual compute features and configuration for the two types of Cloud Infrastructure profiles
 
@@ -641,8 +641,8 @@ Compute resources
 |                      |                                 | BIOS is configured to enable    |             |             |
 |                      |                                 | NUMA.                           |             |             |
 +----------------------+---------------------------------+---------------------------------+-------------+-------------+
-| infra.hw.cpu.cfg.004 | Simultaneous Multithreading     | SMT is enabled, allowing each   | Y           | Y           |
-|                      | (SMT)                           | core to work multiple streams   |             |             |
+| infra.hw.cpu.cfg.004 | Simultaneous Multithreading     | SMT is enabled, allowing each   | Y if SMT is | Y if SMT is |
+|                      | (SMT)                           | core to work multiple streams   | supported   | supported   |
 |                      |                                 | of data simultaneously.         |             |             |
 +----------------------+---------------------------------+---------------------------------+-------------+-------------+
 
