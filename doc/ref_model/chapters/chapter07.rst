@@ -1508,30 +1508,29 @@ for both the Prod-Platform and the NonProd-Platform.
 Open-source software
 ~~~~~~~~~~~~~~~~~~~~
 
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| Ref             | Requirement                                                               | Definition/Note        |
-+=================+===========================================================================+========================+
-| req.sec.oss.001 | Open-source code **must** be inspected by tools with various capabilities |                        |
-|                 | for static and dynamic code analysis.                                     |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.002 | The Common Vulnerabilities and Exposures (CVE) **must** be used to        | :cite:p:`CVE-program-mi|     
-|                 | identify vulnerabilities and assess their severity rating for the         | ssion`                 |
-|                 | open-source code part of the cloud infrastructure and workloads software. |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.003 | Critical- and high-severity-rated vulnerabilities **must** be fixed in a  | :cite:p:`common-vulner |
-|                 | timely manner. See the Common Vulnerability Scoring System (CVSS) to find | ability-scoring`       |
-|                 | out a vulnerability score and its associated rate (low, medium, high, or  |                        |
-|                 | critical).                                                                |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.004 | A dedicated internal isolated repository separated from the production    |                        |
-|                 | environment **must** be used to store vetted open-source content.         |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.005 | A Software Bill of Materials (SBOM) **should** be provided or built, and  | Inventory of software  |
-|                 | maintained to identify the software components and their origins.         | components,            |
-|                 |                                                                           |                        |
-|                 |                                                                           |                        |
-|                 |                                                                           |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
+.. list-table:: Table 7-10: Open-source Security Requirements
+   :widths: 10 70 20
+   :header-rows: 1
+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.oss.001
+     - Open-source code **must** be inspected by tools with various capabilities for static and dynamic code analysis.
+     - 
+   * - req.sec.oss.002
+     - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their severity rating for the open-source code part of the cloud infrastructure and workloads software.
+     - :cite:p:`CVE-program-mission`
+   * - req.sec.oss.003
+     - Critical- and high-severity-rated vulnerabilities **must** be fixed in a timely manner. See the Common Vulnerability Scoring System (CVSS) to find out a vulnerability score and its associated rate (low, medium, high, or critical).
+     - :cite:p:`common-vulnerability-scoring`
+   * - req.sec.oss.004
+     - A dedicated internal isolated repository separated from the production environment **must** be used to store vetted open-source content.
+     - 
+   * - req.sec.oss.005
+     - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software components and their origins.
+     - Inventory of software components
+
 
 **Table 7-10:** Open-source software requirements
 
