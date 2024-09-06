@@ -907,11 +907,11 @@ SFP or SFC can be updated for various reasons and some of them are:
 Data Steering in Service Function Chain
 '''''''''''''''''''''''''''''''''''''''
 
-:numref:`Data steering in Service Function Chain` shows traffic steering along SFP.
+:numref:`DataSteering` shows traffic steering along SFP.
 
 .. figure:: ../figures/ch03-model-sfc-data-flow.png
-   :alt: Data steering in Service Function Chain
-   :name: Data steering in Service Function Chain
+   :alt: Data Steering in Service Function Chain
+   :name: DataSteering
 
    Data steering in Service Function Chain
 
