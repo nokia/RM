@@ -344,14 +344,16 @@ expectation levels:
 
 - **Computing**
 
-  - Speed (e.g., CPU clock and physical cores number)
+  - Speed (e.g., CPU clock and physical cores number; real-time pre-emptive scheduling and/or settings for BIOS, kernel
+    and OS services)
   - Predictability (e.g., CPU and RAM sharing level)
   - Specific processing (e.g., cryptography, transcoding)
 
 - **Networking**
 
   - Throughput (i.e., bit rate and/or packet rate)
-  - Latency
+  - Latency and time sensitive networking
+  - Platform Synchronization (e.g. GNSS, PTP, SyncE)
   - Connection points / interfaces number (i.e., vNIC and VLAN)
   - Specific traffic control (e.g., firewalling, NAT, cyphering)
   - Specific external network connectivity (e.g., MPLS, VXLAN)
@@ -508,12 +510,12 @@ The following **profile extensions** are proposed:
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Ultra Low Latency | ultra-low-latency-edge  | ✅            | ✅            | Labels a host/node as  |               |
-| - Edge Sites      |                         |               |               | located in an edge     |               |
-|                   |                         |               |               | site, for workloads    |               |
-|                   |                         |               |               | requiring low latency  |               |
-|                   |                         |               |               | (specify value) to     |               |
-|                   |                         |               |               | final users or         |               |
+| Ultra Low Latency | ultra-low-latency-edge  | ✅            | ✅            | Labels a host/node as  | For example,  |
+| - Edge Sites      |                         |               |               | located in an edge     | nodes         |
+|                   |                         |               |               | site, for workloads    | configured    |
+|                   |                         |               |               | requiring low latency  | at a RAN cell |
+|                   |                         |               |               | (specify value) to     | site to host  |
+|                   |                         |               |               | final users or         | vDU           |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
