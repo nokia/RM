@@ -269,128 +269,151 @@ Internal Performance Measurement Capabilities
 these capabilities will be determined by the Cloud Infrastructure Profile used by the workloads. These measurements
 or events should be collected and monitored by monitoring tools.
 
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-| Ref     | Cloud               | Unit      | Definition/Notes                                                         |
-|         | Infrastructure      |           |                                                                          |
-|         | Capability          |           |                                                                          |
-+=========+=====================+===========+==========================================================================+
-|i.pm.001 | Host CPU usage      |nanoseconds| Per Compute node. It maps to ETSI GS NFV-TST 008 V3.5.1                  |
-|         |                     |           | :cite:p:`etsigsnfvtst008` processor usage metric (Cloud Infrastructure   |
-|         |                     |           | internal).                                                               |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.002 | Virtual compute     |nanoseconds| Per VM or Pod. It maps to ETSI GS NFV-IFA 027 v2.4.1                     |
-|         | resource (vCPU)     |           | :cite:p:`etsigsnfvifa027` Mean vCPU usage and Peak vCPU usage (Cloud     |
-|         | usage               |           | Infrastructure external).                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.003 | Host CPU            | %         | Per Compute node. It maps to ETSI GS NFV-TST 008 V3.5.1                  |
-|         | utilisation         |           | :cite:p:`etsigsnfvtst008` processor usage metric (Cloud Infrastructure   |
-|         |                     |           | internal).                                                               |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.004 | Virtual compute     | %         | Per VM or Pod. It maps to ETSI GS NFV-IFA 027 v2.4.1                     |
-|         | resource (vCPU)     |           | :cite:p:`etsigsnfvifa027` Mean vCPU usage and Peak vCPU usage (Cloud     |
-|         | utilisation         |           | Infrastructure external).                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.005 | Network metric,     | Number of | Number of successfully transmitted or received packets per physical or   |
-|         | Packet count        | packets   | virtual interface, as defined in  ETSI GS NFV-TST 008 V3.5.1             |
-|         |                     |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.006 | Network metric,     | 8-bit     | Number of 8-bit bytes that constitute successfully transmitted or        |
-|         | Octet count         | bytes     | received packets per physical or virtual interface, as defined in ETSI   |
-|         |                     |           | GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.007 | Network metric,     | Number of | Number of discarded packets per physical or virtual interface,  as       |
-|         | Dropped Packet      | packets   | defined in  ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`         |
-|         | count               |           |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.008 | Network metric,     | Number of | Number of erroneous packets per physical or virtual                      |
-|         | Errored Packet      | packets   | interface, as defined in  ETSI GS NFV-TST 008 V3.5.1                     |
-|         | count               |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.009 | Memory buffered     | KiB       | Amount of temporary storage for raw disk blocks, as defined in ETSI GS   |
-|         |                     |           | NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                             |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.010 | Memory cached       | KiB       | Amount of RAM used as cache memory, as defined in ETSI GS  NFV-TST 008   |
-|         |                     |           | V3.5.1 :cite:p:`etsigsnfvtst008`                                         |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.011 | Memory free         | KiB       | Amount of RAM unused, as defined in  ETSI GS NFV-TST 008 V3.5.1          |
-|         |                     |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.012 | Memory slab         | KiB       | Amount of memory used as a data structure cache by the kernel,           |
-|         |                     |           | as defined in  ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`      |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.013 | Memory total        | KiB       | Amount of usable RAM, as defined in  ETSI GS NFV-TST 008 V3.5.1          |
-|         |                     |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.014 | Storage free space  | Bytes     | for a given storage system, amount of unused storage as defined in       |
-|         |                     |           | ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                     |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.015 | Storage used space  | Bytes     | for a given storage system, amount of storage used as defined in         |
-|         |                     |           | ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                     |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.016 | Storage reserved    | Bytes     | for a given storage system, amount of storage reserved as defined in     |
-|         | space               |           | ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                     |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.017 | Storage Read        | Millisec\ | for a given storage system, average amount of time to perform a Read     |
-|         | latency             | onds      | operation as defined in  ETSI GS NFV-TST 008 V3.5.1                      |
-|         |                     |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.018 | Storage Read        | operatio\ | for a given storage system, average rate of performing Read operations   |
-|         | IOPS                | ns per    | as defined in  ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`      |
-|         |                     | second    |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.019 | Storage Read        | Bytes per | for a given storage system, average rate of performing Read operations   |
-|         | Throughput          | second    | as defined in  ETSI GS NFV-TST 008 V3.5.1                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.020 | Storage Write       | Millisec\ | for a given storage system, average amount of time to perform a Write    |
-|         | latency             | onds      | operation as defined in  ETSI GS NFV-TST 008 V3.5.1                      |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.021 | Storage Write       | operatio\ | for a given storage system, average rate of performing Write operations  |
-|         | IOPS                | ns per    | as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`       |
-|         |                     | second    |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.022 | Storage Write       | Bytes per | for a given storage system, average rate of performing Write operations  |
-|         | Throughput          | second    | as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`       |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.023 | Host power          | Watt      | Real-time electrical power used by a node (1)                            |
-|         | utilization         | (Joule/s) |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.024 | Host energy         | Watt.hour | Electrical energy consumption of a node since the related counter last   |
-|         | consumption         | (Joule)   | reset (2)                                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.025 | CPU power           | Watt      | Real-time electrical power used by the processor(s) of a node (1)        |
-|         | utilization         | (Joule/s) |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.026 | CPU energy          | Watt.hour | Electrical energy consumption of the processor(s) of a node since the    |
-|         | consumption         | (Joule)   | related counter last reset (2)                                           |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.027 | PCIe device power   | Watt      | Real-time electrical power used by a specific PCI device of a node (1)   |
-|         | utilization         | (Joule/s) |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.028 | PCIe device energy  | Watt.hour | Electrical energy consumption of a specific PCI device of a node since   |
-|         | consumption         | (Joule)   | the related counter last reset (2)                                       |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.029 | RAM power           | Watt      | Real-time electrical power used by the memory of a node (1)              |
-|         | utilization         | (Joule/s) |                                                                          |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.030 | RAM energy          | Watt.hour | Electrical energy consumption of the memory of a node since the related  |
-|         | consumption         | (Joule)   | counter last reset (2)                                                   |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.031 | Disk power          | Watt      | Real-time electrical power used by a specific storage device of a node   |
-|         | utilization         | (Joule/s) | (1)                                                                      |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.032 | Disk energy         | Watt.hour | Electrical energy consumption of a specific storage device of a node     |
-|         | consumption         | (Joule)   | since the related counter last reset (2)                                 |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.033 | Hugepages pool      | Integer   | the number of Hugepages currently configured in the pool, which is the   |
-|         | total               |           | total of pages available, as defined in ETSI GS NFV-TST 008 V3.5.1       |
-|         |                     |           | :cite:p:`etsigsnfvtst008`                                                |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.034 | Hugepages used      | Integer   | the number of used pages in the Hugepage Pool, as defined in ETSI GS     |
-|         |                     |           | NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                             |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
-|i.pm.035 | Hugepages free      | Integer   | the number of free pages in the Hugepage Pool, as defined in ETSI GS     |
-|         |                     |           | NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`                             |
-+---------+---------------------+-----------+--------------------------------------------------------------------------+
+* - Ref
+  - Cloud Infrastructure Capability
+  - Unit
+  - Definition/Notes
+* - i.pm.001
+  - Host CPU usage
+  - nanoseconds
+  - Per Compute node. It maps to ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008` processor usage metric (Cloud Infrastructure internal).
+* - i.pm.002
+  - Virtual compute resource (vCPU) usage
+  - nanoseconds
+  - Per VM or Pod. It maps to ETSI GS NFV-IFA 027 v2.4.1 :cite:p:`etsigsnfvifa027` Mean vCPU usage and Peak vCPU usage (Cloud Infrastructure external).
+* - i.pm.003
+  - Host CPU utilisation
+  - %
+  - Per Compute node. It maps to ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008` processor usage metric (Cloud Infrastructure internal).
+* - i.pm.004
+  - Virtual compute resource (vCPU) utilisation
+  - %
+  - Per VM or Pod. It maps to ETSI GS NFV-IFA 027 v2.4.1 :cite:p:`etsigsnfvifa027` Mean vCPU usage and Peak vCPU usage (Cloud Infrastructure external).
+* - i.pm.005
+  - Network metric, Packet count
+  - Number of packets
+  - Number of successfully transmitted or received packets per physical or virtual interface, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.006
+  - Network metric, Octet count
+  - 8-bit bytes
+  - Number of 8-bit bytes that constitute successfully transmitted or received packets per physical or virtual interface, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.007
+  - Network metric, Dropped Packet count
+  - Number of packets
+  - Number of discarded packets per physical or virtual interface, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.008
+  - Network metric, Errored Packet count
+  - Number of packets
+  - Number of erroneous packets per physical or virtual interface, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.009
+  - Memory buffered
+  - KiB
+  - Amount of temporary storage for raw disk blocks, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.010
+  - Memory cached
+  - KiB
+  - Amount of RAM used as cache memory, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.011
+  - Memory free
+  - KiB
+  - Amount of RAM unused, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.012
+  - Memory slab
+  - KiB
+  - Amount of memory used as a data structure cache by the kernel, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.013
+  - Memory total
+  - KiB
+  - Amount of usable RAM, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.014
+  - Storage free space
+  - Bytes
+  - Amount of unused storage for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.015
+  - Storage used space
+  - Bytes
+  - Amount of storage used for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.016
+  - Storage reserved space
+  - Bytes
+  - Amount of storage reserved for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.017
+  - Storage Read latency
+  - Milliseconds
+  - Average amount of time to perform a Read operation for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.018
+  - Storage Read IOPS
+  - Operations per second
+  - Average rate of performing Read operations for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.019
+  - Storage Read Throughput
+  - Bytes per second
+  - Average rate of performing Read operations for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1.
+* - i.pm.020
+  - Storage Write latency
+  - Milliseconds
+  - Average amount of time to perform a Write operation for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1.
+* - i.pm.021
+  - Storage Write IOPS
+  - Operations per second
+  - Average rate of performing Write operations for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.022
+  - Storage Write Throughput
+  - Bytes per second
+  - Average rate of performing Write operations for a given storage system, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.023
+  - Host power utilization
+  - Watt (Joule/s)
+  - Real-time electrical power used by a node (1).
+* - i.pm.024
+  - Host energy consumption
+  - Watt.hour (Joule)
+  - Electrical energy consumption of a node since the related counter was last reset (2).
+* - i.pm.025
+  - CPU power utilization
+  - Watt (Joule/s)
+  - Real-time electrical power used by the processor(s) of a node (1).
+* - i.pm.026
+  - CPU energy consumption
+  - Watt.hour (Joule)
+  - Electrical energy consumption of the processor(s) of a node since the related counter was last reset (2).
+* - i.pm.027
+  - PCIe device power utilization
+  - Watt (Joule/s)
+  - Real-time electrical power used by a specific PCI device of a node (1).
+* - i.pm.028
+  - PCIe device energy consumption
+  - Watt.hour (Joule)
+  - Electrical energy consumption of a specific PCI device of a node since the related counter was last reset (2).
+* - i.pm.029
+  - RAM power utilization
+  - Watt (Joule/s)
+  - Real-time electrical power used by the memory of a node (1).
+* - i.pm.030
+  - RAM energy consumption
+  - Watt.hour (Joule)
+  - Electrical energy consumption of the memory of a node since the related counter was last reset (2).
+* - i.pm.031
+  - Disk power utilization
+  - Watt (Joule/s)
+  - Real-time electrical power used by a specific storage device of a node (1).
+* - i.pm.032
+  - Disk energy consumption
+  - Watt.hour (Joule)
+  - Electrical energy consumption of a specific storage device of a node since the related counter was last reset (2).
+* - i.pm.033
+  - Hugepages pool total
+  - Integer
+  - The number of Hugepages currently configured in the pool, which is the total of pages available, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.034
+  - Hugepages used
+  - Integer
+  - The number of used pages in the Hugepage Pool, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+* - i.pm.035
+  - Hugepages free
+  - Integer
+  - The number of free pages in the Hugepage Pool, as defined in ETSI GS NFV-TST 008 V3.5.1 :cite:p:`etsigsnfvtst008`.
+
 
 **Table 4-8:** Internal Measurement Capabilities of Cloud Infrastructure
 

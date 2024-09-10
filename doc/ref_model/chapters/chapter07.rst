@@ -1180,98 +1180,73 @@ System hardening
 Platform and access
 ~~~~~~~~~~~~~~~~~~~
 
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| Ref             | Requirement                                      | Definition/Note                                 |
-+=================+==================================================+=================================================+
-| req.sec.sys.001 | The platform **must** support authenticated and  |                                                 |
-|                 | secure access to APIs, GUIs, and command line    |                                                 |
-|                 | interfaces (CLIs).                               |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.002 | The platform **must** support traffic filtering  |                                                 |
-|                 | for workloads (for example, firewalls).          |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.003 | The platform **must** support secure and         |                                                 |
-|                 | encrypted communications, and the                |                                                 |
-|                 | confidentiality and integrity of network         |                                                 |
-|                 | traffic.                                         |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.004 | The cloud infrastructure **must** support        | A secure channel enables the transferring of    |
-|                 | authentication, integrity, and confidentiality   | data that is resistant to overhearing and       |
-|                 | on all network channels.                         | tampering.                                      |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.005 | The cloud infrastructure **must** segregate the  |                                                 |
-|                 | underlay and overlay networks.                   |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.006 | The cloud infrastructure must be able to utilize |                                                 |
-|                 | the cloud infrastructure manager identity        |                                                 |
-|                 | lifecycle management capabilities.               |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.007 | The platform **must** implement controls         |                                                 |
-|                 | enforcing the separation of duties and           |                                                 |
-|                 | privileges, least privilege use and least common |                                                 |
-|                 | mechanism (role-based access control).           |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.008 | The platform **must** be able to assign the      | Communication between different trust domains   |
-|                 | entities that comprise the tenant networks to    | is not allowed, by default.                     |
-|                 | different trust domains.                         |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.009 | The platform **must** support the creation of    | These may be uni-directional relationships      |
-|                 | trust relationships between trust domains.       | where the trusting domain trusts another domain |
-|                 |                                                  | (the “trusted domain”) to authenticate users    |
-|                 |                                                  | for them, or to allow access to its resources   |
-|                 |                                                  | from the trusted domain. In a bidirectional     |
-|                 |                                                  | relationship, both domains are “trusting” and   |
-|                 |                                                  | “trusted”.                                      |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.010 | For two or more domains without existing trust   |                                                 |
-|                 | relationships, the platform **must not** allow   |                                                 |
-|                 | the effect of an attack on one domain to impact  |                                                 |
-|                 | the other domains, either directly or            |                                                 |
-|                 | indirectly.                                      |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.011 | The platform **must not** reuse the same         |                                                 |
-|                 | authentication credentials (for example, a key-  |                                                 |
-|                 | pair) on different platform components (for      |                                                 |
-|                 | example, on different hosts, or different        |                                                 |
-|                 | services).                                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.012 | The platform **must** protect all secrets by     | For example, in OpenStack Barbican.             |
-|                 | using strong encryption techniques and storing   |                                                 |
-|                 | the protected secrets externally from the        |                                                 |
-|                 | component.                                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.013 | The platform **must** provide secrets            |                                                 |
-|                 | dynamically as and when needed.                  |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.014 | The platform **should** use Linux Security       |                                                 |
-|                 | Modules, such as SELinux, to control access to   |                                                 |
-|                 | resources.                                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.015 | The platform **must not** contain back-door      |                                                 |
-|                 | entries (such as unpublished access points,      |                                                 |
-|                 | APIs, and so on).                                |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.016 | Login access to the platform's components        | Hardened jump servers isolated from             |
-|                 | **must** be through encrypted protocols, such as | external networks are recommended.              |
-|                 | SSH v2 or TLS v1.2, or higher.                   |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.017 | The platform **must** provide the capability of  |                                                 |
-|                 | using digital certificates that comply with      |                                                 |
-|                 | X.509 standards issued by a trusted              |                                                 |
-|                 | certification authority.                         |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.018 | The platform **must** provide the ability to     |                                                 |
-|                 | allow certificate renewal and revocation.        |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.019 | The platform **must** provide the ability to     |                                                 |
-|                 | test the validity of a digital certificate       |                                                 |
-|                 | (CA signature, validity period, non-revocation,  |                                                 |
-|                 | identity).                                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.sys.020 | The cloud infrastructure architecture **should** | Zero Trust Architecture (ZTA) described in NIST |
-|                 | rely on Zero Trust principles to build a secure  | SP 800-207                                      |
-|                 | by design environment.                           |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
+.. list-table:: Security Requirements
+   :header-rows: 1
+   :widths: 20 60 40
+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.sys.001
+     - The platform **must** support authenticated and secure access to APIs, GUIs, and command line interfaces (CLIs).
+     - 
+   * - req.sec.sys.002
+     - The platform **must** support traffic filtering for workloads (for example, firewalls).
+     - 
+   * - req.sec.sys.003
+     - The platform **must** support secure and encrypted communications, and the confidentiality and integrity of network traffic.
+     - 
+   * - req.sec.sys.004
+     - The cloud infrastructure **must** support authentication, integrity, and confidentiality on all network channels.
+     - A secure channel enables the transferring of data that is resistant to overhearing and tampering.
+   * - req.sec.sys.005
+     - The cloud infrastructure **must** segregate the underlay and overlay networks.
+     - 
+   * - req.sec.sys.006
+     - The cloud infrastructure must be able to utilize the cloud infrastructure manager identity lifecycle management capabilities.
+     - 
+   * - req.sec.sys.007
+     - The platform **must** implement controls enforcing the separation of duties and privileges, least privilege use, and least common mechanism (role-based access control).
+     - 
+   * - req.sec.sys.008
+     - The platform **must** be able to assign the entities that comprise the tenant networks to different trust domains.
+     - Communication between different trust domains is not allowed, by default.
+   * - req.sec.sys.009
+     - The platform **must** support the creation of trust relationships between trust domains.
+     - These may be uni-directional relationships where the trusting domain trusts another domain (the “trusted domain”) to authenticate users for them, or to allow access to its resources from the trusted domain. In a bidirectional relationship, both domains are “trusting” and “trusted”.
+   * - req.sec.sys.010
+     - For two or more domains without existing trust relationships, the platform **must not** allow the effect of an attack on one domain to impact the other domains, either directly or indirectly.
+     - 
+   * - req.sec.sys.011
+     - The platform **must not** reuse the same authentication credentials (for example, a key-pair) on different platform components (for example, on different hosts, or different services).
+     - 
+   * - req.sec.sys.012
+     - The platform **must** protect all secrets by using strong encryption techniques and storing the protected secrets externally from the component.
+     - For example, in OpenStack Barbican.
+   * - req.sec.sys.013
+     - The platform **must** provide secrets dynamically as and when needed.
+     - 
+   * - req.sec.sys.014
+     - The platform **should** use Linux Security Modules, such as SELinux, to control access to resources.
+     - 
+   * - req.sec.sys.015
+     - The platform **must not** contain back-door entries (such as unpublished access points, APIs, and so on).
+     - 
+   * - req.sec.sys.016
+     - Login access to the platform's components **must** be through encrypted protocols, such as SSH v2 or TLS v1.2, or higher.
+     - Hardened jump servers isolated from external networks are recommended.
+   * - req.sec.sys.017
+     - The platform **must** provide the capability of using digital certificates that comply with X.509 standards issued by a trusted certification authority.
+     - 
+   * - req.sec.sys.018
+     - The platform **must** provide the ability to allow certificate renewal and revocation.
+     - 
+   * - req.sec.sys.019
+     - The platform **must** provide the ability to test the validity of a digital certificate (CA signature, validity period, non-revocation, identity).
+     - 
+   * - req.sec.sys.020
+     - The cloud infrastructure architecture **should** rely on Zero Trust principles to build a secure by design environment.
+     - Zero Trust Architecture (ZTA) described in NIST SP 800-207.
 
 **Table 7-4:** Platform and access requirements
 
