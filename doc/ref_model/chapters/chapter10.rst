@@ -1,8 +1,8 @@
 Challenges and Gaps
 ===================
 
-Introduction
-------------
+Introduction to Challenges and Gaps
+-----------------------------------
 
 This chapter is dedicated to identifying the challenges and gaps found in the course of the development of the reference
 model to ensure that it continues to be of strategic and tactical value intended over time. Should a challenge or gap

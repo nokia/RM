@@ -1,8 +1,8 @@
 External Interfaces
 ===================
 
-Introduction
-------------
+Introduction to external interfaces
+-----------------------------------
 
 In the earlier sections in this document, the various resources and capabilities of the Cloud Infrastructure were
 catalogued and the workloads profiled with respect to those capabilities. The intent behind this section and an
