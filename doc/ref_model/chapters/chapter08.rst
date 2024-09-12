@@ -722,34 +722,53 @@ Based on the infrastructure deployed at the edge, Table 8-3 specifies the
 :ref:`chapters/chapter05:feature set and requirements from infrastructure` that would
 need to be relaxed.
 
-+----------------------+--------------+----------------------+-----------------------------+---------------------------+
-| Reference            | Feature      | Description          | As specified in RM Chapter  | Exception for edge        |
-|                      |              |                      | 05                          |                           |
-|                      |              |                      +--------------+--------------+-------------+-------------+
-|                      |              |                      | Basic type   | High         | Basic type  | High        |
-|                      |              |                      |              | performance  |             | performance |
-+======================+==============+======================+==============+==============+=============+=============+
-| infra.stg.cfg.003    | Storage with |                      | N            | Y            | N           | Optional    |
-|                      | replication  |                      |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.stg.cfg.004    | Storage with |                      | Y            | Y            | N           | Optional    |
-|                      | encryption   |                      |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.001 | Minimum      | This determines the  | 2            | 2            | 1           | 1           |
-|                      | number of    | minimum number of    |              |              |             |             |
-|                      | CPU sockets  | CPU sockets within   |              |              |             |             |
-|                      |              | each host.           |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.002 | Minimum      | This determines the  | 20           | 20           | 1           | 1           |
-|                      | Number of    | minimum number of    |              |              |             |             |
-|                      | cores per    | cores needed per     |              |              |             |             |
-|                      | CPU          | CPU.                 |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.003 | NUMA         | NUMA alignment       | N            | Y            | N           | Y (*)       |
-|                      | alignment    | support and BIOS     |              |              |             |             |
-|                      |              | configured to enable |              |              |             |             |
-|                      |              | NUMA.                |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
+   * - Reference
+     - Feature
+     - Description
+     - As specified in RM Chapter 05 - Basic type
+     - As specified in RM Chapter 05 - High performance
+     - Exception for edge - Basic type
+     - Exception for edge - High performance
+
+   * - infra.stg.cfg.003
+     - Storage with replication
+     - 
+     - N
+     - Y
+     - N
+     - Optional
+
+   * - infra.stg.cfg.004
+     - Storage with encryption
+     - 
+     - Y
+     - Y
+     - N
+     - Optional
+
+   * - infra.hw.cpu.cfg.001
+     - Minimum number of CPU sockets
+     - This determines the minimum number of CPU sockets within each host.
+     - 2
+     - 2
+     - 1
+     - 1
+
+   * - infra.hw.cpu.cfg.002
+     - Minimum Number of cores per CPU
+     - This determines the minimum number of cores needed per CPU.
+     - 20
+     - 20
+     - 1
+     - 1
+
+   * - infra.hw.cpu.cfg.003
+     - NUMA alignment
+     - NUMA alignment support and BIOS configured to enable NUMA.
+     - N
+     - Y
+     - N
+     - Y (*)
 
 **Table 8-4. TEC exceptions to infrastructure profile features and requirements**
 
