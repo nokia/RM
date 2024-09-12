@@ -1,8 +1,8 @@
 Hybrid Multicloud: Data Centre to Edge
 ======================================
 
-Introduction
-------------
+Introduction to Hybrid Multicloud
+---------------------------------
 
 The :ref:`chapters/chapter03:modelling` section focuses on cloud infrastructure abstractions. While these are generic
 abstractions, they and the associated capabilities of the cloud infrastructure are specified for data centres, central
