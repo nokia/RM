@@ -35,7 +35,7 @@ secure and accessible over a secure network (transport layer security or TLS), u
 and RBAC policies to limit exposure of this vulnerability.
 
 Typical cloud-associated attacker tactics have been identified in the widely accepted
-`MITRE ATT&CK® Framework <https://www.mitre.org/sites/default/files/2021-11/getting-started-with-attack-october-2019.pdf>`__. This framework provides a systematic approach to capture adversarial tactics targeting cloud
+MITRE ATT&CK® Framework :cite:p:`ATT&CK®`. This framework provides a systematic approach to capture adversarial tactics targeting cloud
 environments. Examples of such adversarial tactics are listed in the following table.
 
 +------------------+---------------------------------------------------------------------------------------------------+
@@ -138,39 +138,31 @@ Standards organisations with recommendations and best practices, and certificati
 consideration, include the following examples. This is not an exhaustive list, it contains only some of the more
 important standards in current use.
 
-- Center for Internet Security - `https://www.cisecurity.org/ <https://www.cisecurity.org/>`__
+- Center for Internet Security - :cite:p:`center-for-internet-security`
 
-- Cloud Security Alliance - `https://cloudsecurityalliance.org/ <https://cloudsecurityalliance.org/>`__
+- Cloud Security Alliance - :cite:p:`cloud-security-alliance`
 
-- Open Web Application Security Project - `https://owasp.org/ <https://owasp.org/>`__
+- Open Web Application Security Project - :cite:p:`open-web-application-security-project`
 
 - The National Institute of Standards and Technology (NIST), with the following special publications:
 
-  - NIST SP 800-123 `Guide to General Server Security <https://nvlpubs.nist.gov/nistpubs/Legacy
-    /SP/nistspecialpublication800-123.pdf>`__
+  - NIST SP 800-123 Guide to General Server Security :cite:p:`guide-to-general-server-security`
 
-  - NIST SP 800-204A `Building Secure Microservices-based Applications Using Service-Mesh Architecture
-    <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__
+  - NIST SP 800-204A Building Secure Microservices-based Applications Using Service-Mesh Architecture :cite:p:`building-secure-microservices-based-applications-using-service-mesh-architecture`
 
-  - NIST SP 800-204B `Attribute-based Access Control for Microservices-based Applications Using a Service Mesh
-    <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__
+  - NIST SP 800-204B Attribute-based Access Control for Microservices-based Applications Using a Service Mesh :cite:p:`attribute-based-access-control-for-microservices-based-applications-using-a-service-mesh`
 
-  - NIST SP 800-207 `Zero Trust Architecture
-    <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf>`__
+  - NIST SP 800-207 Zero Trust Architecture :cite:p:`zero-trust-architecture`
 
-  - NIST SP 800-218 `Secure Software Development Framework (SSDF)
-    <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf>`__
+  - NIST SP 800-218 Secure Software Development Framework (SSDF) :cite:p:`secure-software-development-framework`
 
-- FedRAMP Certification `https://www.fedramp.gov/ <https://www.fedramp.gov/>`__
+- FedRAMP Certification :cite:p:`fedRAMP-certification`
 
-- ETSI Cyber Security Technical Committee (TC CYBER) - `https://www.etsi.org/committee/cyber <https://www.etsi.org/commi
-  ttee/cyber>`__
+- ETSI Cyber Security Technical Committee (TC CYBER) - :cite:p:`ETSI-cyber-security-technical-committee`
 
-- `ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV)
-  <https://www.etsi.org/technologies/nfv>`__ and its Security Working Group NFV-SEC
+- ETSI Industry Specification Group Network Functions Virtualisation (ISG NFV) :cite:p:`eTSI-industry-specification-group-network-functions-virtualisation` and its Security Working Group NFV-SEC
 
-- The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) -
-  `www.iso.org <https://www.iso.org/home.html>`__. The following ISO standards are of particular interest for NFVI:
+- The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) - :cite:p:`the-international-organization-for-standardization`. The following ISO standards are of particular interest for NFVI:
 
   - ISO/IEC 27002:2013 and ISO/IEC 27001: these are the international standards for best-practice information security
     management systems (ISMSs).
@@ -178,11 +170,10 @@ important standards in current use.
   - ISO/IEC 27035: this is the international standard for incident management.
   - ISO/IEC 27031: this is the international standard for ICT readiness for business continuity.
 
-In the mobile network field, the GSM Association (`GSMA <https://www.gsma.com/>`__) and its Fraud and Security working group
+In the mobile network field, the GSM Association (GSMA :cite:p:`gSMA`) and its Fraud and Security working group
 of experts have developed a set of documents specifying how to secure the global mobile ecosystem.
 
-- The document “Baseline Security controls”, `FS.31 v2.0 <https://www.gsma.com/security/resources/fs-31-gsma-baseline-se
-  curity-controls/>`__ :cite:p:`gsmafs31`, published in February 2020, is a practical guide intended for operators and
+- The document “Baseline Security controls”, FS.31 v2.0 :cite:p:`gsmafs31`, published in February 2020, is a practical guide intended for operators and
   stakeholders to check mobile network’s internal security. It lists a set of security controls from business controls
   (including security roles, organizational policies, business continuity management, and so on) to technological controls
   (for user equipment, networks, operations, and so on), covering all areas of mobile network, including Cloud Infrastructure.
@@ -194,8 +185,7 @@ of experts have developed a set of documents specifying how to secure the global
 The GSMA security activities are currently focused on 5G services and the new challenges posed by the virtualisation of network
 functions and by open-source software. The following two documents are in the scope of cloud infrastructure security:
 
-- The white paper `“Open Networking & the Security of Open Source Software deployment” <https://www.gsma.com/futurenetwo
-  rks/resources/open-networking-the-security-of-open-source-software-deployment/>`__ :cite:p:`gsmaopensourcesecurity`,
+- The white paper “Open Networking & the Security of Open Source Software deployment”  :cite:p:`gsmaopensourcesecurity`,
   deals with open-source software security. It highlights the importance of layered security defences and lists
   recommendations and security concepts that are able to secure deployments.
 - The “5G Security Guide” :cite:p:`gsmafs40` (non-binding Permanent Reference Document), covers 5G security in a holistic way,
@@ -266,13 +256,12 @@ General security requirements for the cloud infrastructure
 - Security defects must be reported.
 - The Cloud Infrastructure components must be continuously analysed from deployment to runtime. The cloud infrastructure
   must offer tools to check the code libraries and all other code against the
-  `Common Vulnerabilities and Exposures (CVE) databases <https://cve.mitre.org/>`__ to identify the presence of any
+  Common Vulnerabilities and Exposures (CVE) databases :cite:p:`common-vulnerabilities-and-exposures` to identify the presence of any
   known vulnerabilities. The CVE is a list of publicly disclosed vulnerabilities and exposures that is maintained by
-  `MITRE <https://www.mitre.org/>`__. Each vulnerability is characterised by an identifier, a description, a date, and
+  MITRE :cite:p:`mITRE`. Each vulnerability is characterised by an identifier, a description, a date, and
   comments.
 - When a vulnerability is discovered on a component (from operating systems to virtualisation layer components), the
-  remediation action depends on its severity. The `Common Vulnerability Scoring System (CVSS)
-  <https://www.first.org/cvss/>`__ allows you to calculate a vulnerability score. It is an open framework widely used in
+  remediation action depends on its severity. The Common Vulnerability Scoring System (CVSS) :cite:p:`common-vulnerability-scoring-system` allows you to calculate a vulnerability score. It is an open framework widely used in
   vulnerability management tools. The CVSS is owned and managed by the Forum of Incident Response and Security Teams
   (FIRST). The CVSS consists of three metric groups: base, temporal, and environmental. The base metrics produce a score
   ranging from 0 to 10. This score can then be refined using temporal and environmental metrics. The numerical score can
@@ -398,11 +387,10 @@ The DevSecOps Automation best practices advocate, among other things, the implem
 automation and programmatic execution, as well as the monitoring of security controls to identify, protect, detect,
 respond, and recover from cyber threats. The framework used for IaaC security is based on the joint publication of
 the Cloud Security Alliance (CSA) and SAFECode,
-"`The Six Pillars of DevSecOps: Automation (2020) <https://safecode.org/resource-secure-development-practices/the-six-pillars-of-devsecops-automation>`__"
+"The Six Pillars of DevSecOps: Automation (2020)"
 :cite:p:`safecodesixpillarsdevsecops`. This document uses the base definitions and constructs from
-`ISO 27000 <https://www.iso.org/standard/73906.html>`__ :cite:p:`isoiec270002018`, and the CSA's
-`Information Security Management through Reflexive Security <https://cloudsecurityalliance.org/artifacts/information-sec
-urity-management-through-reflexive-security/>`__ :cite:p:`csaeflexivesec`.
+ISO 27000 :cite:p:`isoiec270002018`, and the CSA's
+Information Security Management through Reflexive Security :cite:p:`csaeflexivesec`.
 
 The framework identifies the following five distinct stages:
 
@@ -634,8 +622,8 @@ A simple process works in the following way:
 4. The hash comparisons can validate settings, as well as the integrity of the modules.
 
 Cloud infrastructure operators should ensure that OS kernel measurements can be recorded by using a TPM-aware
-bootloader (for example, tboot, (see `https://sourceforge.net/projects/tboot/ <https://sourceforge.net/projects/tboot/>`__)
-or shim, (see `https://github.com/rhboot/shim <https://github.com/rhboot/shim>`__)), which can extend the root
+bootloader (for example, tboot, (see :cite:p:`trusted-boot`)
+or shim, (see :cite:p:`shim`)), which can extend the root
 of trust up to the kernel level.
 
 The validation of the platform measurements can be performed by the TPM’s launch control policy (LCP) or through
@@ -650,11 +638,9 @@ starting with PCR 17.
 If a remote attestation server is used to monitor platform integrity, the operators should ensure that the
 attestation is performed periodically or in a timely manner. Additionally, platform monitoring can be extended to
 monitor the integrity of the static file system at run-time by using a TPM-aware kernel module, such as Linux
-Integrity Measurement Architecture (IMA). For details, see
-`https://sourceforge.net/p/linux-ima/wiki/Home <https://sourceforge.net/p/linux-ima/wiki/Home>`__. Alternatively,
+Integrity Measurement Architecture (IMA). For details, see :cite:p:`integrity-measurement-architecture`. Alternatively,
 you can use the trust policies functionality of OpenCIT.
-See `https://github.com/opencit/opencit/wiki/Open-CIT-3.2-Product-Guide <https://github.com/opencit/opencit/wi
-ki/Open-CIT-3.2-Product-Guide>`__ for details.
+See :cite:p:`open-CIT-3.2-product-guide` for details.
 
 The static file system includes a set of important files and folders which do not change between reboots during the
 platform's lifecycle. This allows the attestation server to detect any tampering with the static file system during
@@ -670,8 +656,7 @@ the operator to build secure by design cloud infrastructure, from hardware to ap
 Zero Trust principles mitigates the threats and attacks within an enterprise, a network, or an infrastructure,
 thereby ensuring a fine grained segmentation between each component of the system.
 
-Zero Trust Architecture (ZTA), as described in `NIST SP 800-207 publication <https://nvlpubs.nist.gov/nistpubs/SpecialPubli
-cations/NIST.SP.800-207.pdf>`__ :cite:p:`nistsp800207`, assumes there is no implicit trust granted to assets or
+Zero Trust Architecture (ZTA), as described in NIST SP 800-207 publication :cite:p:`nistsp800207`, assumes there is no implicit trust granted to assets or
 user accounts, whatever their location or ownership. The Zero Trust approach focuses on protecting all types of resources:
 data, services, devices, infrastructure components, and virtual and cloud components. Trust is never granted implicitly,
 and must be evaluated continuously.
@@ -693,9 +678,9 @@ for applications to be compromised. A good practice is to implement the proxy-ba
 framework to build a secured environment for microservices-based applications, offering services such as service
 discovery, authentication and authorisation policies enforcement, network resilience, and security monitoring
 capabilities. The two documents,
-`NIST SP 800-204A <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204A.pdf>`__\ (Building Secure
+NIST SP 800-204A :cite:p:`NIST-SP-800-204A` \ (Building Secure
 Microservices-based Applications Using Service-Mesh Architecture) and
-`NIST SP 800-204B <https://csrc.nist.gov/pubs/sp/800/204/b/final>`__\ (Attribute-based Access Control for
+NIST SP 800-204B :cite:p:`NIST-SP-800-204B` \ (Attribute-based Access Control for
 Microservices-based Applications Using a Service Mesh), describe service mesh, and provide guidance for the deployment
 of service mesh components.
 
@@ -703,25 +688,19 @@ Software supply chain security
 ------------------------------
 
 Software supply chain attacks are increasing worldwide and can cause serious damage. Many enterprises and
-organisations are experiencing these threats. Aqua Security's experts estimated that `software supply chain attacks
-have more than tripled in 2021
-<https://www.aquasec.com/news/aqua-securitys-argon-experts-find-software-supply-chain-attacks-more-than-tripled-in-2021/>`__.
-Reuters reported in August 2021 that the `ransomware affecting Kaseya Virtual System Administration product
-<https://www.reuters.com/technology/kaseya-ransomware-attack-sets-off-race-hack-service-providers-researchers-2021-08-03/>`__
-caused downtime for over 1500 companies. In the case of the `backdoor inserted in codecov software
-<https://www.reuters.com/technology/codecov-hackers-breached-hundreds-restricted-customer-sites-sources-2021-04-19/>`__,
-hundreds of customers were affected. The SolarWinds attack detailed in `Defending against SolarWinds attacks
-<https://www.techtarget.com/searchsecurity/news/252494495/Defending-against-SolarWinds-attacks-What-can-be-done>`__
+organisations are experiencing these threats. Aqua Security's experts estimated that software supply chain attacks :cite:p:`aqua-security`.
+Reuters reported in August 2021 that the ransomware affecting Kaseya Virtual System Administration product :cite:p:`kaseya-ransomware`
+caused downtime for over 1500 companies. In the case of the backdoor inserted in codecov software :cite:p:`codecov-hackers`,
+hundreds of customers were affected. The SolarWinds attack detailed in Defending against SolarWinds attacks :cite:p:`solarWinds-supply`
 is another example of how software suppliers are targeted and, by rebound, their customers affected.
 Open-source code weaknesses can also be exploited by attackers. The
-`Log4J <https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance>`__ vulnerability, impacting many
+Log4J :cite:p:`apache-Log4j` vulnerability, impacting many
 applications, is a recent example in this field. When addressing cyber security, the vulnerabilities of the
 software supply chain are often not taken into account. Some governments are already alerting and requesting
 actions to face these risks. The British government is hardening the law and standards of cyber security for
 the supply chain. The US government requested actions to enhance software supply chain security. The security
 of the software supply chain is a challenge also pointed out by the European Network and Information Security
-Agency, ENISA, in its report `NFV Security in 5G - Challenges and Best Practices
-<https://www.cisa.gov/news-events/news/apache-log4j-vulnerability-guidance>`__.
+Agency, ENISA, in its report NFV Security in 5G - Challenges and Best Practices :cite:p:`apache-Log4j`.
 
 
 Software security
@@ -731,16 +710,14 @@ Software supply chain security is crucial and is made complex by the greater att
 many different supply chains in virtualised, containerised, and edge environments.
 All software components must be trusted, from commercial software and open-source
 code to proprietary software, as well as the integration of these components.
-The SAFECode white paper `"Managing Security Risks Inherent in the Use of Third-party Components"
-<https://safecode.org/wp-content/uploads/2017/05/SAFECode_TPC_Whitepaper.pdf>`__ provides
+The SAFECode white paper "Managing Security Risks Inherent in the Use of Third-party Components" :cite:p:`managing-Security` provides
 a detailed risk management approach.
 
 To secure the software code, the following methods must be applied:
 
--  Use best practices coding, such as design pattern, recommended in the `Twelve-Factor App <https://12factor.net/>`__
-   or `OWASP "Secure Coding Practices - Quick Reference Guide" <https://owasp.org/>`__.
--  Perform threat modelling, as described in the `"Tactical Threat Modeling"
-   <https://safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf>`__ document, published by SAFECode.
+-  Use best practices coding, such as design pattern, recommended in the Twelve-Factor App :cite:p:`twelve-factor-app`
+   or OWASP :cite:p:`secure-coding-practices`.
+-  Perform threat modelling, as described in the "Tactical Threat Modeling" :cite:p:`tactical-threat-modeling` document, published by SAFECode.
 -  Use trusted, authenticated, and identified software images that are provided by authenticated software
    distribution portals.
 -  Require suppliers to provide a Software Bill of Materials to identify all the components parts of their product's
@@ -768,8 +745,7 @@ from open-source public repositories, or code within a commercial application or
 The strength of open-source code is the availability of code source developed by a community which maintains and
 improves it. Integration of open-source code with application source code helps to develop and produce applications
 faster. This could, however, introduce security risks if a risk management DevSecOps approach is not implemented.
-The GSMA white paper  `"Open Networking & the Security of Open Source Software Deployment - Future Networks"
-<https://www.gsma.com/futurenetworks/resources/open-networking-the-security-of-open-source-software-deployment/>`__
+The GSMA white paper  "Open Networking & the Security of Open Source Software Deployment - Future Networks" :cite:p:`open-networking`
 highlights these risks and addresses the challenges coming with open-source code usage. Among the security risks are
 poor code quality containing security flaws, an obsolete code with known vulnerabilities, and the lack of knowledge
 of the branch activity of the open-source communities. An active branch comes with bugs fixes. This is not the case
@@ -790,7 +766,7 @@ Software Bill of Materials
 
 To ensure software security, it is crucial to identify the software components and their origins. The
 Software Bill of Materials (SBOM), described by the US National Telecommunications and Information Administration
-`US NTIA <https://ntia.gov/page/software-bill-materials>`__, is a recommended tool for identifying software
+US NTIA :cite:p:`USNTIA`, is a recommended tool for identifying software
 components. The SBOM is an inventory of software components and the relationships between them. The NTIA describes
 how to establish an SBOM and provides SBOM standard data formats. In the event of vulnerability being detected in a
 component, the SBOM inventory is an effective means of identifying the impacted component and of enabling
@@ -800,8 +776,7 @@ A transparent software supply chain offers benefits for the remediation of vulne
 for licensing management and provides assurance of the source and integrity of the components. To achieve and
 benefit from this transparency, a shared model must be supported by industry. This is the goal of the work
 performed by the US Department of Commerce and the National Telecommunications and Information Administration (NTIA)
-and published, in the report `"The Minimum Elements for a Software Bill of Materials (SBOM)"
-<https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf>`__, in July 2021. This document gives
+and published, in the report "The Minimum Elements for a Software Bill of Materials (SBOM)" :cite:p:`the-minimum-elements`, in July 2021. This document gives
 guidance and specifies the minimum elements for the SBOM as a starting point.
 
 A piece of software can be modelled as a hierarchical tree with components and subcomponents. Each
@@ -836,7 +811,7 @@ component should have its SBOM, including, as a baseline, the information detail
 +------------------------------+---------------------------------------------------+
 
 **Table 7-2**: SBOM components of the data fields. (Source:
-`NTIA <https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf>`__)
+NTIA :cite:p:`ntia`)
 
 For more details about each data field, see the NTIA SBOM document. Examples of commonly used identifiers are
 provided.
@@ -847,20 +822,20 @@ Multiple data formats exist covering baseline SBOM information. The three key fo
 eXchange (SPDX), CycloneDX, and Software Identification Tags (SWID tags), are interoperable for the core data
 fields and use common data syntax representations.
 
-- `SPDX <https://spdx.dev/>`__ is an open-source machine-readable format developed under the umbrella of the Linux
-  Foundation. `SPDX specification 2.2 <https://spdx.dev/use/specifications/>`__ has been published as the standard
+- SPDX :cite:p:`spdx` is an open-source machine-readable format developed under the umbrella of the Linux
+  Foundation. SPDX specification 2.2 :cite:p:`spdx-specification-2.2` has been published as the standard
   ISO/IEC 5962:2021. It provides a language for communicating the data, licenses, copyrights, and security
   information associated with software components. With SPDX specification 2.2, multiple file formats are available:
   YAML, JSON, RDF/XML, tag\:value flat text, and xls spreadsheets.
 
-- `CycloneDX <https://cyclonedx.org/>`__ was designed in 2017 for use with the Open Web Application Security Project
+- CycloneDX :cite:p:`cycloneDX` was designed in 2017 for use with the Open Web Application Security Project
   (OWASP) Dependency-Track tool, an open-source component analysis platform that identifies risk in the software
   supply chain. CycloneDX supports a wide range of software components, including applications, containers,
   libraries, files, firmware, frameworks, and operating systems. The CycloneDX project provides standards in XML,
   JSON, and Protocol Buffers, as well as a large collection of official and community supported tools that create or
   interoperate with the standard.
 
-- `SWID Tags <https://nvd.nist.gov/products/swid>`__ is an international XML-based standard used by commercial
+- SWID Tags :cite:p:`swid-tags` is an international XML-based standard used by commercial
   software publishers. It has been published as the standard ISO/IEC 19770-2. The specification defines four types
   of SWID tags: primary, patch, corpus, and supplemental, to describe a software component.
 
@@ -903,8 +878,7 @@ sample of some of the available testing methodologies and frameworks.
 
 - OWASP testing guide
 - Penetration Testing Execution Standard, PTES
-- Technical Guide to Information Security Testing and Assessment, `NIST 800-115
-  <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf>`__
+- Technical Guide to Information Security Testing and Assessment, NIST 800-115 :cite:p:`NIST-800-115`
 - Vulnerability Assessment Framework for Cloud Computing (VULCAN), IEEE 2013
 - Penetration Testing Framework, VulnerabilityAssessment.co.uk
 - Information Systems Security Assessment Framework (ISSAF)
@@ -978,7 +952,7 @@ requirements.  However, some examples provided below may help in an operator’ 
 Commonly used (in many jurisdictions) compliance audit reports are based on the SOC 2 report from the System and
 Organization Controls (SOC) suite of services, standardised by the American Institute of Certified Public
 Accountants (AICPA) and meant for service organizations, such as cloud providers. See
-`AICPA SOC <https://us.aicpa.org/content/aicpa/interestareas/frc/assuranceadvisoryservices/sorhome.html>`__ for
+AICPA SOC:cite:p:`AICPA` for
 details. A SOC 2 report shows whether the cloud provider has implemented the security controls required to comply
 with the AICPA’s five “trust services criteria”: security, availability, confidentiality, processing integrity,
 and privacy. Operators should request a SOC 2 report from their cloud  providers (public or internal to their
@@ -1005,14 +979,14 @@ regulatory landscape.
 United States of America (U.S.A.)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the United States, the Federal Communications Commission `(FCC) <https://www.fcc.gov/>`__ regulates
+In the United States, the Federal Communications Commission (FCC) :cite:p:`fcc` regulates
 interstate and international communications by radio, television, wire, satellite, and cable in all 50 states,
 the District of Columbia, and all U.S. overseas territories. The FCC is an independent U.S. government agency
 overseen by Congress. The Commission is the federal agency responsible for implementing and enforcing
 America’s communications laws and regulations.
 
 National Institute of Standards and Technology
-`(NIST) Cybersecurity Framework <https://www.nist.gov/cyberframework/>`__,
+(NIST) Cybersecurity Framework :cite:p:`nist-cyberframework`,
 compliance is mandatory for the supply chain for all U.S. federal government agencies. Because this framework
 references globally accepted standards, guidelines, and practice, telecom organisations in the U.S.A. and
 worldwide can use it to efficiently operate in a global environment and manage new and evolving cybersecurity
@@ -1023,18 +997,17 @@ European Union (EU)
 ~~~~~~~~~~~~~~~~~~~
 
 The overall telecommunications regulatory framework in the European Union (EU) is provided in
-`The European Electronic Communications Code
-<https://digital-strategy.ec.europa.eu/en/policies/eu-electronic-communications-code>`__.
+The European Electronic Communications Code :cite:p:`the-european-electronic`.
 
-The European Union Agency for Cybersecurity `(ENISA) <https://www.enisa.europa.eu/>`__ contributes to EU cyber
+The European Union Agency for Cybersecurity (ENISA) :cite:p:`ENISA` contributes to EU cyber
 policy, enhances the trustworthiness of Information and Communications Technology (ICT) products, services,
 and processes with cybersecurity certification schemes, cooperates with Member States and EU bodies, and helps
 Europe prepare for the cyber challenges of tomorrow. In particular, ENISA performs risk assessments of cloud
 computing and works on the European Cybersecurity Certification Scheme
-`(EUCS) <https://www.enisa.europa.eu/publications/eucs-cloud-service-scheme/>`__ for Cloud Services, which
+(EUCS) :cite:p:`EUCS` for Cloud Services, which
 looks into the certification of the cybersecurity of cloud services.
 
-The General Data Protection Regulation `(GDPR) <https://gdpr-info.eu/>`__ is a set of EU regulations that govern
+The General Data Protection Regulation (GDPR) :cite:p:`GDPR` is a set of EU regulations that govern
 how data should be protected for EU citizens. It affects organisations that have EU-based customers, even if
 these organisations are not themselves based in the EU.
 
@@ -1042,16 +1015,16 @@ these organisations are not themselves based in the EU.
 United Kingdom (UK)
 ~~~~~~~~~~~~~~~~~~~
 
-The Office of Communications `(Ofcom) <https://www.ofcom.org.uk/>`__ is the regulator and competition authority
+The Office of Communications (Ofcom) :cite:p:`Ofcom` is the regulator and competition authority
 for the UK communications industries. It regulates the television and radio sectors, fixed-line telecoms,
 mobiles, postal services, and the airwaves over which wireless devices operate.
 
 The Security of Networks and Information Systems
-`NIS Regulations in UK <https://www.gov.uk/government/collections/nis-directive-and-nis-regulations-2018/>`__,
+NIS Regulations in UK:cite:p:`NIS`,
 provides legal measures to boost the level of security (both cyber and physical resilience) of network and
 information systems for the provision of essential services and digital services.
 
-The UK’s National Cyber Security Centre `(NCSC) <https://www.ncsc.gov.uk/>`__ acts as a bridge between industry
+The UK’s National Cyber Security Centre (NCSC) :cite:p:`NCSC` acts as a bridge between industry
 and government. It provides a unified source of advice, guidance, and support on cyber security, including the
 management of cyber security incidents. From this perspective, it is critical for cloud-related security in the
 UK telecommunications industry. The NCSC is not a regulator. Within the general UK cyber security regulatory
@@ -1060,19 +1033,19 @@ advisor to all interested parties. The NCSC supports Security of Networks & Info
 Regulations.
 
 Data protection in UK is controlled by
-`Data Protection Act 2018 <https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted/>`__, which is UK’s
+Data Protection Act 2018 :cite:p:`data-protection`, which is UK’s
 implementation of the EU's General Data Protection Regulation (GDPR).
 
 Australia
 ~~~~~~~~~
 
 In Australia, the telecommunication sector is regulated by the
-`Australian Competition & Consumer Commission (ACCC) <https://www.accc.gov.au/by-industry/telecommunications-and-internet>`__.
+Australian Competition & Consumer Commission (ACCC) :cite:p:`accc`.
 The ACCC is responsible for the economic regulation of the communications sector. This includes telecommunications, the
 National Broadband Network (NBN), and the broadcasting and content sectors.
 
 From the point of view of cloud services security, the
-`Information Security Manual (ISM) <hhttps://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism>`__,
+Information Security Manual (ISM) :cite:p:`ism`,
 produced by the Australian Cyber Security Centre (ACSC), is of particular importance. The purpose of the ISM is to outline
 a cyber security framework that organisations can apply, using their risk management framework, to protect their information
 and systems from cyber threats. The ISM is intended for Chief Information Security Officers, Chief Information Officers,
@@ -1081,7 +1054,7 @@ mandates, several security controls are, by law, mandatory for cloud-based servi
 operators, in situations involving strategically important data and/or services.
 
 Australia regulates data privacy and protection through a mix of federal, state, and territory laws. The federal
-`Privacy Act 1988 <https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act>`__ (currently under review by the Australian
+Privacy Act 1988 :cite:p:`privacy-act-1988` (currently under review by the Australian
 Government) and the Australian Privacy Principles (APPs), contained in the Privacy Act, regulate the handling of
 personal information by relevant entities and under the Privacy Act. The Privacy Commissioner has the authority to conduct
 investigations, including its own motion investigations, to enforce the Privacy Act and to seek civil penalties for serious
@@ -1103,10 +1076,10 @@ System hardening
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.002 | The systems part of the cloud infrastructure     | Hardening: CIS Password Policy Guide            |
 |                 | **must** support password hardening, as defined  |                                                 |
-|                 | in CIS Password Policy Guide `https://www.cisecu |                                                 |
-|                 | rity.org/insights/white-papers/cis-password-poli |                                                 |
-|                 | cy-guide <https://www.cisecurity.org/insights/wh |                                                 |
-|                 | ite-papers/cis-password-policy-guide>`__.        |                                                 |
+|                 | in CIS Password Policy Guide                     |                                                 |
+|                 | :cite:p:`CIS-password-policy`                    |                                                 |
+|                 |                                                  |                                                 |
+|                 |                                                  |                                                 |
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.003 | The servers part of the cloud infrastructure     |                                                 |
 |                 | **must** support a root of trust and secure      |                                                 |
@@ -1145,10 +1118,8 @@ System hardening
 |                 | encrypted storage, for example, block, object    |                                                 |
 |                 | and file storage, with access to encryption keys |                                                 |
 |                 | restricted on a need-to-know basis. Controlled   |                                                 |
-|                 | access based on a need to know `https://www.cis  |                                                 |
-|                 | ecurity.org/controls/cis-controls-list           |                                                 |
-|                 | <https://www.cisecurity.org/controls/            |                                                 |
-|                 | cis-controls-list>`__.                           |                                                 |          
+|                 | access based on a need to know                   |                                                 |
+|                 | :cite:p:`the-18-CIS-critical-security-controls`  |                                                 |
 +-----------------+--------------------------------------------------+-------------------------------------------------+
 | req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
 |                 | read- and write-only storage partitions (write-  |                                                 |
@@ -1537,30 +1508,29 @@ for both the Prod-Platform and the NonProd-Platform.
 Open-source software
 ~~~~~~~~~~~~~~~~~~~~
 
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| Ref             | Requirement                                                               | Definition/Note        |
-+=================+===========================================================================+========================+
-| req.sec.oss.001 | Open-source code **must** be inspected by tools with various capabilities |                        |
-|                 | for static and dynamic code analysis.                                     |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.002 | The Common Vulnerabilities and Exposures (CVE) **must** be used to        | `https://cve.mitre.org |
-|                 | identify vulnerabilities and assess their severity rating for the         | / <https://cve.mitre.o |
-|                 | open-source code part of the cloud infrastructure and workloads software. | rg/>`__                |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.003 | Critical- and high-severity-rated vulnerabilities **must** be fixed in a  | `https://www.first.org |
-|                 | timely manner. See the Common Vulnerability Scoring System (CVSS) to find | /cvss/ <https://www.fi |
-|                 | out a vulnerability score and its associated rate (low, medium, high, or  | rst.org/cvss/>`__      |
-|                 | critical).                                                                |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.004 | A dedicated internal isolated repository separated from the production    |                        |
-|                 | environment **must** be used to store vetted open-source content.         |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.005 | A Software Bill of Materials (SBOM) **should** be provided or built, and  | Inventory of software  |
-|                 | maintained to identify the software components and their origins.         | components, `https://  |
-|                 |                                                                           | ntia.gov/SBOM <http    |
-|                 |                                                                           | s://ntia.gov/SBO       |
-|                 |                                                                           | M>`__                  |
-+-----------------+---------------------------------------------------------------------------+------------------------+
+.. list-table:: Table 7-10: Open-source Security Requirements
+   :widths: 10 70 20
+   :header-rows: 1
+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.oss.001
+     - Open-source code **must** be inspected by tools with various capabilities for static and dynamic code analysis.
+     - 
+   * - req.sec.oss.002
+     - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their severity rating for the open-source code part of the cloud infrastructure and workloads software.
+     - :cite:p:`CVE-program-mission`
+   * - req.sec.oss.003
+     - Critical- and high-severity-rated vulnerabilities **must** be fixed in a timely manner. See the Common Vulnerability Scoring System (CVSS) to find out a vulnerability score and its associated rate (low, medium, high, or critical).
+     - :cite:p:`common-vulnerability-scoring`
+   * - req.sec.oss.004
+     - A dedicated internal isolated repository separated from the production environment **must** be used to store vetted open-source content.
+     - 
+   * - req.sec.oss.005
+     - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software components and their origins.
+     - Inventory of software components
+
 
 **Table 7-10:** Open-source software requirements
 
@@ -1727,63 +1697,63 @@ Compliance with standards
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | Ref             | Requirement                                  | Definition/Note                                     |
 +=================+==============================================+=====================================================+
-| req.sec.std.001 | The cloud operator **should** comply with the| Center for Internet Security - `https://www.cisecur |
-|                 | Center for Internet Security CIS Controls.   | ity.org/ <https://www.cisecurity.org/>`__           |
+| req.sec.std.001 | The cloud operator **should** comply with the| Center for Internet Security -                      |
+|                 | Center for Internet Security CIS Controls.   | :cite:p:`center-internet-security`                  |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.002 | The cloud operator, platform, and workloads  | Cloud Security Alliance - `https://cloudsecurityall |
-|                 | **should** follow the guidance in the CSA    | iance.org/ <https://cloudsecurityalliance.org/>`__  |
+| req.sec.std.002 | The cloud operator, platform, and workloads  | Cloud Security Alliance -                           |
+|                 | **should** follow the guidance in the CSA    | :cite:p:`cloud-security-alliance`                   |      
 |                 | Security Guidance for Critical Areas of      |                                                     |
 |                 | Focus in Cloud Computing (latest version).   |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project `https://www. |
-|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://owasp.org/>`__                   |
-|                 | (OCSS) `https://github.com/OWASP/CheatSheetS |                                                     |
-|                 | eries <https://github.com/OWASP/CheatSheetSe |                                                     |
-|                 | ries>`__.                                    |                                                     |
+| req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project               |
+|                 | the guidance in the OWASP Cheat Sheet Series | :cite:p:`open-web-application`                      |                             
+|                 | (OCSS)                                       |                                                     | 
+|                 | :cite:p:`owasp-Cheat-sheet-series`           |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.004 | The cloud operator, platform, and workloads  |                                                     |
 |                 | **should** ensure that their code is not     |                                                     |
 |                 | vulnerable to the OWASP Top Ten Security     |                                                     |
-|                 | Risks `https://owasp.org/www-project-top-ten |                                                     |
-|                 | / <https://owasp.org/www-project-top-ten     |                                                     |
-|                 | />`__.                                       |                                                     |
+|                 | Risks :cite:p:`owasp-top-ten`                |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.005 | The cloud operator, platform, and workloads  |                                                     |
 |                 | **should** strive to improve their maturity  |                                                     |
 |                 | on the OWASP Software Maturity Model (SAMM)  |                                                     |
-|                 | `https://owaspsamm.org/blog/2019/12/20/versi |                                                     |
-|                 | on2-community-release/ <https://owaspsamm.or |                                                     |
-|                 | g/blog/2019/12/20/version2-community-release |                                                     |
-|                 | />`__.                                       |                                                     |
+|                 | :cite:p:`owasp-software-maturity-model`      |                                                     |                                                     
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.006 | The cloud operator, platform, and workloads  |                                                     |
 |                 | **should** utilize the OWASP Web Security    |                                                     |
-|                 | Testing Guide `https://github.com/OWASP/wstg |                                                     |
-|                 | /tree/master/document <https://github.com/OW |                                                     |
-|                 | ASP/wstg/tree/master/document>`__.           |                                                     |
+|                 | Testing Guide :cite:p:`web-security-testing` |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.007 | The cloud operator and platform **should**   | ISO/IEC 27002:2013 - ISO/IEC 27001 is the           |
 |                 | satisfy the requirements for Information     | international standard for best-practice            |
 |                 | Management Systems, specified in ISO/IEC     | information security management systems (ISMSs).    |
-|                 | 27001 `https://www.iso.org/obp/ui/#iso:std:i |                                                     |
-|                 | so-iec:27001:ed-2:v1:en <https://www.iso.org |                                                     |
-|                 | /obp/ui/#iso:std:iso-iec:27001:ed-2:v1:e     |                                                     |
-|                 | n>`__ .                                      |                                                     |
+|                 | 27001                                        |                                                     |
+|                 | :cite:p:`information-management-systems`     |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.008 | The cloud operator and platform **should**   |                                                     |
 |                 | implement the code of practice for Security  |                                                     |
 |                 | Controls specified ISO/IEC 27002:2013 (or    |                                                     |
-|                 | latest) `https://www.iso.org/obp/ui/#iso:std |                                                     |
-|                 | :iso-iec:27002:ed-2:v1:en <https://www.iso.o |                                                     |
-|                 | rg/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:e   |                                                     |
-|                 | n>`__ .                                      |                                                     |
+|                 | latest)                                      |                                                     |
+|                 | :cite:p:`security-controls-specified`        |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.009 | The cloud operator and platform **should**   | ISO/IEC 27032 - ISO/IEC 27032is the international   |
 |                 | implement the ISO/IEC 27032:2012 (or latest) | Standard focusing explicitly on cybersecurity.      |
-|                 | Guidelines for Cybersecurity techniques `htt |                                                     |
-|                 | ps://www.iso.org/obp/ui/#iso:std:iso-iec:270 |                                                     |
-|                 | 32:ed-1:v1:en <https://www.iso.org/obp/ui/#i |                                                     |
-|                 | so:std:iso-iec:27032:ed-1:v1:en>`__ .        |                                                     |
+|                 | Guidelines for Cybersecurity techniques      |                                                     |
+|                 | :cite:p:`guidelines-for-cybersecurity`       |                                                     |
+|                 |                                              |                                                     |
+|                 |                                              |                                                     |
 +-----------------+----------------------------------------------+-----------------------------------------------------+
 | req.sec.std.010 | The cloud operator **should** conform to the | ISO/IEC 27035 - ISO/IEC 27035 is the international  |
 |                 | ISO/IEC 27035 standard for incidence         | standard for incident management.                   |
@@ -1828,36 +1798,26 @@ the following lists gather together additional standards of interest for cloud i
 
 **NIST Documents**
 
-- `NIST SP 800-53 Security and Privacy Controls for Federal Information Systems and Organizations
-  <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>`__
+- NIST SP 800-53 Security and Privacy Controls for Federal Information Systems and Organizations :cite:p:`NIST-SP-800-53`
 
-- `NIST SP 800-53A Assessing Security and Privacy Controls in Federal Information Systems and Organizations: Building
-  Effective Assessment Plans
-  <https://serdp-estcp.mil/>`__
+- NIST SP 800-53A Assessing Security and Privacy Controls in Federal Information Systems and Organizations: Building
+  Effective Assessment Plans :cite:p:`NIST-SP-800-53A`
 
-- `NIST SP 800-63B Digital Identity Guidelines
-  <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf>`__
+- NIST SP 800-63B Digital Identity Guidelines :cite:p:`NIST-SP-800-63B`
 
-- `NIST SP 800-115 Technical Guide to Information Security Testing and Assessment
-  <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf>`__
+- NIST SP 800-115 Technical Guide to Information Security Testing and Assessment :cite:p:`NIST-SP-800-115`
 
-- `NIST SP 800-125 Guide to Security for Full Virtualization Technologies
-  <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-125.pdf>`__
+- NIST SP 800-125 Guide to Security for Full Virtualization Technologies :cite:p:`NIST-SP-800-125`
 
-- `NIST SP 800-125a Security Recommendations for Server-based Hypervisor Platforms
-  <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-125Ar1.pdf>`__
+- NIST SP 800-125a Security Recommendations for Server-based Hypervisor Platforms :cite:p:`NIST-SP-800-125a`
 
-- `NIST SP 800-125b Secure Virtual Network Configuration for Virtual Machine (VM) Protection
-  <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-125B.pdf>`__
+- NIST SP 800-125b Secure Virtual Network Configuration for Virtual Machine (VM) Protection :cite:p:`NIST-SP-800-125b`
 
-- `NIST SP 800-137 Information Security Continuous Monitoring for Federal Information
-  Systems and Organizations
-  <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-137.pdf>`__
+- NIST SP 800-137 Information Security Continuous Monitoring for Federal Information
+  Systems and Organizations :cite:p:`NIST-SP-800-137`
 
-- `NIST SP 800-145 The NIST Definition of Cloud Computing
-  <https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf>`__
+- NIST SP 800-145 The NIST Definition of Cloud Computing :cite:p:`NIST-SP-800-145`
 
-- `NIST SP 800-190 Application Container Security Guide
-  <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf>`__
+- NIST SP 800-190 Application Container Security Guide :cite:p:`NIST-SP-800-190`
 
 

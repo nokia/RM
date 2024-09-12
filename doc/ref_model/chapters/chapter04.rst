@@ -651,9 +651,9 @@ Basic profile
 
 Hardware resources are configured in accordance with the Basic profile (B) in such a way that they are only suited
 for workloads that tolerate variable performance. This includes latency and resource oversubscription. Only
-Simultaneous Multi-Threading (SMT) is configured on nodes that support the Basic profile. With no NUMA alignment,
-the executing processes of the vCPUs may not be on the same NUMA node as the memory used by these processes. When
-the vCPU and memory are on different NUMA nodes, memory accesses are not local to the vCPU node and therefore add
+Simultaneous Multi-Threading (SMT) if available is configured on nodes that support the Basic profile. With no NUMA
+alignment, the executing processes of the vCPUs may not be on the same NUMA node as the memory used by these processes.
+When the vCPU and memory are on different NUMA nodes, memory accesses are not local to the vCPU node and therefore add
 latency to memory accesses. The Basic profile supports oversubscription (using the CPU Allocation Ratio) which is
 specified as part of the sizing information in the workload profiles.
 
@@ -670,45 +670,47 @@ support oversubscription.
 Profiles specifications and capability mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-| Ref     | Capability                              | Basic     | High        | Notes                                  |
-|         |                                         |           | performance |                                        |
-+=========+=========================================+===========+=============+========================================+
-|e.cap.006| CPU pinning                             | No        | Yes         | Exposed performance capabilities       |
-|         |                                         |           |             | according to Table 4-2.                |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.007| NUMA alignment                          | No        | Yes         |                                        |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.013| SR-IOV over PCI-PT                      | No        | Yes         |                                        |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.018| Simultaneous Multithreading (SMT)       | Yes       | Optional    |                                        |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.019| vSwitch optimisation (DPDK)             | No        | Yes         | DPDK does not have to be used if       |
-|         |                                         |           |             | another network acceleration method is |
-|         |                                         |           |             | being utilised.                        |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.020| CPU Architecture                        | <value>   | <value>     | Values, such as x64, ARM, and so on.   |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.021| Host operating system (OS)              | <value>   | <value>     | Values, such as a specific Linux       |
-|         |                                         |           |             | version, Windows version, and so on.   |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.022| Virtualisation infrastructure Layer1    | <value>   | <value>     | Values, such as KVM, Hyper-V,          |
-|         |                                         |           |             | Kubernetes, and so on, when relevant,  |
-|         |                                         |           |             | depending on technology.               |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.023| Huge page support according to          | No        | Yes         | Internal performance capabilities,     |
-|         | Table 4-7.                              |           |             | according to Table 4-7.                |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|e.cap.025| AF_XDP                                  | No        | Optional    | These capabilities require workload    |
-|         |                                         |           |             | support for the AF_XDP socket type.    |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|i.cap.019| CPU clock speed                         | <value>   | <value>     | This capability specifies the Cloud    |
-|         |                                         |           |             | Infrastructure CPU clock speed, in GHz.|
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
-|i.cap.020| Storage encryption                      | Yes       | Yes         | This capability specifies whether or   |
-|         |                                         |           |             | not the Cloud Infrastructure supports  |
-|         |                                         |           |             | storage encryption.                    |
-+---------+-----------------------------------------+-----------+-------------+----------------------------------------+
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+| Ref     | Capability                             | Basic      | High        | Notes                                  |
+|         |                                        |            | performance |                                        |
++=========+========================================+============+=============+========================================+
+|e.cap.006| CPU pinning                            | No         | Yes         | Exposed performance capabilities       |
+|         |                                        |            |             | according to Table 4-2.                |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.007| NUMA alignment                         | No         | Yes         |                                        |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.013| SR-IOV over PCI-PT                     | No         | Yes         |                                        |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.018| Simultaneous Multithreading (SMT)      | Yes if SMT | Optional    |                                        |
+|         |                                        | is         |             |                                        |
+|         |                                        | supported  |             |                                        |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.019| vSwitch optimisation (DPDK)            | No         | Yes         | DPDK does not have to be used if       |
+|         |                                        |            |             | another network acceleration method is |
+|         |                                        |            |             | being utilised.                        |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.020| CPU Architecture                       | <value>    | <value>     | Values, such as x64, ARM, and so on.   |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.021| Host operating system (OS)             | <value>    | <value>     | Values, such as a specific Linux       |
+|         |                                        |            |             | version, Windows version, and so on.   |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.022| Virtualisation infrastructure Layer1   | <value>    | <value>     | Values, such as KVM, Hyper-V,          |
+|         |                                        |            |             | Kubernetes, and so on, when relevant,  |
+|         |                                        |            |             | depending on technology.               |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.023| Huge page support according to         | No         | Yes         | Internal performance capabilities,     |
+|         | Table 4-7.                             |            |             | according to Table 4-7.                |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|e.cap.025| AF_XDP                                 | No         | Optional    | These capabilities require workload    |
+|         |                                        |            |             | support for the AF_XDP socket type.    |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|i.cap.019| CPU clock speed                        | <value>    | <value>     | This capability specifies the Cloud    |
+|         |                                        |            |             | Infrastructure CPU clock speed, in GHz.|
++---------+----------------------------------------+------------+-------------+----------------------------------------+
+|i.cap.020| Storage encryption                     | Yes        | Yes         | This capability specifies whether or   |
+|         |                                        |            |             | not the Cloud Infrastructure supports  |
+|         |                                        |            |             | storage encryption.                    |
++---------+----------------------------------------+------------+-------------+----------------------------------------+
 
 ..
 

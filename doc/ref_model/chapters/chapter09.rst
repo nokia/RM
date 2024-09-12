@@ -383,7 +383,7 @@ well known in the world of big data, is helpful here to make sure that the messa
 consistently used.
 
 The architecture
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 In geographically dispersed large cloud deployments, a given Telco cloud may have several cloud infrastructure
 components, as well as a large set of virtualized workloads (VNFs/CNFs). It is important to monitor all of these
@@ -656,8 +656,7 @@ and so on, prior to deployment, are listed in Table 9-4 (below).
 |               |                                                   | delivery of the product into a runtime           |
 |               |                                                   | environment. An example of an open-source        |
 |               |                                                   | cloud-native CI/CD framework is the Tekton       |
-|               |                                                   | project                                          |
-|               |                                                   | (`https://tekton.dev/ <https://tekton.dev/>`__)  |
+|               |                                                   | project :cite:p:`tekton-project`                 |
 +---------------+---------------------------------------------------+--------------------------------------------------+
 | auto.cicd.002 | The CI/CD pipelines must use event-driven task    |                                                  |
 |               | automation.                                       |                                                  |
@@ -672,7 +671,7 @@ and so on, prior to deployment, are listed in Table 9-4 (below).
 |               |                                                   | therefore specify which repository is to be used |
 |               |                                                   | for this release. An example of an open-source   |
 |               |                                                   | repository is the CNCF Harbor                    |
-|               |                                                   | (`https://goharbor.io/ <https://goharbor.io/>`__)|
+|               |                                                   | :cite:p:`cncf-harbor`                            |
 +---------------+---------------------------------------------------+--------------------------------------------------+
 | auto.cicd.005 | The CI pipeline must scan the source code and     |                                                  |
 |               | manifests, to validate for compliance with the    |                                                  |
@@ -733,13 +732,12 @@ testing operation from forcing a particular CI/CD design or, worse, from request
 dedicated CI/CD toolchain for a particular network service.
 
 At first glance, the deployment and test job must not request specific CI/CD tools, such as
-`Jenkins <https://www.jenkins.io/>`__ or `Gitlab CI/CD <https://docs.gitlab.com/ee/ci/>`__. However, there are many
+:cite:p:`jenkins` or :cite:p:`ci/cd-gitlab`. However, there are many
 other ways where deployment and test jobs can constrain the end users, from the build servers to artefact management.
 Any manual operation is discouraged, regardless of whether it is about the deployment or the test resources.
 
 The following requirements also aim to deploy all CI/CD toolchains smoothly and easily via simple playbooks, as
-targeted by the Reference Conformance suites currently leveraging
-`XtestingCI <https://galaxy.ansible.com/collivier/xtesting>`__.
+targeted by the Reference Conformance suites currently leveraging :cite:p:`xtestingCI`.
 
 +-----------------+---------------------------------------------------+------------------------------------------------+
 | Ref #           | Description                                       | Comments/Notes                                 |
