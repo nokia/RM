@@ -1,8 +1,8 @@
 Infrastructure Operations and Lifecycle Management
 ==================================================
 
-Introduction
-------------
+Introduction to Infrastructure Operations and Lifecycle Management
+------------------------------------------------------------------
 
 The purpose of this chapter is to define the capabilities required of the infrastructure to ensure it is effectively
 supported, maintained and otherwise lifecycle-managed by Operations teams. This includes requirements relating to the
