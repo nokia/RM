@@ -37,8 +37,7 @@ IP data services, billing, security, identity management, etc. ...) as well as t
 (e.g., Edge cloud, network slicing, etc.) in such a way as to create the necessary flexibility required by this new
 breed of enterprise customers."
 
-Cloud computing has evolved and matured since 2010 when
-`NIST <https://csrc.nist.gov/pubs/sp/800/145/final>`__ published its definition of cloud computing,
+Cloud computing has evolved and matured since 2010 when NIST :cite:p:`NIST-SP-800-145` published its definition of cloud computing,
 with its 5 essential characteristics, 3 service models and 4 deployment models.
 
 The generic model for an enterprise cloud has to be "hybrid", with the special cases of purely private or public clouds
@@ -55,15 +54,14 @@ a federated cloud. The principal charactreristics of a federated cloud are as fo
 - The component clouds perform their local operations (internal requests), while at the same time participating in the
   federation and responding to other component clouds (external requests).
 
-  - The component clouds are autonomous in terms of, for example, execution autonomy. Note that in a centralised
-    control plane scenario (see the "Centralised Control Plane" section, in the
-    "`Edge Computing: Next Steps in Architecture, Design and Testing <https://www.openstack.org/use-cases/edge-computing
-    /edge-computing-next-steps-in-architecture-design-and-testing/>`__" white paper :cite:p:`openinfraedgearch`), the
-    edge clouds do not have total autonomy and are subject to constraints, such as workload LCM.
-  - Execution autonomy is the ability of a component cloud to decide the order in which internal and external requests
-    are performed.
-  - A federation controller does not impose changes to the component cloud, except for running some central components
-    of the federated system, for example, a broker agent which executes as a workload.
+  - the component clouds are autonomous in terms of, for example, execution autonomy; please note that in a centralised
+    control plane scenario (please see the section "Centralised Control Plane" in the
+    "Edge Computing: Next Steps in Architecture, Design and Testing" whitepaper :cite:p:`openinfraedgearch`) the edge clouds do not have
+    total autonomy and are subject to constraints (e.g., workload LCM)
+  - execution autonomy is the ability of a component cloud to decide the order in which internal and external requests
+    are performed
+  - also, a federation controller does not impose changes to the component cloud except for running some central
+    component(s) of the federated system (for example, a broker agent – executes as a workload)
 
 - The component clouds are likely to differ in, for example, infrastructure resources and their cloud platform software.
 - Workloads may be distributed on single or multiple clouds, where the clouds may be co-located or geographically
@@ -596,9 +594,9 @@ Security Group (FASG) and the "5G security Guide", FS.40 v2.0 document :cite:p:`
 For Telco operators to run their network functions in a multicloud environment, specifically, in public clouds, the
 industry will need a set of new standards and new security tools to manage and regulate the interactions between
 the parties participating in the multicloud. For an example of a step in this direction, see ETSI specification
-`TS 103 457 <https://www.etsi.org/deliver/etsi_ts/103400_103499/103457/01.01.01_60/ts_103457v010101p.pdf>`__ “Interface
-to offload sensitive functions to a trusted domain”. This document provides extra security requirements for public
-clouds, to allow Telco operators the option of running network functions in public clouds.
+TS 103 457 :cite:p:`TS-103-457cyber` “Interface to offload sensitive functions to a trusted domain”. This document
+provides extra security requirements for public clouds, to allow Telco operators the option of running network functions
+in public clouds.
 
 There is another security aspect to consider, which is related to the autonomous nature of the participants in the
 multicloud. We can prescribe certain things and if not satisfied treat that party as "untrusted". This problem has been
