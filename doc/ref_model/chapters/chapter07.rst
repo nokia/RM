@@ -419,7 +419,7 @@ outcome of the security activities meets the requirements, the next set of secur
 process transition to the next checkpoint, or, alternatively, to the next stage, if the checkpoint is the last one in
 the current stage. If, however, the outcome of the security activities does not meet the requirements, then the
 process should not be allowed to advance to the next checkpoint. In
-:ref:`test`, the IaaC security activities are presented as security
+:ref:`chapters/chapter07:consolidated security requirements`, the IaaC security activities are presented as security
 requirements mapped to particular stages and trigger points.
 
 Security of production and non-production environments
