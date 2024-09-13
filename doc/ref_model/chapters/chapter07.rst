@@ -1673,7 +1673,6 @@ IaaC - Runtime defence and monitoring requirements
 Compliance with standards
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<<<<<<< HEAD
    * - Ref
      - Requirement
      - Definition/Note
@@ -1713,85 +1712,6 @@ Compliance with standards
    * - req.sec.std.012
      - The public cloud operator **must**, and the private cloud operator **may**, be certified to be compliant with the International Standard on Awareness Engagements (ISAE) 3402 (in the US: SSAE 16).
      - International Standard on Awareness Engagements (ISAE) 3402. US Equivalent: SSAE16.
-=======
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| Ref             | Requirement                                  | Definition/Note                                     |
-+=================+==============================================+=====================================================+
-| req.sec.std.001 | The cloud operator **should** comply with the| Center for Internet Security -                      |
-|                 | Center for Internet Security CIS Controls.   | :cite:p:`center-internet-security`                  |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.002 | The cloud operator, platform, and workloads  | Cloud Security Alliance -                           |
-|                 | **should** follow the guidance in the CSA    | :cite:p:`cloud-security-alliance`                   |      
-|                 | Security Guidance for Critical Areas of      |                                                     |
-|                 | Focus in Cloud Computing (latest version).   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project               |
-|                 | the guidance in the OWASP Cheat Sheet Series | :cite:p:`open-web-application`                      |                             
-|                 | (OCSS)                                       |                                                     | 
-|                 | :cite:p:`owasp-Cheat-sheet-series`           |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.004 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** ensure that their code is not     |                                                     |
-|                 | vulnerable to the OWASP Top Ten Security     |                                                     |
-|                 | Risks :cite:p:`owasp-top-ten`                |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.005 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** strive to improve their maturity  |                                                     |
-|                 | on the OWASP Software Maturity Model (SAMM)  |                                                     |
-|                 | :cite:p:`owasp-software-maturity-model`      |                                                     |                                                     
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.006 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** utilize the OWASP Web Security    |                                                     |
-|                 | Testing Guide :cite:p:`web-security-testing` |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.007 | The cloud operator and platform **should**   | ISO/IEC 27002:2013 - ISO/IEC 27001 is the           |
-|                 | satisfy the requirements for Information     | international standard for best-practice            |
-|                 | Management Systems, specified in ISO/IEC     | information security management systems (ISMSs).    |
-|                 | 27001                                        |                                                     |
-|                 | :cite:p:`information-management-systems`     |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.008 | The cloud operator and platform **should**   |                                                     |
-|                 | implement the code of practice for Security  |                                                     |
-|                 | Controls specified ISO/IEC 27002:2013 (or    |                                                     |
-|                 | latest)                                      |                                                     |
-|                 | :cite:p:`security-controls-specified`        |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.009 | The cloud operator and platform **should**   | ISO/IEC 27032 - ISO/IEC 27032is the international   |
-|                 | implement the ISO/IEC 27032:2012 (or latest) | Standard focusing explicitly on cybersecurity.      |
-|                 | Guidelines for Cybersecurity techniques      |                                                     |
-|                 | :cite:p:`guidelines-for-cybersecurity`       |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.010 | The cloud operator **should** conform to the | ISO/IEC 27035 - ISO/IEC 27035 is the international  |
-|                 | ISO/IEC 27035 standard for incidence         | standard for incident management.                   |
-|                 | management.                                  |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.011 | The cloud operator **should** conform to the |                                                     |
-|                 | ISO/IEC 27031 standard for business          |                                                     |
-|                 | continuity ISO/IEC 27031. ISO/IEC 27031 is   |                                                     |
-|                 | the international standard for ICT readiness |                                                     |
-|                 | for business continuity.                     |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.012 | The public cloud operator **must**, and the  | International Standard on Awareness Engagements     |
-|                 | private cloud operator **may**, be certified | (ISAE) 3402. US Equivalent: SSAE16.                 |
-|                 | to be compliant with the International       |                                                     |
-|                 | Standard on Awareness Engagements (ISAE)     |                                                     |
-|                 | 3402 (in the US: SSAE 16).                   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
->>>>>>> 050eefafa22569f124e7851b428d16705ca08236
 
 **Table 7-16:** Compliance with standards requirements
 
