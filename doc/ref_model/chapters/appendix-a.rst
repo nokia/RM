@@ -69,8 +69,8 @@ VNF Design Guidelines
 
 A number of software design guidelines (industry best practices) have been developed over the years including
 micro-services, cohesion and coupling.
-In addition to the industry best-practices, there are additonal guidelines and requirements specified by ONAP in
-"`VNF or PNF Requirements Documentation <https://docs.onap.org/projects/onap-vnfrqts-requirements/en/istanbul/>`__."
+In addition to the industry best-practices, there are additonal guidelines and requirements specified by ONAP in 
+VNF or PNF Requirements Documentation :cite:p:`onap-vnfrqts-requirements`.
 This section does not supplant these well-known guidelines and practices. The content here only draws attention to some
 other design consideration that VNF Developers need to incorporate in their practices. Please note that some of these
 guidelines may be incorporated by operators in their contracts with VNF Vendors.
@@ -89,15 +89,14 @@ software and the resultant VNF image:
 Additionally, in the design and implementation of their software, the VNF Developer **should** follow the guidance in
 the:
 
-1. `CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version) <https://cloudsecurityalliance
-   .org>`__.
-2. `OWASP Cheat Sheet Series (OCSS) <https://github.com/OWASP/CheatSheetSeries>`__ from the `Open Web Application
-   Security Project <https://owasp.org/>`__.
+1. CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version) :cite:p:`owasp-Cheat-sheet-series`.
+2. OWASP Cheat Sheet Series (OCSS) :cite:p:`owasp-Cheat-sheet-series` from the Open Web Application
+   Security Project :cite:p:`owasp-Web-application-security-project`.
 3. :ref:`chapters/chapter07:workload security and vendor responsibility` section of the Reference Model.
 
 The VNF Developer **should** ensure that their code is not vulnerable to the
-`OWASP Top Ten Security Risks <https://owasp.org/www-project-top-ten/>`__ created by the
-`Open Web Application Security Project <https://owasp.org/>`__.
+OWASP Top Ten Security Risks :cite:p:`owasp-top-ten` created by the
+Open Web Application Security Project :cite:p:`owasp`.
 
 Miscellaneous
 -------------
