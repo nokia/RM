@@ -1492,13 +1492,6 @@ for both the Prod-Platform and the NonProd-Platform.
 Open-source software
 ~~~~~~~~~~~~~~~~~~~~
 
-<<<<<<< HEAD
-=======
-.. list-table:: Table 7-10: Open-source Security Requirements
-   :widths: 10 70 20
-   :header-rows: 1
-
->>>>>>> 050eefafa22569f124e7851b428d16705ca08236
    * - Ref
      - Requirement
      - Definition/Note
@@ -1506,7 +1499,6 @@ Open-source software
      - Open-source code **must** be inspected by tools with various capabilities for static and dynamic code analysis.
      - 
    * - req.sec.oss.002
-<<<<<<< HEAD
      - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their severity rating for the open-source code part of the cloud infrastructure and workloads software.
      - `https://cve.mitre.org/ <https://cve.mitre.org/>`__
    * - req.sec.oss.003
@@ -1518,25 +1510,6 @@ Open-source software
    * - req.sec.oss.005
      - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software components and their origins.
      - Inventory of software components, `https://ntia.gov/SBOM <https://ntia.gov/SBOM>`__
-=======
-     - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their
-       severity rating for the open-source code part of the cloud infrastructure and workloads software.
-     - :cite:p:`CVE-program-mission`
-   * - req.sec.oss.003
-     - Critical- and high-severity-rated vulnerabilities **must** be fixed in a timely manner. See the Common
-       Vulnerability Scoring System (CVSS) to find out a vulnerability score and its associated rate (low, medium, high,
-       or critical).
-     - :cite:p:`common-vulnerability-scoring`
-   * - req.sec.oss.004
-     - A dedicated internal isolated repository separated from the production environment **must** be used to store
-       vetted open-source content.
-     - 
-   * - req.sec.oss.005
-     - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software
-       components and their origins.
-     - Inventory of software components
-
->>>>>>> 050eefafa22569f124e7851b428d16705ca08236
 
 **Table 7-10:** Open-source software requirements
 
