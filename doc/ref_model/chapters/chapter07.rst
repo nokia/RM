@@ -1506,30 +1506,24 @@ for both the Prod-Platform and the NonProd-Platform.
 Open-source software
 ~~~~~~~~~~~~~~~~~~~~
 
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| Ref             | Requirement                                                               | Definition/Note        |
-+=================+===========================================================================+========================+
-| req.sec.oss.001 | Open-source code **must** be inspected by tools with various capabilities |                        |
-|                 | for static and dynamic code analysis.                                     |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.002 | The Common Vulnerabilities and Exposures (CVE) **must** be used to        | `https://cve.mitre.org |
-|                 | identify vulnerabilities and assess their severity rating for the         | / <https://cve.mitre.o |
-|                 | open-source code part of the cloud infrastructure and workloads software. | rg/>`__                |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.003 | Critical- and high-severity-rated vulnerabilities **must** be fixed in a  | `https://www.first.org |
-|                 | timely manner. See the Common Vulnerability Scoring System (CVSS) to find | /cvss/ <https://www.fi |
-|                 | out a vulnerability score and its associated rate (low, medium, high, or  | rst.org/cvss/>`__      |
-|                 | critical).                                                                |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.004 | A dedicated internal isolated repository separated from the production    |                        |
-|                 | environment **must** be used to store vetted open-source content.         |                        |
-+-----------------+---------------------------------------------------------------------------+------------------------+
-| req.sec.oss.005 | A Software Bill of Materials (SBOM) **should** be provided or built, and  | Inventory of software  |
-|                 | maintained to identify the software components and their origins.         | components, `https://  |
-|                 |                                                                           | ntia.gov/SBOM <http    |
-|                 |                                                                           | s://ntia.gov/SBO       |
-|                 |                                                                           | M>`__                  |
-+-----------------+---------------------------------------------------------------------------+------------------------+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.oss.001
+     - Open-source code **must** be inspected by tools with various capabilities for static and dynamic code analysis.
+     - 
+   * - req.sec.oss.002
+     - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their severity rating for the open-source code part of the cloud infrastructure and workloads software.
+     - `https://cve.mitre.org/ <https://cve.mitre.org/>`__
+   * - req.sec.oss.003
+     - Critical- and high-severity-rated vulnerabilities **must** be fixed in a timely manner. See the Common Vulnerability Scoring System (CVSS) to find out a vulnerability score and its associated rate (low, medium, high, or critical).
+     - `https://www.first.org/cvss/ <https://www.first.org/cvss/>`__
+   * - req.sec.oss.004
+     - A dedicated internal isolated repository separated from the production environment **must** be used to store vetted open-source content.
+     - 
+   * - req.sec.oss.005
+     - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software components and their origins.
+     - Inventory of software components, `https://ntia.gov/SBOM <https://ntia.gov/SBOM>`__
 
 **Table 7-10:** Open-source software requirements
 
@@ -1693,83 +1687,45 @@ IaaC - Runtime defence and monitoring requirements
 Compliance with standards
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| Ref             | Requirement                                  | Definition/Note                                     |
-+=================+==============================================+=====================================================+
-| req.sec.std.001 | The cloud operator **should** comply with the| Center for Internet Security - `https://www.cisecur |
-|                 | Center for Internet Security CIS Controls.   | ity.org/ <https://www.cisecurity.org/>`__           |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.002 | The cloud operator, platform, and workloads  | Cloud Security Alliance - `https://cloudsecurityall |
-|                 | **should** follow the guidance in the CSA    | iance.org/ <https://cloudsecurityalliance.org/>`__  |
-|                 | Security Guidance for Critical Areas of      |                                                     |
-|                 | Focus in Cloud Computing (latest version).   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project `https://www. |
-|                 | the guidance in the OWASP Cheat Sheet Series | owasp.org <https://owasp.org/>`__                   |
-|                 | (OCSS) `https://github.com/OWASP/CheatSheetS |                                                     |
-|                 | eries <https://github.com/OWASP/CheatSheetSe |                                                     |
-|                 | ries>`__.                                    |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.004 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** ensure that their code is not     |                                                     |
-|                 | vulnerable to the OWASP Top Ten Security     |                                                     |
-|                 | Risks `https://owasp.org/www-project-top-ten |                                                     |
-|                 | / <https://owasp.org/www-project-top-ten     |                                                     |
-|                 | />`__.                                       |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.005 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** strive to improve their maturity  |                                                     |
-|                 | on the OWASP Software Maturity Model (SAMM)  |                                                     |
-|                 | `https://owaspsamm.org/blog/2019/12/20/versi |                                                     |
-|                 | on2-community-release/ <https://owaspsamm.or |                                                     |
-|                 | g/blog/2019/12/20/version2-community-release |                                                     |
-|                 | />`__.                                       |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.006 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** utilize the OWASP Web Security    |                                                     |
-|                 | Testing Guide `https://github.com/OWASP/wstg |                                                     |
-|                 | /tree/master/document <https://github.com/OW |                                                     |
-|                 | ASP/wstg/tree/master/document>`__.           |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.007 | The cloud operator and platform **should**   | ISO/IEC 27002:2013 - ISO/IEC 27001 is the           |
-|                 | satisfy the requirements for Information     | international standard for best-practice            |
-|                 | Management Systems, specified in ISO/IEC     | information security management systems (ISMSs).    |
-|                 | 27001 `https://www.iso.org/obp/ui/#iso:std:i |                                                     |
-|                 | so-iec:27001:ed-2:v1:en <https://www.iso.org |                                                     |
-|                 | /obp/ui/#iso:std:iso-iec:27001:ed-2:v1:e     |                                                     |
-|                 | n>`__ .                                      |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.008 | The cloud operator and platform **should**   |                                                     |
-|                 | implement the code of practice for Security  |                                                     |
-|                 | Controls specified ISO/IEC 27002:2013 (or    |                                                     |
-|                 | latest) `https://www.iso.org/obp/ui/#iso:std |                                                     |
-|                 | :iso-iec:27002:ed-2:v1:en <https://www.iso.o |                                                     |
-|                 | rg/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:e   |                                                     |
-|                 | n>`__ .                                      |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.009 | The cloud operator and platform **should**   | ISO/IEC 27032 - ISO/IEC 27032is the international   |
-|                 | implement the ISO/IEC 27032:2012 (or latest) | Standard focusing explicitly on cybersecurity.      |
-|                 | Guidelines for Cybersecurity techniques `htt |                                                     |
-|                 | ps://www.iso.org/obp/ui/#iso:std:iso-iec:270 |                                                     |
-|                 | 32:ed-1:v1:en <https://www.iso.org/obp/ui/#i |                                                     |
-|                 | so:std:iso-iec:27032:ed-1:v1:en>`__ .        |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.010 | The cloud operator **should** conform to the | ISO/IEC 27035 - ISO/IEC 27035 is the international  |
-|                 | ISO/IEC 27035 standard for incidence         | standard for incident management.                   |
-|                 | management.                                  |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.011 | The cloud operator **should** conform to the |                                                     |
-|                 | ISO/IEC 27031 standard for business          |                                                     |
-|                 | continuity ISO/IEC 27031. ISO/IEC 27031 is   |                                                     |
-|                 | the international standard for ICT readiness |                                                     |
-|                 | for business continuity.                     |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.012 | The public cloud operator **must**, and the  | International Standard on Awareness Engagements     |
-|                 | private cloud operator **may**, be certified | (ISAE) 3402. US Equivalent: SSAE16.                 |
-|                 | to be compliant with the International       |                                                     |
-|                 | Standard on Awareness Engagements (ISAE)     |                                                     |
-|                 | 3402 (in the US: SSAE 16).                   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.std.001
+     - The cloud operator **should** comply with the Center for Internet Security CIS Controls.
+     - Center for Internet Security - `https://www.cisecurity.org/ <https://www.cisecurity.org/>`__
+   * - req.sec.std.002
+     - The cloud operator, platform, and workloads **should** follow the guidance in the CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version).
+     - Cloud Security Alliance - `https://cloudsecurityalliance.org/ <https://cloudsecurityalliance.org/>`__
+   * - req.sec.std.003
+     - The platform and workloads **should** follow the guidance in the OWASP Cheat Sheet Series (OCSS).
+     - Open Web Application Security Project - `https://owasp.org <https://owasp.org/>`__
+   * - req.sec.std.004
+     - The cloud operator, platform, and workloads **should** ensure that their code is not vulnerable to the OWASP Top Ten Security Risks.
+     - `https://owasp.org/www-project-top-ten/ <https://owasp.org/www-project-top-ten/>`__
+   * - req.sec.std.005
+     - The cloud operator, platform, and workloads **should** strive to improve their maturity on the OWASP Software Maturity Model (SAMM).
+     - `https://owaspsamm.org/blog/2019/12/20/version2-community-release/ <https://owaspsamm.org/blog/2019/12/20/version2-community-release/>`__
+   * - req.sec.std.006
+     - The cloud operator, platform, and workloads **should** utilize the OWASP Web Security Testing Guide.
+     - `https://github.com/OWASP/wstg/tree/master/document <https://github.com/OWASP/wstg/tree/master/document>`__
+   * - req.sec.std.007
+     - The cloud operator and platform **should** satisfy the requirements for Information Management Systems, specified in ISO/IEC 27001.
+     - ISO/IEC 27002:2013 - ISO/IEC 27001 is the international standard for best-practice information security management systems (ISMSs).
+   * - req.sec.std.008
+     - The cloud operator and platform **should** implement the code of practice for Security Controls specified in ISO/IEC 27002:2013 (or latest).
+     - `https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en <https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en>`__
+   * - req.sec.std.009
+     - The cloud operator and platform **should** implement the ISO/IEC 27032:2012 (or latest) Guidelines for Cybersecurity techniques.
+     - `https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en <https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en>`__
+   * - req.sec.std.010
+     - The cloud operator **should** conform to the ISO/IEC 27035 standard for incidence management.
+     - ISO/IEC 27035 - ISO/IEC 27035 is the international standard for incident management.
+   * - req.sec.std.011
+     - The cloud operator **should** conform to the ISO/IEC 27031 standard for business continuity.
+     - ISO/IEC 27031 is the international standard for ICT readiness for business continuity.
+   * - req.sec.std.012
+     - The public cloud operator **must**, and the private cloud operator **may**, be certified to be compliant with the International Standard on Awareness Engagements (ISAE) 3402 (in the US: SSAE 16).
+     - International Standard on Awareness Engagements (ISAE) 3402. US Equivalent: SSAE16.
 
 **Table 7-16:** Compliance with standards requirements
 
