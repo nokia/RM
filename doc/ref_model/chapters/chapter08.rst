@@ -515,21 +515,18 @@ Table : Lifecycle Management (LCM) requirements of the Hybrid, Edge, and Multicl
 
 **HEMP security requirements**
 
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| Ref         | Requirement                                            | Definition/Note                               |
-+=============+========================================================+===============================================+
-| hem.sec.001 | The HEMP should provide capabilities for the           |                                               |
-|             | centralised management of all security policies.       |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| hem.sec.002 | The HEMP should provide capabilities for the           |                                               |
-|             | centralised tracking of compliance of all security     |                                               |
-|             | requirements (:ref:`chapters/chapter07:consolidated    |                                               |
-|             | security requirements`)                                |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| hem.sec.003 | The HEMP should provide capabilities for insights      |                                               |
-|             | into the changes that resulted from resource           |                                               |
-|             | non-compliance.                                        |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
+* hem.sec.001
+   - Requirement: The HEMP should provide capabilities for the centralised management of all security policies.
+   - Definition/Note: (empty)
+
+* hem.sec.002
+   - Requirement: The HEMP should provide capabilities for the centralised tracking of compliance of all security requirements (:ref:`chapters/chapter07:consolidated security requirements`).
+   - Definition/Note: (empty)
+
+* hem.sec.003
+   - Requirement: The HEMP should provide capabilities for insights into the changes that resulted from resource non-compliance.
+   - Definition/Note: (empty)
+
 
 **Table 8-4:**  Hybrid, Edge, and Multicloud operator Platform (HEMP) security requirements
 
