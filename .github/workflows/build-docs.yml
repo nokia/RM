@@ -36,7 +36,7 @@ jobs:
         tox -e gsma
         echo "Building GSMA doc was successful! "
     - name: Store GSMA doc build result
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: rm-gsma-doc
         path: |
