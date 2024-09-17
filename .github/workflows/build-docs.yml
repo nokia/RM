@@ -25,4 +25,20 @@ jobs:
           name: rm-html
           path: |
             doc/ref_model/build
-  
+    - name: Building RM in GSMA doc
+      run: |
+        cd doc/ref_model/
+        echo "---------------------------------------------------------------------------------------"
+        echo "---------------------------------- Building GSMA doc ----------------------------------"
+        echo "---------------------------------------------------------------------------------------"
+        pwd
+        cat ./tox.ini
+        tox -e gsma
+        echo "Building GSMA doc was successful! "
+    - name: Store GSMA doc build result
+      uses: actions/upload-artifact@v3
+      with:
+        name: rm-gsma-doc
+        path: |
+          doc/ref_model/gsma/rm.docx
+
