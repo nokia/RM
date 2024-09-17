@@ -31,7 +31,8 @@ linkcheck_ignore = [
     "https://ntia.gov/SBOM",
     "https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf", 
     "https://www.fcc.gov/", 
-    "https://gdpr-info.eu/"
+    "https://gdpr-info.eu/", 
+    "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism"
 ]
 
 linkcheck_timeout = 10

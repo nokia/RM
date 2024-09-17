@@ -52,6 +52,7 @@ bib_data = parse_file('refs.bib')
 
 shutil.rmtree('gsma', ignore_errors=True)
 os.mkdir('gsma')
+shutil.copytree('_static', 'gsma/_static')
 shutil.copytree('figures', 'gsma/figures')
 shutil.copy('conf.py', 'gsma/conf.py')
 shutil.copy('refs.bib', 'gsma/refs.bib')
