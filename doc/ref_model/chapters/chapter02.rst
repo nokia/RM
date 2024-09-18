@@ -344,9 +344,9 @@ expectation levels:
 
 - **Computing**
 
-  - Speed (e.g., CPU clock and physical cores number; real-time pre-emptive scheduling and/or settings for BIOS, kernel
+  - Speed (e.g., CPU clock and physical cores number)
+  - Predictability (e.g., CPU and RAM sharing level; real-time pre-emptive scheduling and/or settings for BIOS, kernel
     and OS services)
-  - Predictability (e.g., CPU and RAM sharing level)
   - Specific processing (e.g., cryptography, transcoding)
 
 - **Networking**
