@@ -955,11 +955,11 @@ Managed Objects :cite:p:`rfc5907`,
 Server Option for DHCPv6 :cite:p:`rfc5908`)
 as the default time synchronization for the cluster. That level of synchronization is not sufficient for some
 network functions. Just like real-time operating systems instead of base OS, so is precision timing for clock
-synchronization. Precision Time Protocol version 2 `PTP <https://standards.ieee.org/ieee/1588/6825/>`__ cite:p:`ieee1588dash2019`
-is commonly used for Time-Sensitive Networking. This allows synchronization in microsecond range rather than
+synchronization. Precision Time Protocol version 2 PTP :cite:p:`precision-time-protocol-version-2` __ :cite:p:`ieee1588dash2019`
+is commonly used for Time-Sensitive Networking. This allow synchronization in microsecond range rather than
 millisecond range that NTP provides.
 
-Some network functions, like vDU, of vRAN, also require `SyncE <https://www.itu.int/rec/T-REC-G.8262>`__ :cite:p:`itutg8262`. Control,
+Some Network functions, like vDU, of vRAN, also require SyncE :cite:p:`syncE` :cite:p:`itutg8262`. Control,
 User and Synchronization (CUS) Plane specification defines different topology options that provides Lower Layer Split
 Control plane 1-4 (LLS-C1 - LLS-C4) with different synchronization requirements
 (`ITU-T G.8275.2 <https://www.itu.int/rec/T-REC-G.8275.2/en>`__ :cite:p:`itutg82752`).
