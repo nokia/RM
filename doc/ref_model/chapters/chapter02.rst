@@ -352,7 +352,7 @@ expectation levels:
 - **Networking**
 
   - Throughput (i.e., bit rate and/or packet rate)
-  - Latency and time sensitive networking
+  - Latency and Time Sensitive Networking (TSN)
   - Platform Synchronization (e.g. GNSS, PTP, SyncE)
   - Connection points / interfaces number (i.e., vNIC and VLAN)
   - Specific traffic control (e.g., firewalling, NAT, cyphering)
@@ -510,14 +510,20 @@ The following **profile extensions** are proposed:
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Ultra Low Latency | ultra-low-latency-edge  | ✅            | ✅            | Labels a host/node as  | For example,  |
-| - Edge Sites      |                         |               |               | located in an edge     | nodes         |
-|                   |                         |               |               | site, for workloads    | configured    |
-|                   |                         |               |               | requiring low latency  | at a RAN cell |
-|                   |                         |               |               | (specify value) to     | site to host  |
-|                   |                         |               |               | final users or         | vDU           |
+| Ultra Low Latency | ultra-low-latency-edge  | ✅            | ✅            | Labels a host/node as  |               |
+| - Edge Sites      |                         |               |               | located in an edge     |               |
+|                   |                         |               |               | site, for workloads    |               |
+|                   |                         |               |               | requiring low latency  |               |
+|                   |                         |               |               | (specify value) to     |               |
+|                   |                         |               |               | final users or         |               |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
++-------------------+-------------------------+---------------+---------------+------------------------+---------------+
+| Real-Time and     | rt-tsn                  | ❌            | ✅            | Labels a host/node     | For example,  |
+| Time Sensitive    |                         |               |               | configured for Real-   | nodes to run  |
+| Networking - RAN  |                         |               |               | -Time predictability   | vDU           |
+| cell sites        |                         |               |               | and Time Sensitive     |               |
+|                   |                         |               |               | Networking             |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
 | Fixed function    | compute-ffa             | ❌            | ✅            | Labels a host/node     |               |
 | accelerator       |                         |               |               | that includes a        |               |
