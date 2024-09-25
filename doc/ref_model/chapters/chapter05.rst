@@ -728,7 +728,7 @@ Network acceleration configurations
 | infra.hw.nac.cfg.004 | SR-IOV over    | SR-IOV               | N        | Optional    | ``e.cap.013`` |
 |                      | PCI-PT         |                      |          |             |               |
 +----------------------+----------------+----------------------+----------+-------------+---------------+
-| infra.hw.nac.cfg.005 | Time Sensitive | Timing accuracy with | N        | Optional    | ``e.cap.026`` |
+| infra.hw.nac.cfg.005 | Time Sensitive | Timing accuracy with | N        | Optional    | ``e.cap.027`` |
 |                      | Networking     | PTP Hardware Clock   |          |             |               |
 |                      |                | and synchronization  |          |             |               |
 |                      |                | with SyncE.          |          |             |               |
