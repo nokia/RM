@@ -345,13 +345,15 @@ expectation levels:
 - **Computing**
 
   - Speed (e.g., CPU clock and physical cores number)
-  - Predictability (e.g., CPU and RAM sharing level)
+  - Predictability (e.g., CPU and RAM sharing level; real-time pre-emptive scheduling and/or settings for BIOS, kernel
+    and OS services)
   - Specific processing (e.g., cryptography, transcoding)
 
 - **Networking**
 
   - Throughput (i.e., bit rate and/or packet rate)
-  - Latency
+  - Latency and Time Sensitive Networking (TSN)
+  - Platform Synchronization (e.g. GNSS, PTP, SyncE)
   - Connection points / interfaces number (i.e., vNIC and VLAN)
   - Specific traffic control (e.g., firewalling, NAT, cyphering)
   - Specific external network connectivity (e.g., MPLS, VXLAN)
@@ -516,6 +518,12 @@ The following **profile extensions** are proposed:
 |                   |                         |               |               | final users or         |               |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
++-------------------+-------------------------+---------------+---------------+------------------------+---------------+
+| Real-Time and     | rt-tsn                  | ❌            | ✅            | Labels a host/node     | For example,  |
+| Time Sensitive    |                         |               |               | configured for Real-   | nodes to run  |
+| Networking - RAN  |                         |               |               | -Time predictability   | vDU           |
+| cell sites        |                         |               |               | and Time Sensitive     |               |
+|                   |                         |               |               | Networking             |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
 | Fixed function    | compute-ffa             | ❌            | ✅            | Labels a host/node     |               |
 | accelerator       |                         |               |               | that includes a        |               |

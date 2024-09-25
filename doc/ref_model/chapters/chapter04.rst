@@ -134,6 +134,12 @@ Exposed performance optimisation capabilities
 +---------+---------------------+------+-------------------------------------------------------------------------------+
 |e.cap.025| AF_XDP              |Yes/No| Indicates whether or not the Cloud Infrastructure supports AF_XDP.            |
 +---------+---------------------+------+-------------------------------------------------------------------------------+
+|e.cap.026| Real-Time           |Yes/No| Indicates whether the Cloud Infrastructure supports real-time versions and/or |
+|         |                     |      | configuration for BIOS, kernel and OS services.                               |
++---------+---------------------+------+-------------------------------------------------------------------------------+
+|e.cap.027| Time Sensitive      |Yes/No| Indicates whether the Cloud Infrastructure node supports timing accuracy with |
+|         | Networking          |      | PTP and synchronization with SyncE.                                           |
++---------+---------------------+------+-------------------------------------------------------------------------------+
 
 **Table 4-2:** Exposed performance optimisation capabilities of the Cloud Infrastructure
 

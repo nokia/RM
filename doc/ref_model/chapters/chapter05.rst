@@ -713,13 +713,25 @@ infra.hw.pci.cfg.003 PCIe lanes                                             8   
 Network acceleration configurations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-==================== =================== =============================== ======== ================ ======================
-Reference            Feature             Description                     Basic    High performance Capabilities Reference
-==================== =================== =============================== ======== ================ ======================
-infra.hw.nac.cfg.001 Crypto acceleration IPSec, Crypto.                  N        Optional         ``e.cap.009``
-infra.hw.nac.cfg.002 SmartNIC            Offloads network functionality. N        Optional         ``e.cap.015``
-infra.hw.nac.cfg.003 Compression                                         Optional Optional
-infra.hw.nac.cfg.004 SR-IOV over PCI-PT  SR-IOV                          N        Optional         ``e.cap.013``
-==================== =================== =============================== ======== ================ ======================
++----------------------+----------------+----------------------+----------+-------------+---------------+
+| Reference            | Feature        | Description          | Basic    | High        | Capabilities  |
+|                      |                |                      |          | performance | Reference     |
++======================+================+======================+==========+=============+===============+
+| infra.hw.nac.cfg.001 | Crypto         | IPSec, Crypto.       | N        | Optional    | ``e.cap.009`` |
+|                      | acceleration   |                      |          |             |               |
++----------------------+----------------+----------------------+----------+-------------+---------------+
+| infra.hw.nac.cfg.002 | SmartNIC       | Offloads network     | N        | Optional    | ``e.cap.015`` |
+|                      |                | functionality.       |          |             |               |
++----------------------+----------------+----------------------+----------+-------------+---------------+
+| infra.hw.nac.cfg.003 | Compression    |                      | Optional | Optional    |               |
++----------------------+----------------+----------------------+----------+-------------+---------------+
+| infra.hw.nac.cfg.004 | SR-IOV over    | SR-IOV               | N        | Optional    | ``e.cap.013`` |
+|                      | PCI-PT         |                      |          |             |               |
++----------------------+----------------+----------------------+----------+-------------+---------------+
+| infra.hw.nac.cfg.005 | Time Sensitive | Timing accuracy with | N        | Optional    | ``e.cap.027`` |
+|                      | Networking     | PTP Hardware Clock   |          |             |               |
+|                      |                | and synchronization  |          |             |               |
+|                      |                | with SyncE.          |          |             |               |
++----------------------+----------------+----------------------+----------+-------------+---------------+
 
 **Table 5-19:** Network acceleration configuration specification
