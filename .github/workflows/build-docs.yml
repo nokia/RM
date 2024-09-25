@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Install prerequisites
       run: | 
-        sudo apt-get --allow-releaseinfo-change update -y && sudo apt-get install -y tox
+        sudo apt-get --allow-releaseinfo-change update -y && sudo apt-get install -y tox pandoc
     - name: Building RM in HTML
       run: |
         cd doc/ref_model
@@ -25,4 +25,20 @@ jobs:
           name: rm-html
           path: |
             doc/ref_model/build
-  
+    - name: Building RM in GSMA doc
+      run: |
+        cd doc/ref_model/
+        echo "---------------------------------------------------------------------------------------"
+        echo "---------------------------------- Building GSMA doc ----------------------------------"
+        echo "---------------------------------------------------------------------------------------"
+        pwd
+        cat ./tox.ini
+        tox -e gsma
+        echo "Building GSMA doc was successful! "
+    - name: Store GSMA doc build result
+      uses: actions/upload-artifact@v4
+      with:
+        name: rm-gsma-doc
+        path: |
+          doc/ref_model/gsma/rm.docx
+

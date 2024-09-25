@@ -1,8 +1,8 @@
 Infrastructure Operations and Lifecycle Management
 ==================================================
 
-Introduction
-------------
+Introduction to Infrastructure Operations and Lifecycle Management
+------------------------------------------------------------------
 
 The purpose of this section is to define the capabilities required of the infrastructure to ensure that it is
 effectively supported, maintained, and otherwise lifecycle-managed by the operations teams. This includes
@@ -645,80 +645,82 @@ and so on, prior to deployment, are listed in Table 9-4 (below).
   The tenant processes for application LCM, such as updates, are out of scope. For the purpose of these requirements,
   CI includes Continuous Delivery, and CD refers to Continuous Deployment.
 
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| Ref #         | Description                                       | Comments/Notes                                   |
-+===============+===================================================+==================================================+
-| auto.cicd.001 | The CI/CD pipeline must support deployments on    | The CI/CD pipelines automate CI/CD best          |
-|               | any cloud and cloud infrastructures, including    | practices into repeatable workflows for          |
-|               | different hardware accelerators.                  | integrating code and configurations into builds, |
-|               |                                                   | testing builds, including validation against     |
-|               |                                                   | design and operator-specific criteria, and       |
-|               |                                                   | delivery of the product into a runtime           |
-|               |                                                   | environment. An example of an open-source        |
-|               |                                                   | cloud-native CI/CD framework is the Tekton       |
-|               |                                                   | project :cite:p:`tekton-project`                 |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.002 | The CI/CD pipelines must use event-driven task    |                                                  |
-|               | automation.                                       |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.003 | The CI/CD pipelines should avoid scheduling       |                                                  |
-|               | tasks.                                            |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.004 | The CI/CD pipeline is triggered when a new or     | The software release can be in the form of       |
-|               | updated software release is loaded into a         | source code files, configuration files, images,  |
-|               | repository.                                       | or manifests. Operators may support a single     |
-|               |                                                   | repository, or multiple repositories, and may    |
-|               |                                                   | therefore specify which repository is to be used |
-|               |                                                   | for this release. An example of an open-source   |
-|               |                                                   | repository is the CNCF Harbor                    |
-|               |                                                   | :cite:p:`cncf-harbor`                            |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.005 | The CI pipeline must scan the source code and     |                                                  |
-|               | manifests, to validate for compliance with the    |                                                  |
-|               | design and coding best practices.                 |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.006 | The CI pipeline must support the build and        |                                                  |
-|               | packaging of the images and deployment manifests  |                                                  |
-|               | from the source code and configuration files.     |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.007 | The CI pipeline must scan the images and          | See section 7.10 (                               |
-|               | manifests to validate for compliance with the     | :ref:`chapters/chapter07:consolidated            |
-|               | security requirements.                            | security requirements`). Examples of such        |
-|               |                                                   | security requirements include only ingesting     |
-|               |                                                   | images, source code, configuration files, and so |
-|               |                                                   | on, only form trusted sources.                   |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.008 | The CI pipeline must validate the images and      | For example, different tests.                    |
-|               | manifests.                                        |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.009 | The CI pipeline must validate with all the        |                                                  |
-|               | hardware offload permutations and without the     |                                                  |
-|               | hardware offload.                                 |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.010 | The CI pipeline must promote the validated images | An example of this is promoting from a           |
-|               | and manifests to be deployable.                   | development repository to a production           |
-|               |                                                   | repository.                                      |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.011 | The CD pipeline must verify and validate the      | For example, RBAC, request is within quota       |
-|               | tenant request.                                   | limits, affinity/anti-affinity, …                |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.012 | After all the validations have been completed,    |                                                  |
-|               | the CD pipeline must turn over control to the     |                                                  |
-|               | orchestration of the software.                    |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.013 | The CD pipeline must be able to deploy into the   |                                                  |
-|               | development, test, and production environments.   |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.014 | The CD pipeline must be able to automatically     |                                                  |
-|               | promote software from the development environment |                                                  |
-|               | to the test and production environments.          |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.015 | The CI pipeline must run all the relevant         |                                                  |
-|               | Reference Conformance test suites.                |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
-| auto.cicd.016 | The CD pipeline must run all relevant Reference   |                                                  |
-|               | Conformance test suites                           |                                                  |
-+---------------+---------------------------------------------------+--------------------------------------------------+
+   * - Ref #
+     - Description
+     - Comments/Notes
+
+   * - auto.cicd.001
+     - The CI/CD pipeline must support deployment on any cloud and cloud infrastructures, including different hardware
+       accelerators.
+     - CI/CD pipelines automate CI/CD best practices into repeatable workflows for integrating code and configurations
+       into builds, testing builds including validation against design and operator-specific criteria, and delivery of
+       the product onto a runtime environment. Example of an open-source cloud native CI/CD framework is the Tekton
+       project (:cite:p:`tekton-project`)
+
+   * - auto.cicd.002
+     - The CI/CD pipelines must use event-driven task automation
+     - 
+
+   * - auto.cicd.003
+     - The CI/CD pipelines should avoid scheduling tasks
+     - 
+
+   * - auto.cicd.004
+     - The CI/CD pipeline is triggered by a new or updated software release being loaded into a repository
+     - The software release can be source code files, configuration files, images, manifests. Operators may support a
+       single or multiple repositories and may specify which repository is to be used for these releases. An example of
+       an open source repository is the CNCF Harbor (:cite:p:`cncf-harbor`)
+
+   * - auto.cicd.005
+     - The CI pipeline must scan source code and manifests to validate compliance with design and coding best practices.
+     - 
+
+   * - auto.cicd.006
+     - The CI pipeline must support the build and packaging of images and deployment manifests from source code and
+       configuration files.
+     - 
+
+   * - auto.cicd.007
+     - The CI pipeline must scan images and manifests to validate for compliance with security requirements.
+     - See section 7.10 (:ref:`chapters/chapter07:consolidated security requirements`). Examples of such security
+       requirements include only ingesting images, source code, configuration files, etc., only from trusted sources.
+
+   * - auto.cicd.008
+     - The CI pipeline must validate images and manifests
+     - Example: different tests
+
+   * - auto.cicd.009
+     - The CI pipeline must validate with all hardware offload permutations and without hardware offload
+     - 
+
+   * - auto.cicd.010
+     - The CI pipeline must promote validated images and manifests to be deployable.
+     - Example: promote from a development repository to a production repository
+
+   * - auto.cicd.011
+     - The CD pipeline must verify and validate the tenant request
+     - Example: RBAC, request is within quota limits, affinity/anti-affinity, etc.
+
+   * - auto.cicd.012
+     - The CD pipeline after all validations must turn over control to orchestration of the software
+     - 
+
+   * - auto.cicd.013
+     - The CD pipeline must be able to deploy into Development, Test, and Production environments
+     - 
+
+   * - auto.cicd.014
+     - The CD pipeline must be able to automatically promote software from Development to Test and Production
+       environments
+     - 
+
+   * - auto.cicd.015
+     - The CI pipeline must run all relevant Reference Conformance test suites
+     - 
+
+   * - auto.cicd.016
+     - The CD pipeline must run all relevant Reference Conformance test suites
+     - 
 
 **Table 9-4:** Automation CI/CD
 

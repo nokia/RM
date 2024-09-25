@@ -200,8 +200,8 @@ infra.net.acc.cfg.004 Crypto acceleration interface Yes/No
 
 **Table 5-6:** Virtual networking acceleration features.
 
-Security
-~~~~~~~~
+Security details
+~~~~~~~~~~~~~~~~
 
 For details, see section 7 Security.
 
@@ -444,8 +444,8 @@ Infrastructure profiles: Basic and High Performance.
 
 .. _virtual-compute-1:
 
-Virtual compute
-~~~~~~~~~~~~~~~
+Virtual compute features and configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **Table 5-8** depicts the features and configurations related to virtual compute for the two Cloud Infrastructure
@@ -483,8 +483,8 @@ infra.com.acc.cfg.005 FPGA/other acceleration H/W Firmware-programmable adapter
 
 .. _virtual-storage-1:
 
-Virtual storage
-~~~~~~~~~~~~~~~
+Virtual storage features and configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **Table 5-10** and **Table 5-11** depict the features and configurations related to virtual storage for the two
@@ -514,8 +514,8 @@ infra.stg.acc.cfg.002 Storage capacity oriented Yes/No N     N
 
 .. _virtual-networking-1:
 
-Virtual networking
-~~~~~~~~~~~~~~~~~~
+Virtual networking features and configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 **Table 5-12** and **Table 5-13** depict the features and configurations related to virtual networking for the two types
@@ -561,7 +561,6 @@ infra.net.acc.cfg.004 Crypto acceleration interface Yes/No/Optional            N
 Cloud Infrastructure hardware profile description
 -------------------------------------------------
 
-
 The support of various workload types, each with different, and sometimes conflicting, compute, storage, and
 network characteristics, including accelerations and optimizations, drives the need to aggregate these characteristics
 as a hardware (host) profile and capabilities. A host profile is a “personality” assigned to a compute host (also
@@ -571,9 +570,10 @@ disks and their capacity, and so on, as well as capabilities enabled in the hard
 as accelerators, the underlay networking, and storage.
 
 This chapter defines a simplified host, profile, and related capabilities model associated with each of the different 
-Cloud Infrastructure hardware profile and related capabilities. The two :ref:`chapters/chapter02:profiles, profile 
-extensions & flavours` (also known as host profiles, node profiles, and hardware profiles), and some of their
-associated capabilities, are shown in :numref:`Cloud Infrastructure Hardware Profiles and host-associated capabilities`.
+Cloud Infrastructure hardware profile and related capabilities. The two
+:ref:`chapters/chapter02:profiles, profile extensions & flavours` (also known as host profiles, node profiles, and
+hardware profiles), and some of their associated capabilities, are shown in
+:numref:`Cloud Infrastructure Hardware Profiles and host-associated capabilities`.
 
 
 .. figure:: ../figures/RM-ch05-hw-profile.png

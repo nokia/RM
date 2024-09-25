@@ -1,8 +1,8 @@
 Hybrid Multicloud: Data Centre to Edge
 ======================================
 
-Introduction
-------------
+Introduction to Hybrid Multicloud
+---------------------------------
 
 The :ref:`chapters/chapter03:modelling` section focuses on cloud infrastructure abstractions. While these are generic
 abstractions, they and the associated capabilities of the cloud infrastructure are specified for data centres, central
@@ -515,21 +515,18 @@ Table : Lifecycle Management (LCM) requirements of the Hybrid, Edge, and Multicl
 
 **HEMP security requirements**
 
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| Ref         | Requirement                                            | Definition/Note                               |
-+=============+========================================================+===============================================+
-| hem.sec.001 | The HEMP should provide capabilities for the           |                                               |
-|             | centralised management of all security policies.       |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| hem.sec.002 | The HEMP should provide capabilities for the           |                                               |
-|             | centralised tracking of compliance of all security     |                                               |
-|             | requirements (:ref:`chapters/chapter07:consolidated    |                                               |
-|             | security requirements`)                                |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
-| hem.sec.003 | The HEMP should provide capabilities for insights      |                                               |
-|             | into the changes that resulted from resource           |                                               |
-|             | non-compliance.                                        |                                               |
-+-------------+--------------------------------------------------------+-----------------------------------------------+
+* hem.sec.001
+   - Requirement: The HEMP should provide capabilities for the centralised management of all security policies.
+   - Definition/Note: (empty)
+
+* hem.sec.002
+   - Requirement: The HEMP should provide capabilities for the centralised tracking of compliance of all security requirements (:ref:`chapters/chapter07:consolidated security requirements`).
+   - Definition/Note: (empty)
+
+* hem.sec.003
+   - Requirement: The HEMP should provide capabilities for insights into the changes that resulted from resource non-compliance.
+   - Definition/Note: (empty)
+
 
 **Table 8-4:**  Hybrid, Edge, and Multicloud operator Platform (HEMP) security requirements
 
@@ -720,34 +717,53 @@ Based on the infrastructure deployed at the edge, Table 8-3 specifies the
 :ref:`chapters/chapter05:feature set and requirements from infrastructure` that would
 need to be relaxed.
 
-+----------------------+--------------+----------------------+-----------------------------+---------------------------+
-| Reference            | Feature      | Description          | As specified in RM Chapter  | Exception for edge        |
-|                      |              |                      | 05                          |                           |
-|                      |              |                      +--------------+--------------+-------------+-------------+
-|                      |              |                      | Basic type   | High         | Basic type  | High        |
-|                      |              |                      |              | performance  |             | performance |
-+======================+==============+======================+==============+==============+=============+=============+
-| infra.stg.cfg.003    | Storage with |                      | N            | Y            | N           | Optional    |
-|                      | replication  |                      |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.stg.cfg.004    | Storage with |                      | Y            | Y            | N           | Optional    |
-|                      | encryption   |                      |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.001 | Minimum      | This determines the  | 2            | 2            | 1           | 1           |
-|                      | number of    | minimum number of    |              |              |             |             |
-|                      | CPU sockets  | CPU sockets within   |              |              |             |             |
-|                      |              | each host.           |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.002 | Minimum      | This determines the  | 20           | 20           | 1           | 1           |
-|                      | Number of    | minimum number of    |              |              |             |             |
-|                      | cores per    | cores needed per     |              |              |             |             |
-|                      | CPU          | CPU.                 |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
-| infra.hw.cpu.cfg.003 | NUMA         | NUMA alignment       | N            | Y            | N           | Y (*)       |
-|                      | alignment    | support and BIOS     |              |              |             |             |
-|                      |              | configured to enable |              |              |             |             |
-|                      |              | NUMA.                |              |              |             |             |
-+----------------------+--------------+----------------------+--------------+--------------+-------------+-------------+
+   * - Reference
+     - Feature
+     - Description
+     - As specified in RM Chapter 05 - Basic type
+     - As specified in RM Chapter 05 - High performance
+     - Exception for edge - Basic type
+     - Exception for edge - High performance
+
+   * - infra.stg.cfg.003
+     - Storage with replication
+     - 
+     - N
+     - Y
+     - N
+     - Optional
+
+   * - infra.stg.cfg.004
+     - Storage with encryption
+     - 
+     - Y
+     - Y
+     - N
+     - Optional
+
+   * - infra.hw.cpu.cfg.001
+     - Minimum number of CPU sockets
+     - This determines the minimum number of CPU sockets within each host.
+     - 2
+     - 2
+     - 1
+     - 1
+
+   * - infra.hw.cpu.cfg.002
+     - Minimum Number of cores per CPU
+     - This determines the minimum number of cores needed per CPU.
+     - 20
+     - 20
+     - 1
+     - 1
+
+   * - infra.hw.cpu.cfg.003
+     - NUMA alignment
+     - NUMA alignment support and BIOS configured to enable NUMA.
+     - N
+     - Y
+     - N
+     - Y (*)
 
 **Table 8-4. TEC exceptions to infrastructure profile features and requirements**
 
