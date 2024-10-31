@@ -1,8 +1,8 @@
 Security
 ========
 
-Introduction
-------------
+Introduction to security
+------------------------
 
 Security vulnerabilities and attack vectors are everywhere. The telecom industry and its cloud infrastructures are
 especially vulnerable to potential attacks due to the ubiquitous nature of the infrastructures and services, combined
@@ -407,7 +407,7 @@ outcome of the security activities meets the requirements, the next set of secur
 process transition to the next checkpoint, or, alternatively, to the next stage, if the checkpoint is the last one in
 the current stage. If, however, the outcome of the security activities does not meet the requirements, then the
 process should not be allowed to advance to the next checkpoint. In
-":ref:`chapters/chapter07:consolidated security requirements`", the IaaC security activities are presented as security
+:ref:`chapters/chapter07:consolidated security requirements`, the IaaC security activities are presented as security
 requirements mapped to particular stages and trigger points.
 
 Security of production and non-production environments
@@ -1068,83 +1068,67 @@ Consolidated security requirements
 System hardening
 ~~~~~~~~~~~~~~~~
 
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| Ref             | Requirement                                      | Definition/Note                                 |
-+=================+==================================================+=================================================+
-| req.sec.gen.001 | The platform **must** maintain the specified     |                                                 |
-|                 | configuration.                                   |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.002 | The systems part of the cloud infrastructure     | Hardening: CIS Password Policy Guide            |
-|                 | **must** support password hardening, as defined  |                                                 |
-|                 | in CIS Password Policy Guide                     |                                                 |
-|                 | :cite:p:`CIS-password-policy`                    |                                                 |
-|                 |                                                  |                                                 |
-|                 |                                                  |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.003 | The servers part of the cloud infrastructure     |                                                 |
-|                 | **must** support a root of trust and secure      |                                                 |
-|                 | boot.                                            |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.004 | The operating systems of all the parts of the    | NIST SP 800-123                                 |
-|                 | cloud infrastructure dealing with servers        |                                                 |
-|                 | **must** be hardened by removing or disabling    |                                                 |
-|                 | unnecessary services, applications, and network  |                                                 |
-|                 | protocols, configuring operating system user     |                                                 |
-|                 | authentication, configuring resource controls,   |                                                 |
-|                 | installing and configuring additional security   |                                                 |
-|                 | controls where needed, and testing the security  |                                                 |
-|                 | of the operating system.                         |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.005 | The platform **must** support operating system-  |                                                 |
-|                 | level access control.                            |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.006 | The platform **must** support secure logging.    |                                                 |
-|                 | Logging with the root account must be prohibited |                                                 |
-|                 | when the root privileges are not required.       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.007 | All parts of the cloud infrastructure dealing    |                                                 |
-|                 | with servers **must** be time-synchronized with  |                                                 |
-|                 | the authenticated time service.                  |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.008 | All parts of the cloud infrastructure dealing    |                                                 |
-|                 | with servers **must** be regularly updated to    |                                                 |
-|                 | address security vulnerabilities.                |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.009 | The platform **must** support software integrity |                                                 |
-|                 | protection and verification, and **must** scan   |                                                 |
-|                 | the source code and manifests.                   |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.010 | The cloud infrastructure **must** support        |                                                 |
-|                 | encrypted storage, for example, block, object    |                                                 |
-|                 | and file storage, with access to encryption keys |                                                 |
-|                 | restricted on a need-to-know basis. Controlled   |                                                 |
-|                 | access based on a need to know                   |                                                 |
-|                 | :cite:p:`the-18-CIS-critical-security-controls`  |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.011 | The cloud infrastructure **should** support      |                                                 |
-|                 | read- and write-only storage partitions (write-  |                                                 |
-|                 | only permission to one or more authorized        |                                                 |
-|                 | actors).                                         |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.012 | The operator **must** ensure that only           |                                                 |
-|                 | authorized actors have physical access to the    |                                                 |
-|                 | underlying infrastructure.                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.013 | The platform **must** ensure that only           |                                                 |
-|                 | authorized actors have logical access to the     |                                                 |
-|                 | underlying infrastructure.                       |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.014 | All parts of the cloud infrastructure dealing    |                                                 |
-|                 | with servers **should** support measured boot    |                                                 |
-|                 | and an attestation server that monitors the      |                                                 |
-|                 | measurements of the servers.                     |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
-| req.sec.gen.015 | Any change to the platform **must** be logged as |                                                 |
-|                 | a security event. The logged event must include  |                                                 |
-|                 | the identity of the entity making the change,    |                                                 |
-|                 | the change itself, and the date and time of the  |                                                 |
-|                 | change.                                          |                                                 |
-+-----------------+--------------------------------------------------+-------------------------------------------------+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.gen.001
+     - The platform **must** maintain the specified configuration.
+     - 
+   * - req.sec.gen.002
+     - The systems part of the cloud infrastructure **must** support password hardening, as defined in CIS Password
+       Policy Guide :cite:p:`CIS-password-policy`.
+     - Hardening: CIS Password Policy Guide
+   * - req.sec.gen.003
+     - The servers part of the cloud infrastructure **must** support a root of trust and secure boot.
+     - 
+   * - req.sec.gen.004
+     - The operating systems of all the parts of the cloud infrastructure dealing with servers **must** be hardened by
+       removing or disabling unnecessary services, applications, and network protocols, configuring operating system
+       user authentication, configuring resource controls, installing and configuring additional security controls where
+       needed, and testing the security of the operating system.
+     - NIST SP 800-123
+   * - req.sec.gen.005
+     - The platform **must** support operating system-level access control.
+     - 
+   * - req.sec.gen.006
+     - The platform **must** support secure logging. Logging with the root account must be prohibited when the root
+       privileges are not required.
+     - 
+   * - req.sec.gen.007
+     - All parts of the cloud infrastructure dealing with servers **must** be time-synchronized with the authenticated
+       time service.
+     - 
+   * - req.sec.gen.008
+     - All parts of the cloud infrastructure dealing with servers **must** be regularly updated to address security
+       vulnerabilities.
+     - 
+   * - req.sec.gen.009
+     - The platform **must** support software integrity protection and verification, and **must** scan the source code
+       and manifests.
+     - 
+   * - req.sec.gen.010
+     - The cloud infrastructure **must** support encrypted storage, for example, block, object, and file storage, with
+       access to encryption keys restricted on a need-to-know basis. Controlled access based on a need to know
+       :cite:p:`the-18-CIS-critical-security-controls`.
+     - 
+   * - req.sec.gen.011
+     - The cloud infrastructure **should** support read- and write-only storage partitions (write-only permission to one
+       or more authorized actors).
+     - 
+   * - req.sec.gen.012
+     - The operator **must** ensure that only authorized actors have physical access to the underlying infrastructure.
+     - 
+   * - req.sec.gen.013
+     - The platform **must** ensure that only authorized actors have logical access to the underlying infrastructure.
+     - 
+   * - req.sec.gen.014
+     - All parts of the cloud infrastructure dealing with servers **should** support measured boot and an attestation
+       server that monitors the measurements of the servers.
+     - 
+   * - req.sec.gen.015
+     - Any change to the platform **must** be logged as a security event. The logged event must include the identity of
+       the entity making the change, the change itself, and the date and time of the change.
+     -
 
 **Table 7-3:** System hardening requirements
 
@@ -1508,10 +1492,6 @@ for both the Prod-Platform and the NonProd-Platform.
 Open-source software
 ~~~~~~~~~~~~~~~~~~~~
 
-.. list-table:: Table 7-10: Open-source Security Requirements
-   :widths: 10 70 20
-   :header-rows: 1
-
    * - Ref
      - Requirement
      - Definition/Note
@@ -1520,17 +1500,16 @@ Open-source software
      - 
    * - req.sec.oss.002
      - The Common Vulnerabilities and Exposures (CVE) **must** be used to identify vulnerabilities and assess their severity rating for the open-source code part of the cloud infrastructure and workloads software.
-     - :cite:p:`CVE-program-mission`
+     - `https://cve.mitre.org/ <https://cve.mitre.org/>`__
    * - req.sec.oss.003
      - Critical- and high-severity-rated vulnerabilities **must** be fixed in a timely manner. See the Common Vulnerability Scoring System (CVSS) to find out a vulnerability score and its associated rate (low, medium, high, or critical).
-     - :cite:p:`common-vulnerability-scoring`
+     - `https://www.first.org/cvss/ <https://www.first.org/cvss/>`__
    * - req.sec.oss.004
      - A dedicated internal isolated repository separated from the production environment **must** be used to store vetted open-source content.
      - 
    * - req.sec.oss.005
      - A Software Bill of Materials (SBOM) **should** be provided or built, and maintained to identify the software components and their origins.
-     - Inventory of software components
-
+     - Inventory of software components, `https://ntia.gov/SBOM <https://ntia.gov/SBOM>`__
 
 **Table 7-10:** Open-source software requirements
 
@@ -1694,83 +1673,45 @@ IaaC - Runtime defence and monitoring requirements
 Compliance with standards
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| Ref             | Requirement                                  | Definition/Note                                     |
-+=================+==============================================+=====================================================+
-| req.sec.std.001 | The cloud operator **should** comply with the| Center for Internet Security -                      |
-|                 | Center for Internet Security CIS Controls.   | :cite:p:`center-internet-security`                  |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.002 | The cloud operator, platform, and workloads  | Cloud Security Alliance -                           |
-|                 | **should** follow the guidance in the CSA    | :cite:p:`cloud-security-alliance`                   |      
-|                 | Security Guidance for Critical Areas of      |                                                     |
-|                 | Focus in Cloud Computing (latest version).   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.003 | The platform and workloads **should** follow | Open Web Application Security Project               |
-|                 | the guidance in the OWASP Cheat Sheet Series | :cite:p:`open-web-application`                      |                             
-|                 | (OCSS)                                       |                                                     | 
-|                 | :cite:p:`owasp-Cheat-sheet-series`           |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.004 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** ensure that their code is not     |                                                     |
-|                 | vulnerable to the OWASP Top Ten Security     |                                                     |
-|                 | Risks :cite:p:`owasp-top-ten`                |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.005 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** strive to improve their maturity  |                                                     |
-|                 | on the OWASP Software Maturity Model (SAMM)  |                                                     |
-|                 | :cite:p:`owasp-software-maturity-model`      |                                                     |                                                     
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.006 | The cloud operator, platform, and workloads  |                                                     |
-|                 | **should** utilize the OWASP Web Security    |                                                     |
-|                 | Testing Guide :cite:p:`web-security-testing` |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.007 | The cloud operator and platform **should**   | ISO/IEC 27002:2013 - ISO/IEC 27001 is the           |
-|                 | satisfy the requirements for Information     | international standard for best-practice            |
-|                 | Management Systems, specified in ISO/IEC     | information security management systems (ISMSs).    |
-|                 | 27001                                        |                                                     |
-|                 | :cite:p:`information-management-systems`     |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.008 | The cloud operator and platform **should**   |                                                     |
-|                 | implement the code of practice for Security  |                                                     |
-|                 | Controls specified ISO/IEC 27002:2013 (or    |                                                     |
-|                 | latest)                                      |                                                     |
-|                 | :cite:p:`security-controls-specified`        |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.009 | The cloud operator and platform **should**   | ISO/IEC 27032 - ISO/IEC 27032is the international   |
-|                 | implement the ISO/IEC 27032:2012 (or latest) | Standard focusing explicitly on cybersecurity.      |
-|                 | Guidelines for Cybersecurity techniques      |                                                     |
-|                 | :cite:p:`guidelines-for-cybersecurity`       |                                                     |
-|                 |                                              |                                                     |
-|                 |                                              |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.010 | The cloud operator **should** conform to the | ISO/IEC 27035 - ISO/IEC 27035 is the international  |
-|                 | ISO/IEC 27035 standard for incidence         | standard for incident management.                   |
-|                 | management.                                  |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.011 | The cloud operator **should** conform to the |                                                     |
-|                 | ISO/IEC 27031 standard for business          |                                                     |
-|                 | continuity ISO/IEC 27031. ISO/IEC 27031 is   |                                                     |
-|                 | the international standard for ICT readiness |                                                     |
-|                 | for business continuity.                     |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
-| req.sec.std.012 | The public cloud operator **must**, and the  | International Standard on Awareness Engagements     |
-|                 | private cloud operator **may**, be certified | (ISAE) 3402. US Equivalent: SSAE16.                 |
-|                 | to be compliant with the International       |                                                     |
-|                 | Standard on Awareness Engagements (ISAE)     |                                                     |
-|                 | 3402 (in the US: SSAE 16).                   |                                                     |
-+-----------------+----------------------------------------------+-----------------------------------------------------+
+   * - Ref
+     - Requirement
+     - Definition/Note
+   * - req.sec.std.001
+     - The cloud operator **should** comply with the Center for Internet Security CIS Controls.
+     - Center for Internet Security - `https://www.cisecurity.org/ <https://www.cisecurity.org/>`__
+   * - req.sec.std.002
+     - The cloud operator, platform, and workloads **should** follow the guidance in the CSA Security Guidance for Critical Areas of Focus in Cloud Computing (latest version).
+     - Cloud Security Alliance - `https://cloudsecurityalliance.org/ <https://cloudsecurityalliance.org/>`__
+   * - req.sec.std.003
+     - The platform and workloads **should** follow the guidance in the OWASP Cheat Sheet Series (OCSS).
+     - Open Web Application Security Project - `https://owasp.org <https://owasp.org/>`__
+   * - req.sec.std.004
+     - The cloud operator, platform, and workloads **should** ensure that their code is not vulnerable to the OWASP Top Ten Security Risks.
+     - `https://owasp.org/www-project-top-ten/ <https://owasp.org/www-project-top-ten/>`__
+   * - req.sec.std.005
+     - The cloud operator, platform, and workloads **should** strive to improve their maturity on the OWASP Software Maturity Model (SAMM).
+     - `https://owaspsamm.org/blog/2019/12/20/version2-community-release/ <https://owaspsamm.org/blog/2019/12/20/version2-community-release/>`__
+   * - req.sec.std.006
+     - The cloud operator, platform, and workloads **should** utilize the OWASP Web Security Testing Guide.
+     - `https://github.com/OWASP/wstg/tree/master/document <https://github.com/OWASP/wstg/tree/master/document>`__
+   * - req.sec.std.007
+     - The cloud operator and platform **should** satisfy the requirements for Information Management Systems, specified in ISO/IEC 27001.
+     - ISO/IEC 27002:2013 - ISO/IEC 27001 is the international standard for best-practice information security management systems (ISMSs).
+   * - req.sec.std.008
+     - The cloud operator and platform **should** implement the code of practice for Security Controls specified in ISO/IEC 27002:2013 (or latest).
+     - `https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en <https://www.iso.org/obp/ui/#iso:std:iso-iec:27002:ed-2:v1:en>`__
+   * - req.sec.std.009
+     - The cloud operator and platform **should** implement the ISO/IEC 27032:2012 (or latest) Guidelines for Cybersecurity techniques.
+     - `https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en <https://www.iso.org/obp/ui/#iso:std:iso-iec:27032:ed-1:v1:en>`__
+   * - req.sec.std.010
+     - The cloud operator **should** conform to the ISO/IEC 27035 standard for incidence management.
+     - ISO/IEC 27035 - ISO/IEC 27035 is the international standard for incident management.
+   * - req.sec.std.011
+     - The cloud operator **should** conform to the ISO/IEC 27031 standard for business continuity.
+     - ISO/IEC 27031 is the international standard for ICT readiness for business continuity.
+   * - req.sec.std.012
+     - The public cloud operator **must**, and the private cloud operator **may**, be certified to be compliant with the International Standard on Awareness Engagements (ISAE) 3402 (in the US: SSAE 16).
+     - International Standard on Awareness Engagements (ISAE) 3402. US Equivalent: SSAE16.
 
 **Table 7-16:** Compliance with standards requirements
 
