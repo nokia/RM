@@ -1,558 +1,585 @@
 .. _workload-requirements--analysis:
 
-Workload Requirements & Analysis
-================================
+Workload Requirements and Analysis
+==================================
 
-The Cloud Infrastructure is the totality of all hardware and software components which build up the environment in which
-VNFs/CNFs (workloads) are deployed, managed and executed. It is, therefore, inevitable that different workloads would
-require different capabilities and have different expectations from it.
+The cloud infrastructure is the totality of all the hardware and software components which build up the environment in
+which the VNFs and CNFs (workloads) are deployed, managed, and executed. It is, therefore, inevitable that different
+workloads will require different capabilities and have different expectations from the cloud infrastructure.
 
-One of the main targets of the Reference Model is to define an agnostic cloud infrastructure, to remove any dependencies
-between workloads and the deployed cloud infrastructure, and offer infrastructure resources to workloads in an
-abstracted way with defined capabilities and metrics.
+Among the main targets of the Reference Model is to define an agnostic cloud infrastructure, to remove any dependencies
+between the workloads and the deployed cloud infrastructure, and to offer infrastructure resources to the workloads in
+an abstracted way, with defined capabilities and metrics.
 
-This means, operators will be able to host their Telco workloads (VNFs/CNFs) with different traffic types, behaviour and
-from any vendor on a unified consistent cloud infrastructure.
+This means that operators will be able to host their Telco workloads (VNFs/CNFs) with different traffic types and
+behaviours, and will be able to buy from any vendor on a unified consistent cloud infrastructure.
 
-Additionally, a well-defined cloud infrastructure is also needed for other type of workloads such as IT, Machine
-Learning, and Artificial Intelligence.
+Additionally, a well-defined cloud infrastructure is needed for other types of workloads such as IT, machine
+learning, and artificial intelligence.
 
 This chapter analyses various Telco workloads and their requirements, and recommends certain cloud infrastructure
-parameters needed to specify the desired performance expected by these workloads.
+parameters necessary to specify the desired performance expected by these workloads.
 
-Workloads Collateral
+Workloads collateral
 --------------------
 
-There are different ways that workloads can be classified, for example:
+There are different ways in which workloads can be classified, for example:
 
 -  **By function type:**
 
-   -  Data Plane (a.k.a., User Plane, Media Plane, Forwarding Plane)
-   -  Control Plane (a.k.a., Signalling Plane)
-   -  Management Plane
+   -  Data plane (also known as user plane, media plane, and forwarding plane)
+   -  Control plane (also known as signalling plane)
+   -  Management plane
 
    ..
 
-      **Note**\ *: Data plane workloads also include control and management plane functions; control plane workloads
-      also include management plane functions.*
+      **Note**\ *: Data plane workloads also include control and management plane functions. Control plane
+      workloads also include management plane functions.*
 
 - **By service offered:**
 
-  - Mobile broadband service
-  - Fixed broadband Service
-  - Voice Service
-  - Value-Added-Services
+  - mobile broadband service
+  - fixed broadband service
+  - voice service
+  - value-added services
 
--  **By technology:** 2G, 3G, 4G, 5G, IMS, FTTx, Wi-Fi...
+-  **By technology:** 2G, 3G, 4G, 5G, IMS, FTTx, WiFi, and so on.
 
-The list of, most likely to be virtualised, Network Functions below, covering almost **95%** of the Telco workloads, is
-organised by network segment and function type.
+The following list of network functions most likely to be virtualised, covering almost 95% of the Telco workloads,
+is organised by network segment and function type.
 
 - **Radio Access Network (RAN)**
 
-  - Data Plane
+  - Data plane
 
-    - BBU: BaseBand Unit
-    - CU: Centralised Unit
-    - DU: Distributed Unit
+    - BaseBand Unit (BBU)
+    - Centralised Unit (CU)
+    - Distributed Unit (DU)
 
 - **2G/3G/4G mobile core network**
 
-  - Control Plane
+  - Control plane
 
-    - MME: Mobility Management Entity
-    - 3GPP AAA: Authentication, Authorisation, and Accounting
-    - PCRF: Policy and Charging Rules Function
-    - OCS: Online Charging system
-    - OFCS: Offline Charging System
-    - HSS: Home Subscriber Server
-    - DRA: Diameter Routing Agent
-    - HLR: Home Location Register
-    - SGW-C: Serving GateWay Control plane
-    - PGW-C: Packet data network GateWay Control plane
+    - Mobility Management Entity (MME)
+    - Authentication, Authorisation, and Accounting (3GPP AAA)
+    - Policy and Charging Rules Function (PCRF)
+    - Online Charging system (OCS)
+    - Offline Charging System (OFCS)
+    - Home Subscriber Server (HSS)
+    - Diameter Routing Agent (DRA)
+    - Home Location Register (HLR)
+    - Serving GateWay Control plane (SGW-C)
+    - Packet data network GateWay Control plane (PGW-C)
 
-  - Data Plane
+  - Data plane
 
-    - SGW: Serving GateWay
-    - SGW-U: Serving GateWay User plane
-    - PGW: Packet data network GateWay
-    - PGW-U: Packet data network GateWay User plane
-    - ePDG: Evolved Packet Data GateWay
-    - MSC: Mobile Switching Center
-    - SGSN: Serving GPRS Support Node
-    - GGSN: Gateway GPRS Support Node
-    - SMSC : SMS Center
+    - Serving GateWay (SGW)
+    - Serving GateWay User plane (SGW-U)
+    - Packet data network GateWay (PGW)
+    - Packet data network GateWay User plane (PGW-U)
+    - Evolved Packet Data GateWay (ePDG)
+    - Mobile Switching Center (MSC)
+    - Serving GPRS Support Node (SGSN)
+    - Gateway GPRS Support Node (GGSN)
+    - Short Message Service Center (SMSC)
 
 - **5G core network**
 
-  5G core nodes are virtualisable by design and strong candidate to be onboarded onto Telco Cloud as "cloud native
-  application"
+  5G core nodes are virtualisable by design and are a strong candidate for onboarding into the Telco cloud as
+  cloud-native applications.
 
-  - Data Plane
+  - Data plane
 
-    - UPF: User Plane Function
-
-  - Control Plane
-
-    - AMF: Access and Mobility management Function
-    - SMF: Session Management Function
-    - PCF: Policy Control Function
-    - AUSF: Authentication Server Function
-    - NSSF: Network Slice Selection Function
-    - UDM: Unified Data Management
-    - UDR: Unified Data Repository
-    - NRF: Network Repository Function
-    - NEF: Network Exposure Function
-    - CHF: Charging Function part of the Converged Charging System (CCS)
-
-      ..
-
-         **Note:**\ *for Service-based Architecture (SBA) all Network Functions are stateless (store all sessions/ state
-         on unified data repository UDR)*
-
-- **IP Multimedia Subsystem (IMS)**
-
-  - Data Plane
-
-    - MGW: Media GateWay
-    - SBC: Session Border Controller
-    - MRF: Media Resource Function
-
-  - Control Plane
-
-    - CSCF: Call Session Control Function
-    - MTAS: Mobile Telephony Application Server
-    - BGCF: Border Gateway Control Function
-    - MGCF: Media Gateway Control Function
-
-- **Fixed network**
-
-  - Data Plane
-
-    - MSAN: MultiService Access Node
-    - OLT: Optical Line Termination
-    - WLC: WLAN Controller
-    - BNG: Broadband Network Gateway
-    - BRAS: Broadband Remote Access Server
-    - RGW: Residential GateWay
-    - CPE: Customer Premises Equipment
-
-  - Control Plane
-
-    - AAA: Authentication, Authorisation, and Accounting
-
-- **Other network functions**
-
-  - Data Plane
-
-    - LSR: Label Switching Router
-    - DPI: Deep Packet Inspection
-    - CG-NAT: Carrier-Grade Network Address Translation
-    - ADC: Application Delivery Controller
-    - FW: FireWall
-    - Sec-GW: Security GateWay
-    - CDN: Content Delivery Network
+    - User Plane Function (UPF)
 
   - Control plane
 
-    - RR: Route Reflector
-    - DNS: Domain Name System
+    - Access and Mobility management Function (AMF)
+    - Session Management Function (SMF)
+    - Policy Control Function (PCF)
+    - Authentication Server Function (AUSF)
+    - Network Slice Selection Function (NSSF)
+    - Unified Data Management (UDM)
+    - Unified Data Repository (UDR)
+    - Network Repository Function (NRF)
+    - Network Exposure Function (NEF)
+    - Charging Function part of the Converged Charging System (CHF)
 
-  - Management Plane
+      ..
 
-    - NMS: Network Management System
+         **Note:**\ *for Service-based Architecture (SBA), all network functions are stateless. That is, they
+         store all sessions or states on unified data repository (UDR).*
+
+- **IP Multimedia Subsystem (IMS)**
+
+  - Data plane
+
+    - Media GateWay (MGW)
+    - Session Border Controller (SBC)
+    - Media Resource Function (MRF)
+
+  - Control plane
+
+    - Call Session Control Function (CSCF)
+    - Mobile Telephony Application Server (MTAS)
+    - Border Gateway Control Function (BGCF)
+    - Media Gateway Control Function (MGCF)
+
+- **Fixed network**
+
+  - Data plane
+
+    - MultiService Access Node (MSAN)
+    - Optical Line Termination (OLT)
+    - WLAN Controller (WLC)
+    - Broadband Network Gateway (BNG)
+    - Broadband Remote Access Server (BRAS)
+    - Residential GateWay (RGW)
+    - Customer Premises Equipment (CPE)
+
+  - Control plane
+
+    - Authentication, Authorisation, and Accounting (AAA)
+
+- **Other network functions**
+
+  - Data plane
+
+    - Label Switching Router (LSR)
+    - Deep Packet Inspection (DPI)
+    - Carrier-Grade Network Address Translation (CG-NAT)
+    - Application Delivery Controller (ADC)
+    - FireWall (FW)
+    - Security GateWay (Sec-GW)
+    - Content Delivery Network (CDN)
+
+  - Control plane
+
+    - Route Reflector (RR)
+    - Domain Name System (DNS)
+
+  - Management plane
+
+    - Network Management System (NMS)
 
 Use cases
 ---------
 
-The intent of this section is to describe some important use cases that are pertinent to this Reference Model. We start
-with some typical Edge related use cases. The list of use cases will be extended in the future releases.
+The intent of this section is to describe some important use cases that are pertinent to this Reference Model. We will
+start with some typical Edge-related use cases. The list of use cases will be extended in future releases.
 
 Telco Edge is commonly coupled with 5G use cases, seen as one of the ingredients of the Ultra-Reliable Low-latency
-Communication (URLLC) and Enhanced Mobile Broadband (eMBB) Network Slicing. The requirements for user plane Local
-Breakout / Termination are common mandating that Value Added Services (VASs) & Any Gi-LAN applications are locally
-hosted at the Edge. The Telco Edge is a perfect fit for centralized vRAN deployment and vDU/vCU hosting that satisfy the
-latency requirements.
+Communication (URLLC) and Enhanced Mobile Broadband (eMBB) network slicing. The requirements for user plane local
+breakout/termination are common. They stipulate that value-added services (VASs) and any Gi-LAN applications are
+locally hosted at the Edge. The Telco Edge is a perfect fit for centralized vRAN deployments and vDU/vCU hosting that
+satisfy the latency requirements.
 
-It is expected that with the technology evolution (e.g. 6G) the use cases will be more demanding. For instance, 
-either to meet less than 1 ms latency, or ultrafast data rate, it will be required to evolve the architecture. 
-These use cases, once available, can be used for life saving decisions, for instance for the remote automation in 
-environments not supporting life (e.g., in deep space communication), to ensure that the car autonomous 
-driving can be done in real time, and even for holographic communications. Such use cases can be seen as the 
-evolution of 5G use cases, where such requirements could not be met due to the technology constrains.
+It is expected that with the technology evolution (for example, 6G), the use cases will be more demanding. For
+example, to achieve either less than 1 ms latency or an ultrafast data rate, it will be required to evolve the
+architecture. These use cases, once available, can be used for life saving decisions, such as for remote
+automation in environments not supporting life (for example, in deep space communication), to ensure that the car
+autonomous driving can be done in real time, and even for holographic communications. Such use cases can be seen as
+the evolution of 5G use cases, where such requirements cannot be met due to technology constraints.
 
-- **Use Case #1 - Edge CDN with eMBB Core Network Slicing**
+Use case no. 1: Edge CDN with eMBB core network slicing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - **Business Objectives**
+- **Business objectives**
 
-    Monetizing 5G by provisioning eMBB network slice with distributed Content Delivery Network (CDN) as a service, that
-    enables Ultra-HD (UHD) streaming, Video Optimization, caching for large files, and other capabilities that can
-    either bundled by the Network Slice offering or implicitly enabled by the operator.
+  Monetizing 5G by provisioning eMBB network slices with a distributed content delivery network (CDN) as a service
+  that enables ultra-HD (UHD) streaming, video optimization, caching for large files, and other capabilities that can
+  either be bundled by the network slice offering or implicitly enabled by the operator.
 
-  - **Targeted Segments**
+- **Targeted segments**
 
-    - B2C (Targeting high Tier Packages & Bundles)
-    - Content Owners (Potential revenue sharing model)
-    - Mobile Virtual Network Operators (MVNOs - Wholesale)
-    - Stadiums and Venues.
+  - B2C: targeting high-tier packages and bundles
+  - content owners: potential revenue sharing model
+  - mobile virtual network operators (MVNOs): wholesale
+  - stadiums and venues
 
-  - **Architecture**
+- **Architecture**
 
 .. figure:: ../figures/Fig2-1-uc1.png
-   :alt: Edge CDN with eMBB Core Network Slicing
+  :alt: Edge CDN with eMBB Core Network Slicing
 
-   Edge CDN with eMBB Core Network Slicing
+  Edge CDN with eMBB core network slicing
 
-- **Use Case #2 - Edge Private 5G with Core Network Slicing**
+Use case no. 2: Edge private 5G with core network slicing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - **Business Objectives**
+- **Business objectives**
 
-    Private 5G is considered one of the most anticipated Business use cases in the coming few years enabling Mobile
-    Operators to provide a standalone private Mobile Network to enterprises that may include all the ingredients of PLMN
-    such as Radio, Core, Infrastructure & Services covering the business requirements in terms of security, performance,
-    reliability, & availability.
+  Private 5G is considered to be one of the most eagerly awaited business use cases in the coming years. It will
+  enable mobile operators to provide a standalone private mobile network to enterprises that may include all the
+  ingredients of the PLMN, such as radio, core, infrastructure, and services covering business requirements in terms
+  of security, performance, reliability, and availability.
 
-  - **Targeted Segments**
+- **Targeted segments**
 
-    - Governmental Sectors & Public Safety (Mission critical applications)
-    - Factories and Industry sector.
-    - Enterprises with Business-critical applications.
-    - Enterprises with strict security requirements with respect to assets reachability.
-    - Enterprises with strict KPIs requirements that mandate the on-premise deployment.
+  - governmental sectors and public safety (mission-critical applications)
+  - factories and the industry sector
+  - enterprises with business-critical applications
+  - enterprises with strict security requirements, with respect to the reachability of assets
+  - enterprises with strict KPI requirements that mandate the on-premise deployment
 
-  - **Architecture**
+- **Architecture**
 
-    - There are multiple flavours for Private 5G deployments or NPN, Non-Public Network as defined by 3GPP.
-    - The use case addresses the technical realization of NPN as a Network Slice of a PLMN as per Annex D –
-      3GPP TS 23.501 R16 and not covering the other scenarios of deployment.
-    - The use case assumes a network slice that is constructed from a single UPF deployed on Customer premises while
-      sharing the 5G Control Plane (AMF, SMF, & other CP Network Functions) with the PLMN.
-    - The use case doesn’t cover the requirements of the private Application Servers (ASs) as they may vary with each
-      customer setup.
-    - Hosting the CU/DU on-Customer Infrastructure depends on the enterprise offering by the Mobile Operator and the
-      selected Private 5G setup.
-    - The Edge Cloud Infrastructure can be governed by the client or handled by the Service Provider (Mobile Operator)
-      as part of Managed-services model.
+  - There are multiple flavours for private 5G deployments or for the non-public network (NPN), as defined by 3GPP.
+  - This use case addresses the technical realization of the NPN as a network slice of a PLMN, according to Annex D –
+    3GPP TS 23.501 R16. It does not cover the other scenarios of deployment.
+  - Thise use case assumes a network slice that is constructed from a single UPF deployed on customer premises, while
+    sharing the 5G control plane (AMF, SMF, and other CP network functions) with the PLMN.
+  - This use case does not cover the requirements of the private application servers (ASs), as they may vary with
+    each customer setup.
+  - Hosting the CU/DU on-customer infrastructure depends on the enterprise offering by the mobile operator and the
+    selected private 5G setup.
+  - The Edge cloud infrastructure can be governed by the client or handled by the service provider (mobile operator)
+    as part of managed-services model.
 
 .. figure:: ../figures/Fig2-2-uc2.png
-   :alt: Edge Private 5G with Core Network Slicing
+  :alt: Edge private 5G with core network slicing
 
-   Edge Private 5G with Core Network Slicing.
+  Edge private 5G with core network slicing.
 
-- **Use Case #3 - Edge Automotive (V2X) with uRLLC Core Network Slicing**
+Use case no. 3: Edge automotive (V2X) with uRLLC core network slicing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - **Business Objectives**
+- **Business objectives**
 
-     The V2X (Vehicle-to-everything) set of use cases provides a 5G monetization framework for Mobile Operators
-     developing 5G URLLC business use cases targeting the Automotive Industry, Smart City Regulators, & Public Safety.
+    The vehicle-to-everything (V2X) set of use cases provides a 5G monetization framework for mobile operators
+    developing 5G URLLC business use cases targeting the automotive industry, smart city regulators, and public
+    safety.
 
-  - **Targeted Segments**
+- **Targeted segments**
 
-    - Automotive Industry.
-    - Governmental Departments (Smart Cities, Transport, Police, Emergency Services, etc.).
-    - Private residencies (Compounds, Hotels and Resorts).
-    - Enterprise and Industrial Campuses.
+  - the automotive industry
+  - governmental departments (smart cities, transport, police, emergency services, and so on)
+  - private residences (compounds, hotels, and resorts)
+  - enterprise and industrial campuses
 
-  - **Architecture**
+- **Architecture**
 
-    - 5G NR-V2X is a work item in 3GPP Release 16 that is not completed yet by the time of writing this document.
+  - 5G NR-V2X is a work item in 3GPP Release 16 that has not been completed at the time of writing this document.
 
-      - C-V2X, Cellular V2X has two modes of communications
+    - Cellular V2X (C-V2X) has two modes of communication:
 
-        - Direct Mode (Commonly described by SL, Sidelink by 3GPP): This includes the V2V, V2I, & V2P using a direct
-          Interface (PC5) operating in ITS, Intelligent Transport Bands (e.g. 5.9 GHZ).
-        - Network Mode (UL/DL): This covers the V2N while operating in the common telecom licensed spectrum. This use
-          case is capitalizing on this mode.
+      - Direct mode, commonly described by Sidelink (SL), by 3GPP: this includes the V2V, V2I, and V2P using a
+        direct interface (PC5) operating in ITS and intelligent transport bands (for example, 5.9 GHZ).
+      - Network mode (UL/DL): this covers the V2N while operating in the common telecom-licensed spectrum. This use
+        case capitalizes on this mode.
 
-      - The potential use cases that may consume services from Edge is the Network Model (V2N) and potentially the V2I
-        (According on how the Infrastructure will be mapped to an Edge level)
+    - The potential use cases that may consume services from the Edge are the network model (V2N) and potentially
+      the V2I (according to how the infrastructure will be mapped to an Edge level).
 
 .. figure:: ../figures/Fig2-3-uc3.png
-   :alt: Edge Automotive (V2X) with uRLLC Core Network Slicing
+  :alt: Edge automotive (V2X) with uRLLC core network slicing
 
-   Edge Automotive (V2X) with uRLLC Core Network Slicing
+  Edge automotive (V2X) with uRLLC core network slicing
 
-- **Use Case #4 – Edge vRAN Deployments**
+Use case no. 4: Edge vRAN deployments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - **Business Objectives**
-    vRAN is one of the trending technologies of RAN deployment that fits for all Radio Access Technologies. vRAN helps
-    to provide coverage for rural & uncovered areas with a compelling CAPEX reduction compared to Traditional and legacy
-    RAN deployments. This coverage can be extended to all area types with 5G greenfield deployment as a typical example.
+- **Business objectives**
+  vRAN is one of the trending RAN deployment technologies that fits all radio access technologies. vRAN helps to
+  provide coverage for rural and uncovered areas with a compelling CAPEX reduction, compared to traditional and
+  legacy RAN deployments. This coverage can be extended to all area types with 5G greenfield deployments as a
+  typical example.
 
-  - **Targeted Segments**
+- **Targeted segments**
 
-    - Private 5G Customers (vRAN Can be part of the Non-Public Network, NPN)
-    - B2B Customers & MVNOs (vRAN Can be part of an E2E Network Slicing)
-    - B2C (Mobile Consumers Segment).
+  - Private 5G customers: vRAN can be part of the non-public network (NPN).
+  - B2B customers and MVNOs: vRAN can be part of E2E network slicing.
+  - B2C: the mobile consumers segment.
 
-  - **Architecture**
+- **Architecture**
 
-    - There are multiple deployment models for Centralized Unit (CU) & Distributed Unit (DU). This use case covers the
-      placement case of having the DU & CU collocated & deployed on Telco Edge, see NGMN Overview on 5GRAN Functional
-      Decomposition ver 1.0 :cite:p:`ngmn5granfnldecomp`.
-    - The use case covers the 5G vRAN deployment. However, this can be extended to cover 4G vRAN as well.
-    - Following Split Option 7.2, the average market latency for RU-DU (Fronthaul) is 100 microsec – 200 microsec while
-      the latency for DU-CU (Midhaul) is tens of milliseconds, see ORAN-WG4.IOT.0-v01.00 :cite:p:`oranwg4iot0`.
+  - There are multiple deployment models for the centralized unit (CU) and the distributed unit (DU). This use
+    case covers the placement case of having the DU and the CU co-located and deployed on the Telco Edge. For
+    details, see the NGMN Overview on 5GRAN Functional Decomposition ver 1.0 :cite:p:`ngmn5granfnldecomp`.
+  - This use case covers the 5G vRAN deployment. However, this can be extended to cover 4G vRAN, as well.
+  - Following Split Option 7.2, the average market latency for RU-DU (fronthaul) is 100 microseconds to 200
+    microseconds, while the latency for DU-CU (midhaul) is tens of milliseconds. For details, see
+    ORAN-WG4.IOT.0-v01.00 :cite:p:`oranwg4iot0`.
 
 .. figure:: ../figures/Fig2-4-uc4.png
-   :alt: Edge vRAN Deployments
+  :alt: Edge vRAN deployments
 
-   Edge vRAN Deployments
+  Edge vRAN deployments
 
-- **Use Case #5 - Telepresence Experience**
+Use case no. 5: Telepresence experience
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - **Business Objectives**
+- **Business objectives**
 
-    This service would allow the communication between one or more persons with the feeling to be present in a location without being physically in a virtual environment. This service will make use of eMBB, and URLLC network slices and a distributed deployment which would offload processing.
+  This service allows communication with one or more persons and creates the impression of being present in the
+  same location without being physically in a virtual environment. This service makes use of eMBB and URLLC
+  network slices, and a distributed deployment which would offload processing.
 
-  - **Targeted Segments**
+- **Targeted segments**
 
-    - B2B Customers & MVNOs
-    - B2C (Mobile Consumers Segment)
-    - Enterpises which make use of Communication platforms
-   
+  - B2B customers and MVNOs
+  - B2C: the mobile consumers segment
+  - enterpises which use of communication platforms
+  
+- **Architecture**
+
+  - The architecture takes the form of distributed deployment models across the ecosystem. It should be possible
+    to deploy the workloads at the extreme edge, which would allow real-time processing for video, and would
+    offload processing for network load prediction. This would in turn support the quality of experience that is
+    defined for such a use case.
+  - This use case covers the placement at the management plane and the control plane (for example, the Core and
+    the Edge domain).
+  - There are high-level requirements for such a use case, such as a latency of 1ms, and an available bandwidth of
+    8 Gbps.
+      
+Use case no. 6: Digital twins for manufacturing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Business Objectives**
+
+  The business objectives are to provide the ability to design and create a product/service as a digital twin
+  which can be tested before moving into the production environment. Therefore, only once acceptance is achieved
+  in the digital world does the service become available. This leads to an extreme reduction of the total cost of
+  ownership (TCO), and minimizes the risks that are commonly associated with the design and testing of a service
+  for the industrial environment.
+
+- **Targeted segments**
+
+  - private networks
+  - enterprise
+  - factories (making extensive use of automation)
+  
   - **Architecture**
 
-    - Distributed deployment model across the ecosystem. It should be possible to deploy workload at the extreme edge, which would allow real-time processing for video, and offload processing for network load prediction, which would support the Quality of Experience that is defined for such a use case
-    - The use case covers should allow the placement at the management plane and control plane (e.g. Core, Edge domain) 
-    - There are high-level requirements requirement for such a use case (e.g. latency of 1ms, available bandwidth 8 Gbps) 
-      
-- **Use Case #6 - Digital Twins for Manufacturing**
-
-  - **Business Objectives**
-
-    Providing the capability to design and create a product/service as a Digital Twin which can be tested before moving into Production environment. Therefore, only once acceptance is achieved in the digital world, the service would be available. This leads to extreme reduction of Total Cost of Ownership (TCO), and minimize the risks that are commonly associated to a design and testing of a service for industrial environment.
-
-  - **Targeted Segments**
-
-    - Private Networks
-    - Enterprise
-    - Factory (make use of high level of automation).
-    
-   - **Architecture**
-
-    - Demands very low latency (<<1ms) and high reliability. 
-    - Trustworthiness needs to be guaranteed, which are usually associated to performance, security and resource efficiency/cost and subsequently productivity
-    - Processing capability of massive volumes of data.
+  - This use case demands low latency (less than 1 ms) and high reliability.
+  - The trustworthiness of the feature needs to be guaranteed. This is usually associated with performance,
+    security, and resource efficiency/cost, and, subsequently, productivity.
+  - This use case can process massive volumes of data.
     
 Analysis
 --------
 
-Studying various requirements of workloads helps understanding what expectation they will have from the underlying cloud
-infrastructure. Following are *some* of the requirement types on which various workloads might have different
-expectation levels:
+Studying the various requirements of the workloads helps us to understand what expectations they will have
+from the underlying cloud infrastructure. Some of the requirement types on which various workloads may have
+different expectation levels are set out below:
 
 - **Computing**
 
-  - Speed (e.g., CPU clock and physical cores number)
-  - Predictability (e.g., CPU and RAM sharing level)
-  - Specific processing (e.g., cryptography, transcoding)
+  - speed (for example, the CPU clock and the number of physical cores)
+  - predictability (for example, the CPU and RAM sharing levels)
+  - specific processing (for example, cryptography and transcoding)
 
 - **Networking**
 
-  - Throughput (i.e., bit rate and/or packet rate)
-  - Latency
-  - Connection points / interfaces number (i.e., vNIC and VLAN)
-  - Specific traffic control (e.g., firewalling, NAT, cyphering)
-  - Specific external network connectivity (e.g., MPLS, VXLAN)
+  - throughput (that is, bit rate or packet rate, or both)
+  - latency
+  - the number of connection points or interfaces (that is, vNICs and VLANs)
+  - specific traffic control (for example, firewalling, NAT, and cyphering)
+  - specific external network connectivity (for example, MPLS and VXLAN)
 
 - **Storage**
 
-  - IOPS (i.e., input/output rate and/or byte rate)
-  - Volume
-  - Ephemeral or Persistent
-  - Specific features (e.g., object storage, local storage)
+  - IOPS (that is, input/output rate or byte rate, or both)
+  - volume
+  - ephemeral or persistent
+  - specific features (for example, object storage and local storage)
 
-By trying to sort workloads into different categories based on the requirements observed, below are the different
-profiles concluded, which are mainly driven by expected performance levels:
+In trying to sort workloads into different categories based on the observed requirements, we have identified
+two different profiles, detailed below. These profiles are mainly driven by the expected performance levels.
 
 - **Profile One**
 
-  - Workload types
+  - Workload types:
 
-    - Control plane functions without specific need, and management plane functions
-    - *Examples: OFCS, AAA, NMS*
+    - control plane functions without specific needs, and management plane functions
+    - *examples: OFCS, AAA, and NMS*
 
-  - No specific requirement
+  - Requirements:
+
+    - There are no specific requirements.
 
 - **Profile Two**
 
   - Workload types
 
-    - Data plane functions (i.e., functions with specific networking and computing needs)
-    - *Examples: BNG, S/PGW, UPF, Sec-GW, DPI, CDN, SBC, MME, AMF, IMS-CSCF, UDR*
+    - data plane functions (that is, functions with specific networking and computing needs)
+    - *examples: BNG, S/PGW, UPF, Sec-GW, DPI, CDN, SBC, MME, AMF, IMS-CSCF, and UDR*
 
-  - Requirements
+  - Requirements:
 
-    - Predictable computing
-    - High network throughput
-    - Low network latency
+    - predictable computing
+    - high network throughput
+    - low network latency
 
 .. _profiles-profile-extensions--flavours:
 
-Profiles, Profile Extensions & Flavours
----------------------------------------
+Profiles, profile extensions, and flavours
+------------------------------------------
 
-**Profiles** are used to tag infrastructure (such as hypervisor hosts, or Kubernetes worker nodes) and associate it with
+**Profiles** are used to tag infrastructure, such as hypervisor hosts or Kubernetes worker nodes, and associate it with
 a set of capabilities that are exploitable by the workloads.
 
-Two profile *layers* are proposed:
+There are two profile *layers*:
 
-- The top level **profiles** represent macro-characteristics that partition infrastructure into separate pools, i.e.: an
-  infrastructure object can belong to one and only one profile, and workloads can only be created using a single
-  profile. Workloads requesting a given profile **must** be instantiated on infrastructure of that same profile.
-- For a given profile, **profile extensions** represent small deviations from (or further qualification, such as
-  infrastructure sizing differences (e.g. memory size)) the profile that do not require partitioning the infrastructure
-  into separate pools, but that have specifications with a finer granularity of the profile. Profile Extensions can be
-  *optionally* requested by workloads that want a more granular control over what infrastructure they run on, i.e.: an
-  infrastructure resource can have **more than one profile extension label** attached to it, and workloads can request
+- Top-level **profiles**: The top-level profiles represent macro-characteristics that partition the infrastructure into
+  separate pools. This means that an infrastructure object can belong to one profile only, and workloads can only be
+  created using a single profile. Workloads requesting a given profile **must** be instantiated on the infrastructure of
+  that same profile.
+- Profile extensions: For a given profile, **profile extensions** represent small variations of the profile, such as
+  infrastructure sizing differences (for example, memory size), that do not require the partitioning of the infrastructure
+  into separate pools, but that have specifications with a finer granularity of the profile. Profile extensions can be
+  *optionally* requested by workloads that want a more granular control over the infrastructure on which they run, that is,
+  an infrastructure resource can have **more than one profile extension label** attached to it, and workloads can request
   resources to be instantiated on infrastructure with a certain profile extension. Workloads requesting a given profile
-  extension **must** be instantiated on infrastructure with that same profile extension. It is allowed to instantiate
-  workloads on infrastructure tagged with more profile extensions than requested, as long as the minimum requirements
-  are satisfied.
+  extension **must** be instantiated on infrastructure with the same profile extension. The operator may instantiate
+  workloads on infrastructure tagged with more profile extensions than requested, as long as the minimum requirements are
+  satisfied.
 
-Workloads specify infrastructure capability requirements as workload metadata, indicating what kind of infrastructure
-they must run on to achieve functionality and/or the intended level of performance. Workloads request resources
-specifying the Profiles and Profile Extensions, and a set of sizing metadata that maybe expressed as flavours that are
-required for the workload to run as intended.
-A resource request by a workload can be met by any infrastructure node that has the same or a more specialised profile
+The workloads specify infrastructure capability requirements as workload metadata, indicating what kind of
+infrastructure they must run on to achieve functionality or the intended level of performance, or both. The workloads
+request resources, specifying the profiles and profile extensions, and a set of sizing metadata that may be expressed
+as flavours that are required for the workload to run as intended.
+A resource request by a workload can be met by any infrastructure node that has the same or a more specialised profile,
 and the necessary capacity to support the requested flavour or resource size.
 
-Profiles, Profile Extensions and Flavours will be considered in greater detail in
+Profiles, profile extensions, and flavours are considered in greater detail in
 :ref:`chapters/chapter04:profile extensions`.
 
 Profiles (top-level partitions)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Based on the above analysis, the following cloud infrastructure profiles are proposed (also shown in
-:numref:`Infrastructure profiles proposed based on VNFs categorisation` below)
 
-- **Basic**: for Workloads that can tolerate resource over-subscription and variable latency.
-- **High Performance**: for Workloads that require predictable computing performance, high network throughput and low
-  network latency.
+Based on the analysis in Profiles, profile extensions, and flavours, the following cloud infrastructure profiles are as
+follows (see also :numref:`Infrastructure profiles proposed based on VNFs categorisation`):
+
+- **Basic**: this is for workloads that can tolerate resource over-subscription and variable latency.
+- **High-performance**: this is for workloads that require predictable computing performance, high network throughput,
+and low network latency.
 
 .. figure:: ../figures/RM-ch02-node-profiles.png
-   :alt: Infrastructure profiles proposed based on VNFs categorisation
-   :name: Infrastructure profiles proposed based on VNFs categorisation
+   :alt: Infrastructure profiles based on the categorisation of the VNFs
+   :name: Infrastructure profiles based on the categorisation of the VNFs
 
-   Infrastructure profiles proposed based on VNFs categorisation
+   Infrastructure profiles based on the categorisation of the VNFs
 
 In :ref:`chapters/chapter04:infrastructure capabilities, measurements and catalogue`
-these **B (Basic)** and **H (High) Performance** infrastructure profiles will be
-defined in greater detail for use by workloads.
+these **Basic (B)** and **High-performance (H)** infrastructure profiles are defined in greater detail for use by the
+workloads.
 
-Profiles partition the infrastructure: an infrastructure object (host/node) **must** have one and only one profile
-associated to it.
+Profiles partition the infrastructure: an infrastructure object (host/node) **must** have only one profile associated
+to it.
 
-Profile Extensions (specialisations)
+Profile extensions (specialisations)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Profile Extensions are meant to be used as labels for infrastructure, identifying the nodes that implement special
-capabilities that go beyond the profile baseline. Certain profile extensions may be relevant only for some profiles.
-The following **profile extensions** are proposed:
+Profile extensions are intended to be used as labels for infrastructure. They identify the nodes that implement
+special capabilities that go beyond the profile baseline. Certain profile extensions may only be relevant for some
+profiles. The **profile extensions** are detailed in the following table.
 
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Profile Extension | Mnemonic                | Applicable to | Applicable to | Description            | Notes         |
-| Name              |                         | Basic Profile | High          |                        |               |
-|                   |                         |               | Performance   |                        |               |
-|                   |                         |               | Profile       |                        |               |
+| Profile extension | Mnemonic                | Applicable to | Applicable to | Description            | Notes         |
+| name              |                         | the basic     | the high-     |                        |               |
+|                   |                         | profile       | performance   |                        |               |
+|                   |                         |               | profile       |                        |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Compute Intensive | compute-high-perf-cpu   | ❌            | ✅            | Nodes that have        | May use       |
-| High-performance  |                         |               |               | predictable computing  | vanilla       |
+| Compute-intensive | compute-high-perf-cpu   | ❌            | ✅           | Nodes that have        | May use       |
+| high-performance  |                         |               |               | predictable computing  | vanilla       |
 | CPU               |                         |               |               | performance and higher | VIM/K8S       |
 |                   |                         |               |               | clock speeds.          | scheduling    |
 |                   |                         |               |               |                        | instead.      |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Storage Intensive | storage-high-perf       | ❌            | ✅            | Nodes that have low    |               |
-| High-performance  |                         |               |               | storage latency and/or |               |
-| storage           |                         |               |               | high storage IOPS      |               |
+| Storage-intensive | storage-high-perf       | ❌            | ✅           | Nodes that have low    |               |
+| high-performance  |                         |               |               | storage latency or     |               |
+| storage           |                         |               |               | high storage IOPS, or  |               | 
+|                   |                         |               |               | both.                  |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Compute Intensive | compute-high-memory     | ❌            | ✅            | Nodes that have high   | May use       |
-| High memory       |                         |               |               | amounts of RAM.        | vanilla       |
+| Compute-intensive | compute-high-memory     | ❌            | ✅           | Nodes that have high   | May use       |
+| high memory       |                         |               |               | amounts of RAM.        | vanilla       |
 |                   |                         |               |               |                        | VIM/K8S       |
 |                   |                         |               |               |                        | scheduling    |
 |                   |                         |               |               |                        | instead.      |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Compute Intensive | compute-gpu             | ❌            | ✅            | for compute intensive  | May use Node  |
-| GPU               |                         |               |               | Workloads that         | Feature       |
-|                   |                         |               |               | requires GPU compute   | Discovery.    |
-|                   |                         |               |               | resource on the node   |               |
+| Compute-intensive | compute-gpu             | ❌            | ✅           | For compute-intensive  | May use node  |
+| GPU               |                         |               |               | workloads that         | feature       |
+|                   |                         |               |               | require GPU compute    | discovery.    |
+|                   |                         |               |               | resources on the node. |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Network Intensive | high-speed-network      | ❌            | ✅            | Denotes the presence   |               |
-| High speed        |                         |               |               | of network links (to   |               |
-| network (25G)     |                         |               |               | the DC network) of     |               |
+| Network-intensive | high-speed-network      | ❌            | ✅           | Denotes the presence   |               |
+| high-speed        |                         |               |               | of network links (to   |               |
+| network (25G)     |                         |               |               | the DC network) with a |               |
 |                   |                         |               |               | speed of 25 Gbps or    |               |
 |                   |                         |               |               | greater on the node.   |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Network Intensive | very-high-speed-network | ❌            | ✅            | Denotes the presence   |               |
-| Very High speed   |                         |               |               | of network links (to   |               |
-| network (100G)    |                         |               |               | the DC network) of     |               |
+| Network-intensive | very-high-speed-network | ❌            | ✅           | Denotes the presence   |               |
+| very-high-speed   |                         |               |               | of network links (to   |               |
+| network (100G)    |                         |               |               | the DC network) with a |               |
 |                   |                         |               |               | speed of 100 Gbps or   |               |
 |                   |                         |               |               | greater on the node.   |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Low Latency -     | low-latency-edge        | ✅            | ✅            | Labels a host/node as  |               |
-| Edge Sites        |                         |               |               | located in an edge     |               |
+| Low latency Edge  | low-latency-edge        | ✅            | ✅           | Labels a host/node as  |               |
+| sites             |                         |               |               | located in an Edge     |               |
 |                   |                         |               |               | site, for workloads    |               |
 |                   |                         |               |               | requiring low latency  |               |
-|                   |                         |               |               | (specify value) to     |               |
+|                   |                         |               |               | (specify value), to    |               |
 |                   |                         |               |               | final users or         |               |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Very Low Latency  | very-low-latency-edge   | ✅            | ✅            | Labels a host/node as  |               |
-| - Edge Sites      |                         |               |               | located in an edge     |               |
+| Very low latency  | very-low-latency-edge   | ✅            | ✅           | Labels a host/node as  |               |
+| Edge sites        |                         |               |               | located in an Edge     |               |
 |                   |                         |               |               | site, for workloads    |               |
 |                   |                         |               |               | requiring low latency  |               |
-|                   |                         |               |               | (specify value) to     |               |
+|                   |                         |               |               | (specify value), to    |               |
 |                   |                         |               |               | final users or         |               |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Ultra Low Latency | ultra-low-latency-edge  | ✅            | ✅            | Labels a host/node as  |               |
-| - Edge Sites      |                         |               |               | located in an edge     |               |
+| Ultra low latency | ultra-low-latency-edge  | ✅            | ✅           | Labels a host/node as  |               |
+| Edge sites        |                         |               |               | located in an Edge     |               |
 |                   |                         |               |               | site, for workloads    |               |
 |                   |                         |               |               | requiring low latency  |               |
-|                   |                         |               |               | (specify value) to     |               |
+|                   |                         |               |               | (specify value), to    |               |
 |                   |                         |               |               | final users or         |               |
 |                   |                         |               |               | geographical           |               |
 |                   |                         |               |               | distribution.          |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Fixed function    | compute-ffa             | ❌            | ✅            | Labels a host/node     |               |
+| Fixed-function    | compute-ffa             | ❌            | ✅           | Labels a host/node     |               |
 | accelerator       |                         |               |               | that includes a        |               |
-|                   |                         |               |               | consumable fixed       |               |
+|                   |                         |               |               | consumable fixed-      |               |
 |                   |                         |               |               | function accelerator   |               |
 |                   |                         |               |               | (non-programmable,     |               |
-|                   |                         |               |               | e.g. Crypto,           |               |
+|                   |                         |               |               | such as a Crypto- or   |               |
 |                   |                         |               |               | vRAN-specific          |               |
 |                   |                         |               |               | adapter).              |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| Firmware-         | compute-fpga            | ❌            | ✅            | Labels a host/node     |               |
+| Firmware-         | compute-fpga            | ❌            | ✅           | Labels a host/node     |               |
 | programmable      |                         |               |               | that includes a        |               |
 | adapter           |                         |               |               | consumable             |               |
-|                   |                         |               |               | Firmware-programmable  |               |
+|                   |                         |               |               | firmware-programmable  |               |
 |                   |                         |               |               | adapter (programmable, |               |
-|                   |                         |               |               | e.g. Network/storage   |               |
-|                   |                         |               |               | FPGA with programmable |               |
-|                   |                         |               |               | part of firmware       |               |
-|                   |                         |               |               | image).                |               |
+|                   |                         |               |               | such as a network/     |               |
+|                   |                         |               |               | storage FPGA with a    |               |
+|                   |                         |               |               | programmable part of   |               |
+|                   |                         |               |               | the firmware image).   |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| SmartNIC enabled  | network-smartnic        | ❌            | ✅            | Labels a host/node     |               |
+| SmartNIC enabled  | network-smartnic        | ❌            | ✅           | Labels a host/node     |               |
 |                   |                         |               |               | that includes a        |               |
-|                   |                         |               |               | Programmable           |               |
+|                   |                         |               |               | programmable           |               |
 |                   |                         |               |               | accelerator for        |               |
 |                   |                         |               |               | vSwitch/vRouter,       |               |
-|                   |                         |               |               | Network Function       |               |
-|                   |                         |               |               | and/or Hardware        |               |
-|                   |                         |               |               | Infrastructure.        |               |
+|                   |                         |               |               | network function,      |               |
+|                   |                         |               |               | and/or hardware        |               |
+|                   |                         |               |               | infrastructure.        |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
-| SmartSwitch       | network-smartswitch     | ❌            | ✅            | Labels a host/node     |               |
+| SmartSwitch-      | network-smartswitch     | ❌            | ✅           | Labels a host/node     |               |
 | enabled           |                         |               |               | that is connected to a |               |
-|                   |                         |               |               | Programmable Switch    |               |
-|                   |                         |               |               | Fabric or TOR switch   |               |
+|                   |                         |               |               | programmable switch    |               |
+|                   |                         |               |               | fabric or a TOR        |               |
+|                   |                         |               |               | switch.                |               |
 +-------------------+-------------------------+---------------+---------------+------------------------+---------------+
 
 **Table 2-1:** Profile extensions
 
-   \*\ **Note:** This is an initial set of proposed profiles and profile extensions and it is expected that more 
-   profiles and/or profile extensions will be added as more requirements are gathered and as technology enhances and 
+   \*\ **Note:** This is an initial set of proposed profiles and profile extensions. It is expected that more profiles
+   or profile extensions, or both, will be added as more requirements are gathered, and as technology evolves and
    matures.
