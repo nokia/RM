@@ -32,7 +32,9 @@ linkcheck_ignore = [
     "https://ntia.gov/files/ntia/publications/sbom_minimum_elements_report.pdf", 
     "https://www.fcc.gov/", 
     "https://gdpr-info.eu/", 
-    "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism"
+    "https://www.cyber.gov.au/resources-business-and-government/essential-cyber-security/ism", 
+    "https://sourceforge.net/p/linux-ima/wiki/Home", 
+    "https://sourceforge.net/projects/tboot/"
 ]
 
 linkcheck_timeout = 10
